@@ -1,12 +1,12 @@
-Lens API Documentation
-======================
+Lens API
+=========
 
-### Version: 0.1.0
+### Version: `beta`
 Lens offers Restful public APIs that allow users to search scholarly data for their query preferences.
 As of current version, Lens provides access to its data paginated with 1000 records at a time to its users. 
 The request and response format supported by the APIs is `json`  specified by [request](#requests) and [response](#fields) schema.
 
-> To report any bugs, performance issues or provide feedback, please use [Lens Support] page.
+> To report any bugs, performance issues or provide feedback, please use our [Issue Tracker].
 
 ### Privacy Policy and License
 Read our privacy policy [here](https://about.lens.org/policies/#termsuse).
@@ -23,7 +23,7 @@ Read our privacy policy [here](https://about.lens.org/policies/#termsuse).
 9. [Filter](#filtering)
 10. [Examples](#examples)
 11. [Fields](#fields)
-12. [HTTP Responses](#response)
+12. [HTTP Responses](#http-responses)
 
 ## API Access
 Lens uses token based API authentication. To generate your access token, please visit [Lens Support] page. 
@@ -39,9 +39,9 @@ TODO
 
 As of current version, Lens offers following API endpoints:
 
-**Search API Endpoint** `https://suds-store.api.lens.org/api/search`
+**Search API Endpoint** `https://beta.api.lens.org/api/search`
 
-**Available Fields** `https://suds-store.api.lens.org/api/search/fields`
+**Swagger Documentation** `https://beta.api.lens.org/swagger-ui.html`
 
 ## Requests
 
@@ -51,18 +51,28 @@ Fields | Description |  Required
 ------- | ------| ------- 
 **[query](#query)** | Valid json search request | true
 **[sort](#sort)** | Use available fields to sort results by ascending/descending order. | false
-**[select](#projection)** | Only get specific fields from API response. By default all fields are selected. | false
+**[include](#projection)** | Only get specific fields from API response. By default all fields are selected. | false
 **[exclude](#projection)** | Get all fields except undesired ones in search result. | false
-**[scroll_id](#pagination)** | Pagination parameter | false (true for next requests)
 **[size](#pagination)** | Integer value to specify number of items per page | false
+**[from](#pagination)** | Integer value, defines the offset from the first result | false
+**[scroll_id](#pagination)** | Pagination parameter | false (true for next requests)
+**[scroll](#pagination)** | Lifespan of Scroll scroll context in minute (e.g. 1m) | false (true for scroll context)
 
 ## Query
 
 Following queries are supported by current version of Lens APIs:
 
+#### String Based Query
+Query different terms with explicit operators `AND`/`OR`/`NOT` to create a compact query string.
+
+>Example: Find works having title Dimensions from Harvard University published between 2000 TO 2018
+>```json
+>{"query": "(title:Dimensions AND authors.affiliations.institution: \"Harvard University\") AND year_published:[2000 TO 2018]"}
+>```
+
 #### Term Query
 [Term Query] operates in a single term and search for *exact term* in the field provided. 
->Example
+>Example:
 >```json
 >{
 >    "query": {
@@ -75,7 +85,7 @@ Following queries are supported by current version of Lens APIs:
 
 ##### Match query
 
-[Match query] accepts text/numbers/dates. The main use case for the match query is for full-text search. 
+[Match query] accepts text/numbers/dates. The main use case of the match query is full-text search. 
 It matches each words separately. If you need to search whole phrase use [match phrase](#match-phrase-query) query.
 > Example:
 >```json
@@ -92,6 +102,7 @@ It matches each words separately. If you need to search whole phrase use [match 
 
 [Match phrase query] accepts text/numbers/dates. The main use case for the match query is for full-text search.
 
+>Example:
 >```json
 >{
 >  "query": {
@@ -101,8 +112,6 @@ It matches each words separately. If you need to search whole phrase use [match 
 >   }
 >}
 >```
-
-
 
 ##### Range query
 
@@ -150,17 +159,33 @@ It matches each words separately. If you need to search whole phrase use [match 
 >```
 
 ## Pagination
-Lens APIs provides cursor based pagination with each pages containing maximum of 1000 records. You can specify page size using `size` request field.
+Lens API provides two type of pagination based on their use:
 
-In the response body of each request, you will receive a `scroll_id`. This `scroll_id` needs to be passed via request body to access next page. 
-Since the `scroll_id` changes every time after each successful requests, please use the current scroll_id to access next page.
+**Offset/Size Based Pagination**
+
+Use parameter `from` to define the offset and `size` to specify number of records expected.
+```json
+{
+	"query": "Malaria", 
+	"from": 100, 
+	"size":50
+}
+```
+
+**Cursor Based Pagination**
+
+You can specify records per page using `size` (default 1000) and context alive time `scroll` (default 1m). You will receive a `scroll_id` in response,  
+which should be passed via request body to access next set of results. Since the `scroll_id` tends to change every time after each successful requests, 
+please use most recent scroll_id to access next page. This is not suited for real time user requests.
 
 ```json
 {
-    "scroll_id": "MjAxOTEw;DnF1ZXJ...R2NZdw=="
+    "scroll_id": "MjAxOTEw;DnF1ZXJ...R2NZdw==",
+    "scroll": "1m"
 }
 ```
 > Note: The lifespan of scroll_id is limited to 1 minute for the current API version. Using expired scroll_id will result bad request HTTP response.
+> Parameter `size` will be used for first scroll query and will remain the same for whole scroll context. Hence, using size in each scroll request will not have any effect.
 
 ## Sort
 Result can be retrieved in ascending or descending order. Use the following formats and [fields](#fields) to apply sorting to the API response.
@@ -177,15 +202,14 @@ Result can be retrieved in ascending or descending order. Use the following form
 You can control the output fields in the API result using projection. There are two possible ways to do that.
 1. **include**: Only request specific fields from the API endpoint
 2. **exclude**: Fields to be excluded from result
-> Note: Both *include* and *exclude* cannot be used in the same query and you might receive error.
+> Note: Both *include* and *exclude* cannot be used in same request.
 
->Example:
->```json
-> {"include":["title","patent_citations","authors.affiliations.name"]}
->```
->```json
-> {"exclude":["external_ids","references"]}
->```
+```json
+ {"include":["title","patent_citations","authors.affiliations.name"]}
+```
+```json
+ {"exclude":["external_ids","references"]}
+```
 
 ## Filtering
 You can use following pre-defined filters to refine search results:
@@ -228,17 +252,17 @@ is_open_access | Flags if the scholarly work has is Open Access | ` true`/`false
  **authors** | Array of [Author](#author) | Authors| | 
  **title** | String | Title of the scholarly work | true | `Malaria`
  **external_ids** | Array of [Id](#id) | The external identifier(s) for a scholarly work (DOI, PubMed ID, PubMed Central ID, Microsoft Academic ID or CORE) | |
- **start_page** | String | Start page | true | `893`
- **end_page** | String | End page | true | `916`
- **volume** | String | Volume | true | `32`
- **issue** | String | Issue | true | `4`
+ **start_page** | String | Start page | false | `893`
+ **end_page** | String | End page | false | `916`
+ **volume** | String | Volume | false | `32`
+ **issue** | String | Issue | false | `4`
  **languages** | Array of String | Languages | true | `["ENG"]`
  **references** | List of [Reference](#reference) | References |  |
  **scholarly_citations** | List of Lens Ids | Scholarly Citations | true  | `["091-720-300-990-437"]`
  **chemicals** | List of [Chemical](#chemical) | Chemicals |  |
  **clinical_trials** | List of [Clinical Trial](#clinical-trial) | Scholarly Citations |  |
  **fields_of_study** | List of String |Fields Of Study | true | `["Immunology", "Malaria"]`
- **source_urls** | List of [Source URL](#source-url) | Source Urls |  | 
+ **source_urls** | List of [Source URL](#source-url) | Source Urls | false | 
  **abstract** | String | Scholarly work abstract text | true |
  **full_text** | String | Full Text | true | 
  **date_published** | Date | Date of publication | true | `2009-05-22`
@@ -269,6 +293,7 @@ collective_name | String | Author Collective Name | true |
 first_name | String | The author's first name | true | `Alexander`
 last_name | String | The author's last name | true | `Kupco`
 initials | Integer | Author Initials | true | `A`
+full_name | String | Author's full name | true | `Alexander Kupco`
 affiliations | Array of [Affiliation](#affiliation) | The institution/affiliations associated with Author. | 
 
 #### Affiliation
@@ -356,15 +381,24 @@ value | String | The external identifier(s) for a scholarly work | true | `10.10
 
 ## Examples
 
-#### Get patent citations for publication (doi)
+#### Find 20 records from offset 10 that match provided query
+```json
+{
+    "query": "X-ray analysis of protein crystals",
+    "size": 20,
+    "from": 10
+}
+```
+
+#### Get title and patent citations for publication (doi)
 ```json
 {
     "query": {
     	"match":{
-    		"external_ids.value": "10.4271/970963"
+    		"external_ids.value": "10.1109/ee.1934.6540358"
     	}
     },
-    "select":["patent_citations"]
+    "include":["title","patent_citations"]
 }
 ```
 #### Get Scholarly metadata for a patent
@@ -378,7 +412,7 @@ value | String | The external identifier(s) for a scholarly work | true | `10.10
 }
 ```
 
-#### Find recent 10 works from an institution
+#### Find recent 10 works from an institution sorted by published year
 
 ```json
 {
@@ -457,6 +491,7 @@ Response |  Description  |
 [//]: # (Reference Links)
 [Lens]: <http://lens.org>
 [Lens Support]: <https://support.lens.org>
+[Issue Tracker]: <https://github.com/cambialens/lens-api-doc/issues>
 [Bool Query]: <https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html>
 [Term query]: <https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-term-query.html>
 [Match query]: <https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-query.html>

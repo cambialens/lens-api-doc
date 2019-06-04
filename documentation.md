@@ -1,32 +1,16 @@
 ---
 layout: page
-title: Documentation
+title: Reference
 permalink: /api/
 ---
 
-1. [API Access](#api-access)
-2. [API Endpoints](#api-endpoints)
-3. [Requests](#requests)
-4. [Query](#query)
-5. [Pagination](#pagination)
-6. [Sort](#sort)
-7. [Projection](#projection)
-8. [Filter](#filtering)
-10. [Fields](#fields)
-11. [HTTP Responses](#http-responses)
-
-### API Access
-Lens uses token based API authentication. To generate your access token, please contact [Lens Support]. You should provide access token from Request Header to access the APIs.
->Example: ```Authorization: Bearer your-access-token```
-
-### API Endpoints
-As of current version, Lens offers following API endpoints:
-
-**Search API Endpoint:**
-`https://beta.api.lens.org/scholarly/search`
-
-**Swagger Documentation:**
-`https://beta.api.lens.org/swagger-ui.html`
+- [Requests](#requests)
+- [Query](#query)
+- [Pagination](#pagination)
+- [Sort](#sort)
+- [Projection](#projection)
+- [Filter](#filtering)
+- [Fields](#fields)
 
 ### Requests
 The request payload should comply with following `json` schema.
@@ -369,15 +353,6 @@ url | String | URL String |  false |  `http://cds.cern.ch/record/2291692`
 type | String | The type/s of external identifiers for the scholarly work | true | `doi`, `pmid`, `magid`
 value | String | The external identifier(s) for a scholarly work | true | `10.1016/s0031-3955(16)34861-1`
 
-### HTTP Responses
-
-Response |  Description  |  
- ------- | -------|
-404 - Not Found | Incorrect Resource URL / Empty Result for supplied queries / Expired [scroll_id](#pagination)
-400 - Bad Request | Malformed request or incorrect fields/values provided
-200 - Ok | Valid response from the server
-401 - Unauthorized | Authentication credentials might be incorrect or missing
-415 - Unsupported Media Type | Request body is not Json or `Content Type` is not `application/json`
 
 [//]: # (Reference Links)
 [Lens]: <http://lens.org>

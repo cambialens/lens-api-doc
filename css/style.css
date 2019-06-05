@@ -414,7 +414,8 @@ table td {
 table th {
     background-color: #f0f0f0;
     border: 1px solid #dedede;
-    border-bottom-color: #c9c9c9
+    border-bottom-color: #c9c9c9;
+    font-weight: 600;
 }
 
 table td {
@@ -702,6 +703,12 @@ footer.footer {
 .post-content h4 {
     font-size: 20px;
     font-weight: 500;
+}
+
+.post-content h5 {
+    font-size: 16px;
+    padding-top: 10px;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 800px) {

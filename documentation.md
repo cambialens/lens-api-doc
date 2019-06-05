@@ -4,6 +4,7 @@ title: Reference
 permalink: /api/
 ---
 
+{:.table-contents}
 - [Requests](#requests)
 - [Query](#query)
 - [Pagination](#pagination)

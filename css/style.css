@@ -658,6 +658,20 @@ footer.footer {
     }
 }
 
+.table-contents {
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.table-contents li {
+    list-style-type: none;
+    display: inline-block;
+    border: 1px solid #dadada;
+    padding: 3px 8px;
+    background: #fafafa;
+    border-radius: 4px;
+}
+
 .post-content {
     margin-bottom: 30px
 }

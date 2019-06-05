@@ -223,8 +223,8 @@ figure {
 body {
     font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-family: "Source Sans Pro", sans-serif;
-    color: #111;
-    background-color: #fdfdfd;
+    color: #000;
+    background-color: #fff;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -252,6 +252,10 @@ dl,
 figure,
 .highlight {
     margin-bottom: 15px
+}
+
+strong {
+    font-weight: 600;
 }
 
 main {
@@ -283,24 +287,27 @@ li>ol {
 
 h1,
 h2,
-h3,
+h3{
+    font-weight: 300
+}
+
 h4,
 h5,
 h6 {
-    font-weight: 400
+    font-weight: 500;
 }
 
 a {
-    color: #2a7ae2;
+    color: #1a79c5;
     text-decoration: none
 }
 
 a:visited {
-    color: #1756a9
+    color: #004767
 }
 
 a:hover {
-    color: #111;
+    color: #22afed;
     text-decoration: underline
 }
 
@@ -313,12 +320,12 @@ a:hover {
 }
 
 blockquote {
-    color: #828282;
-    border-left: 4px solid #e8e8e8;
+    color: #666;
+    border-left: 4px solid #f1f1f1;
     padding-left: 15px;
     font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic
+    letter-spacing: 0px;
+    font-style: normal;
 }
 
 blockquote>:last-child {
@@ -328,7 +335,7 @@ blockquote>:last-child {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid #e8e8e8;
+    border: 0px solid #e8e8e8;
     border-radius: 3px;
     background-color: #eef
 }
@@ -423,9 +430,12 @@ table td {
 
 .site-header .wrapper,
 .page-wrapper {
-    max-width: 100%;
+    width: 100%;
+    max-width: 1000px;
     padding-left: 20px;
     padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .page-wrapper {
@@ -489,11 +499,11 @@ table td {
 @media screen and (max-width: 600px) {
     .site-nav {
         position: absolute;
-        top: 9px;
+        top: 4px;
         right: 15px;
-        background-color: #fdfdfd;
-        border: 1px solid #e8e8e8;
-        border-radius: 5px;
+        background-color: #182735;
+        border: 1px solid #2f4050;
+        border-radius: 4px;
         text-align: right
     }
     .site-nav label[for="nav-trigger"] {
@@ -514,7 +524,7 @@ table td {
         text-align: center
     }
     .site-nav .menu-icon>svg {
-        fill: #424242
+        fill: #fff
     }
     .site-nav input ~ .trigger {
         clear: both;
@@ -535,8 +545,8 @@ table td {
 }
 
 footer.footer {
-    border-top: 1px solid #e8e8e8;
-    padding: 30px 0;
+    border-top: 0px solid #e8e8e8;
+    padding: 0 0 30px;
     text-align: center;
     font-size: .85rem;
 }
@@ -637,8 +647,9 @@ footer.footer {
 
 .post-title {
     font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1
+    line-height: 1;
+    letter-spacing: 0;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 800px) {
@@ -652,7 +663,8 @@ footer.footer {
 }
 
 .post-content h2 {
-    font-size: 32px
+    font-size: 32px;
+    border-bottom: 1px solid #dadada;
 }
 
 @media screen and (max-width: 800px) {
@@ -662,7 +674,9 @@ footer.footer {
 }
 
 .post-content h3 {
-    font-size: 26px
+    font-size: 30px;
+    border-bottom: 1px solid #dadada;
+    padding-top: 10px;
 }
 
 @media screen and (max-width: 800px) {
@@ -672,7 +686,8 @@ footer.footer {
 }
 
 .post-content h4 {
-    font-size: 20px
+    font-size: 20px;
+    font-weight: 500;
 }
 
 @media screen and (max-width: 800px) {

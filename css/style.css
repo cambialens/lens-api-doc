@@ -197,3 +197,38 @@ input[type="submit"] {
   margin: 30px 0 0 0;
   font-size: 20px;
 }
+
+
+/* Header */
+.site-header {
+    background: #182735;
+    color: #fff;
+}
+
+.site-header .wrapper {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.site-header .site-nav .site-title svg{
+    width: 116px;
+    height: 43px;
+}
+
+.site-header .site-nav svg .st0 {
+    fill: #fff;
+}
+
+.site-header .site-nav svg .st1 {
+    fill: #22afed;
+}
+
+.site-header .site-nav .page-link{
+    color: #fff;
+}
+
+.site-header .site-nav .page-link:hover{
+    color: #22afed;
+    text-decoration: none;
+}

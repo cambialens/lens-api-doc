@@ -4,6 +4,14 @@ title: Getting Started
 permalink: /getting-started/
 ---
 
+{:.table-contents}
+- [Prerequisites](#prerequisites)
+- [API Endpoints](#api-endpoints)
+- [API Access](#api-access)
+- [Rate Limiting](#rate-limiting)
+- [HTTP Responses](#http-responses)
+
+
 ### Prerequisites
 
 You need to have the following before you can start using Lens APIs:

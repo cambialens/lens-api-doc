@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Examples
-permalink: /Examples/
+permalink: /examples/
 ---
 ##### Find 20 records from offset 10 that match provided query
 ```json

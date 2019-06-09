@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Examples
-permalink: /examples/
+permalink: /examples.html
 ---
 ##### Find 20 records from offset 10 that match provided query
 ```json
@@ -17,7 +17,7 @@ permalink: /examples/
 {
     "query": {
     	"match":{
-    		"external_ids.value": "10.1109/ee.1934.6540358"
+    		"external_id": "10.1109/ee.1934.6540358"
     	}
     },
     "include":["title","patent_citations"]
@@ -28,7 +28,7 @@ permalink: /examples/
 {
 	"query": {
 		"match": {
-			"patent_citations.lens_id": "115-570-536-815-377"
+			"patent_citation.lens_id": "115-570-536-815-377"
 		}
 	}
 }
@@ -40,7 +40,7 @@ permalink: /examples/
 {
 	"query": {
 		"match_phrase": {
-			"authors.affiliations.name": "Harvard University"
+			"author.affiliation.name": "Harvard University"
 		}
 	},
 	"sort": [{
@@ -57,7 +57,7 @@ permalink: /examples/
 		"bool": {
 			"must": {
 				"match_phrase": {
-					"authors.affiliations.name": "Harvard University"
+					"author.affiliation.name": "Harvard University"
 				}
 			},
 			"filter": {
@@ -94,7 +94,7 @@ permalink: /examples/
 {
     "query": {
     	"match":{
-    		"authors.first_name": "Sebastien"
+    		"author.first_name": "Sebastien"
     	}
     },
     "size": 10
@@ -107,8 +107,8 @@ permalink: /examples/
     "query": {
         "bool":{
              "must":[
-                 {"term":{"external_ids.value": "6359161"}},
-                 {"term":{"external_ids.type": "pmid"}}
+                 {"term":{"external_id": "6359161"}},
+                 {"term":{"external_id_type": "pmid"}}
               ]
          }
     },
@@ -120,7 +120,7 @@ OR using String Based Query
 
 ```json
 {
-    "query": "external_ids.value: 6359161 AND external_ids.type: pmid",
+    "query": "external_ids: 6359161 AND external_id_type: pmid",
     "include":["patent_citation_count", "external_ids"]
 }
 ```

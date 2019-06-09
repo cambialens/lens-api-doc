@@ -1,13 +1,14 @@
 ---
 layout: page
 title: Code Samples
-permalink: /samples/
+permalink: /samples.html
 ---
 
 {:.table-contents}
 - [Python](#python)
 - [Java](#java)
 - [NodeJs](#nodejs)
+- [cURL](#curl)
 
 ## Python
 ```python
@@ -16,7 +17,7 @@ url = 'https://api.lens.org/scholarly/search'
 data = '''{
      "query": {
            "match_phrase":{
-                "authors.affiliations.name": "Harvard University"
+                "author.affiliation.name": "Harvard University"
            }
      },
      "size": 1,
@@ -53,7 +54,7 @@ public class JavaSample {
             conn.setRequestProperty("Content-Type", "application/json");
             conn.setRequestProperty("Authorization", "Bearer your-access-token");
 
-            String request = "{\"query\":{\"match_phrase\":{\"authors.affiliations.name\":\"Harvard University\"}},\"size\":10,\"sort\":[{\"year_published\":\"desc\"}]}";
+            String request = "{\"query\":{\"match_phrase\":{\"author.affiliation.name\":\"Harvard University\"}},\"size\":10,\"sort\":[{\"year_published\":\"desc\"}]}";
             conn.getOutputStream().write(request.getBytes(StandardCharsets.UTF_8));
 
             if (conn.getResponseCode() != 200) {
@@ -82,7 +83,7 @@ var token  = 'your-access-token';
 var query = {
      "query": {
            "match_phrase":{
-                "authors.affiliations.name": "Harvard University"
+                "author.affiliation.name": "Harvard University"
            }
      },
      "size": 10,
@@ -109,4 +110,32 @@ request.post(options, function(err, res, data) {
 
      console.log(data);
 });
+```
+
+## cURL
+```bash
+curl -X POST \
+  https://api.lens.org/scholarly/search \
+  -H 'Authorization: Bearer your-access-token' \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"query": {
+		"bool": {
+			"must": {
+				"match_phrase": {
+					"author.affiliation.name": "Harvard University"
+				}
+			},
+			"filter": {
+				"range": {
+					"year_published": {
+						"gte": "1999",
+						"lte": "2000"
+					}
+				}
+			}
+		}
+	},
+	"size": 50
+}'
 ```

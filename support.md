@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Support
-permalink: /support/
+permalink: /support.html
 ---
 
 - To report any bugs, issues and usability of APIs you can [Create Issue].

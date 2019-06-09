@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Getting Started
-permalink: /getting-started/
+permalink: /getting-started.html
 ---
 
 {:.table-contents}
@@ -26,10 +26,10 @@ You need to have the following before you can start using Lens APIs:
 As of current version, Lens offers following API endpoints:
 
 **Search API Endpoint:**
-`https://beta.api.lens.org/scholarly/search`
+`https://api.lens.org/scholarly/search`
 
 **Swagger Documentation:**
-`https://beta.api.lens.org/swagger-ui.html`
+`https://api.lens.org/swagger-ui.html`
 
 ### API Access
 

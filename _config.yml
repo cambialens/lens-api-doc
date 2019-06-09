@@ -16,7 +16,7 @@
 title: Lens API
 description: >- # this means to ignore newlines until "baseurl:"
   Now more than ever privacy, impact, openness and cost matter.
-baseurl: "/docs" # the subpath of your site, e.g. /blog
+baseurl: "/lens-api-doc" # the subpath of your site, e.g. /blog
 url: "https://cambialens.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings

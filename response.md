@@ -163,315 +163,515 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
     "total": 1,
     "data": [
         {
-            "patent_citation_count": 0,
-            "lens_id": "057-666-896-534-696",
-            "created": "2018-05-15T00:09:53.738000+00:00",
+            "patent_citations": [
+                {
+                    "lens_id": "025-968-418-263-556"
+                }
+            ],
+            "patent_citations_count": 1,
+            "lens_id": "016-246-580-034-670",
+            "created": "2018-05-12T12:35:22.055000+00:00",
             "open_access": {
-                "license": null,
-                "colour": "green"
+                "license": "cc-by-nc-sa",
+                "colour": "hybrid"
             },
             "publication_type": "journal article",
+            "publication_supplementary_type": [
+                "clinical trial, phase iii",
+                "multicenter study",
+                "randomized controlled trial",
+                "research support, n.i.h., extramural"
+            ],
             "authors": [
                 {
-                    "first_name": "Luis",
-                    "last_name": "Araujo",
+                    "first_name": "S.",
+                    "last_name": "Engebretson",
+                    "initials": "S",
+                    "affiliations": [
+                        {
+                            "name": "aNew York University, College of Dentistry, New York, New York 10010, United States",
+                            "grid": {
+                                "id": "grid.21100.32",
+                                "addresses": [
+                                    {
+                                        "country_code": "CA"
+                                    }
+                                ]
+                            },
+                            "institution": "York University"
+                        }
+                    ]
+                },
+                {
+                    "first_name": "Marie C.",
+                    "last_name": "Gelato",
+                    "initials": "MC",
+                    "affiliations": [
+                        {
+                            "name": "bStony Brook Medicine, Stony Brook, New York 11794, United States",
+                            "grid": {
+                                "id": "grid.36425.36",
+                                "addresses": [
+                                    {
+                                        "country_code": "US"
+                                    }
+                                ]
+                            },
+                            "institution": "Stony Brook University"
+                        }
+                    ]
+                },
+                {
+                    "first_name": "Leslie",
+                    "last_name": "Hyman",
                     "initials": "L",
                     "affiliations": [
                         {
-                            "name": "Michigan State University, United States of America",
+                            "name": "bStony Brook Medicine, Stony Brook, New York 11794, United States",
                             "grid": {
-                                "id": "grid.17088.36",
+                                "id": "grid.36425.36",
                                 "addresses": [
                                     {
                                         "country_code": "US"
                                     }
                                 ]
                             },
-                            "institution": "Michigan State University"
+                            "institution": "Stony Brook University"
                         }
                     ]
                 },
                 {
-                    "first_name": "Qingqing",
-                    "last_name": "Cao",
-                    "initials": "Q",
+                    "first_name": "Bryan S.",
+                    "last_name": "Michalowicz",
+                    "initials": "BS",
                     "affiliations": [
                         {
-                            "name": "Michigan State University, United States of America",
+                            "institution": "cUniversity of Minnesota, School of Dentistry, Minneapolis, Minnesota 55455, United States"
+                        }
+                    ]
+                },
+                {
+                    "first_name": "Elinor",
+                    "last_name": "Schoenfeld",
+                    "initials": "E",
+                    "affiliations": [
+                        {
+                            "name": "bStony Brook Medicine, Stony Brook, New York 11794, United States",
                             "grid": {
-                                "id": "grid.17088.36",
+                                "id": "grid.36425.36",
                                 "addresses": [
                                     {
                                         "country_code": "US"
                                     }
                                 ]
                             },
-                            "institution": "Michigan State University"
-                        }
-                    ]
-                },
-                {
-                    "first_name": "Raoul",
-                    "last_name": "Minetti",
-                    "initials": "R",
-                    "affiliations": [
-                        {
-                            "name": "Michigan State University, United States of America",
-                            "grid": {
-                                "id": "grid.17088.36",
-                                "addresses": [
-                                    {
-                                        "country_code": "US"
-                                    }
-                                ]
-                            },
-                            "institution": "Michigan State University"
-                        }
-                    ]
-                },
-                {
-                    "first_name": "Pierluigi",
-                    "last_name": "Murro",
-                    "initials": "P",
-                    "affiliations": [
-                        {
-                            "name": "Luiss University, Italy",
-                            "institution": "Libera Università Internazionale degli Studi Sociali Guido Carli"
+                            "institution": "Stony Brook University"
                         }
                     ]
                 }
             ],
-            "title": "Credit Crunches, Asset Prices and Technological Change",
-            "volume": "32",
+            "title": "Design features of the Diabetes and Periodontal Therapy Trial (DPTT): A multicenter randomized single-masked clinical trial testing the effect of nonsurgical periodontal therapy on glycosylated hemoglobin (HbA1c) levels in subjects with type 2 diabetes and chronic periodontitis ☆☆",
+            "volume": "36",
+            "issue": "2",
             "languages": [
                 "en"
             ],
             "references": [
                 {
-                    "lens_id": "001-928-280-929-804"
+                    "lens_id": "000-902-678-418-666"
                 },
                 {
-                    "lens_id": "004-212-611-699-202"
+                    "lens_id": "009-477-839-313-148"
                 },
                 {
-                    "lens_id": "005-579-458-898-498"
+                    "lens_id": "009-666-259-811-864"
                 },
                 {
-                    "lens_id": "025-101-173-604-591"
+                    "lens_id": "010-191-520-208-428"
                 },
                 {
-                    "lens_id": "028-930-297-640-217"
+                    "lens_id": "010-950-058-400-675"
                 },
                 {
-                    "lens_id": "030-830-714-012-814"
+                    "lens_id": "012-982-306-980-242"
                 },
                 {
-                    "lens_id": "033-145-572-757-637"
+                    "lens_id": "013-265-576-671-217"
                 },
                 {
-                    "lens_id": "035-519-217-675-203"
+                    "lens_id": "014-287-574-456-744"
                 },
                 {
-                    "lens_id": "037-214-630-787-407"
+                    "lens_id": "015-129-896-126-919"
                 },
                 {
-                    "lens_id": "043-987-472-903-151"
+                    "lens_id": "016-945-336-786-312"
                 },
                 {
-                    "lens_id": "045-382-417-479-598"
+                    "lens_id": "019-057-352-639-973"
                 },
                 {
-                    "lens_id": "048-911-230-430-305"
+                    "lens_id": "019-384-628-907-990"
                 },
                 {
-                    "lens_id": "050-136-344-463-858"
+                    "lens_id": "020-346-139-119-115"
                 },
                 {
-                    "lens_id": "052-024-557-155-791"
+                    "lens_id": "022-506-837-457-704"
                 },
                 {
-                    "lens_id": "052-027-687-931-983"
+                    "lens_id": "025-826-220-021-523"
                 },
                 {
-                    "lens_id": "053-833-475-306-927"
+                    "lens_id": "025-826-423-380-649"
                 },
                 {
-                    "lens_id": "054-260-384-126-569"
+                    "lens_id": "032-149-436-621-702"
                 },
                 {
-                    "lens_id": "059-678-079-754-075"
+                    "lens_id": "032-255-849-587-599"
                 },
                 {
-                    "lens_id": "063-258-687-565-263"
+                    "lens_id": "032-968-019-888-86X"
                 },
                 {
-                    "lens_id": "063-520-145-129-134"
+                    "lens_id": "034-494-676-639-653"
                 },
                 {
-                    "lens_id": "064-427-081-110-273"
+                    "lens_id": "035-069-835-132-673"
                 },
                 {
-                    "lens_id": "075-157-236-653-865"
+                    "lens_id": "035-254-547-454-998"
                 },
                 {
-                    "lens_id": "078-007-020-651-428"
+                    "lens_id": "035-391-010-028-826"
                 },
                 {
-                    "lens_id": "079-534-575-836-38X"
+                    "lens_id": "036-613-302-127-532"
                 },
                 {
-                    "lens_id": "084-673-955-657-405"
+                    "lens_id": "039-120-288-830-996"
                 },
                 {
-                    "lens_id": "095-221-615-702-697"
+                    "lens_id": "039-812-193-186-154"
                 },
                 {
-                    "lens_id": "097-640-096-741-30X"
+                    "lens_id": "045-391-408-939-534"
                 },
                 {
-                    "lens_id": "102-602-874-145-996"
+                    "lens_id": "045-579-901-866-185"
                 },
                 {
-                    "lens_id": "106-619-997-653-532"
+                    "lens_id": "047-021-495-077-374"
                 },
                 {
-                    "lens_id": "110-125-963-715-074"
+                    "lens_id": "047-426-047-421-683"
                 },
                 {
-                    "lens_id": "111-537-875-984-351"
+                    "lens_id": "053-788-592-360-316"
                 },
                 {
-                    "lens_id": "111-662-072-400-984"
+                    "lens_id": "057-541-052-735-43X"
                 },
                 {
-                    "lens_id": "113-015-341-294-246"
+                    "lens_id": "064-203-426-129-672"
                 },
                 {
-                    "lens_id": "119-758-023-750-272"
+                    "lens_id": "064-364-121-353-339"
                 },
                 {
-                    "lens_id": "121-681-440-045-792"
+                    "lens_id": "066-005-342-898-218"
                 },
                 {
-                    "lens_id": "123-516-004-187-587"
+                    "lens_id": "067-585-773-724-13X"
                 },
                 {
-                    "lens_id": "126-873-825-670-044"
+                    "lens_id": "072-191-146-155-862"
                 },
                 {
-                    "lens_id": "133-316-086-552-635"
+                    "lens_id": "072-822-443-374-189"
                 },
                 {
-                    "lens_id": "142-182-572-724-856"
+                    "lens_id": "077-466-318-602-799"
                 },
                 {
-                    "lens_id": "149-149-926-117-94X"
+                    "lens_id": "079-019-130-486-78X"
                 },
                 {
-                    "lens_id": "149-406-626-016-05X"
+                    "lens_id": "082-444-465-200-590"
                 },
                 {
-                    "lens_id": "156-169-533-070-935"
+                    "lens_id": "085-670-698-198-828"
                 },
                 {
-                    "lens_id": "160-240-870-264-881"
+                    "lens_id": "087-880-348-023-057"
                 },
                 {
-                    "lens_id": "163-931-861-739-824"
+                    "lens_id": "097-827-472-332-949"
                 },
                 {
-                    "lens_id": "171-047-879-244-857"
+                    "lens_id": "099-608-242-925-709"
                 },
                 {
-                    "lens_id": "176-855-425-991-329"
+                    "lens_id": "105-575-000-819-839"
                 },
                 {
-                    "lens_id": "185-169-345-522-588"
+                    "lens_id": "107-854-826-094-226"
                 },
                 {
-                    "lens_id": "193-307-619-919-244"
+                    "lens_id": "135-663-758-084-002"
                 },
                 {
-                    "lens_id": "196-918-085-414-226"
+                    "lens_id": "152-697-260-272-147"
+                },
+                {
+                    "lens_id": "153-559-208-836-807"
+                },
+                {
+                    "lens_id": "155-740-379-756-202"
+                },
+                {
+                    "lens_id": "168-887-895-981-383"
+                },
+                {
+                    "lens_id": "168-977-715-566-705"
+                },
+                {
+                    "lens_id": "169-526-631-599-773"
+                },
+                {
+                    "lens_id": "177-200-440-164-742"
+                },
+                {
+                    "lens_id": "191-839-173-722-782"
+                },
+                {
+                    "lens_id": "198-731-392-080-45X"
+                }
+            ],
+            "keywords": [
+                "Diabetes mellitus",
+                "Glycosylated hemoglobin",
+                "HbA1c",
+                "Periodontal disease",
+                "Periodontitis",
+                "Type 2"
+            ],
+            "mesh_terms": [
+                {
+                    "mesh_heading": "Blood Glucose",
+                    "qualifier_name": "analysis",
+                    "mesh_id": "D001786",
+                    "qualifier_id": "Q000032"
+                },
+                {
+                    "mesh_heading": "Clinical Protocols",
+                    "mesh_id": "D002985"
+                },
+                {
+                    "mesh_heading": "Diabetes Mellitus, Type 2",
+                    "qualifier_name": "blood",
+                    "mesh_id": "D003924",
+                    "qualifier_id": "Q000097"
+                },
+                {
+                    "mesh_heading": "Glycated Hemoglobin A",
+                    "qualifier_name": "analysis",
+                    "mesh_id": "D006442",
+                    "qualifier_id": "Q000032"
+                },
+                {
+                    "mesh_heading": "Humans",
+                    "mesh_id": "D006801"
+                },
+                {
+                    "mesh_heading": "Mouthwashes",
+                    "qualifier_name": "therapeutic use",
+                    "mesh_id": "D009067",
+                    "qualifier_id": "Q000627"
+                },
+                {
+                    "mesh_heading": "Periodontitis",
+                    "qualifier_name": "blood",
+                    "mesh_id": "D010518",
+                    "qualifier_id": "Q000097"
+                },
+                {
+                    "mesh_heading": "Severity of Illness Index",
+                    "mesh_id": "D012720"
+                },
+                {
+                    "mesh_heading": "Single-Blind Method",
+                    "mesh_id": "D016037"
+                }
+            ],
+            "chemicals": [
+                {
+                    "substance_name": "Blood Glucose",
+                    "registry_number": "0",
+                    "mesh_id": "D001786"
+                },
+                {
+                    "substance_name": "Glycated Hemoglobin A",
+                    "registry_number": "0",
+                    "mesh_id": "D006442"
+                },
+                {
+                    "substance_name": "Mouthwashes",
+                    "registry_number": "0",
+                    "mesh_id": "D009067"
+                },
+                {
+                    "substance_name": "hemoglobin A1c protein, human",
+                    "registry_number": "0",
+                    "mesh_id": "C517652"
+                }
+            ],
+            "clinical_trials": [
+                {
+                    "id": "nct00997178",
+                    "registry": "10.18810/clinical-trials-gov"
                 }
             ],
             "fields_of_study": [
-                "Collateral management",
-                "Business",
-                "Credit risk",
-                "Credit crunch",
-                "Credit enhancement",
-                "Credit derivative",
-                "Restructuring",
-                "Credit history",
-                "Financial system",
-                "Credit valuation adjustment"
+                "Internal medicine",
+                "Randomized controlled trial",
+                "Physical therapy",
+                "Dentistry",
+                "Randomization",
+                "Type 2 diabetes",
+                "Chronic periodontitis",
+                "Scaling and root planing",
+                "Periodontitis",
+                "Type 2 Diabetes Mellitus",
+                "Clinical trial",
+                "Medicine"
+            ],
+            "funding": [
+                {
+                    "org": "NIDCR NIH HHS",
+                    "funding_id": "U01 DE018886",
+                    "country": "United States"
+                },
+                {
+                    "org": "NIDCR NIH HHS",
+                    "funding_id": "U01 DE018902",
+                    "country": "United States"
+                },
+                {
+                    "org": "NIDCR NIH HHS",
+                    "funding_id": "UO1 DE018902",
+                    "country": "United States"
+                }
             ],
             "source_urls": [
                 {
-                    "type": "html",
-                    "url": "https://econpapers.repec.org/RePEc:lui:casmef:1204"
+                    "url": "http://www.sciencedirect.com/science/article/pii/S1551714413001614"
+                },
+                {
+                    "type": "unknown",
+                    "url": "http://europepmc.org/abstract/MED/24080100"
+                },
+                {
+                    "type": "unknown",
+                    "url": "http://www.contemporaryclinicaltrials.com/article/S1551-7144(13)00161-4/abstract"
                 },
                 {
                     "type": "html",
-                    "url": "https://ideas.repec.org/a/red/issued/18-267.html"
+                    "url": "http://europepmc.org/articles/PMC3885354"
                 },
                 {
                     "type": "html",
-                    "url": "https://www.sciencedirect.com/science/article/pii/S1094202518302965"
+                    "url": "https://nyuscholars.nyu.edu/en/publications/design-features-of-the-diabetes-and-periodontal-therapy-trial-dpt"
+                },
+                {
+                    "type": "html",
+                    "url": "https://www.ncbi.nlm.nih.gov/pubmed/24080100"
+                },
+                {
+                    "type": "html",
+                    "url": "https://www.sciencedirect.com/science/article/pii/S1551714413001614"
                 },
                 {
                     "type": "pdf",
-                    "url": "http://www.eco.uc3m.es/temp/CreditCrunches.pdf"
+                    "url": "http://www.preserveyourteeth.com/forms/publications/Design_Features_DPTT_b_25.pdf"
                 },
                 {
-                    "type": "pdf",
-                    "url": "https://www.chicagofed.org/~/media/others/events/2011/money-banking-payments-finance/araujo-minetti-pdf.pdf"
+                    "type": "core_fulltext",
+                    "url": "https://core.ac.uk/download/pdf/82325678.pdf"
                 }
             ],
-            "abstract": "We investigate the effects of a credit crunch in an economy where firms can operate a mature technology or restructure their activity and adopt a new technology. We show that firms’ collateral and credit relationships ease firms’ access to credit and investment but can also inhibit firms’ restructuring. When this occurs, negative collateral or productivity shocks and the resulting drop in the price of collateral assets squeeze collateral-poor firms out of the credit market but foster the restructuring of collateral-rich firms. We characterize conditions under which such an increase in firms’ restructuring occurs within existing credit relationships or through their breakdown. The analysis reveals that the credit and asset market policies adopted during the recent credit crunch can promote investment but might also slow down a process of Shumpeterian restructuring in the credit market.",
-            "year_published": 2019,
-            "reference_count": 49,
-            "scholarly_citation_count": 1,
+            "abstract": "Abstract Background Evidence suggests that periodontitis is associated with prevalent and incident type 2 diabetes mellitus (T2DM), raising the question of whether periodontitis treatment may improve glycemic control in patients with T2DM. Meta-analyses of mostly small clinical trials suggest that periodontitis treatment results in a modest reduction in glycosylated hemoglobin (Hb) A1c. Purpose The purpose of the Diabetes and Periodontal Therapy Trial (DPTT) was to determine if periodontal treatment reduces HbA1c in patients with T2DM and periodontitis. Methods DPTT was a phase-III, single-masked, multi-center, randomized trial with a planned enrollment of 600 participants. Participants were randomly assigned to receive periodontal treatment immediately (Treatment Group) or after 6 months (Control Group). HbA1c values and clinical periodontal measures were determined at baseline and 3 and 6 months following randomization. Medication usage and dosing were assessed at each visit. Periodontal treatment consisted of scaling and root planing for a minimum of two 90-minute sessions, plus the use of an antibacterial mouth rinse for at least 32 days afterwards. The primary outcome was change in HbA1c from baseline to 6 months and the trial was powered to detect a between-group difference of 0.6%. Secondary outcomes included changes in periodontal clinical measures, fasting plasma glucose, the Homeostasis Model Assessment (HOMA2) and the need for rescue diabetes or periodontal therapy. Conclusion Dental and medical researchers collaborated to recruit, treat and monitor participants with two chronic diseases to determine if treatment of one condition affects the status of the other.",
+            "year_published": 2013,
+            "references_count": 57,
+            "scholarly_citations_count": 23,
             "external_ids": [
                 {
                     "type": "magid",
-                    "value": "mag1605916543"
+                    "value": "mag2032032163"
+                },
+                {
+                    "type": "pmid",
+                    "value": "24080100"
                 },
                 {
                     "type": "doi",
-                    "value": "10.1016/j.red.2019.02.001"
+                    "value": "10.1016/j.cct.2013.09.010"
                 }
             ],
-            "start_page": "153",
-            "end_page": "179",
+            "start_page": "515",
+            "end_page": "526",
             "source": {
-                "title": "Review of Economic Dynamics",
+                "title": "Contemporary Clinical Trials",
                 "type": "Journal",
-                "publisher": "Elsevier BV",
+                "publisher": "Elsevier Inc.",
                 "issn": [
                     {
-                        "type": "print",
-                        "value": "10942025"
+                        "type": "electronic",
+                        "value": "15592030"
                     },
                     {
-                        "type": "electronic",
-                        "value": "10966099"
+                        "type": "print",
+                        "value": "15517144"
                     }
                 ],
-                "country": "United States",
+                "country": "Netherlands",
                 "asjc_codes": [
-                    "2002"
+                    "2736",
+                    "2700"
                 ],
                 "asjc_subjects": [
-                    "Economics and Econometrics"
+                    "General Medicine",
+                    "Pharmacology (medical)"
                 ]
             },
             "scholarly_citations": [
-                "024-902-290-771-501"
+                "002-766-214-233-849",
+                "003-159-551-789-532",
+                "004-611-380-582-565",
+                "007-078-510-225-686",
+                "020-395-484-049-382",
+                "024-934-953-127-749",
+                "029-284-280-417-783",
+                "031-296-216-724-498",
+                "040-793-824-470-544",
+                "045-364-961-943-105",
+                "047-845-909-326-820",
+                "048-165-048-329-129",
+                "051-532-781-808-480",
+                "056-524-694-788-620",
+                "059-524-110-174-668",
+                "061-191-783-691-933",
+                "074-794-978-605-69X",
+                "077-837-872-838-547",
+                "078-397-628-071-620",
+                "082-627-563-150-664",
+                "082-926-428-633-92X",
+                "099-584-695-769-442",
+                "194-018-966-210-702"
             ],
-            "author_count": 4,
-            "date_published": "2019-04-01T00:00:00+00:00"
+            "author_count": 5,
+            "date_published": "2013-09-27T00:00:00+00:00"
         }
     ],
     "results": 1

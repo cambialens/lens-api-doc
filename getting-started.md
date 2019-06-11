@@ -36,15 +36,14 @@ As of current version, Lens offers following API endpoints:
 Lens uses token based API authentication. You should provide access token from Request Header to access the APIs.
 >Example: ```Authorization: Bearer your-access-token```
 
-> [Manage your subscription and Access Tokens]
+[Manage your subscription and Access Tokens]
 
 ### Rate Limiting
 
-To ensure our public API endpoints remain usable by everyone and to maintain the server's optimal availability, a rate limiting mechanism is being used to temporarily block any clients that reduce the server's performance.
+To ensure our public API endpoints remain usable by everyone and to maintain the server's optimal availability, a rate limiting mechanism is being used to temporarily block any clients that reduce the server's performance. The applied rate limits will be included in the `X-Rate-Limit-Remaining` and `X-Rate-Limit-Retry-After-Seconds` HTTP response headers.
 
-`X-Rate-Limit-Remaining`: Number of requests allowed in a minute
-
-`X-Rate-Limit-Retry-After-Seconds`: Time in seconds until next request can be performed
+- `X-Rate-Limit-Remaining`: Number of requests allowed in a minute
+- `X-Rate-Limit-Retry-After-Seconds`: Time in seconds until next request can be performed
 
 Once you go over the rate limit you will receive a `Too many requests` error message.
 

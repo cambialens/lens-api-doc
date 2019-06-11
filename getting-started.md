@@ -17,7 +17,7 @@ permalink: /getting-started.html
 You need to have the following before you can start using Lens APIs:
 
 1. Subscribed to our API service.
-2. Create Access Token from your user's setting page.
+2. Create Access Token from your user's profile page.
 3. Basic knowledge of API structure and JSON formatting.
 4. Any API Client (cURL, Postman, etc.)
 
@@ -40,9 +40,7 @@ Lens uses token based API authentication. You should provide access token from R
 
 ### Rate Limiting
 
-To ensure our public API endpoints are usable to everyone and maintain the server's availability
-to optimal, rate limiting mechanism is being used to temporarily block the clients who are hampering
-server's performance.
+To ensure our public API endpoints remain usable by everyone and to maintain the server's optimal availability, a rate limiting mechanism is being used to temporarily block any clients that reduce the server's performance.
 
 `X-Rate-Limit-Remaining`: Number of requests allowed in a minute
 

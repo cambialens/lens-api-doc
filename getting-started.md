@@ -23,17 +23,15 @@ You need to have the following before you can start using Lens APIs:
 
 ### API Endpoints
 
-As of current version, Lens offers following API endpoints:
+As of the current version, Lens offers the following API endpoints:
 
-**Search API Endpoint:**
-`https://api.lens.org/scholarly/search`
-
-**Swagger Documentation:**
-`https://api.lens.org/swagger-ui.html`
+- **Search API Endpoint:** `https://api.lens.org/scholarly/search`
+- **Swagger Documentation:** `https://api.lens.org/swagger-ui.html`
 
 ### API Access
 
-Lens uses token based API authentication. You should provide access token from Request Header to access the APIs.
+Your use of the API is subject to the Lens [Terms of Use]. Lens uses token-based API authentication, you can request access and [Manage your subscription and Access Tokens] from your Lens user profile. You need to provide your access token in the Request Header when accessing the APIs.
+
 >Example: ```Authorization: Bearer your-access-token```
 
 [Manage your subscription and Access Tokens]
@@ -60,3 +58,4 @@ Response |  Description  |
 50x	- Internal Server Error	| An error occurred on API server side.
 
 [Manage your subscription and Access Tokens]: <http://lens.org/lens/user/subscriptions>
+[Terms of Use]: <https://about.lens.org/policies/#termsuse>

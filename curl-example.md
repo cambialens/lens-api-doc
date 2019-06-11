@@ -60,34 +60,6 @@ curl -X POST \
 }'
 ```
 
-#### Get 50 works from an institution published between two years
-```
-curl -X POST \
-  http://localhost:8080/api/search \
-  -H 'Authorization: Bearer ABCD' \
-  -H 'Content-Type: application/json' \
-  -d '{
-	"query": {
-		"bool": {
-			"must": {
-				"match_phrase": {
-					"authors.affiliations.name": "Harvard University"
-				}
-			},
-			"filter": {
-				"range": {
-					"year_published": {
-						"gte": "1999",
-						"lte": "2000"
-					}
-				}
-			}
-		}
-	},
-	"size": 50
-}'
-```
-
 #### Get data having patent citations and affiliations
 ```
 curl -X POST \

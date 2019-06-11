@@ -176,12 +176,6 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
                 "colour": "hybrid"
             },
             "publication_type": "journal article",
-            "publication_supplementary_type": [
-                "clinical trial, phase iii",
-                "multicenter study",
-                "randomized controlled trial",
-                "research support, n.i.h., extramural"
-            ],
             "authors": [
                 {
                     "first_name": "S.",
@@ -270,7 +264,7 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
                     ]
                 }
             ],
-            "title": "Design features of the Diabetes and Periodontal Therapy Trial (DPTT): A multicenter randomized single-masked clinical trial testing the effect of nonsurgical periodontal therapy on glycosylated hemoglobin (HbA1c) levels in subjects with type 2 diabetes and chronic periodontitis ☆☆",
+            "title": "Design features of the Diabetes and Periodontal Therapy Trial (DPTT): A multicenter randomized single-masked clinical trial testing the effect of nonsurgical periodontal therapy on glycosylated hemoglobin (HbA1c) levels in subjects with type 2 diabetes and chronic periodontitis",
             "volume": "36",
             "issue": "2",
             "languages": [

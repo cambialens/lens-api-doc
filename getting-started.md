@@ -30,11 +30,10 @@ As of the current version, Lens offers the following API endpoints:
 
 ### API Access
 
-Your use of the API is subject to the Lens [Terms of Use]. Lens uses token-based API authentication, you can request access and [Manage your subscription and Access Tokens] from your Lens user profile. You need to provide your access token in the Request Header when accessing the APIs.
+Your use of the API is subject to the Lens [Terms of Use]. Lens uses token-based API authentication, you can request access and [manage your subscription and access tokens] from your Lens user profile. You need to provide your access token in the Request Header when accessing the APIs.
 
 >Example: ```Authorization: Bearer your-access-token```
 
-[Manage your subscription and Access Tokens]
 
 ### Rate Limiting
 
@@ -57,5 +56,5 @@ Response |  Description  |
 429 - Too Many Requests | You have exceeded the number of allowed calls
 50x	- Internal Server Error	| An error occurred on API server side.
 
-[Manage your subscription and Access Tokens]: <http://lens.org/lens/user/subscriptions>
+[manage your subscription and access tokens]: <http://lens.org/lens/user/subscriptions>
 [Terms of Use]: <https://about.lens.org/policies/#termsuse>

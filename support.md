@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Support
-permalink: /support/
+permalink: /support.html
 ---
 
 - To report any bugs, issues and usability of APIs you can [Create Issue].
@@ -16,7 +16,8 @@ permalink: /support/
 
 Version | Date Released | Availability
 ------- | ------| -------
-1.0 | 10/06/2019 | TBD
+1.0 | June 24, 2019 | TBD
+beta | April 29, 2019 | June 23, 2019
 
 [Create Issue]: <https://github.com/cambialens/lens-api-doc/issues>
 [Lens Support]: <https://www.lens.org/lens/feedback?returnTo=https:/>

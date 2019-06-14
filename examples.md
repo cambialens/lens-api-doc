@@ -108,31 +108,17 @@ permalink: /examples.html
         "bool": {
             "should": [{
                     "bool": {
-                        "must": [{
-                                "match": {
-                                    "author.first_name": "Craig"
-                                }
-                            },
-                            {
-                                "match": {
-                                    "author.last_name": "Venter"
-                                }
-                            }
+                        "must": [
+				{"match": {"author.first_name": "craig"}},
+                            	{"match": {"author.last_name": "venter"}}
                         ]
                     }
                 },
-                {
-                    "match_phrase": {
-                        "author.display_name": "Craig Venter"
-                    }
-                }
+                {"match_phrase": {"author.display_name": "craig venter"}}
             ]
-
         }
     },
-	"sort": [{
-		"year_published": "desc"
-	}],
+    "sort": [{"year_published": "desc"}],
     "size": 10
 }
 ```

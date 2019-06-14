@@ -12,6 +12,18 @@ permalink: /examples.html
 }
 ```
 
+##### Find multiple records by list of lens_id
+```json
+{
+    "query": {
+        "terms":{
+            "lens_id": ["017-767-306-508-482", "017-624-265-921-255"]
+        }
+    },
+    "include": ["lens_id", "patent_citations", "scholarly_citations", "references"]
+}
+```
+
 ##### Get title and patent citations for publication (doi)
 ```json
 {

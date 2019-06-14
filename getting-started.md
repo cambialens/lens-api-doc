@@ -51,7 +51,7 @@ Response |  Description  |
 200 - Ok | Valid response from the server
 400 - Bad Request | Malformed request or incorrect fields/values provided
 401 - Unauthorized | Authentication credentials might be incorrect or missing
-404 - Not Found | Incorrect Resource URL / Empty Result for supplied queries / Expired [scroll_id](#pagination)
+404 - Not Found | Incorrect Resource URL / Empty Result for supplied queries / Expired `scroll_id`
 415 - Unsupported Media Type | Request body is not json or `Content Type` is not `application/json`
 429 - Too Many Requests | You have exceeded the number of allowed calls
 50x	- Internal Server Error	| An error occurred on API server side.

@@ -135,9 +135,7 @@ Use parameter `from` to define the offset and `size` to specify number of record
 ```
 **Cursor Based Pagination:**
 
-You can specify records per page using `size` (default 1000) and context alive time `scroll` (default 1m). You will receive a `scroll_id` in response,  
-which should be passed via request body to access next set of results. Since the `scroll_id` tends to change every time after each successful requests,
-please use most recent scroll_id to access next page. This is not suited for real time user requests.
+You can specify records per page using `size` (default 20 and max 1000) and context alive time `scroll` (default 1 minute). You will receive a `scroll_id` in response, which should be passed via request body to access next set of results. Since the `scroll_id` tends to change every time after each successful requests, please use the most recent `scroll_id` to access next page. This is not suited for real time user requests.
 
 ```json
 {

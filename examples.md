@@ -109,12 +109,12 @@ permalink: /examples.html
             "should": [{
                     "bool": {
                         "must": [
-				{"match": {"author.first_name": "craig"}},
-                            	{"match": {"author.last_name": "venter"}}
+				{"match": {"author.first_name": "Craig"}},
+                            	{"match": {"author.last_name": "Venter"}}
                         ]
                     }
                 },
-                {"match_phrase": {"author.display_name": "craig venter"}}
+                {"match_phrase": {"author.display_name": "Craig Venter"}}
             ]
         }
     },

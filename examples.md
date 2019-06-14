@@ -100,14 +100,17 @@ permalink: /examples.html
 }
 ```
 
-##### Query by Author's Name
+##### Query by author Name
 
 ```json
 {
     "query": {
-    	"match":{
-    		"author.first_name": "Sebastien"
-    	}
+    	"bool":{
+    		"must":[
+    			{"match": {"author.first_name": "Craig"}},
+			{"match": {"author.last_name": "Venter"}}
+		]	
+	}
     },
     "size": 10
 }

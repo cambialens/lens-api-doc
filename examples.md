@@ -100,18 +100,39 @@ permalink: /examples.html
 }
 ```
 
-##### Query by author Name
+##### Query by author name
 
 ```json
 {
     "query": {
-    	"bool":{
-    		"must":[
-    			{"match": {"author.first_name": "Craig"}},
-			{"match": {"author.last_name": "Venter"}}
-		]	
-	}
+        "bool": {
+            "should": [{
+                    "bool": {
+                        "must": [{
+                                "match": {
+                                    "author.first_name": "Craig"
+                                }
+                            },
+                            {
+                                "match": {
+                                    "author.last_name": "Venter"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "match_phrase": {
+                        "author.display_name": "Craig Venter"
+                    }
+                }
+            ]
+
+        }
     },
+	"sort": [{
+		"year_published": "desc"
+	}],
     "size": 10
 }
 ```

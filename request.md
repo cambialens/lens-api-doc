@@ -37,8 +37,11 @@ Field | Type | Case Sensitive | Description
 **lens_id** | String | true | Unique lens identifier e.g. `100-004-910-081-14X`
 **patent_citation.lens_id** | String | true | ID of Referenced by patents
 **patent_citation_count** | Integer | false | Number of patent citations
-**external_id** | String | true | The external identifier(s) for a scholarly work
-**external_id_type** | String | true | External Identifier type (DOI, PubMed ID, PubMed Central ID, Microsoft Academic ID or CORE)
+**doi** | String | true | DOI Identifier
+**pmid** | String | true | PubMed ID Identifier
+**pmcid** | String | true | PubMed Central ID Identifier
+**magid** | String | true | Microsoft Academic ID
+**coreid** | String | true | DOI Identifier
 **created** | Date | false | Record created date e.g. `2016-08-01T00:00:00+00:00`
 **publication_type** | String | false | Publication Type e.g. `Conference Proceedings`
 **publication_supplementary_type** | String | false | Supplementary publication type e.g. `review`

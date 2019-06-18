@@ -15,8 +15,8 @@ permalink: /response.html
  **patent_citations_count** | Integer | Number of patent citations | `10`
  **lens_id** | String | Unique lens identifier | `100-004-910-081-14X`
  **created** | Date | Record created date | `2016-08-01T00:00:00+00:00`
- **publication_type** | String | Publication Type | `report`, `Conference Proceedings`
- **publication_supplementary_type** | Array of String | Supplementary publication type | `review`
+ **publication_type** | String | Publication Type | `journal article`
+ **publication_supplementary_type** | Array of String | Supplementary publication type | `["review"]`
  **authors** | Array of [Author](#author) | Authors| |
  **title** | String | Title of the scholarly work | `Malaria`
  **external_ids** | Array of [Id](#id) | The external identifier(s) for a scholarly work (DOI, PubMed ID, PubMed Central ID, Microsoft Academic ID or CORE) | |

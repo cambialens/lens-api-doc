@@ -45,12 +45,11 @@ Field | Type | Case Sensitive | Description
 **author.collective_name** | String |  true | Author Collective Name
 **author.first_name** | String | true| The author's first name e.g. `Alexander`
 **author.last_name** | String | true | The author's last name e.g. `Kupco`
-**author.initials** | Integer | true | Author Initials e.g. `A`
+**author.initials** | String | true | Author Initials e.g. `A`
 **author.display_name** | String | true | Author's full name e.g. `Alexander Kupco`
-**author.affiliation.institution** | String | true | The institution associated with the author affiliations. e.g. `Stony Brook University`
-**author.affiliation.name** | String | true | The author's affiliated institution and address  e.g. `Stony Brook Medicine, Stony Brook, New York 11794, United States`
-**author.affiliation.grid.id** | String | true | Affiliation grid id e.g. `grid.9018.0`
-**author.affiliation.grid.address.country_code** | String | true | Country Code e.g. `DE`
+**author.affiliation.name** | String | true | The institution associated with the author affiliations. e.g. `Stony Brook University`
+**author.affiliation.grid_id** | String | true | Affiliation grid id e.g. `grid.9018.0`
+**author.affiliation.country_code** | String | true | Country Code e.g. `DE`
 **title** | String | true | Title of the scholarly work e.g. `Malaria`
 **start_page** | String | false | Start page e.g. `893`
 **end_page** | String | false | End page  e.g. `916`

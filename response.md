@@ -58,7 +58,7 @@ lens_id | String | Unique lens identifier | `141-171-521-309-804`
 collective_name | String | Author Collective Name |
 first_name | String | The author's first name | `Alexander`
 last_name | String | The author's last name | `Kupco`
-initials | Integer | Author Initials | `A`
+initials | String | Author Initials | `A`
 full_name | String | Author's full name | `Alexander Kupco`
 affiliations | Array of [Affiliation](#affiliation) | The institution/affiliations associated with Author.
 
@@ -66,16 +66,9 @@ affiliations | Array of [Affiliation](#affiliation) | The institution/affiliatio
 
  Field | Type |  Description | Example
 ------- |:------| -------|---------
-institution | String | The institution associated with the author affiliations. | `Stony Brook University`
-name | String | The author's affiliated institution and address | `Stony Brook Medicine, Stony Brook, New York 11794, United States`
-grid | Array of [Grid](#grid) | Affiliation Grid | true |
-
-#### Grid
-
- Field | Type |  Description | Example
-------- |:------| -------|---------
-id | String | Affiliation grid id | `grid.9018.0`
-country_code | String | Country Code | `DE`
+name | String | The institution associated with the author affiliations. | `Stony Brook University`
+grid_id | String | Affiliation grid id | `grid.9018.0`
+country_code | String | Comma separated country codes | `DE`
 
 #### Reference
 

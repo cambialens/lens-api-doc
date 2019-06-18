@@ -165,507 +165,537 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
         {
             "patent_citations": [
                 {
-                    "lens_id": "025-968-418-263-556"
+                    "lens_id": "122-064-734-901-067"
                 }
             ],
             "patent_citations_count": 1,
-            "lens_id": "016-246-580-034-670",
-            "created": "2018-05-12T12:35:22.055000+00:00",
+            "lens_id": "086-713-276-176-892",
+            "created": "2018-05-12T02:39:28.395000+00:00",
             "open_access": {
-                "license": "cc-by-nc-sa",
+                "license": "cc-by-nc-nd",
                 "colour": "hybrid"
             },
             "publication_type": "journal article",
+            "publication_supplementary_type": [
+                "clinical trial, phase ii",
+                "multicenter study",
+                "randomized controlled trial",
+                "research support, non-u.s. gov't"
+            ],
             "authors": [
                 {
-                    "first_name": "S.",
-                    "last_name": "Engebretson",
-                    "initials": "S",
+                    "first_name": "Maha",
+                    "last_name": "Hussain",
+                    "initials": "M",
                     "affiliations": [
                         {
-                            "name": "aNew York University, College of Dentistry, New York, New York 10010, United States",
-                            "grid": {
-                                "id": "grid.21100.32",
-                                "addresses": [
-                                    {
-                                        "country_code": "CA"
-                                    }
-                                ]
-                            },
-                            "institution": "York University"
+                            "name": "University of Michigan",
+                            "grid_id": "grid.214458.e",
+                            "country_code": "US"
                         }
                     ]
                 },
                 {
-                    "first_name": "Marie C.",
-                    "last_name": "Gelato",
-                    "initials": "MC",
+                    "first_name": "Dana E.",
+                    "last_name": "Rathkopf",
+                    "initials": "DE",
                     "affiliations": [
                         {
-                            "name": "bStony Brook Medicine, Stony Brook, New York 11794, United States",
-                            "grid": {
-                                "id": "grid.36425.36",
-                                "addresses": [
-                                    {
-                                        "country_code": "US"
-                                    }
-                                ]
-                            },
-                            "institution": "Stony Brook University"
+                            "name": "Memorial Sloan Kettering Cancer Center",
+                            "grid_id": "grid.51462.34",
+                            "country_code": "US"
                         }
                     ]
                 },
                 {
-                    "first_name": "Leslie",
-                    "last_name": "Hyman",
+                    "first_name": "Glenn",
+                    "last_name": "Liu",
+                    "initials": "G",
+                    "affiliations": [
+                        {
+                            "name": "University of Wisconsin-Madison",
+                            "grid_id": "grid.14003.36",
+                            "country_code": "US"
+                        }
+                    ]
+                },
+                {
+                    "first_name": "Andrew J.",
+                    "last_name": "Armstrong",
+                    "initials": "AJ",
+                    "affiliations": [
+                        {
+                            "name": "Duke University",
+                            "grid_id": "grid.26009.3d",
+                            "country_code": "US"
+                        }
+                    ]
+                },
+                {
+                    "first_name": "Kevin",
+                    "last_name": "Kelly",
+                    "initials": "K",
+                    "affiliations": [
+                        {
+                            "name": "Thomas Jefferson University",
+                            "grid_id": "grid.265008.9",
+                            "country_code": "US"
+                        }
+                    ]
+                },
+                {
+                    "first_name": "Anna C.",
+                    "last_name": "Ferrari",
+                    "initials": "AC",
+                    "affiliations": [
+                        {
+                            "name": "New York University",
+                            "grid_id": "grid.137628.9",
+                            "country_code": "US"
+                        }
+                    ]
+                },
+                {
+                    "first_name": "John D.",
+                    "last_name": "Hainsworth",
+                    "initials": "JD",
+                    "affiliations": [
+                        {
+                            "name": "Sarah Cannon Research Institute",
+                            "grid_id": "grid.477834.b",
+                            "country_code": "GB"
+                        }
+                    ]
+                },
+                {
+                    "first_name": "Adarsh",
+                    "last_name": "Joshi",
+                    "initials": "A",
+                    "affiliations": [
+                        {
+                            "name": "Eli Lilly and Company",
+                            "grid_id": "grid.488258.b",
+                            "country_code": "IT"
+                        }
+                    ]
+                },
+                {
+                    "first_name": "Rebecca R.",
+                    "last_name": "Hozak",
+                    "initials": "RR",
+                    "affiliations": [
+                        {
+                            "name": "Eli Lilly and Company",
+                            "grid_id": "grid.488258.b",
+                            "country_code": "IT"
+                        }
+                    ]
+                },
+                {
+                    "first_name": "Ling",
+                    "last_name": "Yang",
                     "initials": "L",
                     "affiliations": [
                         {
-                            "name": "bStony Brook Medicine, Stony Brook, New York 11794, United States",
-                            "grid": {
-                                "id": "grid.36425.36",
-                                "addresses": [
-                                    {
-                                        "country_code": "US"
-                                    }
-                                ]
-                            },
-                            "institution": "Stony Brook University"
+                            "name": "Eli Lilly and Company",
+                            "grid_id": "grid.488258.b",
+                            "country_code": "IT"
                         }
                     ]
                 },
                 {
-                    "first_name": "Bryan S.",
-                    "last_name": "Michalowicz",
-                    "initials": "BS",
+                    "first_name": "Jonathan D.",
+                    "last_name": "Schwartz",
+                    "initials": "JD",
                     "affiliations": [
                         {
-                            "institution": "cUniversity of Minnesota, School of Dentistry, Minneapolis, Minnesota 55455, United States"
+                            "name": "Eli Lilly and Company",
+                            "grid_id": "grid.488258.b",
+                            "country_code": "IT"
                         }
                     ]
                 },
                 {
-                    "first_name": "Elinor",
-                    "last_name": "Schoenfeld",
-                    "initials": "E",
+                    "first_name": "Celestia S.",
+                    "last_name": "Higano",
+                    "initials": "CS",
                     "affiliations": [
                         {
-                            "name": "bStony Brook Medicine, Stony Brook, New York 11794, United States",
-                            "grid": {
-                                "id": "grid.36425.36",
-                                "addresses": [
-                                    {
-                                        "country_code": "US"
-                                    }
-                                ]
-                            },
-                            "institution": "Stony Brook University"
+                            "name": "University of Washington",
+                            "grid_id": "grid.34477.33",
+                            "country_code": "US"
                         }
                     ]
                 }
             ],
-            "title": "Design features of the Diabetes and Periodontal Therapy Trial (DPTT): A multicenter randomized single-masked clinical trial testing the effect of nonsurgical periodontal therapy on glycosylated hemoglobin (HbA1c) levels in subjects with type 2 diabetes and chronic periodontitis",
-            "volume": "36",
-            "issue": "2",
+            "title": "A randomised non-comparative phase II trial of cixutumumab (IMC-A12) or ramucirumab (IMC-1121B) plus mitoxantrone and prednisone in men with metastatic docetaxel-pretreated castration-resistant prostate cancer",
+            "volume": "51",
+            "issue": "13",
             "languages": [
                 "en"
             ],
             "references": [
                 {
-                    "lens_id": "000-902-678-418-666"
+                    "lens_id": "003-415-704-045-340"
                 },
                 {
-                    "lens_id": "009-477-839-313-148"
+                    "lens_id": "006-027-163-131-418"
                 },
                 {
-                    "lens_id": "009-666-259-811-864"
+                    "lens_id": "007-652-362-542-447"
                 },
                 {
-                    "lens_id": "010-191-520-208-428"
+                    "lens_id": "010-839-632-959-305"
                 },
                 {
-                    "lens_id": "010-950-058-400-675"
+                    "lens_id": "013-690-046-069-453"
                 },
                 {
-                    "lens_id": "012-982-306-980-242"
+                    "lens_id": "015-449-984-502-884"
                 },
                 {
-                    "lens_id": "013-265-576-671-217"
+                    "lens_id": "015-767-931-570-158"
                 },
                 {
-                    "lens_id": "014-287-574-456-744"
+                    "lens_id": "018-245-327-947-052"
                 },
                 {
-                    "lens_id": "015-129-896-126-919"
+                    "lens_id": "020-963-415-260-304"
                 },
                 {
-                    "lens_id": "016-945-336-786-312"
+                    "lens_id": "026-332-934-265-841"
                 },
                 {
-                    "lens_id": "019-057-352-639-973"
+                    "lens_id": "028-101-820-366-93X"
                 },
                 {
-                    "lens_id": "019-384-628-907-990"
+                    "lens_id": "032-523-762-689-478"
                 },
                 {
-                    "lens_id": "020-346-139-119-115"
+                    "lens_id": "037-117-740-052-570"
                 },
                 {
-                    "lens_id": "022-506-837-457-704"
+                    "lens_id": "038-557-040-762-884"
                 },
                 {
-                    "lens_id": "025-826-220-021-523"
+                    "lens_id": "040-239-601-782-040"
                 },
                 {
-                    "lens_id": "025-826-423-380-649"
+                    "lens_id": "042-246-996-698-043"
                 },
                 {
-                    "lens_id": "032-149-436-621-702"
+                    "lens_id": "043-024-349-674-734"
                 },
                 {
-                    "lens_id": "032-255-849-587-599"
+                    "lens_id": "043-201-312-439-671"
                 },
                 {
-                    "lens_id": "032-968-019-888-86X"
+                    "lens_id": "046-041-414-632-674"
                 },
                 {
-                    "lens_id": "034-494-676-639-653"
+                    "lens_id": "046-648-350-541-685"
                 },
                 {
-                    "lens_id": "035-069-835-132-673"
+                    "lens_id": "046-852-526-558-260"
                 },
                 {
-                    "lens_id": "035-254-547-454-998"
+                    "lens_id": "054-808-246-993-497"
                 },
                 {
-                    "lens_id": "035-391-010-028-826"
+                    "lens_id": "059-727-763-246-876"
                 },
                 {
-                    "lens_id": "036-613-302-127-532"
+                    "lens_id": "065-982-455-260-233"
                 },
                 {
-                    "lens_id": "039-120-288-830-996"
+                    "lens_id": "069-612-901-254-771"
                 },
                 {
-                    "lens_id": "039-812-193-186-154"
+                    "lens_id": "070-794-057-102-152"
                 },
                 {
-                    "lens_id": "045-391-408-939-534"
+                    "lens_id": "083-233-359-584-62X"
                 },
                 {
-                    "lens_id": "045-579-901-866-185"
+                    "lens_id": "087-375-055-670-659"
                 },
                 {
-                    "lens_id": "047-021-495-077-374"
+                    "lens_id": "087-458-139-690-01X"
                 },
                 {
-                    "lens_id": "047-426-047-421-683"
+                    "lens_id": "090-234-280-758-859"
                 },
                 {
-                    "lens_id": "053-788-592-360-316"
+                    "lens_id": "094-489-992-059-749"
                 },
                 {
-                    "lens_id": "057-541-052-735-43X"
+                    "lens_id": "095-400-716-937-253"
                 },
                 {
-                    "lens_id": "064-203-426-129-672"
+                    "lens_id": "096-654-301-744-608"
                 },
                 {
-                    "lens_id": "064-364-121-353-339"
+                    "lens_id": "101-625-667-760-940"
                 },
                 {
-                    "lens_id": "066-005-342-898-218"
+                    "lens_id": "113-073-836-369-700"
                 },
                 {
-                    "lens_id": "067-585-773-724-13X"
+                    "lens_id": "128-335-721-572-401"
                 },
                 {
-                    "lens_id": "072-191-146-155-862"
-                },
-                {
-                    "lens_id": "072-822-443-374-189"
-                },
-                {
-                    "lens_id": "077-466-318-602-799"
-                },
-                {
-                    "lens_id": "079-019-130-486-78X"
-                },
-                {
-                    "lens_id": "082-444-465-200-590"
-                },
-                {
-                    "lens_id": "085-670-698-198-828"
-                },
-                {
-                    "lens_id": "087-880-348-023-057"
-                },
-                {
-                    "lens_id": "097-827-472-332-949"
-                },
-                {
-                    "lens_id": "099-608-242-925-709"
-                },
-                {
-                    "lens_id": "105-575-000-819-839"
-                },
-                {
-                    "lens_id": "107-854-826-094-226"
-                },
-                {
-                    "lens_id": "135-663-758-084-002"
-                },
-                {
-                    "lens_id": "152-697-260-272-147"
-                },
-                {
-                    "lens_id": "153-559-208-836-807"
-                },
-                {
-                    "lens_id": "155-740-379-756-202"
-                },
-                {
-                    "lens_id": "168-887-895-981-383"
-                },
-                {
-                    "lens_id": "168-977-715-566-705"
-                },
-                {
-                    "lens_id": "169-526-631-599-773"
-                },
-                {
-                    "lens_id": "177-200-440-164-742"
-                },
-                {
-                    "lens_id": "191-839-173-722-782"
-                },
-                {
-                    "lens_id": "198-731-392-080-45X"
+                    "lens_id": "155-152-241-876-905"
                 }
             ],
             "keywords": [
-                "Diabetes mellitus",
-                "Glycosylated hemoglobin",
-                "HbA1c",
-                "Periodontal disease",
-                "Periodontitis",
-                "Type 2"
+                "Cixutumumab",
+                "Mitoxantrone",
+                "Prednisone",
+                "Prostate cancer",
+                "Ramucirumab"
             ],
             "mesh_terms": [
                 {
-                    "mesh_heading": "Blood Glucose",
-                    "qualifier_name": "analysis",
-                    "mesh_id": "D001786",
-                    "qualifier_id": "Q000032"
+                    "mesh_heading": "Adenocarcinoma",
+                    "qualifier_name": "drug therapy",
+                    "mesh_id": "D000230",
+                    "qualifier_id": "Q000188"
                 },
                 {
-                    "mesh_heading": "Clinical Protocols",
-                    "mesh_id": "D002985"
+                    "mesh_heading": "Adolescent",
+                    "mesh_id": "D000293"
                 },
                 {
-                    "mesh_heading": "Diabetes Mellitus, Type 2",
-                    "qualifier_name": "blood",
-                    "mesh_id": "D003924",
-                    "qualifier_id": "Q000097"
+                    "mesh_heading": "Adult",
+                    "mesh_id": "D000328"
                 },
                 {
-                    "mesh_heading": "Glycated Hemoglobin A",
-                    "qualifier_name": "analysis",
-                    "mesh_id": "D006442",
-                    "qualifier_id": "Q000032"
+                    "mesh_heading": "Aged",
+                    "mesh_id": "D000368"
+                },
+                {
+                    "mesh_heading": "Antibodies, Monoclonal",
+                    "qualifier_name": "administration & dosage",
+                    "mesh_id": "D000911",
+                    "qualifier_id": "Q000008"
+                },
+                {
+                    "mesh_heading": "Antineoplastic Combined Chemotherapy Protocols",
+                    "qualifier_name": "adverse effects",
+                    "mesh_id": "D000971",
+                    "qualifier_id": "Q000009"
+                },
+                {
+                    "mesh_heading": "Disease Progression",
+                    "mesh_id": "D018450"
+                },
+                {
+                    "mesh_heading": "Disease-Free Survival",
+                    "mesh_id": "D018572"
+                },
+                {
+                    "mesh_heading": "Docetaxel",
+                    "mesh_id": "D000077143"
                 },
                 {
                     "mesh_heading": "Humans",
                     "mesh_id": "D006801"
                 },
                 {
-                    "mesh_heading": "Mouthwashes",
+                    "mesh_heading": "Kaplan-Meier Estimate",
+                    "mesh_id": "D053208"
+                },
+                {
+                    "mesh_heading": "Male",
+                    "mesh_id": "D008297"
+                },
+                {
+                    "mesh_heading": "Middle Aged",
+                    "mesh_id": "D008875"
+                },
+                {
+                    "mesh_heading": "Mitoxantrone",
+                    "qualifier_name": "administration & dosage",
+                    "mesh_id": "D008942",
+                    "qualifier_id": "Q000008"
+                },
+                {
+                    "mesh_heading": "Prednisone",
+                    "qualifier_name": "administration & dosage",
+                    "mesh_id": "D011241",
+                    "qualifier_id": "Q000008"
+                },
+                {
+                    "mesh_heading": "Proportional Hazards Models",
+                    "mesh_id": "D016016"
+                },
+                {
+                    "mesh_heading": "Prostatic Neoplasms, Castration-Resistant",
+                    "qualifier_name": "drug therapy",
+                    "mesh_id": "D064129",
+                    "qualifier_id": "Q000188"
+                },
+                {
+                    "mesh_heading": "Taxoids",
                     "qualifier_name": "therapeutic use",
-                    "mesh_id": "D009067",
+                    "mesh_id": "D043823",
                     "qualifier_id": "Q000627"
                 },
                 {
-                    "mesh_heading": "Periodontitis",
-                    "qualifier_name": "blood",
-                    "mesh_id": "D010518",
-                    "qualifier_id": "Q000097"
+                    "mesh_heading": "Time Factors",
+                    "mesh_id": "D013997"
                 },
                 {
-                    "mesh_heading": "Severity of Illness Index",
-                    "mesh_id": "D012720"
+                    "mesh_heading": "Treatment Outcome",
+                    "mesh_id": "D016896"
                 },
                 {
-                    "mesh_heading": "Single-Blind Method",
-                    "mesh_id": "D016037"
+                    "mesh_heading": "United States",
+                    "mesh_id": "D014481"
+                },
+                {
+                    "mesh_heading": "Young Adult",
+                    "mesh_id": "D055815"
                 }
             ],
             "chemicals": [
                 {
-                    "substance_name": "Blood Glucose",
+                    "substance_name": "Antibodies, Monoclonal",
                     "registry_number": "0",
-                    "mesh_id": "D001786"
+                    "mesh_id": "D000911"
                 },
                 {
-                    "substance_name": "Glycated Hemoglobin A",
+                    "substance_name": "Taxoids",
                     "registry_number": "0",
-                    "mesh_id": "D006442"
+                    "mesh_id": "D043823"
                 },
                 {
-                    "substance_name": "Mouthwashes",
+                    "substance_name": "anti-IGF-1R antibody A12",
                     "registry_number": "0",
-                    "mesh_id": "D009067"
+                    "mesh_id": "C557414"
                 },
                 {
-                    "substance_name": "hemoglobin A1c protein, human",
-                    "registry_number": "0",
-                    "mesh_id": "C517652"
+                    "substance_name": "Docetaxel",
+                    "registry_number": "15H5577CQD",
+                    "mesh_id": "D000077143"
+                },
+                {
+                    "substance_name": "Mitoxantrone",
+                    "registry_number": "BZ114NVM5P",
+                    "mesh_id": "D008942"
+                },
+                {
+                    "substance_name": "ramucirumab",
+                    "registry_number": "D99YVK4L0X",
+                    "mesh_id": "C543333"
+                },
+                {
+                    "substance_name": "Prednisone",
+                    "registry_number": "VB0R961HZT",
+                    "mesh_id": "D011241"
                 }
             ],
             "clinical_trials": [
                 {
-                    "id": "nct00997178",
+                    "id": "nct00683475",
                     "registry": "10.18810/clinical-trials-gov"
                 }
             ],
             "fields_of_study": [
-                "Internal medicine",
-                "Randomized controlled trial",
-                "Physical therapy",
-                "Dentistry",
-                "Randomization",
-                "Type 2 diabetes",
-                "Chronic periodontitis",
-                "Scaling and root planing",
-                "Periodontitis",
-                "Type 2 Diabetes Mellitus",
-                "Clinical trial",
+                "M.2",
+                "Immunology",
+                "Cixutumumab",
+                "Prednisone",
+                "Ramucirumab",
+                "Prostate cancer",
+                "Mitoxantrone",
+                "Docetaxel",
+                "Regimen",
                 "Medicine"
             ],
             "funding": [
                 {
-                    "org": "NIDCR NIH HHS",
-                    "funding_id": "U01 DE018886",
-                    "country": "United States"
-                },
-                {
-                    "org": "NIDCR NIH HHS",
-                    "funding_id": "U01 DE018902",
-                    "country": "United States"
-                },
-                {
-                    "org": "NIDCR NIH HHS",
-                    "funding_id": "UO1 DE018902",
+                    "org": "NCI NIH HHS",
+                    "funding_id": "P30 CA008748",
                     "country": "United States"
                 }
             ],
             "source_urls": [
                 {
-                    "url": "http://www.sciencedirect.com/science/article/pii/S1551714413001614"
-                },
-                {
                     "type": "unknown",
-                    "url": "http://europepmc.org/abstract/MED/24080100"
-                },
-                {
-                    "type": "unknown",
-                    "url": "http://www.contemporaryclinicaltrials.com/article/S1551-7144(13)00161-4/abstract"
+                    "url": "http://www.ejcancer.com/article/S0959-8049(15)00450-5/pdf"
                 },
                 {
                     "type": "html",
-                    "url": "http://europepmc.org/articles/PMC3885354"
+                    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5024789/"
                 },
                 {
                     "type": "html",
-                    "url": "https://nyuscholars.nyu.edu/en/publications/design-features-of-the-diabetes-and-periodontal-therapy-trial-dpt"
+                    "url": "https://www.scholars.northwestern.edu/en/publications/a-randomised-non-comparative-phase-ii-trial-of-cixutumumab-imc-a1"
                 },
                 {
                     "type": "html",
-                    "url": "https://www.ncbi.nlm.nih.gov/pubmed/24080100"
-                },
-                {
-                    "type": "html",
-                    "url": "https://www.sciencedirect.com/science/article/pii/S1551714413001614"
-                },
-                {
-                    "type": "pdf",
-                    "url": "http://www.preserveyourteeth.com/forms/publications/Design_Features_DPTT_b_25.pdf"
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0959804915004505#!"
                 },
                 {
                     "type": "core_fulltext",
-                    "url": "https://core.ac.uk/download/pdf/82325678.pdf"
+                    "url": "https://core.ac.uk/download/pdf/82196673.pdf"
                 }
             ],
-            "abstract": "Abstract Background Evidence suggests that periodontitis is associated with prevalent and incident type 2 diabetes mellitus (T2DM), raising the question of whether periodontitis treatment may improve glycemic control in patients with T2DM. Meta-analyses of mostly small clinical trials suggest that periodontitis treatment results in a modest reduction in glycosylated hemoglobin (Hb) A1c. Purpose The purpose of the Diabetes and Periodontal Therapy Trial (DPTT) was to determine if periodontal treatment reduces HbA1c in patients with T2DM and periodontitis. Methods DPTT was a phase-III, single-masked, multi-center, randomized trial with a planned enrollment of 600 participants. Participants were randomly assigned to receive periodontal treatment immediately (Treatment Group) or after 6 months (Control Group). HbA1c values and clinical periodontal measures were determined at baseline and 3 and 6 months following randomization. Medication usage and dosing were assessed at each visit. Periodontal treatment consisted of scaling and root planing for a minimum of two 90-minute sessions, plus the use of an antibacterial mouth rinse for at least 32 days afterwards. The primary outcome was change in HbA1c from baseline to 6 months and the trial was powered to detect a between-group difference of 0.6%. Secondary outcomes included changes in periodontal clinical measures, fasting plasma glucose, the Homeostasis Model Assessment (HOMA2) and the need for rescue diabetes or periodontal therapy. Conclusion Dental and medical researchers collaborated to recruit, treat and monitor participants with two chronic diseases to determine if treatment of one condition affects the status of the other.",
-            "year_published": 2013,
-            "references_count": 57,
-            "scholarly_citations_count": 23,
+            "abstract": "Abstract Background Cixutumumab, a human monoclonal antibody (HuMAb), targets the insulin-like growth factor receptor. Ramucirumab is a recombinant HuMAb that binds to vascular endothelial growth factor receptor-2. A non-comparative randomised phase II study evaluated cixutumumab or ramucirumab plus mitoxantrone and prednisone (MP) in metastatic castration-resistant prostate cancer (mCRPC). Patients and methods Men with progressive mCRPC during or after docetaxel therapy received mitoxantrone 12 mg/m 2 on day 1 and prednisone 5 mg twice daily and were randomised 1:1 to receive either cixutumumab or ramucirumab 6 mg/kg intravenously weekly in a 21-day cycle. Primary end-point was composite progression-free survival (cPFS). Secondary end-points included safety, response, radiographic progression-free survival (PFS) and overall survival (OS). Sample size was based on a 50% increase in median cPFS from 2.6 (MP) to 3.9 months (either combination). Results 132 men were treated (66 per arm). Median cPFS was 4.1 months (95% confidence interval (CI), 2.2–5.6) for cixutumumab and 6.7 months (95% CI, 4.5–8.3) for ramucirumab. Median time to radiographic progression was 7.5 months for cixutumumab and 10.2 months for ramucirumab, with a median OS of 10.8 and 13.0 months, respectively. Fatigue was the most frequent adverse event (AE). Incidence of most non-haematologic grade 3–4 AEs was Conclusion Combinations of cixutumumab or ramucirumab plus MP were feasible and associated with moderate toxicities in docetaxel-pretreated men with mCRPC. Of the two regimens, the ramucirumab regimen is worthy of further testing based on the observed cPFS relative to the historical control.",
+            "year_published": 2015,
+            "references_count": 37,
+            "scholarly_citations_count": 10,
             "external_ids": [
                 {
                     "type": "magid",
-                    "value": "mag2032032163"
+                    "value": "mag2113210954"
                 },
                 {
                     "type": "pmid",
-                    "value": "24080100"
+                    "value": "26082390"
                 },
                 {
                     "type": "doi",
-                    "value": "10.1016/j.cct.2013.09.010"
+                    "value": "10.1016/j.ejca.2015.05.019"
                 }
             ],
-            "start_page": "515",
-            "end_page": "526",
+            "start_page": "1714",
+            "end_page": "1724",
             "source": {
-                "title": "Contemporary Clinical Trials",
+                "title": "European Journal of Cancer",
                 "type": "Journal",
-                "publisher": "Elsevier Inc.",
+                "publisher": "Elsevier BV",
                 "issn": [
                     {
-                        "type": "electronic",
-                        "value": "15592030"
-                    },
-                    {
                         "type": "print",
-                        "value": "15517144"
+                        "value": "09598049"
                     }
                 ],
-                "country": "Netherlands",
+                "country": "United Kingdom",
                 "asjc_codes": [
-                    "2736",
-                    "2700"
+                    "1306",
+                    "2730"
                 ],
                 "asjc_subjects": [
-                    "General Medicine",
-                    "Pharmacology (medical)"
+                    "Cancer Research",
+                    "Oncology"
                 ]
             },
             "scholarly_citations": [
-                "002-766-214-233-849",
-                "003-159-551-789-532",
-                "004-611-380-582-565",
-                "007-078-510-225-686",
-                "020-395-484-049-382",
-                "024-934-953-127-749",
-                "029-284-280-417-783",
-                "031-296-216-724-498",
-                "040-793-824-470-544",
-                "045-364-961-943-105",
-                "047-845-909-326-820",
-                "048-165-048-329-129",
-                "051-532-781-808-480",
-                "056-524-694-788-620",
-                "059-524-110-174-668",
-                "061-191-783-691-933",
-                "074-794-978-605-69X",
-                "077-837-872-838-547",
-                "078-397-628-071-620",
-                "082-627-563-150-664",
-                "082-926-428-633-92X",
-                "099-584-695-769-442",
-                "194-018-966-210-702"
+                "000-201-187-558-654",
+                "026-107-871-228-662",
+                "028-262-672-178-175",
+                "030-115-779-382-725",
+                "035-630-845-016-108",
+                "037-016-998-061-439",
+                "062-343-220-167-149",
+                "067-043-485-486-441",
+                "145-126-752-104-913",
+                "174-636-795-252-301"
             ],
-            "author_count": 5,
-            "date_published": "2013-09-27T00:00:00+00:00"
+            "author_count": 12,
+            "date_published": "2015-06-13T00:00:00+00:00"
         }
     ],
     "results": 1

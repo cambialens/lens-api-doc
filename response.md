@@ -12,7 +12,7 @@ permalink: /response.html
  Field | Type |  Description  | Example
 ------- |:------| :------- |---------
  **patent_citations** | Array of [Patent Citation](#patent-citation) | Referenced by patents |  |
- **patent_citation_count** | Integer | Number of patent citations | `10`
+ **patent_citations_count** | Integer | Number of patent citations | `10`
  **lens_id** | String | Unique lens identifier | `100-004-910-081-14X`
  **created** | Date | Record created date | `2016-08-01T00:00:00+00:00`
  **publication_type** | String | Publication Type | `report`, `Conference Proceedings`
@@ -37,8 +37,8 @@ permalink: /response.html
  **year_published** | Integer | Year of publication | `1986`
  **conference** | [Conference](#conference) | The conference instance or edition |
  **author_count** | Integer | Number of Authors | `4`
- **reference_count** | Integer | The number of works in the reference list of a scholarly work | `2`
- **scholarly_citation_count** | Integer | The number of scholarly works that cite this scholarly work | `3`
+ **references_count** | Integer | The number of works in the reference list of a scholarly work | `2`
+ **scholarly_citations_count** | Integer | The number of scholarly works that cite this scholarly work | `3`
  **open_access** | [Open Access](#open-access) |
  **source** | [Source](#source) | Source publication in which the scholarly work appears |
  **keywords** | Array of String | Keywords |

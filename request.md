@@ -37,6 +37,7 @@ Field | Type | Case Sensitive | Description
 **lens_id** | String | true | Unique lens identifier e.g. `100-004-910-081-14X`
 **patent_citation.lens_id** | String | true | ID of Referenced by patents
 **patent_citation_count** | Integer | false | Number of patent citations
+**external_id_type** | String | true | External Identifier type (DOI, PubMed ID, PubMed Central ID, Microsoft Academic ID or CORE)
 **doi** | String | true | DOI Identifier
 **pmid** | String | true | PubMed ID Identifier
 **pmcid** | String | true | PubMed Central ID Identifier

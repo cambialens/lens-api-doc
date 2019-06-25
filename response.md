@@ -28,7 +28,7 @@ permalink: /response.html
  **references** | List of [Reference](#reference) | References |  |
  **scholarly_citations** | List of Lens Ids | Scholarly Citations  | `["091-720-300-990-437"]`
  **chemicals** | List of [Chemical](#chemical) | Chemicals |  |
- **clinical_trials** | List of [Clinical Trial](#clinical-trial) | Scholarly Citations |  |
+ **clinical_trials** | List of [Clinical Trial](#clinical-trial) | Clinical Trials |  |
  **fields_of_study** | List of String |Fields Of Study | `["Immunology", "Malaria"]`
  **source_urls** | List of [Source URL](#source-url) | Source Urls |
  **abstract** | String | Scholarly work abstract text |

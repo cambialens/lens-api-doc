@@ -12,7 +12,7 @@ permalink: /examples.html
 }
 ```
 
-##### Find multiple records by list of lens_id
+##### Get the patent citations, scholarly citations and references for a list of scholarly works using the `lens_id`
 ```json
 {
     "query": {
@@ -24,29 +24,29 @@ permalink: /examples.html
 }
 ```
 
-##### Get title and patent citations for publication (doi)
+##### Get title and patent citations for a scholarly work using a `doi`
 ```json
 {
     "query": {
     	"match":{
-    		"external_id": "10.1109/ee.1934.6540358"
+    		"doi": "10.1109/ee.1934.6540358"
     	}
     },
     "include":["title","patent_citations"]
 }
 ```
-##### Get Scholarly metadata for a patent
+##### Get the metadata for scholarly works that are cited by a list of patents using the patent lens_id
 ```json
 {
 	"query": {
-		"match": {
-			"patent_citation.lens_id": "115-570-536-815-377"
+		"terms": {
+			"patent_citation.lens_id":["198-832-374-467-397", "092-513-162-449-806"]
 		}
 	}
 }
 ```
 
-##### Find recent 10 works from an institution sorted by published year
+##### Find the 10 most recently published works from an institution (sorted by published date)
 
 ```json
 {
@@ -56,7 +56,7 @@ permalink: /examples.html
 		}
 	},
 	"sort": [{
-		"year_published": "desc"
+		"date_published": "desc"
 	}],
 	"size": 10
 }

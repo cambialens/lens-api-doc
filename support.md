@@ -16,8 +16,8 @@ permalink: /support.html
 
 Version | Date Released | Availability
 ------- | ------| -------
-`1.0` | June 24, 2019 | TBD
-`beta` | April 29, 2019 | June 23, 2019
+`1.0` | June 27, 2019 | TBD
+`beta` | April 29, 2019 | June 21, 2019
 
 [Create Issue]: <https://github.com/cambialens/lens-api-doc/issues>
 [Lens Support]: <https://www.lens.org/lens/feedback?returnTo=https:/>

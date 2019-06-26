@@ -30,15 +30,15 @@ Fields | Description |  Required
 **[scroll](#pagination)** | Lifespan of Scroll scroll context in minute (e.g. 1m) | false (true for scroll context)
 
 ### Searchable Fields
-For searching, following fields are supported by the system
+For searching, following fields are supported by the system:
 
 Field | Type | Description
 -------- | --------- | -------
 **lens_id** | String | Unique lens identifier e.g. `100-004-910-081-14X`
 **patent_citation.lens_id** | String | ID of Referenced by patents
 **patent_citation_count** | Integer | Number of patent citations
-**external_id_type** | String | External Identifier type (DOI, PubMed ID, PubMed Central ID, Microsoft Academic ID or CORE)
-**doi** | String | DOI Identifier
+**external_id_type** | String | External Identifier type (Crossref: `doi`, Microsoft Academic: `magid`, PubMed: `pmid`, PubMed Central: `pmcid`, CORE: `coreid`)
+**doi** | String | Crossref DOI Identifier
 **pmid** | String | PubMed ID Identifier
 **pmcid** | String | PubMed Central ID Identifier
 **magid** | String | Microsoft Academic ID

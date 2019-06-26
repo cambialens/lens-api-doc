@@ -32,67 +32,67 @@ Fields | Description |  Required
 ### Searchable Fields
 For searching, following fields are supported by the system
 
-Field | Type | Case Sensitive | Description
+Field | Type | Description
 -------- | --------- | -------
-**lens_id** | String | true | Unique lens identifier e.g. `100-004-910-081-14X`
-**patent_citation.lens_id** | String | true | ID of Referenced by patents
-**patent_citation_count** | Integer | false | Number of patent citations
-**external_id_type** | String | true | External Identifier type (DOI, PubMed ID, PubMed Central ID, Microsoft Academic ID or CORE)
-**doi** | String | true | DOI Identifier
-**pmid** | String | true | PubMed ID Identifier
-**pmcid** | String | true | PubMed Central ID Identifier
-**magid** | String | true | Microsoft Academic ID
-**coreid** | String | true | DOI Identifier
-**created** | Date | false | Record created date e.g. `2016-08-01T00:00:00+00:00`
-**publication_type** | String | false | Publication Type e.g. `Conference Proceedings`
-**publication_supplementary_type** | String | false | Supplementary publication type e.g. `review`
-**author.collective_name** | String |  true | Author Collective Name
-**author.first_name** | String | true| The author's first name e.g. `Alexander`
-**author.last_name** | String | true | The author's last name e.g. `Kupco`
-**author.initials** | String | true | Author Initials e.g. `A`
-**author.display_name** | String | true | Author's full name e.g. `Alexander Kupco`
-**author.affiliation.name** | String | true | The institution associated with the author affiliations. e.g. `Stony Brook University`
-**author.affiliation.grid_id** | String | true | Affiliation grid id e.g. `grid.9018.0`
-**author.affiliation.country_code** | String | true | Country Code e.g. `DE`
-**title** | String | true | Title of the scholarly work e.g. `Malaria`
-**start_page** | String | false | Start page e.g. `893`
-**end_page** | String | false | End page  e.g. `916`
-**volume** | String | false | Volume  `32`
-**issue** | String | false | Issue `4`
-**language** | String | true | Languages e.g. `["ENG"]`
-**chemical.mesh_id** | String | true | MeSH term id e.g. `D000293`
-**chemical.registry_number** | String | true | Chemical registration number e.g. `5Q7ZVV76EI`
-**chemical.substance_name** | String | true | Substance name e.g. `Antimalarials`
-**clinical_trial.id** | String | true | Clinical trial Identifier e.g. `nct00105716`
-**clinical_trial.registry** | String | true | Clinical Trial Registry e.g. `10.18810/clinical-trials-gov`
-**field_of_study** | String | true | Fields Of Study e.g. `Immunology`, `Malaria`
-**abstract** | String | true | Scholarly work abstract text
-**full_text** | String | false | Full Text
-**date_published** | Date | false | Date of publication e.g. `2009-05-22`
-**year_published** | Integer | false | Year of publication e.g. `1986`
-**conference.name** | String | true | Conference Name e.g. `International Electron Devices Meeting`
-**conference.instance** | String | true | Conference Instance Name e.g. `CHI 1985`
-**conference.location** | String | true | The location of the conference e.g. `Lihue, Kauai, HA, USA`
-**author_count** | Integer | false | Number of Authors
-**reference_count** | Integer | false | The number of works in the reference list of a scholarly work
-**scholarly_citation_count** | Integer | false | The number of scholarly works that cite this scholarly work
-**open_access.license** |  String | true | The Open Access license type e.g. `cc-by`
-**open_access.colour** |  String | true | The Open Access colour category e.g. `gold`
-**source.title** | String | false | The name of source publication in which the scholarly work appears e.g. `Journal name, Book title, Confernce proceedings`
-**source.type** | String | false | Source Type e.g. `Journal`
-**source.publisher** | String | true | The publisher of the source publication `W.B. Saunders Ltd`
-**source.issn** | String | true | The International Standard Serial Number of the source publication, without hyphenation e.g. `00222836`
-**source.country** |  String | true | The publisher's country e.g. `United Kingdom`
-**source.asjc_codes** |  String | false | The All Science Journal Classification (ASJC) code e.g. `2735`
-**source.asjc_subjects** |  String | false | Subject is derived from journals descriptions in Crossref metadata based on the Science Journal Classification Codes e.g. `Pediatrics`
-**keyword** | String | false | Search Keywords
-**mesh_term.mesh_id** | String | true | MeSH term unique identifier. MeSH terms are the National Library of Medicine’s controlled vocabulary or subject heading list. e.g. `D000293`
-**mesh_term.mesh_heading** | String | true | MeSH terms are the National Library of Medicine’s controlled vocabulary or medical subject headings assigned to PubMed entries. e.g. `Adolescent`
-**mesh_term.qualifier_id** | String | true | Mesh Term Qualifier ID e.g. `Q000032`
-**mesh_term.qualifier_name** | String | true | Mesh Term Qualifier Name e.g. `analysis`
-**funding.organisation** | String | true | Name of the funding organisation e.g. `NIDCR NIH HHS`
-**funding.funding_id** | String | true | The funding organisation's project identifier e.g.`U01 DE018902`
-**funding.country** | String | true | The country of the funding body e.g. `United States`
+**lens_id** | String | Unique lens identifier e.g. `100-004-910-081-14X`
+**patent_citation.lens_id** | String | ID of Referenced by patents
+**patent_citation_count** | Integer | Number of patent citations
+**external_id_type** | String | External Identifier type (DOI, PubMed ID, PubMed Central ID, Microsoft Academic ID or CORE)
+**doi** | String | DOI Identifier
+**pmid** | String | PubMed ID Identifier
+**pmcid** | String | PubMed Central ID Identifier
+**magid** | String | Microsoft Academic ID
+**coreid** | String | DOI Identifier
+**created** | Date | Record created date e.g. `2016-08-01T00:00:00+00:00`
+**publication_type** | String | Publication Type e.g. `Conference Proceedings`
+**publication_supplementary_type** | String | Supplementary publication type e.g. `review`
+**author.collective_name** | String | Author Collective Name
+**author.first_name** | String | The author's first name e.g. `Alexander`
+**author.last_name** | String | The author's last name e.g. `Kupco`
+**author.initials** | String | Author Initials e.g. `A`
+**author.display_name** | String | Author's full name e.g. `Alexander Kupco`
+**author.affiliation.name** | String | The institution associated with the author affiliations. e.g. `Stony Brook University`
+**author.affiliation.grid_id** | String | Affiliation grid id e.g. `grid.9018.0`
+**author.affiliation.country_code** | String | Country Code e.g. `DE`
+**title** | String | Title of the scholarly work e.g. `Malaria`
+**start_page** | String | Start page e.g. `893`
+**end_page** | String | End page  e.g. `916`
+**volume** | String | Volume  `32`
+**issue** | String | Issue `4`
+**language** | String | Languages e.g. `["ENG"]`
+**chemical.mesh_id** | String | MeSH term id e.g. `D000293`
+**chemical.registry_number** | String | Chemical registration number e.g. `5Q7ZVV76EI`
+**chemical.substance_name** | String | Substance name e.g. `Antimalarials`
+**clinical_trial.id** | String | Clinical trial Identifier e.g. `nct00105716`
+**clinical_trial.registry** | String | Clinical Trial Registry e.g. `10.18810/clinical-trials-gov`
+**field_of_study** | String | Fields Of Study e.g. `Immunology`, `Malaria`
+**abstract** | String | Scholarly work abstract text
+**full_text** | String | Full Text
+**date_published** | Date | Date of publication e.g. `2009-05-22`
+**year_published** | Integer | Year of publication e.g. `1986`
+**conference.name** | String | Conference Name e.g. `International Electron Devices Meeting`
+**conference.instance** | String | Conference Instance Name e.g. `CHI 1985`
+**conference.location** | String | The location of the conference e.g. `Lihue, Kauai, HA, USA`
+**author_count** | Integer | Number of Authors
+**reference_count** | Integer | The number of works in the reference list of a scholarly work
+**scholarly_citation_count** | Integer | The number of scholarly works that cite this scholarly work
+**open_access.license** |  String | The Open Access license type e.g. `cc-by`
+**open_access.colour** |  String | The Open Access colour category e.g. `gold`
+**source.title** | String | The name of source publication in which the scholarly work appears e.g. `Journal name, Book title, Confernce proceedings`
+**source.type** | String | Source Type e.g. `Journal`
+**source.publisher** | String | The publisher of the source publication `W.B. Saunders Ltd`
+**source.issn** | String | The International Standard Serial Number of the source publication, without hyphenation e.g. `00222836`
+**source.country** |  String | The publisher's country e.g. `United Kingdom`
+**source.asjc_codes** |  String | The All Science Journal Classification (ASJC) code e.g. `2735`
+**source.asjc_subjects** |  String | Subject is derived from journals descriptions in Crossref metadata based on the Science Journal Classification Codes e.g. `Pediatrics`
+**keyword** | String | Search Keywords
+**mesh_term.mesh_id** | String | MeSH term unique identifier. MeSH terms are the National Library of Medicine’s controlled vocabulary or subject heading list. e.g. `D000293`
+**mesh_term.mesh_heading** | String | MeSH terms are the National Library of Medicine’s controlled vocabulary or medical subject headings assigned to PubMed entries. e.g. `Adolescent`
+**mesh_term.qualifier_id** | String | Mesh Term Qualifier ID e.g. `Q000032`
+**mesh_term.qualifier_name** | String | Mesh Term Qualifier Name e.g. `analysis`
+**funding.organisation** | String | Name of the funding organisation e.g. `NIDCR NIH HHS`
+**funding.funding_id** | String | The funding organisation's project identifier e.g.`U01 DE018902`
+**funding.country** | String | The country of the funding body e.g. `United States`
 
 ### Filtering
 You can use following pre-defined filters to refine search results:
@@ -128,12 +128,12 @@ Lens API provides two type of pagination based on their use:
 
 **Offset/Size Based Pagination:**
 
-Use parameter `from` to define the offset and `size` to specify number of records expected.
+Use parameter `from` to define the offset and `size` to specify number of records expected. This is useful when you want to skip some records and select desired ones. Example below skips first 100 and select 50 records after that.
 ```json
 {
-	"query": "Malaria",
-	"from": 100,
-	"size":50
+  "query": "Malaria",
+  "from": 100,
+  "size":50
 }
 ```
 **Cursor Based Pagination:**
@@ -142,8 +142,8 @@ You can specify records per page using `size` (default 20 and max 1000) and cont
 
 ```json
 {
-    "scroll_id": "MjAxOTEw;DnF1ZXJ...R2NZdw==",
-    "scroll": "1m"
+  "scroll_id": "MjAxOTEw;DnF1ZXJ...R2NZdw==",
+  "scroll": "1m"
 }
 ```
 > Note: The lifespan of scroll_id is limited to 1 minute for the current API version. Using expired scroll_id will result bad request HTTP response.

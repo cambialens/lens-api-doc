@@ -42,7 +42,7 @@ Field | Type | Description
 **pmid** | String | PubMed ID Identifier
 **pmcid** | String | PubMed Central ID Identifier
 **magid** | String | Microsoft Academic ID
-**coreid** | String | DOI Identifier
+**coreid** | String | Core Identifier
 **created** | Date | Record created date e.g. `2016-08-01T00:00:00+00:00`
 **publication_type** | String | Publication Type e.g. `Conference Proceedings`
 **publication_supplementary_type** | String | Supplementary publication type e.g. `review`

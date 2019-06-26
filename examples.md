@@ -62,7 +62,7 @@ permalink: /examples.html
 }
 ```
 
-##### Get 100 works from an institution published between two years
+##### Get 30 works from an institution published between two years
 ```json
 {
 	"query": {
@@ -82,7 +82,7 @@ permalink: /examples.html
 			}
 		}
 	},
-	"size": 100
+	"size": 30
 }
 ```
 
@@ -105,18 +105,7 @@ permalink: /examples.html
 ```json
 {
     "query": {
-        "bool": {
-            "should": [{
-                    "bool": {
-                        "must": [
-				{"match": {"author.first_name": "Craig"}},
-                            	{"match": {"author.last_name": "Venter"}}
-                        ]
-                    }
-                },
-                {"match_phrase": {"author.display_name": "Craig Venter"}}
-            ]
-        }
+        "match_phrase": {"author.display_name": "Craig Venter"}
     },
     "sort": [{"year_published": "desc"}],
     "size": 10
@@ -129,13 +118,12 @@ permalink: /examples.html
     "query": {
         "bool":{
              "must":[
-                 {"term":{"external_id_type": "pmid"},
-			{"year_published": 2012}
-		 }
+                {"match":{"external_id_type": "pmid"}},
+			          {"match":{"year_published": 2012}}
               ]
-         }
+        }
     },
-    "include":["patent_citation_count", "external_ids"]
+    "include":["patent_citations_count", "external_ids"]
 }
 ```
 
@@ -144,6 +132,6 @@ OR using String Based Query
 ```json
 {
     "query": "external_id_type: pmid AND year_published: 2012",
-    "include":["patent_citation_count", "external_ids"]
+    "include":["patent_citations_count", "external_ids"]
 }
 ```

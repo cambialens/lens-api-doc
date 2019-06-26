@@ -151,6 +151,15 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
 
 
 ### Sample API Response
+**Request:**
+```json
+{
+  "query":{
+  	"match":{"lens_id":"086-713-276-176-892"}
+  }
+}
+```
+**Response:**
 ```json
 {
     "total": 1,
@@ -177,6 +186,7 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
             ],
             "authors": [
                 {
+                    "collective_name": null,
                     "first_name": "Maha",
                     "last_name": "Hussain",
                     "initials": "M",
@@ -189,6 +199,7 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
                     ]
                 },
                 {
+                    "collective_name": null,
                     "first_name": "Dana E.",
                     "last_name": "Rathkopf",
                     "initials": "DE",
@@ -201,6 +212,7 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
                     ]
                 },
                 {
+                    "collective_name": null,
                     "first_name": "Glenn",
                     "last_name": "Liu",
                     "initials": "G",
@@ -213,6 +225,7 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
                     ]
                 },
                 {
+                    "collective_name": null,
                     "first_name": "Andrew J.",
                     "last_name": "Armstrong",
                     "initials": "AJ",
@@ -225,6 +238,7 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
                     ]
                 },
                 {
+                    "collective_name": null,
                     "first_name": "Kevin",
                     "last_name": "Kelly",
                     "initials": "K",
@@ -237,6 +251,7 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
                     ]
                 },
                 {
+                    "collective_name": null,
                     "first_name": "Anna C.",
                     "last_name": "Ferrari",
                     "initials": "AC",
@@ -249,6 +264,7 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
                     ]
                 },
                 {
+                    "collective_name": null,
                     "first_name": "John D.",
                     "last_name": "Hainsworth",
                     "initials": "JD",
@@ -261,6 +277,7 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
                     ]
                 },
                 {
+                    "collective_name": null,
                     "first_name": "Adarsh",
                     "last_name": "Joshi",
                     "initials": "A",
@@ -273,6 +290,7 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
                     ]
                 },
                 {
+                    "collective_name": null,
                     "first_name": "Rebecca R.",
                     "last_name": "Hozak",
                     "initials": "RR",
@@ -285,6 +303,7 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
                     ]
                 },
                 {
+                    "collective_name": null,
                     "first_name": "Ling",
                     "last_name": "Yang",
                     "initials": "L",
@@ -297,6 +316,7 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
                     ]
                 },
                 {
+                    "collective_name": null,
                     "first_name": "Jonathan D.",
                     "last_name": "Schwartz",
                     "initials": "JD",
@@ -309,6 +329,7 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
                     ]
                 },
                 {
+                    "collective_name": null,
                     "first_name": "Celestia S.",
                     "last_name": "Higano",
                     "initials": "CS",
@@ -628,7 +649,7 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
                 },
                 {
                     "type": "html",
-                    "url": "https://www.sciencedirect.com/science/article/pii/S0959804915004505#!"
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0959804915004505"
                 },
                 {
                     "type": "core_fulltext",
@@ -642,7 +663,7 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
             "external_ids": [
                 {
                     "type": "magid",
-                    "value": "mag2113210954"
+                    "value": "2113210954"
                 },
                 {
                     "type": "pmid",
@@ -661,7 +682,6 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
                 "publisher": "Elsevier BV",
                 "issn": [
                     {
-                        "type": "print",
                         "value": "09598049"
                     }
                 ],
@@ -671,8 +691,8 @@ value | String | The external identifier(s) for a scholarly work | `10.1016/s003
                     "2730"
                 ],
                 "asjc_subjects": [
-                    "Cancer Research",
-                    "Oncology"
+                    "Oncology",
+                    "Cancer Research"
                 ]
             },
             "scholarly_citations": [

@@ -45,6 +45,7 @@ To ensure our public API endpoints remain usable by everyone and to maintain the
 - `X-Rate-Limit-Month-Remaining`: Number of API calls allowed till the reset date above
 
 Once you go over any rate limit you will receive a `429 - Too many requests` error with respective messages.
+> Currently users can perform up to 5 requests per minute and 1000 per month before getting rate limited.
 
 ### HTTP Responses
 

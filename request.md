@@ -26,7 +26,7 @@ Fields | Description |  Required
 **[exclude](#projection)** | Get all fields except undesired ones in search result. | false
 **[size](#pagination)** | Integer value to specify number of items per page | false
 **[from](#pagination)** | Integer value, defines the offset from the first result | false
-**[scroll_id](#pagination)** | Pagination parameter | false (true for next requests)
+**[scroll_id](#pagination)** | Pagination parameter | false (true for next scroll requests)
 **[scroll](#pagination)** | Lifespan of Scroll scroll context in minute (e.g. 1m) | false (true for scroll context)
 
 ### Searchable Fields
@@ -42,7 +42,7 @@ Field | Type | Description
 **pmid** | String | PubMed ID Identifier
 **pmcid** | String | PubMed Central ID Identifier
 **magid** | String | Microsoft Academic ID
-**coreid** | String | Core Identifier
+**coreid** | String | CORE Identifier
 **created** | Date | Record created date e.g. `2016-08-01T00:00:00+00:00`
 **publication_type** | String | Publication Type e.g. `Conference Proceedings`
 **publication_supplementary_type** | String | Supplementary publication type e.g. `review`
@@ -150,7 +150,7 @@ You can specify records per page using `size` (default 20 and max 1000) and cont
 > Parameter `size` will be used for first scroll query and will remain the same for whole scroll context. Hence, using size in each scroll request will not have any effect.
 
 ### Sorting
-Result can be retrieved in ascending or descending order. Use the following formats and [fields](#fields) to apply sorting to the API response.
+Result can be retrieved in ascending or descending order. By default, results are sorted with most relevant matches first. Use the following format and [fields](#searchable-fields) to apply sorting to the API response.
 ```json
 {
   "sort": [

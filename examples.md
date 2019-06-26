@@ -86,7 +86,7 @@ permalink: /examples.html
 }
 ```
 
-##### Get data having patent citations and affiliations
+##### Get scholarly works having patent citations and affiliations
 ```json
 {
     "query": {
@@ -123,14 +123,15 @@ permalink: /examples.html
 }
 ```
 
-##### Find record by external id and value
+##### Find scholarly works with a Pubmed identifier published in 2012
 ```json
 {
     "query": {
         "bool":{
              "must":[
-                 {"term":{"external_id": "6359161"}},
-                 {"term":{"external_id_type": "pmid"}}
+                 {"term":{"external_id_type": "pmid"},
+			{"year_published": 2012}
+		 }
               ]
          }
     },
@@ -142,7 +143,7 @@ OR using String Based Query
 
 ```json
 {
-    "query": "external_ids: 6359161 AND external_id_type: pmid",
+    "query": "external_id_type: pmid AND year_published: 2012",
     "include":["patent_citation_count", "external_ids"]
 }
 ```

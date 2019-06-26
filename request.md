@@ -256,8 +256,9 @@ It matches each words separately. If you need to search whole phrase use [match 
            {"match": {"publication_type": "journal article"}},
            {"match": {"author.last_name": "Kondratyev"}}
          ]
-       }}]
-
+       }
+       }
+     ]
    }
  }
 }

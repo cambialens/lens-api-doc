@@ -242,7 +242,7 @@ It matches each words separately. If you need to search whole phrase use [match 
 
 ##### Boolean query
 [Bool Query] allows to combine multiple queries to create complex query providing precise result.
-> Example: Get `journal article` scholarly works of Author with last name Kondratyev having patent citations.
+> Example: Get journal article scholarly works of Author with last name Kondratyev having patent citations.
 ```json
 {
  "query": {

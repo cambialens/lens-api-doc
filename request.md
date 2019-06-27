@@ -43,9 +43,9 @@ Field | Type | Description
 **pmcid** | String | PubMed Central ID Identifier
 **magid** | String | Microsoft Academic ID
 **coreid** | String | CORE Identifier
-**created** | Date | Record created date e.g. `2016-08-01T00:00:00+00:00`
-**publication_type** | String | Publication Type e.g. `Conference Proceedings`
-**publication_supplementary_type** | String | Supplementary publication type e.g. `review`
+**created** | Date | Record created date e.g. `2018-05-12`, `2016-08-01T00:00:00+00:00`
+**publication_type** | String | Publication Type `conference proceedings`, `book chapter`, `journal article`, `component`, `conference proceedings article`, `dataset`, `libguide`, `reference entry`, `book`
+**publication_supplementary_type** | String | Supplementary publication type e.g. `review`, `comparative study`, `research support`
 **author.collective_name** | String | Author Collective Name
 **author.first_name** | String | The author's first name e.g. `Alexander`
 **author.last_name** | String | The author's last name e.g. `Kupco`
@@ -53,13 +53,13 @@ Field | Type | Description
 **author.display_name** | String | Author's full name e.g. `Alexander Kupco`
 **author.affiliation.name** | String | The institution associated with the author affiliations. e.g. `Stony Brook University`
 **author.affiliation.grid_id** | String | Affiliation grid id e.g. `grid.9018.0`
-**author.affiliation.country_code** | String | Country Code e.g. `DE`
+**author.affiliation.country_code** | String | Country Code e.g. `US`,`DE`,`CH`, `FR`
 **title** | String | Title of the scholarly work e.g. `Malaria`
 **start_page** | String | Start page e.g. `893`
 **end_page** | String | End page  e.g. `916`
 **volume** | String | Volume  `32`
 **issue** | String | Issue `4`
-**language** | String | Languages e.g. `["ENG"]`
+**language** | String | Languages e.g. `en`, `de`, `fr`, `zh_chs`
 **chemical.mesh_id** | String | MeSH term id e.g. `D000293`
 **chemical.registry_number** | String | Chemical registration number e.g. `5Q7ZVV76EI`
 **chemical.substance_name** | String | Substance name e.g. `Antimalarials`
@@ -177,13 +177,6 @@ You can control the output fields in the API [Response] using projection. There 
 
 Following queries are supported by current version of Lens API:
 
-##### String Based Query
-Query different terms with explicit operators `AND`/`OR`/`NOT` to create a compact query string.
->Example: Find works from institution published between two dates having some title.
-```json
-{"query": "(title:Dimensions AND author.affiliation.institution:(Harvard University)) AND year_published:[2000 TO 2018]"}
-```
-
 ##### Term Query
 [Term Query] operates in a single term and search for *exact term* in the field provided.
 > Example: Find record by publication type
@@ -263,6 +256,20 @@ It matches each words separately. If you need to search whole phrase use [match 
  }
 }
 ```
+
+##### Query String Based Query
+Query different terms with explicit operators `AND`/`OR`/`NOT` to create a compact query string.
+>Example: Find works from institution published between two dates having some title.
+```json
+{"query": "(title:Dimensions AND author.affiliation.institution:(Harvard University)) AND year_published:[2000 TO 2018]"}
+```
+
+If you need to use any [reserved special characters](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#_reserved_characters), you should escape them with leading backslash.
+>Example: Getting by doi identifier using string based query
+```json
+{"query": "doi:10.1109\\/ee.1934.6540358"}
+```
+
 
 [//]: # (Reference Links)
 [Response]: <{{site.baseurl}}/response.html>

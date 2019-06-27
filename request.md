@@ -55,10 +55,6 @@ Field | Type | Description
 **author.affiliation.grid_id** | String | Affiliation grid id e.g. `grid.9018.0`
 **author.affiliation.country_code** | String | Country Code e.g. `US`,`DE`,`CH`, `FR`
 **title** | String | Title of the scholarly work e.g. `Malaria`
-**start_page** | String | Start page e.g. `893`
-**end_page** | String | End page  e.g. `916`
-**volume** | String | Volume  `32`
-**issue** | String | Issue `4`
 **language** | String | Languages e.g. `en`, `de`, `fr`, `zh_chs`
 **chemical.mesh_id** | String | MeSH term id e.g. `D000293`
 **chemical.registry_number** | String | Chemical registration number e.g. `5Q7ZVV76EI`
@@ -77,22 +73,22 @@ Field | Type | Description
 **reference_count** | Integer | The number of works in the reference list of a scholarly work
 **scholarly_citation_count** | Integer | The number of scholarly works that cite this scholarly work
 **open_access.license** |  String | The Open Access license type e.g. `cc-by`
-**open_access.colour** |  String | The Open Access colour category e.g. `gold`
-**source.title** | String | The name of source publication in which the scholarly work appears e.g. `Journal name, Book title, Confernce proceedings`
-**source.type** | String | Source Type e.g. `Journal`
-**source.publisher** | String | The publisher of the source publication `W.B. Saunders Ltd`
+**open_access.colour** |  String | The Open Access colour category e.g. `gold`, `green`
+**source.title** | String | The name of source publication in which the scholarly work appears e.g. Journal name, Book title, Conference proceedings
+**source.type** | String | Source Type e.g. `Journal`, `Book Series`
+**source.publisher** | String | The publisher of the source publication `Elsevier`, `Wiley`, `American Medical Association`
 **source.issn** | String | The International Standard Serial Number of the source publication, without hyphenation e.g. `00222836`
-**source.country** |  String | The publisher's country e.g. `United Kingdom`
+**source.country** |  String | The publisher's country e.g. `United States`, `United Kingdom`
 **source.asjc_codes** |  String | The All Science Journal Classification (ASJC) code e.g. `2735`
-**source.asjc_subjects** |  String | Subject is derived from journals descriptions in Crossref metadata based on the Science Journal Classification Codes e.g. `Pediatrics`
+**source.asjc_subjects** |  String | Subject is derived from journals descriptions in Crossref metadata based on the Science Journal Classification Codes e.g. `Pediatrics`, `Microbiology`, `Biophysics`
 **keyword** | String | Search Keywords
 **mesh_term.mesh_id** | String | MeSH term unique identifier. MeSH terms are the National Library of Medicine’s controlled vocabulary or subject heading list. e.g. `D000293`
-**mesh_term.mesh_heading** | String | MeSH terms are the National Library of Medicine’s controlled vocabulary or medical subject headings assigned to PubMed entries. e.g. `Adolescent`
+**mesh_term.mesh_heading** | String | MeSH terms are the National Library of Medicine’s controlled vocabulary or medical subject headings assigned to PubMed entries. e.g. `Phosphates`, `Immunochemistry`
 **mesh_term.qualifier_id** | String | Mesh Term Qualifier ID e.g. `Q000032`
-**mesh_term.qualifier_name** | String | Mesh Term Qualifier Name e.g. `analysis`
+**mesh_term.qualifier_name** | String | Mesh Term Qualifier Name e.g. `pathology`, `immunology`, `analysis`
 **funding.organisation** | String | Name of the funding organisation e.g. `NIDCR NIH HHS`
 **funding.funding_id** | String | The funding organisation's project identifier e.g.`U01 DE018902`
-**funding.country** | String | The country of the funding body e.g. `United States`
+**funding.country** | String | The country of the funding body e.g. `United States`, `Germany`, `United Kingdom`
 
 ### Filtering
 You can use following pre-defined filters to refine search results:

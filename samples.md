@@ -5,10 +5,35 @@ permalink: /samples.html
 ---
 
 {:.table-contents}
+- [R](#r)
 - [Python](#python)
 - [Java](#java)
 - [NodeJs](#nodejs)
 - [cURL](#curl)
+
+## R
+```r
+require(httr)
+getScholarlyData <- function(token, query){
+	url <- 'https://api.lens.org/scholarly/search'
+	headers <- c('Authorization' = token, 'Content-Type' = 'application/json')
+	httr::POST(url = url, add_headers(.headers=headers), body = query)
+}
+token <- 'your-access-token'
+request <- '{
+	"query": {
+		"match_phrase": {
+			"author.affiliation.name": "Harvard University"
+		}
+	},
+	"size": 1,
+	"sort": [{
+		"year_published": "desc"
+	}]
+}'
+data <- getScholarlyData(token, request)
+content(data, "text")
+```
 
 ## Python
 ```python

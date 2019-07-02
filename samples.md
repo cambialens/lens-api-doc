@@ -104,7 +104,7 @@ public class JavaSample {
 var request = require('request');
 
 var endPoint = 'https://api.lens.org/scholarly/search';
-var token  = 'your-access-token';
+var token = 'your-access-token';
 var query = {
      "query": {
            "match_phrase":{

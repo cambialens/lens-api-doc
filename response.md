@@ -59,7 +59,6 @@ collective_name | String | Author Collective Name |
 first_name | String | The author's first name | `Alexander`
 last_name | String | The author's last name | `Kupco`
 initials | String | Author Initials | `A`
-full_name | String | Author's full name | `Alexander Kupco`
 affiliations | Array of [Affiliation](#affiliation) | The institution/affiliations associated with Author.
 
 #### Affiliation

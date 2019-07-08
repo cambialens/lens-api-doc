@@ -35,6 +35,18 @@ permalink: /examples.html
   "include":["title","patent_citations"]
 }
 ```
+
+##### Get scholarly works using multiple pmid
+```json
+{
+	"query": {
+		"terms": {
+			"pmid": ["14297189", "17475107"]
+		}
+	}
+}
+```
+
 ##### Get the metadata for scholarly works that are cited by a list of patents using the patent lens_id
 ```json
 {

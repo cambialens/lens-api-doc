@@ -187,7 +187,7 @@ Following queries are supported by current version of Lens API:
 ```
 
 ##### Terms Query
-[Terms Query] allows you to search exact multiple terms in a field. It can be useful to search multiple identifiers.
+[Terms Query] allows you to search multiple *exact terms* for a provided field. A useful scenario is while searching multiple identifiers.
 > Example: Search scholarly works for multiple pmid
 ```json
 {
@@ -197,7 +197,6 @@ Following queries are supported by current version of Lens API:
 		}
 	}
 }
-
 ```
 
 ##### Match query

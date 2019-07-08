@@ -186,6 +186,20 @@ Following queries are supported by current version of Lens API:
 }
 ```
 
+##### Terms Query
+[Terms Query] allows you to search exact multiple terms in a field. It can be useful to search multiple identifiers.
+> Example: Search scholarly works for multiple pmid
+```json
+{
+	"query": {
+		"terms": {
+			"pmid": ["14297189", "17475107"]
+		}
+	}
+}
+
+```
+
 ##### Match query
 [Match query] accepts text/numbers/dates. The main use case of the match query is full-text search.
 It matches each words separately. If you need to search whole phrase use [match phrase](#match-phrase-query) query.
@@ -270,6 +284,7 @@ If you need to use any [reserved special characters](https://www.elastic.co/guid
 [//]: # (Reference Links)
 [Response]: <{{site.baseurl}}/response.html>
 [Bool Query]: <https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html>
+[Terms Query]: <https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-terms-query.html>
 [Term query]: <https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-term-query.html>
 [Match query]: <https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-query.html>
 [Match phrase query]: <https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-match-query-phrase.html>

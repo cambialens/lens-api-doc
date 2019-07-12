@@ -12,12 +12,11 @@ This is version 1.0 of the Lens Scholarly API, which we will continue to develop
 
 You can request access to the Lens Scholarly API or PatSeq Bulk Downloads or manage your subscription and access tokens from your [Lens user profile](https://www.lens.org/lens/user/subscriptions).
 
-#### Privacy Policy
-Read our privacy policy [here](https://about.lens.org/policies/#privacypolicy).
-
 #### Terms of Use
 Read our terms of use [here](https://about.lens.org/policies/#termsuse).
 
+#### Privacy Policy
+Read our privacy policy [here](https://about.lens.org/policies/#privacypolicy).
 
 [//]: # (Reference Links)
 [Swagger UI]: <https://api.lens.org/swagger-ui.html>

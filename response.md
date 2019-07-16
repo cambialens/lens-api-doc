@@ -44,36 +44,40 @@ permalink: /response.html
  **keywords** | Array of String | Keywords |
  **mesh_terms** | Array of [MeSH Term](#mesh-term) | MeSH term |
  **funding** | Array of [Funding](#funding) |  Funding |
+{: .param-def }
 
 #### Patent Citation
 
  Field | Type |  Description | Example
 ------- |:------| -------|---------
-lens_id | String | Unique lens identifier | `141-171-521-309-804`
-
+**lens_id** | String | Unique lens identifier | `141-171-521-309-804`
+{: .param-def }
 #### Author
 
  Field | Type |  Description  | Example
 ------- |:------| -------|---------
-collective_name | String | Author Collective Name |
-first_name | String | The author's first name | `Alexander`
-last_name | String | The author's last name | `Kupco`
-initials | String | Author Initials | `A`
-affiliations | Array of [Affiliation](#affiliation) | The institution/affiliations associated with Author.
+**collective_name** | String | Author Collective Name |
+**first_name** | String | The author's first name | `Alexander`
+**last_name** | String | The author's last name | `Kupco`
+**initials** | String | Author Initials | `A`
+**affiliations** | Array of [Affiliation](#affiliation) | The institution/affiliations associated with Author.
+{: .param-def }
 
 #### Affiliation
 
  Field | Type |  Description | Example
 ------- |:------| -------|---------
-name | String | The institution associated with the author affiliations. | `Stony Brook University`
-grid_id | String | Affiliation grid id | `grid.9018.0`
-country_code | String | Comma separated country codes | `DE`
+**name** | String | The institution associated with the author affiliations. | `Stony Brook University`
+**grid_id** | String | Affiliation grid id | `grid.9018.0`
+**country_code** | String | Comma separated country codes | `DE`
+{: .param-def }
 
 #### Reference
 
  Field | Type |  Description | Example
 ------- |:------| -------|---------
-lens_id | String | Unique lens identifier | `071-957-228-698-625`
+**lens_id** | String | Unique lens identifier | `071-957-228-698-625`
+{: .param-def }
 
 #### Open Access
 
@@ -81,6 +85,7 @@ lens_id | String | Unique lens identifier | `071-957-228-698-625`
 ------- |:------| -------|---------
 **license** |  String | The Open Access license type | `cc-by`
 **colour** |  String | The Open Access colour category | `gold`
+{: .param-def }
 
 #### Source
 
@@ -93,23 +98,26 @@ lens_id | String | Unique lens identifier | `071-957-228-698-625`
 **country** |  String | The publisher's country | `United Kingdom`
 **asjc_codes** |  String | The All Science Journal Classification (ASJC) code | `2735`
 **asjc_subjects** |  String | Subject is derived from journals descriptions in Crossref metadata based on the Science Journal Classification Codes | `Pediatrics`
+{: .param-def }
 
 #### Mesh Term
 
  Field | Type |  Description | Example
 ------- |:------|-------|---------
-mesh_id | String | MeSH term unique identifier. MeSH terms are the National Library of Medicine’s controlled vocabulary or subject heading list. | `D000293`
-mesh_heading | String | MeSH terms are the National Library of Medicine’s controlled vocabulary or medical subject headings assigned to PubMed entries. NB MeSH Headings are case sensitive. | `Adolescent`
-qualifier_id | String | Mesh Term Qualifier ID | `Q000032`
-qualifier_name | String | Mesh Term Qualifier Name | `analysis`
+**mesh_id** | String | MeSH term unique identifier. MeSH terms are the National Library of Medicine’s controlled vocabulary or subject heading list. | `D000293`
+**mesh_heading** | String | MeSH terms are the National Library of Medicine’s controlled vocabulary or medical subject headings assigned to PubMed entries. NB MeSH Headings are case sensitive. | `Adolescent`
+**qualifier_id** | String | Mesh Term Qualifier ID | `Q000032`
+**qualifier_name** | String | Mesh Term Qualifier Name | `analysis`
+{: .param-def }
 
 #### Funding
 
  Field | Type |  Description | Example
 ------- |:------:| -------|---------
-org | String | Name of the funding organisation | `NIDCR NIH HHS`
-funding_id | String | The funding organisation's project identifier | `U01 DE018902`
-country | String | The country of the funding body | `United States`
+**org** | String | Name of the funding organisation | `NIDCR NIH HHS`
+**funding_id** | String | The funding organisation's project identifier | `U01 DE018902`
+**country** | String | The country of the funding body | `United States`
+{: .param-def }
 
 #### Conference
 
@@ -118,36 +126,40 @@ Field | Type |  Description | Example
 **name** | String | Conference Name | `International Electron Devices Meeting`
 **instance** | String | Conference Instance Name | `CHI 1985`
 **location** | String | The location of the conference | `Lihue, Kauai, HA, USA`
+{: .param-def }
 
 #### Chemical
 
  Field | Type |  Description | Example
 ------- |:------:| -------|---------
-mesh_id | String | MeSH term id | `D000293`
-registry_number | String | Chemical registration number | `5Q7ZVV76EI`
-substance_name | String | Substance name | `Antimalarials`
+**mesh_id** | String | MeSH term id | `D000293`
+**registry_number** | String | Chemical registration number | `5Q7ZVV76EI`
+**substance_name** | String | Substance name | `Antimalarials`
+{: .param-def }
 
 #### Clinical Trial
 
  Field | Type |  Description | Example
  ------- |:------:| ------- |---------
-id | String | Identifier | `nct00105716`
-registry | String | Clinical Trial Registry | `10.18810/clinical-trials-gov`
+**id** | String | Identifier | `nct00105716`
+**registry** | String | Clinical Trial Registry | `10.18810/clinical-trials-gov`
+{: .param-def }
 
 #### Source URL
 
 Field | Type |  Description | Example
  ------- |:------:| -------|---------
-type | String | Source URL Type | `html`
-url | String | URL String | `http://cds.cern.ch/record/2291692`
+**type** | String | Source URL Type | `html`
+**url** | String | URL String | `http://cds.cern.ch/record/2291692`
+{: .param-def }
 
 #### ID
 
  Field | Type |  Description | Example
 ------- |:------:| -------|---------
-type | String | The type/s of external identifiers for the scholarly work | `doi`, `pmid`, `magid`
-value | String | The external identifier(s) for a scholarly work | `10.1016/s0031-3955(16)34861-1`
-
+**type** | String | The type/s of external identifiers for the scholarly work | `doi`, `pmid`, `magid`
+**value** | String | The external identifier(s) for a scholarly work | `10.1016/s0031-3955(16)34861-1`
+{: .param-def }
 
 ### Sample API Response
 **Request:**

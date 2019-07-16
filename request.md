@@ -28,6 +28,7 @@ Fields | Description |  Required
 **[from](#pagination)** | Integer value, defines the offset from the first result | false
 **[scroll_id](#pagination)** | Pagination parameter | false (true for next scroll requests)
 **[scroll](#pagination)** | Lifespan of Scroll scroll context in minute (e.g. 1m) | false (true for scroll context)
+{: .param-def }
 
 ### Searchable Fields
 For searching, following fields are supported by the system:
@@ -89,24 +90,26 @@ Field | Type | Description
 **funding.organisation** | String | Name of the funding organisation e.g. `NIDCR NIH HHS`
 **funding.funding_id** | String | The funding organisation's project identifier e.g.`U01 DE018902`
 **funding.country** | String | The country of the funding body e.g. `United States`, `Germany`, `United Kingdom`
+{: .param-def }
 
 ### Filtering
 You can use following pre-defined filters to refine search results:
 
 Field | Description |  Possible Value
 ------- | ------| -------
-has_patent_citations | Indicates if the scholarly work has been cited by a patent document. | `true`/`false`
-has_affiliation | Has affiliation | `true`/`false`
-has_affiliation_grid | Has affiliation grid | `true`/`false`
-has_mesh_term | Has MeSH term | `true`/`false`
-has_chemical | Indicates if the scholarly work has an associated chemical substance  | `true`/`false`
-has_keyword | Indicates if the scholarly work has keyword | `true`/`false`
-has_clinical_trial | Indicates if the scholarly work has clinical trial | `true`/`false`
-has_field_of_study | Flags if the scholarly work has a Field of Study | `true`/`false`
-has_abstract | Indicates if the scholarly work has abstract | `true`/`false`
-has_fulltext | Indicates if the scholarly work has fulltext | `true`/`false`
-has_funding | Indicates if the scholarly work has funding information | `true`/`false`
-is_open_access | Flags if the scholarly work has is Open Access | `true`/`false`
+**has_patent_citations** | Indicates if the scholarly work has been cited by a patent document. | `true`/`false`
+**has_affiliation** | Has affiliation | `true`/`false`
+**has_affiliation_grid** | Has affiliation grid | `true`/`false`
+**has_mesh_term** | Has MeSH term | `true`/`false`
+**has_chemical** | Indicates if the scholarly work has an associated chemical substance  | `true`/`false`
+**has_keyword** | Indicates if the scholarly work has keyword | `true`/`false`
+**has_clinical_trial** | Indicates if the scholarly work has clinical trial | `true`/`false`
+**has_field_of_study** | Flags if the scholarly work has a Field of Study | `true`/`false`
+**has_abstract** | Indicates if the scholarly work has abstract | `true`/`false`
+**has_fulltext** | Indicates if the scholarly work has fulltext | `true`/`false`
+**has_funding** | Indicates if the scholarly work has funding information | `true`/`false`
+**is_open_access** | Flags if the scholarly work has is Open Access | `true`/`false`
+{: .param-def }
 
  Example:
 ```json
@@ -122,7 +125,7 @@ is_open_access | Flags if the scholarly work has is Open Access | `true`/`false`
 ### Pagination
 Lens API provides two type of pagination based on their use:
 
-**Offset/Size Based Pagination:**
+##### Offset/Size Based Pagination
 
 Use parameter `from` to define the offset and `size` to specify number of records expected. This is useful when you want to skip some records and select desired ones. Example below skips first 100 and select 50 records after that.
 ```json
@@ -132,7 +135,7 @@ Use parameter `from` to define the offset and `size` to specify number of record
   "size":50
 }
 ```
-**Cursor Based Pagination:**
+##### Cursor Based Pagination
 
 You can specify records per page using `size` (default 20 and max 1000) and context alive time `scroll` (default 1 minute). You will receive a `scroll_id` in response, which should be passed via request body to access next set of results. Since the `scroll_id` tends to change every time after each successful requests, please use the most recent `scroll_id` to access next page. This is not suited for real time user requests.
 

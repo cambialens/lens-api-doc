@@ -26,6 +26,7 @@ You need to have the following before you can start using Lens APIs:
 As of the current version, Lens offers the following API endpoints:
 
 - **Search API Endpoint:** `https://api.lens.org/scholarly/search`
+- **Collection API Endpoint:** `https://api.lens.org/collections/{collection_id}`
 - **Swagger Documentation:** `https://api.lens.org/swagger-ui.html`
 
 ### API Access

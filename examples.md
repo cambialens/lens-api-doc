@@ -137,3 +137,13 @@ OR using String Based Query
     "include":["patent_citations_count", "external_ids"]
 }
 ```
+
+##### Access your collection
+> `[POST] https://api.lens.org/collections/123456`
+```json
+{
+  "query": {"match": {"title": "Malaria"}},
+  "include":["title","lens_id", "authors.first_name"],
+  "size":10
+}
+```

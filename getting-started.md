@@ -25,8 +25,12 @@ You need to have the following before you can start using Lens APIs:
 
 As of the current version, Lens offers the following API endpoints:
 
-- **Search API Endpoint:** `https://api.lens.org/scholarly/search`
-- **Swagger Documentation:** `https://api.lens.org/swagger-ui.html`
+- **Scholarly Works:** `[POST] https://api.lens.org/scholarly/search`
+- **Collections:** `[POST] https://api.lens.org/collections/{collection_id}`
+> You can access scholarly works from collections created at your [Work Area].
+> Here is an [example]({{site.baseurl}}/examples.html#access-your-collection) to illustrate how to access your collection.
+
+**Swagger Documentation is available here:** `https://api.lens.org/swagger-ui.html`
 
 ### API Access
 
@@ -61,3 +65,4 @@ Response |  Description  |
 
 [manage your subscription and access tokens]: <http://lens.org/lens/user/subscriptions>
 [Terms of Use]: <https://about.lens.org/policies/#termsuse>
+[Work Area]: <https://www.lens.org/lens/user/collections>

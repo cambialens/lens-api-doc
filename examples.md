@@ -68,6 +68,22 @@ permalink: /examples.html
 }
 ```
 
+##### Get publication year of journal articles cited by patents
+```json
+{
+   "query": {
+       "bool" : {
+        "must": [
+            {"terms": { "patent_citation.lens_id": ["020-159-299-402-960", "014-680-767-794-441"]}},
+            {"match": {"source.type": "Journal"}}
+        ]
+      }
+   },
+   "include": ["year_published"],
+   "size": 50
+}
+```
+
 ##### Get 30 works from an institution published between two years
 ```json
 {

@@ -32,7 +32,6 @@ permalink: /response.html
  **fields_of_study** | List of String |Fields Of Study | `["Immunology", "Malaria"]`
  **source_urls** | List of [Source URL](#source-url) | Source Urls |
  **abstract** | String | Scholarly work abstract text |
- **full_text** | String | Full Text |
  **date_published** | Date | Date of publication | `2009-05-22`
  **year_published** | Integer | Year of publication | `1986`
  **conference** | [Conference](#conference) | The conference instance or edition |

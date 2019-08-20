@@ -93,7 +93,7 @@ permalink: /response.html
 **title** |  String | The name of source publication in which the scholarly work appears | `Journal name, Book title, Confernce proceedings`
 **type** |  String | Source Type | `Journal`
 **publisher** |  String | The publisher of the source publication | `W.B. Saunders Ltd`
-**issn** |  Array of [Id](#id) | The International Standard Serial Number of the source publication, without hyphenation | `00222836`
+**issn** |  Array of Object | The International Standard Serial Number of the source publication, without hyphenation | `[{"value": "10797114"}]`
 **country** |  String | The publisher's country | `United Kingdom`
 **asjc_codes** |  String | The All Science Journal Classification (ASJC) code | `2735`
 **asjc_subjects** |  String | Subject is derived from journals descriptions in Crossref metadata based on the Science Journal Classification Codes | `Pediatrics`

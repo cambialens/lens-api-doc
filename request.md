@@ -273,7 +273,7 @@ It matches each words separately. If you need to search whole phrase use [match 
 Query different terms with explicit operators `AND`/`OR`/`NOT` to create a compact query string.
 >Example: Find works from institution published between two dates having some title.
 ```json
-{"query": "(title:Dimensions AND author.affiliation.institution:(Harvard University)) AND year_published:[2000 TO 2018]"}
+{"query": "(title:Dimensions AND author.affiliation.name:(Harvard University)) AND year_published:[2000 TO 2018]"}
 ```
 
 If you need to use any [reserved special characters](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#_reserved_characters), you should escape them with leading backslash.

@@ -5,7 +5,7 @@ permalink: /support.html
 ---
 
 - To report any bugs, issues and usability of APIs you can [Create Issue].
-- If you have any issues or concerns regarding your subscription, please email `support@lens.org`.
+- If you have any issues or concerns regarding your subscription, please email [support@lens.org](mailto:support@lens.org).
 - To provide feedback, please use the [Lens Feedback] form.
 
 #### Tips for creating issues:

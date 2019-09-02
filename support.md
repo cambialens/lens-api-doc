@@ -5,8 +5,8 @@ permalink: /support.html
 ---
 
 - To report any bugs, issues and usability of APIs you can [Create Issue].
-- If you have any issues or concerns regarding your subscription please contact [Lens Support] or email `support@lens.org`.
-- To provide feedback, you can use [Lens Support] contact form.
+- If you have any issues or concerns regarding your subscription please email `support@lens.org`.
+- To provide feedback, please use the [Lens Feedback] form.
 
 #### Tips for creating issues:
 - Please provide the API request and response if possible.
@@ -21,4 +21,4 @@ Version | Date Released | Notes
 `beta` | April 29, 2019 | |
 
 [Create Issue]: <https://github.com/cambialens/lens-api-doc/issues>
-[Lens Support]: <https://www.lens.org/lens/feedback?returnTo=https:/>
+[Lens Feedback]: <https://www.lens.org/lens/feedback?returnTo=https:/>

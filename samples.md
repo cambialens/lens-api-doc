@@ -60,6 +60,38 @@ else:
   print(response.text)
 ```
 
+#### Cursor based pagination
+
+```python
+import requests
+import time
+url = 'https://api.lens.org/scholarly/search'
+data = '''{
+     "query": "Malaria",
+     "size": 100,
+     "scroll":"1m"
+}'''
+headers = {'Authorization': 'Bearer your_token', 'Content-Type': 'application/json'}
+
+def scroll(scroll_id):
+  if scroll_id is not None:
+    global data
+    data = '''{"scroll_id": "%s"}''' % scroll_id
+  response = requests.post(url, data=data, headers=headers) 
+  if response.status_code != requests.codes.ok:
+    print response
+  elif response.status_code == requests.codes.too_many_requests:
+    time.sleep(8)
+    scroll(scroll_id)
+  else:
+    json = response.json()
+    scroll_id = json['scroll_id']
+    print json['data'] #DO something with your data
+    scroll(scroll_id)
+
+scroll(scroll_id=None)
+```
+
 ## Java
 ```java
 import java.io.*;

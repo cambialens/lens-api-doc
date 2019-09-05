@@ -16,7 +16,7 @@ permalink: /support.html
 
 Version | Date Released | Notes
 ------- | ------| -------
-`1.1` | September 9, 2019 | - Added additional subscription options.|
+`1.2` | September 9, 2019 | - Added additional subscription options. <br/> - Bug fixes <br/> - Performance improvements <br/> - See (Release 6.4)[] notes |
 `1.1` | July 22, 2019 | - Added the ability to search within a scholarly collection (user feedback) <br/> - Bug fixes|
 `1.0` | June 27, 2019 | - API to access the full corpus of Scholarly works |
 `beta` | April 29, 2019 | |

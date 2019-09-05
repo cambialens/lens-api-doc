@@ -50,7 +50,6 @@ To ensure our public API endpoints remain usable by everyone and to maintain the
 - `x-rate-limit-remaining_record_per_month`: Number of remaining records that can be fetched
 
 Once you go over any rate limit you will receive a `429 - Too many requests` error with respective messages.
-> Currently Free API users can perform up to 5 requests per minute and 2000 per month before getting rate limited.
 
 ### HTTP Responses
 

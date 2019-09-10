@@ -5,7 +5,7 @@ permalink: /support.html
 ---
 
 - To report any bugs, issues and usability of APIs you can [Create Issue].
-- If you have any issues or concerns regarding your subscription, please email [subscriptions@lens.org](mailto:subscriptions@lens.org).
+- If you have any issues or concerns regarding your access plan, please email [subscriptions@lens.org](mailto:subscriptions@lens.org).
 - To provide feedback, please use the [Lens Feedback] form.
 
 #### Tips for creating issues:
@@ -16,7 +16,7 @@ permalink: /support.html
 
 Version | Date Released | Notes
 ------- | ------| -------
-`1.2` | September 9, 2019 | - Added additional subscription options. <br/> - Bug fixes <br/> - Performance improvements <br/> - See (Release 6.4)[] notes |
+`1.2` | September 9, 2019 | - Added Lens partner option <br/> - Bug fixes <br/> - Performance improvements <br/> - See [Release 6.4](https://about.lens.org/news/release-6-4/) notes for details|
 `1.1` | July 22, 2019 | - Added the ability to search within a scholarly collection (user feedback) <br/> - Bug fixes|
 `1.0` | June 27, 2019 | - API to access the full corpus of Scholarly works |
 `beta` | April 29, 2019 | |

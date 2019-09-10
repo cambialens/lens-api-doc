@@ -4,9 +4,9 @@ title: Support
 permalink: /support.html
 ---
 
-- To report any bugs, issues and usability of APIs you can [Create Issue].
+- To report any bugs, issues and usability of APIs you can [create an issue].
 - If you have any issues or concerns regarding your access plan, please email [subscriptions@lens.org](mailto:subscriptions@lens.org).
-- To provide feedback, please use the [Lens Feedback] form.
+- For general questions or to provide feedback, please use the [Lens Feedback] form.
 
 #### Tips for creating issues:
 - Please provide the API request and response if possible.
@@ -21,5 +21,5 @@ Version | Date Released | Notes
 `1.0` | June 27, 2019 | - API to access the full corpus of Scholarly works |
 `beta` | April 29, 2019 | |
 
-[Create Issue]: <https://github.com/cambialens/lens-api-doc/issues>
+[create an issue]: <https://github.com/cambialens/lens-api-doc/issues>
 [Lens Feedback]: <https://www.lens.org/lens/feedback?returnTo=https:/>

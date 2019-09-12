@@ -170,7 +170,7 @@ You can control the output fields in the API [Response] using projection. There 
 ```json
  {"exclude":["external_ids","references"]}
 ```
-> Note: Both *include* and *exclude* cannot be used in same request.
+> Note: Both *include* and *exclude* can be used in same request.
 
 ### Supported Query Types
 

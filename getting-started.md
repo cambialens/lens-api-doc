@@ -43,11 +43,11 @@ Your use of the API is subject to the Lens [Terms of Use]. Lens uses token-based
 
 To ensure our public API endpoints remain usable by everyone and to maintain the server's optimal availability, a rate limiting mechanism is being used to temporarily block any clients that reduce the server's performance. The applied rate limits will be included in the following HTTP response headers:
 
-- `x-rate-limit-remaining_request_per_minute`: Number of requests allowed in a minute
+- `x-rate-limit-remaining-request-per-minute`: Number of requests allowed in a minute
 - `x-rate-limit-retry-after-seconds`: Time in seconds until next request can be performed
 - `x-rate-limit-reset-date`: Rate limit will get reset at this date
-- `x-rate-limit-remaining_request_per_month`: Number of API calls allowed till the reset date above
-- `x-rate-limit-remaining_record_per_month`: Number of remaining records that can be fetched
+- `x-rate-limit-remaining-request-per-month`: Number of API calls allowed till the reset date above
+- `x-rate-limit-remaining-record-per-month`: Number of remaining records that can be fetched
 
 Once you go over any rate limit you will receive a `429 - Too many requests` error with respective messages.
 

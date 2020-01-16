@@ -27,7 +27,7 @@ As of the current version, Lens offers the following API endpoints:
 
 - **Scholarly Works:** `[POST] https://api.lens.org/scholarly/search`
 - **Collections:** `[POST] https://api.lens.org/collections/{collection_id}`
-> You can access scholarly works from collections created at your [Work Area].
+> You can access scholarly works from collections created at your [Work Area]. The `{collection_id}` can be found at the end of your collection URL, e.g. `https://www.lens.org/lens/scholar/search/results?collectionId={collection_id}`.
 > Here is an [example]({{site.baseurl}}/examples.html#access-your-collection) to illustrate how to access your collection.
 
 **Swagger Documentation is available here:** `https://api.lens.org/swagger-ui.html`

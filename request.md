@@ -246,7 +246,7 @@ It matches each words separately. If you need to search whole phrase use [match 
 ```
 
 ##### Boolean query
-[Bool Query] allows to combine multiple queries to create complex query providing precise result.
+[Bool Query] allows to combine multiple queries to create complex query providing precise result. It can be created using one or more of these clauses: `must`, `should`, `must_not` and `filter`. You can use `must` for `AND` operation and `should` for `OR`.
 > Example: Get journal article scholarly works of Author with last name Kondratyev having patent citations.
 ```json
 {

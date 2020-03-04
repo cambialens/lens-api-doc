@@ -52,6 +52,8 @@ Field | Type | Description
 **author.last_name** | String | The author's last name e.g. `Kupco`
 **author.initials** | String | Author Initials e.g. `A`
 **author.display_name** | String | Author's full name e.g. `Alexander Kupco`
+**author.magid** | String | Author MAG identifier
+**author.orcid** | String | Author ORCID identifier
 **author.affiliation.name** | String | The institution associated with the author affiliations. e.g. `Stony Brook University`
 **author.affiliation.grid_id** | String | Affiliation grid id e.g. `grid.9018.0`
 **author.affiliation.country_code** | String | Country Code e.g. `US`,`DE`,`CH`, `FR`

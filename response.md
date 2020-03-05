@@ -60,8 +60,8 @@ permalink: /response.html
 **last_name** | String | The author's last name | `Kupco`
 **initials** | String | Author Initials | `A`
 **affiliations** | Array of [Affiliation](#affiliation) | The institution/affiliations associated with Author.
-{: .param-def }
 **ids** | Array of [Id](#id) | Author's MAG, ORCID identifiers | `[{"type": "magid", "value": "1234567890"}]`
+{: .param-def }
 
 #### Affiliation
 

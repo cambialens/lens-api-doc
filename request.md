@@ -137,6 +137,9 @@ Use parameter `from` to define the offset and `size` to specify number of record
   "size":50
 }
 ```
+Similarly for `GET` requests, following parameters are applicable:
+`size=50&from=100`
+
 ##### Cursor Based Pagination
 
 You can specify records per page using `size` (default 20 and max 1000) and context alive time `scroll` (default 1 minute). You will receive a `scroll_id` in response, which should be passed via request body to access next set of results. Since the `scroll_id` tends to change every time after each successful requests, please use the most recent `scroll_id` to access next page. This is not suited for real time user requests.
@@ -147,8 +150,10 @@ You can specify records per page using `size` (default 20 and max 1000) and cont
   "scroll": "1m"
 }
 ```
-> Note: The lifespan of scroll_id is limited to 1 minute for the current API version. Using expired scroll_id will result bad request HTTP response.
-> Parameter `size` will be used for first scroll query and will remain the same for whole scroll context. Hence, using size in each scroll request will not have any effect.
+> Note: 
+> - The lifespan of scroll_id is limited to 1 minute for the current API version. Using expired scroll_id will result bad request HTTP response.
+> - Parameter `size` will be used for first scroll query and will remain the same for whole scroll context. Hence, using size in each scroll request will not have any effect.
+> - Cursor based pagination is only applicable to `POST` requests.
 
 ### Sorting
 Result can be retrieved in ascending or descending order. By default, results are sorted with most relevant matches first. Use the following format and [fields](#searchable-fields) to apply sorting to the API response.
@@ -160,6 +165,8 @@ Result can be retrieved in ascending or descending order. By default, results ar
   ]
 }
 ```
+For `GET` requests following structure is applicable.
+`sort=desc(date_published),asc(patent_citation_count)`
 
 ### Projection
 You can control the output fields in the API [Response] using projection. There are two possible ways to do that.
@@ -172,6 +179,8 @@ You can control the output fields in the API [Response] using projection. There 
 ```json
  {"exclude":["external_ids","references"]}
 ```
+For `GET` requests following structure is applicable.
+`include=authors,lens_id`
 > Note: Both *include* and *exclude* can be used in same request.
 
 ### Supported Query Types

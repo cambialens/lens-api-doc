@@ -163,3 +163,8 @@ OR using String Based Query
   "size":10
 }
 ```
+
+##### Using GET Requests
+> `[GET] https://api.lens.org/collections/123456?token=[your-access-token]&size=10&query=Malaria&include=authors,lens_id&sort=desc(date_published)`
+
+> `[GET] https://api.lens.org/scholarly/search?token=[your-access-token]&size=10&query=Malaria&include=authors,lens_id&sort=desc(date_published)`

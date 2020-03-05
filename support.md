@@ -16,6 +16,7 @@ permalink: /support.html
 
 Version | Date Released | Notes
 ------- | ------| -------
+`1.3` | March 5, 2020 | - Added `GET` endpoints for Scholarly Search and Collections <br/> - Added author identifier fields (MAG, ORCID) <br/> - See [Release 6.7](https://about.lens.org/news/release-6-7/) notes for details|
 `1.2` | September 9, 2019 | - Added Lens partner option <br/> - Bug fixes <br/> - Performance improvements <br/> - See [Release 6.4](https://about.lens.org/news/release-6-4/) notes for details|
 `1.1` | July 22, 2019 | - Added the ability to search within a scholarly collection (user feedback) <br/> - Bug fixes|
 `1.0` | June 27, 2019 | - API to access the full corpus of Scholarly works |

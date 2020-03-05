@@ -61,6 +61,7 @@ permalink: /response.html
 **initials** | String | Author Initials | `A`
 **affiliations** | Array of [Affiliation](#affiliation) | The institution/affiliations associated with Author.
 {: .param-def }
+**ids** | Array of [Id](#id) | Author's MAG, ORCID identifiers | `[{"type": "magid", "value": "1234567890"}]`
 
 #### Affiliation
 

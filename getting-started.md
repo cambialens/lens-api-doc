@@ -25,8 +25,14 @@ You need to have the following before you can start using Lens APIs:
 
 As of the current version, Lens offers the following API endpoints:
 
-- **Scholarly Works:** `[POST] https://api.lens.org/scholarly/search`
-- **Collections:** `[POST] https://api.lens.org/collections/{collection_id}`
+**Scholarly Works:** 
+- `[POST] https://api.lens.org/scholarly/search`
+- `[GET] https://api.lens.org/scholarly/search`
+
+**Collections:** 
+- `[POST] https://api.lens.org/collections/{collection_id}`
+- `[GET] https://api.lens.org/collections/{collection_id}`
+
 > You can access scholarly works in your collections from your [Work Area]. The `{collection_id}` can be found at the end of your collection URL, e.g. `https://www.lens.org/lens/scholar/search/results?collectionId={collection_id}`.
 > Here is an [example]({{site.baseurl}}/examples.html#access-your-collection) to illustrate how to access your collection.
 - **API usage:** `[GET] https://api.lens.org/scholarly/usage`
@@ -35,10 +41,13 @@ As of the current version, Lens offers the following API endpoints:
 
 ### API Access
 
-Your use of the API is subject to the Lens [Terms of Use]. Lens uses token-based API authentication, you can request access and [manage your access plan and tokens] from your Lens user profile. You need to provide your access token in the Request Header when accessing the APIs.
+Your use of the API is subject to the Lens [Terms of Use]. Lens uses token-based API authentication, you can request access and [manage your access plan and tokens] from your Lens user profile.
 
+For `POST` Requests, you need to provide your access token in the Request Header when accessing the APIs:
 >Example: ```Authorization: Bearer your-access-token```
 
+For the `GET` Requests, you can provide your access token in the request parameter:
+>Example: ```https://api.lens.org/scholarly/search?token=YOUR_ACCESS_TOKEN```
 
 ### Rate Limiting
 

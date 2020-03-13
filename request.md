@@ -292,7 +292,28 @@ If you need to use any [reserved special characters](https://www.elastic.co/guid
 ```json
 {"query": "doi:10.1109\\/ee.1934.6540358"}
 ```
+You can use json based format for string based query and mixed with complex boolean queries like this:
+```json
+{
+	"query": {
+		"bool": {
+			"must": [{
+				"query_string": {
+					"query": "X-ray analysis of protein crystals",
+					"fields": ["title", "abstract", "full_text"],
+					"default_operator": "and"
+				}
+			}],
+			"filter": [{
+				"term": {
+					"has_affiliation": true
+				}
+			}]
 
+		}
+	}
+}
+```
 
 [//]: # (Reference Links)
 [Response]: <{{site.baseurl}}/response.html>

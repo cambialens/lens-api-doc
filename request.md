@@ -293,6 +293,7 @@ If you need to use any [reserved special characters](https://www.elastic.co/guid
 {"query": "doi:10.1109\\/ee.1934.6540358"}
 ```
 You can use json based format for string based query and mixed with complex boolean queries like this:
+
 ```json
 {
 	"query": {

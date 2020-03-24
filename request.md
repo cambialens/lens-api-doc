@@ -55,7 +55,7 @@ Field | Type | Description
 **author.magid** | String | Author MAG identifier
 **author.orcid** | String | Author ORCID identifier
 **author.affiliation.name** | String | The institution associated with the author affiliations. e.g. `Stony Brook`
-**author.affiliation.name.exact** | String | Exactly matches the full institution name. e.g. `Stony Brook University`
+**author.affiliation.name.exact** | String | Exactly matches the full institution name (case sensetive). e.g. `Stony Brook University`
 **author.affiliation.grid_id** | String | Affiliation grid id e.g. `grid.9018.0`
 **author.affiliation.country_code** | String | Country Code e.g. `US`,`DE`,`CH`, `FR`
 **title** | String | Title of the scholarly work e.g. `Malaria`
@@ -79,7 +79,7 @@ Field | Type | Description
 **open_access.license** |  String | The Open Access license type e.g. `cc-by`
 **open_access.colour** |  String | The Open Access colour category e.g. `gold`, `green`
 **source.title** | String | The name of source publication in which the scholarly work appears e.g. Journal name, Book title, Conference proceedings
-**source.title.exact** | String | The full name of source publication for exact match.
+**source.title.exact** | String | The full name of source publication for exact match (case sensetive).
 **source.type** | String | Source Type e.g. `Journal`, `Book Series`
 **source.publisher** | String | The publisher of the source publication `Elsevier`, `Wiley`, `American Medical Association`
 **source.issn** | String | The International Standard Serial Number of the source publication, without hyphenation e.g. `00222836`
@@ -92,7 +92,7 @@ Field | Type | Description
 **mesh_term.qualifier_id** | String | Mesh Term Qualifier ID e.g. `Q000032`
 **mesh_term.qualifier_name** | String | Mesh Term Qualifier Name e.g. `pathology`, `immunology`, `analysis`
 **funding.organisation** | String | Name of the funding organisation e.g. `NIDCR NIH HHS`
-**funding.organisation.exact** | String | For exact matches of full organisational name.
+**funding.organisation.exact** | String | For exact matches of full organisational name (case sensetive).
 **funding.funding_id** | String | The funding organisation's project identifier e.g.`U01 DE018902`
 **funding.country** | String | The country of the funding body e.g. `United States`, `Germany`, `United Kingdom`
 {: .param-def }

@@ -142,7 +142,7 @@ Use parameter `from` to define the offset and `size` to specify number of record
 ```
 Similarly for `GET` requests, the following parameters are applicable: `size=50&from=100`
 > Note: 
-> - Offset/size based paginations is suitable for small result sets only and does not work on result sets of more that 10000 records. For larger volume data downloads, use Cursor Based Pagination.
+> - Offset/size based paginations is suitable for small result sets only and does not work on result sets of more that 1000 records. For larger volume data downloads, use Cursor Based Pagination.
 
 ##### Cursor Based Pagination
 

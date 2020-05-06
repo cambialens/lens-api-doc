@@ -14,7 +14,7 @@ permalink: /patent-response.html
 **jurisdiction** | string | patent filing jurisdiction | `"WO"`
 **lens_id** | string | patent Lens ID | `"008-525-073-655-546"`
 **pub_key** | string | patent natural key | `"EP_1944033_A2"`
-**title** | array | patent title | 
+**title** | array | Array of patent [title](#title) | 
 **abstract** | array | patent abstract | 
 **doc_type** | string | patent document type | `"Patent Application"`
 **pub_date** | date: yyyy-mm-dd | patent publication date | `"2008-07-16"`
@@ -30,12 +30,14 @@ permalink: /patent-response.html
 **npl_cit** | array of objects | non-patent literature citations | 
 {: .param-def }
 
-#### Patent Citation
+#### title
 
  Field | Type |  Description | Example
 ------- |:------| -------|---------
-**lens_id** | String | Unique lens identifier | `141-171-521-309-804`
+**lang** | string | Two letter ISO country code representing the language of the associated text | `EN`
+**text** | string | The title text | 
 {: .param-def }
+
 #### Author
 
  Field | Type |  Description  | Example

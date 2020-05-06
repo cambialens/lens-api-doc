@@ -4,10 +4,10 @@ title: Patent Metadata
 permalink: /patent-response.html
 ---
 {:.table-contents}
-- [Response Fields](#response-fields)
-- [Sample API Response](#sample-api-response)
+- [Metadata Fields](#metadata-fields)
+- [Sample Patent Record](#sample-patent-record)
 
-### Patent Fields
+### Metadata Fields
 
  Field | Type |  Description  | Example
 ------- |:------| :------- |---------

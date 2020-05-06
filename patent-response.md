@@ -11,38 +11,23 @@ permalink: /patent-response.html
 
  Field | Type |  Description  | Example
 ------- |:------| :------- |---------
- **patent_citations** | Array of [Patent Citation](#patent-citation) | Referenced by patents |  |
- **patent_citations_count** | Integer | Number of patent citations | `10`
- **lens_id** | String | Unique lens identifier | `100-004-910-081-14X`
- **created** | Date | Record created date | `2016-08-01T00:00:00+00:00`
- **publication_type** | String | Publication Type | `journal article`
- **publication_supplementary_type** | Array of String | Supplementary publication type | `["review"]`
- **authors** | Array of [Author](#author) | Authors| |
- **title** | String | Title of the scholarly work | `Malaria`
- **external_ids** | Array of [Id](#id) | The external identifier(s) for a scholarly work (DOI, PubMed ID, PubMed Central ID, Microsoft Academic ID or CORE) | |
- **start_page** | String | Start page | `893`
- **end_page** | String | End page | `916`
- **volume** | String | Volume | `32`
- **issue** | String | Issue | `4`
- **languages** | Array of String | Languages | `["ENG"]`
- **references** | List of [Reference](#reference) | References |  |
- **scholarly_citations** | List of Lens Ids | Scholarly Citations  | `["091-720-300-990-437"]`
- **chemicals** | List of [Chemical](#chemical) | Chemicals |  |
- **clinical_trials** | List of [Clinical Trial](#clinical-trial) | Clinical Trials |  |
- **fields_of_study** | List of String |Fields Of Study | `["Immunology", "Malaria"]`
- **source_urls** | List of [Source URL](#source-url) | Source Urls |
- **abstract** | String | Scholarly work abstract text |
- **date_published** | Date | Date of publication | `2009-05-22`
- **year_published** | Integer | Year of publication | `1986`
- **conference** | [Conference](#conference) | The conference instance or edition |
- **author_count** | Integer | Number of Authors | `4`
- **references_count** | Integer | The number of works in the reference list of a scholarly work | `2`
- **scholarly_citations_count** | Integer | The number of scholarly works that cite this scholarly work | `3`
- **open_access** | [Open Access](#open-access) |
- **source** | [Source](#source) | Source publication in which the scholarly work appears |
- **keywords** | Array of String | Keywords |
- **mesh_terms** | Array of [MeSH Term](#mesh-term) | MeSH term |
- **funding** | Array of [Funding](#funding) |  Funding |
+**jurisdiction** | string | patent filing jurisdiction | `"WO"`
+**lens_id** | string | patent Lens ID | `"008-525-073-655-546"`
+**pub_key** | string | patent natural key | `"EP_1944033_A2"`
+**title** | array | patent title | 
+**abstract** | array | patent abstract | 
+**doc_type** | string | patent document type | `"Patent Application"`
+**pub_date** | date: yyyy-mm-dd | patent publication date | `"2008-07-16"`
+**filing_date** | date: yyyy-mm-dd | patent filing date | `"2001-11-21"`
+**filing_key** | string | patent filing key | `"EP_07022824_A_20011121"`
+**family** | array of objects | patent family data for both simple and extended family definitions - see https://www.epo.org/searching-for-patents/helpful-resources/first-time-here/patent-families.html  | 
+**applicant** | array of strings | patent applicants | `"NUTRICIA NV"`
+**inventor** | array of strings | patent inventors | `"VOGEL MANFRED"`
+**owner** | available for US patents | patent owners | `"RAINBOW MEDICAL LTD"`
+**classification_us** | array of strings | United States Patent classification codes | 
+**classification_cpc** | array of strings | CPC classification codes | `"A61K31/732"`
+**pat_cit** |  | cited patent publications | 
+**npl_cit** | array of objects | non-patent literature citations | 
 {: .param-def }
 
 #### Patent Citation

@@ -20,7 +20,7 @@ permalink: /patent-response.html
 **pub_date** | date: yyyy-mm-dd | patent publication date | `"2008-07-16"`
 **filing_date** | date: yyyy-mm-dd | patent filing date | `"2001-11-21"`
 **filing_key** | string | patent filing key | `"EP_07022824_A_20011121"`
-**family** | array of objects | patent family data for both simple and extended family definitions - see https://www.epo.org/searching-for-patents/helpful-resources/first-time-here/patent-families.html  | 
+**family** | Array of [family](#family) objects | patent family data for both simple and extended family definitions - see https://www.epo.org/searching-for-patents/helpful-resources/first-time-here/patent-families.html  | 
 **applicant** | array of strings | patent applicants | `"NUTRICIA NV"`
 **inventor** | array of strings | patent inventors | `"VOGEL MANFRED"`
 **owner** | available for US patents | patent owners | `"RAINBOW MEDICAL LTD"`
@@ -38,7 +38,7 @@ permalink: /patent-response.html
 **text** | string | The title text | 
 {: .param-def }
 
-#### Author
+#### abstract
 
  Field | Type |  Description  | Example
 ------- |:------| -------|---------
@@ -46,13 +46,13 @@ permalink: /patent-response.html
 **text** | string | The abstract text | 
 {: .param-def }
 
-#### Affiliation
+#### family 
 
  Field | Type |  Description | Example
 ------- |:------| -------|---------
-**name** | String | The institution associated with the author affiliations. | `Stony Brook University`
-**grid_id** | String | Affiliation grid id | `grid.9018.0`
-**country_code** | String | Comma separated country codes | `DE`
+**type** | string | simple | extended | `simple`
+**size** | integer | patent family size | `43`
+**lens_id ** | array of strings | patent publication Lens IDs of family members | `"195-080-781-069-750"`
 {: .param-def }
 
 #### Reference

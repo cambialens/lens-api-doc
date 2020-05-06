@@ -26,8 +26,8 @@ permalink: /patent-response.html
 **owner** | available for US patents | patent owners | `"RAINBOW MEDICAL LTD"`
 **classification_us** | array of strings | United States Patent classification codes | 
 **classification_cpc** | array of strings | CPC classification codes | `"A61K31/732"`
-**pat_cit** |  | cited patent publications | 
-**npl_cit** | array of objects | non-patent literature citations | 
+**pat_cit** | Array of [Cited Patents](#pat_cit) | cited patent publications | 
+**npl_cit** | array of [Cited NPL](#npl_cit) objects | non-patent literature citations | 
 {: .param-def }
 
 #### title
@@ -52,107 +52,27 @@ permalink: /patent-response.html
 ------- |:------| -------|---------
 **type** | string | simple | extended | `simple`
 **size** | integer | patent family size | `43`
-**lens_id ** | array of strings | patent publication Lens IDs of family members | `"195-080-781-069-750"`
+**lens_id** | array of strings | patent publication Lens IDs of family members | `"195-080-781-069-750"`
 {: .param-def }
 
-#### Reference
+#### pat_cit
 
  Field | Type |  Description | Example
 ------- |:------| -------|---------
-**lens_id** | String | Unique lens identifier | `071-957-228-698-625`
+**pub_key** | string | patent natural key | `"US_5834442_A"`
+**lens_id** | string | patent Lens ID - may be null if the natural key for the citation is not resolved | `"172-621-027-075-635"`
 {: .param-def }
 
-#### Open Access
+#### npl_cit
 
  Field | Type |  Description | Example
 ------- |:------| -------|---------
-**license** |  String | The Open Access license type | `cc-by`
-**colour** |  String | The Open Access colour category | `gold`
+**cit_text** | string | citation free text string in the original form | `"W.C. Birtwell, et al., "The evolution of counterpulsation techniques", Medical Instrumentation, vol. 10, No. 5, Sep.-Oct. 1976."`
 {: .param-def }
 
-#### Source
 
- Field | Type |  Description | Example
-------- |:------| -------|---------
-**title** |  String | The name of source publication in which the scholarly work appears | `Journal name, Book title, Confernce proceedings`
-**type** |  String | Source Type | `Journal`
-**publisher** |  String | The publisher of the source publication | `W.B. Saunders Ltd`
-**issn** |  Array of Object | The International Standard Serial Number of the source publication, without hyphenation | `[{"value": "10797114"}]`
-**country** |  String | The publisher's country | `United Kingdom`
-**asjc_codes** |  String | The All Science Journal Classification (ASJC) code | `2735`
-**asjc_subjects** |  String | Subject is derived from journals descriptions in Crossref metadata based on the Science Journal Classification Codes | `Pediatrics`
-{: .param-def }
 
-#### Mesh Term
-
- Field | Type |  Description | Example
-------- |:------|-------|---------
-**mesh_id** | String | MeSH term unique identifier. MeSH terms are the National Library of Medicine’s controlled vocabulary or subject heading list. | `D000293`
-**mesh_heading** | String | MeSH terms are the National Library of Medicine’s controlled vocabulary or medical subject headings assigned to PubMed entries. NB MeSH Headings are case sensitive. | `Adolescent`
-**qualifier_id** | String | Mesh Term Qualifier ID | `Q000032`
-**qualifier_name** | String | Mesh Term Qualifier Name | `analysis`
-{: .param-def }
-
-#### Funding
-
- Field | Type |  Description | Example
-------- |:------:| -------|---------
-**org** | String | Name of the funding organisation | `NIDCR NIH HHS`
-**funding_id** | String | The funding organisation's project identifier | `U01 DE018902`
-**country** | String | The country of the funding body | `United States`
-{: .param-def }
-
-#### Conference
-
-Field | Type |  Description | Example
-------- |:------:| -------|---------
-**name** | String | Conference Name | `International Electron Devices Meeting`
-**instance** | String | Conference Instance Name | `CHI 1985`
-**location** | String | The location of the conference | `Lihue, Kauai, HA, USA`
-{: .param-def }
-
-#### Chemical
-
- Field | Type |  Description | Example
-------- |:------:| -------|---------
-**mesh_id** | String | MeSH term id | `D000293`
-**registry_number** | String | Chemical registration number | `5Q7ZVV76EI`
-**substance_name** | String | Substance name | `Antimalarials`
-{: .param-def }
-
-#### Clinical Trial
-
- Field | Type |  Description | Example
- ------- |:------:| ------- |---------
-**id** | String | Identifier | `nct00105716`
-**registry** | String | Clinical Trial Registry | `10.18810/clinical-trials-gov`
-{: .param-def }
-
-#### Source URL
-
-Field | Type |  Description | Example
- ------- |:------:| -------|---------
-**type** | String | Source URL Type | `html`
-**url** | String | URL String | `http://cds.cern.ch/record/2291692`
-{: .param-def }
-
-#### ID
-
- Field | Type |  Description | Example
-------- |:------:| -------|---------
-**type** | String | The type/s of external identifiers for the scholarly work | `doi`, `pmid`, `magid`
-**value** | String | The external identifier(s) for a scholarly work | `10.1016/s0031-3955(16)34861-1`
-{: .param-def }
-
-### Sample API Response
-**Request:**
-```json
-{
-  "query":{
-  	"match":{"lens_id":"086-713-276-176-892"}
-  }
-}
-```
+### Sample Patent Record
 **Response:**
 ```json
 {

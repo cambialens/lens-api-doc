@@ -15,7 +15,7 @@ permalink: /patent-response.html
 **lens_id** | string | patent Lens ID | `"008-525-073-655-546"`
 **pub_key** | string | patent natural key | `"EP_1944033_A2"`
 **title** | array | Array of patent [title](#title) | 
-**abstract** | array | patent abstract | 
+**abstract** | array | Array of patent [abstract](#abstract) | 
 **doc_type** | string | patent document type | `"Patent Application"`
 **pub_date** | date: yyyy-mm-dd | patent publication date | `"2008-07-16"`
 **filing_date** | date: yyyy-mm-dd | patent filing date | `"2001-11-21"`
@@ -42,12 +42,8 @@ permalink: /patent-response.html
 
  Field | Type |  Description  | Example
 ------- |:------| -------|---------
-**collective_name** | String | Author Collective Name |
-**first_name** | String | The author's first name | `Alexander`
-**last_name** | String | The author's last name | `Kupco`
-**initials** | String | Author Initials | `A`
-**affiliations** | Array of [Affiliation](#affiliation) | The institution/affiliations associated with Author.
-**ids** | Array of [Id](#id) | Author's MAG, ORCID identifiers | `[{"type": "magid", "value": "1234567890"}]`
+**lang** | string | Two letter ISO country code representing the language of the associated text | `DE`
+**text** | string | The abstract text | 
 {: .param-def }
 
 #### Affiliation

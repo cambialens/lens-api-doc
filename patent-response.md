@@ -76,556 +76,123 @@ permalink: /patent-response.html
 **Response:**
 ```json
 {
-    "total": 1,
-    "data": [
-        {
-            "patent_citations": [
-                {
-                    "lens_id": "122-064-734-901-067"
-                }
-            ],
-            "patent_citations_count": 1,
-            "lens_id": "086-713-276-176-892",
-            "created": "2018-05-12T02:39:28.395000+00:00",
-            "open_access": {
-                "license": "cc-by-nc-nd",
-                "colour": "hybrid"
-            },
-            "publication_type": "journal article",
-            "publication_supplementary_type": [
-                "clinical trial, phase ii",
-                "multicenter study",
-                "randomized controlled trial",
-                "research support, non-u.s. gov't"
-            ],
-            "authors": [
-                {
-                    "collective_name": null,
-                    "first_name": "Maha",
-                    "last_name": "Hussain",
-                    "initials": "M",
-                    "affiliations": [
-                        {
-                            "name": "University of Michigan",
-                            "grid_id": "grid.214458.e",
-                            "country_code": "US"
-                        }
-                    ]
-                },
-                {
-                    "collective_name": null,
-                    "first_name": "Dana E.",
-                    "last_name": "Rathkopf",
-                    "initials": "DE",
-                    "affiliations": [
-                        {
-                            "name": "Memorial Sloan Kettering Cancer Center",
-                            "grid_id": "grid.51462.34",
-                            "country_code": "US"
-                        }
-                    ]
-                },
-                {
-                    "collective_name": null,
-                    "first_name": "Glenn",
-                    "last_name": "Liu",
-                    "initials": "G",
-                    "affiliations": [
-                        {
-                            "name": "University of Wisconsin-Madison",
-                            "grid_id": "grid.14003.36",
-                            "country_code": "US"
-                        }
-                    ]
-                },
-                {
-                    "collective_name": null,
-                    "first_name": "Andrew J.",
-                    "last_name": "Armstrong",
-                    "initials": "AJ",
-                    "affiliations": [
-                        {
-                            "name": "Duke University",
-                            "grid_id": "grid.26009.3d",
-                            "country_code": "US"
-                        }
-                    ]
-                },
-                {
-                    "collective_name": null,
-                    "first_name": "Kevin",
-                    "last_name": "Kelly",
-                    "initials": "K",
-                    "affiliations": [
-                        {
-                            "name": "Thomas Jefferson University",
-                            "grid_id": "grid.265008.9",
-                            "country_code": "US"
-                        }
-                    ]
-                },
-                {
-                    "collective_name": null,
-                    "first_name": "Anna C.",
-                    "last_name": "Ferrari",
-                    "initials": "AC",
-                    "affiliations": [
-                        {
-                            "name": "New York University",
-                            "grid_id": "grid.137628.9",
-                            "country_code": "US"
-                        }
-                    ]
-                },
-                {
-                    "collective_name": null,
-                    "first_name": "John D.",
-                    "last_name": "Hainsworth",
-                    "initials": "JD",
-                    "affiliations": [
-                        {
-                            "name": "Sarah Cannon Research Institute",
-                            "grid_id": "grid.477834.b",
-                            "country_code": "GB"
-                        }
-                    ]
-                },
-                {
-                    "collective_name": null,
-                    "first_name": "Adarsh",
-                    "last_name": "Joshi",
-                    "initials": "A",
-                    "affiliations": [
-                        {
-                            "name": "Eli Lilly and Company",
-                            "grid_id": "grid.488258.b",
-                            "country_code": "IT"
-                        }
-                    ]
-                },
-                {
-                    "collective_name": null,
-                    "first_name": "Rebecca R.",
-                    "last_name": "Hozak",
-                    "initials": "RR",
-                    "affiliations": [
-                        {
-                            "name": "Eli Lilly and Company",
-                            "grid_id": "grid.488258.b",
-                            "country_code": "IT"
-                        }
-                    ]
-                },
-                {
-                    "collective_name": null,
-                    "first_name": "Ling",
-                    "last_name": "Yang",
-                    "initials": "L",
-                    "affiliations": [
-                        {
-                            "name": "Eli Lilly and Company",
-                            "grid_id": "grid.488258.b",
-                            "country_code": "IT"
-                        }
-                    ]
-                },
-                {
-                    "collective_name": null,
-                    "first_name": "Jonathan D.",
-                    "last_name": "Schwartz",
-                    "initials": "JD",
-                    "affiliations": [
-                        {
-                            "name": "Eli Lilly and Company",
-                            "grid_id": "grid.488258.b",
-                            "country_code": "IT"
-                        }
-                    ]
-                },
-                {
-                    "collective_name": null,
-                    "first_name": "Celestia S.",
-                    "last_name": "Higano",
-                    "initials": "CS",
-                    "affiliations": [
-                        {
-                            "name": "University of Washington",
-                            "grid_id": "grid.34477.33",
-                            "country_code": "US"
-                        }
-                    ]
-                }
-            ],
-            "title": "A randomised non-comparative phase II trial of cixutumumab (IMC-A12) or ramucirumab (IMC-1121B) plus mitoxantrone and prednisone in men with metastatic docetaxel-pretreated castration-resistant prostate cancer",
-            "volume": "51",
-            "issue": "13",
-            "languages": [
-                "en"
-            ],
-            "references": [
-                {
-                    "lens_id": "003-415-704-045-340"
-                },
-                {
-                    "lens_id": "006-027-163-131-418"
-                },
-                {
-                    "lens_id": "007-652-362-542-447"
-                },
-                {
-                    "lens_id": "010-839-632-959-305"
-                },
-                {
-                    "lens_id": "013-690-046-069-453"
-                },
-                {
-                    "lens_id": "015-449-984-502-884"
-                },
-                {
-                    "lens_id": "015-767-931-570-158"
-                },
-                {
-                    "lens_id": "018-245-327-947-052"
-                },
-                {
-                    "lens_id": "020-963-415-260-304"
-                },
-                {
-                    "lens_id": "026-332-934-265-841"
-                },
-                {
-                    "lens_id": "028-101-820-366-93X"
-                },
-                {
-                    "lens_id": "032-523-762-689-478"
-                },
-                {
-                    "lens_id": "037-117-740-052-570"
-                },
-                {
-                    "lens_id": "038-557-040-762-884"
-                },
-                {
-                    "lens_id": "040-239-601-782-040"
-                },
-                {
-                    "lens_id": "042-246-996-698-043"
-                },
-                {
-                    "lens_id": "043-024-349-674-734"
-                },
-                {
-                    "lens_id": "043-201-312-439-671"
-                },
-                {
-                    "lens_id": "046-041-414-632-674"
-                },
-                {
-                    "lens_id": "046-648-350-541-685"
-                },
-                {
-                    "lens_id": "046-852-526-558-260"
-                },
-                {
-                    "lens_id": "054-808-246-993-497"
-                },
-                {
-                    "lens_id": "059-727-763-246-876"
-                },
-                {
-                    "lens_id": "065-982-455-260-233"
-                },
-                {
-                    "lens_id": "069-612-901-254-771"
-                },
-                {
-                    "lens_id": "070-794-057-102-152"
-                },
-                {
-                    "lens_id": "083-233-359-584-62X"
-                },
-                {
-                    "lens_id": "087-375-055-670-659"
-                },
-                {
-                    "lens_id": "087-458-139-690-01X"
-                },
-                {
-                    "lens_id": "090-234-280-758-859"
-                },
-                {
-                    "lens_id": "094-489-992-059-749"
-                },
-                {
-                    "lens_id": "095-400-716-937-253"
-                },
-                {
-                    "lens_id": "096-654-301-744-608"
-                },
-                {
-                    "lens_id": "101-625-667-760-940"
-                },
-                {
-                    "lens_id": "113-073-836-369-700"
-                },
-                {
-                    "lens_id": "128-335-721-572-401"
-                },
-                {
-                    "lens_id": "155-152-241-876-905"
-                }
-            ],
-            "keywords": [
-                "Cixutumumab",
-                "Mitoxantrone",
-                "Prednisone",
-                "Prostate cancer",
-                "Ramucirumab"
-            ],
-            "mesh_terms": [
-                {
-                    "mesh_heading": "Adenocarcinoma",
-                    "qualifier_name": "drug therapy",
-                    "mesh_id": "D000230",
-                    "qualifier_id": "Q000188"
-                },
-                {
-                    "mesh_heading": "Adolescent",
-                    "mesh_id": "D000293"
-                },
-                {
-                    "mesh_heading": "Adult",
-                    "mesh_id": "D000328"
-                },
-                {
-                    "mesh_heading": "Aged",
-                    "mesh_id": "D000368"
-                },
-                {
-                    "mesh_heading": "Antibodies, Monoclonal",
-                    "qualifier_name": "administration & dosage",
-                    "mesh_id": "D000911",
-                    "qualifier_id": "Q000008"
-                },
-                {
-                    "mesh_heading": "Antineoplastic Combined Chemotherapy Protocols",
-                    "qualifier_name": "adverse effects",
-                    "mesh_id": "D000971",
-                    "qualifier_id": "Q000009"
-                },
-                {
-                    "mesh_heading": "Disease Progression",
-                    "mesh_id": "D018450"
-                },
-                {
-                    "mesh_heading": "Disease-Free Survival",
-                    "mesh_id": "D018572"
-                },
-                {
-                    "mesh_heading": "Docetaxel",
-                    "mesh_id": "D000077143"
-                },
-                {
-                    "mesh_heading": "Humans",
-                    "mesh_id": "D006801"
-                },
-                {
-                    "mesh_heading": "Kaplan-Meier Estimate",
-                    "mesh_id": "D053208"
-                },
-                {
-                    "mesh_heading": "Male",
-                    "mesh_id": "D008297"
-                },
-                {
-                    "mesh_heading": "Middle Aged",
-                    "mesh_id": "D008875"
-                },
-                {
-                    "mesh_heading": "Mitoxantrone",
-                    "qualifier_name": "administration & dosage",
-                    "mesh_id": "D008942",
-                    "qualifier_id": "Q000008"
-                },
-                {
-                    "mesh_heading": "Prednisone",
-                    "qualifier_name": "administration & dosage",
-                    "mesh_id": "D011241",
-                    "qualifier_id": "Q000008"
-                },
-                {
-                    "mesh_heading": "Proportional Hazards Models",
-                    "mesh_id": "D016016"
-                },
-                {
-                    "mesh_heading": "Prostatic Neoplasms, Castration-Resistant",
-                    "qualifier_name": "drug therapy",
-                    "mesh_id": "D064129",
-                    "qualifier_id": "Q000188"
-                },
-                {
-                    "mesh_heading": "Taxoids",
-                    "qualifier_name": "therapeutic use",
-                    "mesh_id": "D043823",
-                    "qualifier_id": "Q000627"
-                },
-                {
-                    "mesh_heading": "Time Factors",
-                    "mesh_id": "D013997"
-                },
-                {
-                    "mesh_heading": "Treatment Outcome",
-                    "mesh_id": "D016896"
-                },
-                {
-                    "mesh_heading": "United States",
-                    "mesh_id": "D014481"
-                },
-                {
-                    "mesh_heading": "Young Adult",
-                    "mesh_id": "D055815"
-                }
-            ],
-            "chemicals": [
-                {
-                    "substance_name": "Antibodies, Monoclonal",
-                    "registry_number": "0",
-                    "mesh_id": "D000911"
-                },
-                {
-                    "substance_name": "Taxoids",
-                    "registry_number": "0",
-                    "mesh_id": "D043823"
-                },
-                {
-                    "substance_name": "anti-IGF-1R antibody A12",
-                    "registry_number": "0",
-                    "mesh_id": "C557414"
-                },
-                {
-                    "substance_name": "Docetaxel",
-                    "registry_number": "15H5577CQD",
-                    "mesh_id": "D000077143"
-                },
-                {
-                    "substance_name": "Mitoxantrone",
-                    "registry_number": "BZ114NVM5P",
-                    "mesh_id": "D008942"
-                },
-                {
-                    "substance_name": "ramucirumab",
-                    "registry_number": "D99YVK4L0X",
-                    "mesh_id": "C543333"
-                },
-                {
-                    "substance_name": "Prednisone",
-                    "registry_number": "VB0R961HZT",
-                    "mesh_id": "D011241"
-                }
-            ],
-            "clinical_trials": [
-                {
-                    "id": "nct00683475",
-                    "registry": "10.18810/clinical-trials-gov"
-                }
-            ],
-            "fields_of_study": [
-                "M.2",
-                "Immunology",
-                "Cixutumumab",
-                "Prednisone",
-                "Ramucirumab",
-                "Prostate cancer",
-                "Mitoxantrone",
-                "Docetaxel",
-                "Regimen",
-                "Medicine"
-            ],
-            "funding": [
-                {
-                    "org": "NCI NIH HHS",
-                    "funding_id": "P30 CA008748",
-                    "country": "United States"
-                }
-            ],
-            "source_urls": [
-                {
-                    "type": "unknown",
-                    "url": "http://www.ejcancer.com/article/S0959-8049(15)00450-5/pdf"
-                },
-                {
-                    "type": "html",
-                    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5024789/"
-                },
-                {
-                    "type": "html",
-                    "url": "https://www.scholars.northwestern.edu/en/publications/a-randomised-non-comparative-phase-ii-trial-of-cixutumumab-imc-a1"
-                },
-                {
-                    "type": "html",
-                    "url": "https://www.sciencedirect.com/science/article/pii/S0959804915004505"
-                },
-                {
-                    "type": "core_fulltext",
-                    "url": "https://core.ac.uk/download/pdf/82196673.pdf"
-                }
-            ],
-            "abstract": "Abstract Background Cixutumumab, a human monoclonal antibody (HuMAb), targets the insulin-like growth factor receptor. Ramucirumab is a recombinant HuMAb that binds to vascular endothelial growth factor receptor-2. A non-comparative randomised phase II study evaluated cixutumumab or ramucirumab plus mitoxantrone and prednisone (MP) in metastatic castration-resistant prostate cancer (mCRPC). Patients and methods Men with progressive mCRPC during or after docetaxel therapy received mitoxantrone 12 mg/m 2 on day 1 and prednisone 5 mg twice daily and were randomised 1:1 to receive either cixutumumab or ramucirumab 6 mg/kg intravenously weekly in a 21-day cycle. Primary end-point was composite progression-free survival (cPFS). Secondary end-points included safety, response, radiographic progression-free survival (PFS) and overall survival (OS). Sample size was based on a 50% increase in median cPFS from 2.6 (MP) to 3.9 months (either combination). Results 132 men were treated (66 per arm). Median cPFS was 4.1 months (95% confidence interval (CI), 2.2–5.6) for cixutumumab and 6.7 months (95% CI, 4.5–8.3) for ramucirumab. Median time to radiographic progression was 7.5 months for cixutumumab and 10.2 months for ramucirumab, with a median OS of 10.8 and 13.0 months, respectively. Fatigue was the most frequent adverse event (AE). Incidence of most non-haematologic grade 3–4 AEs was Conclusion Combinations of cixutumumab or ramucirumab plus MP were feasible and associated with moderate toxicities in docetaxel-pretreated men with mCRPC. Of the two regimens, the ramucirumab regimen is worthy of further testing based on the observed cPFS relative to the historical control.",
-            "year_published": 2015,
-            "references_count": 37,
-            "scholarly_citations_count": 10,
-            "external_ids": [
-                {
-                    "type": "magid",
-                    "value": "2113210954"
-                },
-                {
-                    "type": "pmid",
-                    "value": "26082390"
-                },
-                {
-                    "type": "doi",
-                    "value": "10.1016/j.ejca.2015.05.019"
-                }
-            ],
-            "start_page": "1714",
-            "end_page": "1724",
-            "source": {
-                "title": "European Journal of Cancer",
-                "type": "Journal",
-                "publisher": "Elsevier BV",
-                "issn": [
-                    {
-                        "value": "09598049"
-                    }
-                ],
-                "country": "United Kingdom",
-                "asjc_codes": [
-                    "1306",
-                    "2730"
-                ],
-                "asjc_subjects": [
-                    "Oncology",
-                    "Cancer Research"
-                ]
-            },
-            "scholarly_citations": [
-                "000-201-187-558-654",
-                "026-107-871-228-662",
-                "028-262-672-178-175",
-                "030-115-779-382-725",
-                "035-630-845-016-108",
-                "037-016-998-061-439",
-                "062-343-220-167-149",
-                "067-043-485-486-441",
-                "145-126-752-104-913",
-                "174-636-795-252-301"
-            ],
-            "author_count": 12,
-            "date_published": "2015-06-13T00:00:00+00:00"
-        }
-    ],
-    "results": 1
+  "lens_id": "008-525-073-655-546",
+  "jurisdiction": "EP",
+  "pub_key": "EP_1944033_A2",
+  "pub_date": "2008-07-16",
+  "filing_key": "EP_07022824_A_20011121",
+  "filing_date": "2001-11-21",
+  "type": "Patent Application",
+  "inventor": [
+    "KUNZ MARKWART",
+    "MUNIR MOHAMMAD",
+    "VOGEL MANFRED"
+  ],
+  "applicant": [
+    "NUTRICIA NV"
+  ],
+  "owner": [],
+  "classification_cpc": [
+    "C12Y301/01011",
+    "A23L29/231",
+    "A61K31/732",
+    "C08B37/0045",
+    "C12P19/04",
+    "C12Y302/01015",
+    "C12Y402/0201"
+  ],
+  "classification_ipc": [
+    "A23K1/16",
+    "A61K31/732",
+    "A23B4/00",
+    "A23L29/231",
+    "A61P1/12",
+    "A61P31/04",
+    "A61P35/00",
+    "A61P35/02",
+    "A61P35/04",
+    "A61P37/08",
+    "A61P43/00",
+    "C08B37/00",
+    "C08B37/06",
+    "C12P19/04",
+    "C12P19/14"
+  ],
+  "classification_us": [],
+  "npl_cit": [
+    {
+      "cit_text": "RAZ; LOTAN, CANCER METASTASIS REV., vol. 6, 1987, pages 433"
+    },
+    {
+      "cit_text": "CANCER RESEARCH, vol. 48, 1988, pages 6933 - 6937"
+    },
+    {
+      "cit_text": "KESTER ET AL., J. BIOL. CHEM., vol. 274, 1999, pages 37053 - 37059"
+    },
+    {
+      "cit_text": "ENDRESS ET AL., LEBENSM.-WISS. U. -TECHNOL., vol. 24, 1991, pages 80 - 85"
+    }
+  ],
+  "family": {
+    "simple": {
+      "lens_id": [
+        "195-080-781-069-750",
+        "164-658-285-491-42X",
+        // ...
+        "189-163-739-442-204",
+        "072-032-313-269-851"
+      ],
+      "size": 43
+    },
+    "extended": {
+      "lens_id": [
+        "195-080-781-069-750",
+        "164-658-285-491-42X",
+         // ...
+        "056-142-840-402-420",
+        "083-375-113-340-231"
+      ],
+      "size": 43
+    }
+  },
+  "title": [
+    {
+      "lang": "DE",
+      "text": "Verwendung von Pektinhydrolyseprodukten"
+    },
+    {
+      "lang": "EN",
+      "text": "Use of pectin hydrolysis products"
+    },
+    {
+      "lang": "FR",
+      "text": "Utilisation de produits d'hydrolyse de pectine"
+    }
+  ],
+  "abstract": [
+    {
+      "lang": "EN",
+      "text": "Pectin hydrolysis products are produced by the two-stage hydrolysis of a pectin or pectin-containing plant material with pectin-hydrolysing enzymes. Production of pectin hydrolysis products comprises: (a) treatment of a pectin or pectin-containing plant material in aqueous solution or suspension with a pectin-hydrolysing enzyme (A); and (b) treatment of the product with a pectin-hydrolysing enzyme (B). The products obtained contain galacturonides with at least one 4,5-unsaturated galacturonic acid molecule and are esterified with methanol to >= 20%. An independent claim is also included for a pharmaceutical or dietetic preparation containing the pectin hydrolysis products and a carrier. ACTIVITY : Antibacterial. No data is given. MECHANISM OF ACTION : None given in the source material."
+    },
+    {
+      "lang": "DE",
+      "text": "Die vorliegende Erfindung betrifft die Verwendung eines Pektinhydrolyseprodukts, das zumindest ein ungesättigtes Galakturonsäuremolekül enthält und mit Methanol zu >= 20% verestert ist, für die Prophylaxe und Therapie von Infektionskrankheiten, Vergiftungen und Allergien."
+    }
+  ],
+  "pat_cit": [
+    {
+      "pub_key": "US_5834442_A",
+      "lens_id": "172-621-027-075-635"
+    },
+    {
+      "pub_key": "EP_0716605_B1",
+      "lens_id": "118-962-823-688-691"
+    },
+    {
+      "pub_key": "WO_1995_007084_A1",
+      "lens_id": "102-644-968-906-309"
+    }
+  ]
 }
 ```
 

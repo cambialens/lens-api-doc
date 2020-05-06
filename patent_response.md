@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Response
-permalink: /response.html
+title: Patent Response
+permalink: /patent-response.html
 ---
 {:.table-contents}
 - [Response Fields](#response-fields)
 - [Sample API Response](#sample-api-response)
 
-### Response Fields
+### Patent Fields
 
  Field | Type |  Description  | Example
 ------- |:------| :------- |---------

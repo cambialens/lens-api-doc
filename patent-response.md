@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Patent Response
+title: Patent Metadata
 permalink: /patent-response.html
 ---
 {:.table-contents}
@@ -73,7 +73,6 @@ permalink: /patent-response.html
 
 
 ### Sample Patent Record
-**Response:**
 ```json
 {
   "lens_id": "008-525-073-655-546",

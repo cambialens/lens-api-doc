@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Patent Metadata
-permalink: /patent-response.html
+permalink: /patent-metadata.html
 ---
 {:.table-contents}
 - [Metadata Fields](#metadata-fields)
@@ -28,6 +28,8 @@ permalink: /patent-response.html
 **classification_cpc** | array of strings | CPC classification codes | `"A61K31/732"`
 **pat_cit** | Array of [Cited Patents](#pat_cit) | cited patent publications | 
 **npl_cit** | array of [Cited NPL](#npl_cit) objects | non-patent literature citations | 
+**description** | array | Array of patent [description](#description). **N.B.** Description is only available for US patents. |
+**claims** | array | Array of patent [claims](#claims). **N.B.** Claims are only available for US patents. |
 {: .param-def }
 
 #### title
@@ -70,7 +72,21 @@ permalink: /patent-response.html
 **cit_text** | string | citation free text string in the original form | `"W.C. Birtwell, et al., "The evolution of counterpulsation techniques", Medical Instrumentation, vol. 10, No. 5, Sep.-Oct. 1976."`
 {: .param-def }
 
+#### description
 
+ Field | Type |  Description | Example
+------- |:------| -------|---------
+**lang** | string | Two letter ISO country code representing the language of the associated text | `EN`
+**text** | string | The description full text | `"CROSS-REFERENCE TO RELATED APPLICATIONS This application claims the benefit under 35 U.S.C. § 119(e) of U.S. provisional application Ser. No. 62/654,665, filed Apr. 9, 2018...`
+{: .param-def }
+
+#### claims
+
+ Field | Type |  Description | Example
+------- |:------| -------|---------
+**lang** | string | Two letter ISO country code representing the language of the associated text | `EN`
+**text** | string | The claims full text | `"1. A method, comprising:\n exposing tissue that comprises lipopigments when in a diseased state to an excitation source, wherein the lipopigments have at least a portion of an autofluorescence spectrum at wavelengths...`
+{: .param-def }
 
 ### Sample Patent Record
 ```json
@@ -190,6 +206,18 @@ permalink: /patent-response.html
     {
       "pub_key": "WO_1995_007084_A1",
       "lens_id": "102-644-968-906-309"
+    }
+  ],
+  "description": [
+    {
+       "lang": "en",
+       "text": "CROSS-REFERENCE TO RELATED APPLICATIONS This application claims the benefit under 35 U.S.C. § 119(e) of U.S. provisional application Ser. No. 62/654,665, filed Apr. 9, 2018, the disclosure of which is incorporated by reference in its entir..." // ...
+    }
+  ],
+  "claims": [
+    {
+       "lang": "en",
+        "text": "1. A method, comprising:\n exposing tissue that comprises lipopigments when in a diseased state to an excitation source, wherein the lipopigments have at least a portion of an autofluorescence spectrum at wavelengths..." //...
     }
   ]
 }

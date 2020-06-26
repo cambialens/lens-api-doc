@@ -37,7 +37,7 @@ As of the current version, Lens offers the following API endpoints:
 > Here is an [example]({{site.baseurl}}/examples.html#access-your-collection) to illustrate how to access your collection.
 
 **API usage:** 
-- `[GET] https://api.lens.org/scholarly/usage`
+- `[GET] https://api.lens.org/scholarly/usage?token={your-access-token}`
 
 **Swagger Documentation is available here:** [https://api.lens.org/swagger-ui.html](https://api.lens.org/swagger-ui.html)
 
@@ -49,7 +49,7 @@ For `POST` Requests, you need to provide your access token in the Request Header
 >Example: ```Authorization: Bearer your-access-token```
 
 For `GET` Requests, you can provide your access token in the request parameter:
->Example: ```https://api.lens.org/scholarly/search?token=your-access-token```
+>Example: ```https://api.lens.org/scholarly/search?token={your-access-token}```
 
 ### Rate Limiting
 

@@ -152,9 +152,9 @@ Field | Type | Description
 **doc_key** | String |
 **biblio** | String |
 **kind** | String |
-**biblio** | [Bibliographic Data](#bibliographic-data)
-**sequence_listing** |
-**abstract** |
+**biblio** | [Bibliographic Data](#bibliographic-data) |
+**sequence_listing** | [PatentSequenceListing](#patent-sequence-listing) |
+**abstract** | 
 **claims** | 
 **description** |
 **publication_type** | String | [Document Type](#document-type)
@@ -168,19 +168,19 @@ Field | Type | Description
 **priority_claims** | [Priority Claims](#priority-claims) |
 **invention_title** | List[[Invention Title](#invention-title)] |
 **lang** | String |
-**parties** | [Parties](#parties)
-**assignees** | [Assignees](#assignees)
-**examiners** | [Examiners](#examiners)
-**classifications_ipc** | [Classification Ipc](#classification-ipc)
-**classifications_ipcr** | List[[Classification Ipcr](#classification-ipcr)]
-**classifications_cpc** | [Classifications Cpc](#classifications-cpc)
-**classifications_national** | [Classifications National](#classifications-national)
-**references_cited** | [References Cited](#references-cited)
-**npl_citations** | [Patent Npl Citations](#patent-npl-citations)
-**designation_of_states** | [Designation Of States](#designation-of-states)
-**pct_or_regional_filing_data** | 
-**pct_or_regional_publishing_data** | 
-**us_term_of_grant** | 
+**parties** | [Parties](#parties) |
+**assignees** | [Assignees](#assignees) |
+**examiners** | [Examiners](#examiners) |
+**classifications_ipc** | [Classification Ipc](#classification-ipc) |
+**classifications_ipcr** | List[[Classification Ipcr](#classification-ipcr)] |
+**classifications_cpc** | [Classifications Cpc](#classifications-cpc) |
+**classifications_national** | [Classifications National](#classifications-national) |
+**references_cited** | [References Cited](#references-cited) |
+**npl_citations** | [Patent Npl Citations](#patent-npl-citations) |
+**designation_of_states** | [Designation Of States](#designation-of-states) |
+**pct_or_regional_filing_data** | [Pct Or Regional Filing Data](#pct-or-regional-filing-data) |
+**pct_or_regional_publishing_data** | [Pct Or Regional Publishing Data](#pct-or-regional-publishing-data)
+**us_term_of_grant** | [UsTermOfGrant](#us-term-of-grant)
 
 ##### Publication Reference
 Field | Type | Description
@@ -209,7 +209,7 @@ Field | Type | Description
 ##### Priority Claims
 Field | Type | Description
 -------- | --------- | -------
-**priority_claim** | List[[Priority Claim]](#priority-claim)
+**priority_claim** | List[[Priority Claim]](#priority-claim) |
 **source** | [Source](#source) | 
 
 ##### Priority Claim
@@ -253,15 +253,15 @@ Field | Type | Description
 ##### Applicant
 Field | Type | Description
 -------- | --------- | -------
-**applicant_name** |  [NameGroup](#name-group)
-**address_books** |  List[[Address Book](#address-book)]
-**nationality** | [Country](#country)
-**residence** |  [Country](#country)
-**us_rights** | [US Rights](#us-rights)
-**designated_states** | [Designated States](#designated-states)
-**designated_states_as_inventor** | [Designated States](#designated-states)
-**sequence** | Integer
-**app_type** | [Applicant Type](#applicant-type)
+**applicant_name** |  [NameGroup](#name-group) |
+**address_books** |  List[[Address Book](#address-book)] |
+**nationality** | [Country](#country) |
+**residence** |  [Country](#country) |
+**us_rights** | [US Rights](#us-rights) |
+**designated_states** | [Designated States](#designated-states) |
+**designated_states_as_inventor** | [Designated States](#designated-states) |
+**sequence** | Integer |
+**app_type** | [Applicant Type](#applicant-type) |
 **designation** | String |  `all`, `all_except_us`,`us_only`,`as_indicated`
 **data_format** | String | `DOCDB`, `DOCDBA`, `ORIGINAL`, `EPODOC`, `BNS`
 **source** | [Source](#source) |
@@ -269,22 +269,22 @@ Field | Type | Description
 ##### Inventor
 Field | Type | Description
 -------- | --------- | -------
-**inventor_name** |  [NameGroup](#name-group)
-**address_books** |  List[[Address Book](#address-book)]
-**nationality** | [Country](#country)
-**residence** |  [Country](#country)
-**designated_states** | [US Rights](#us-rights)
+**inventor_name** |  [NameGroup](#name-group) |
+**address_books** |  List[[Address Book](#address-book)] |
+**nationality** | [Country](#country) |
+**residence** |  [Country](#country) |
+**designated_states** | [US Rights](#us-rights) |
 **designation** | String |  `all`, `all_except_us`,`us_only`,`as_indicated`
-**sequence** | Integer
+**sequence** | Integer |
 **data_format** | String | `DOCDB`, `DOCDBA`, `ORIGINAL`, `EPODOC`, `BNS`
 **source** | [Source](#source) |
 
 ##### Agent
 Field | Type | Description
 -------- | --------- | -------
-**agent_name** |  [NameGroup](#name-group)
-**address_books** |  List[[Address Book](#address-book)]
-**sequence** | Integer
+**agent_name** |  [NameGroup](#name-group) |
+**address_books** |  List[[Address Book](#address-book)] |
+**sequence** | Integer |
 **rep_type** | String | `agent`, `attorney`, `common_representative`
 **data_format** | String | `DOCDB`, `DOCDBA`, `ORIGINAL`, `EPODOC`, `BNS`
 **source** | [Source](#source) |
@@ -292,7 +292,7 @@ Field | Type | Description
 ##### Assignees
 Field | Type | Description
 -------- | --------- | -------
-**assignee** | List[[NameAndAddress](#name-and-address)]
+**assignee** | List[[NameAndAddress](#name-and-address)] |
 **source** | [Source](#source) |
 
 ##### Examiners
@@ -300,7 +300,7 @@ Field | Type | Description
 -------- | --------- | -------
 **primary_examiner** | [Examiner](#examiner) |
 **assistant_examiner** | [Examiner](#examiner) |
-**authorized_officer** | [AuthorizedOfficer](#authorized-officer)
+**authorized_officer** | [AuthorizedOfficer](#authorized-officer) |
 **source** | [Source](#source) |
 
 ##### Classification Ipc
@@ -308,10 +308,10 @@ Field | Type | Description
 -------- | --------- | -------
 **edition** | String | 
 **main_classification** | String |
-**further_classification** | List[[FurtherClassification](#further-classification)]
-**unlinked_indexing_codes** | List[String]
-**linked_indexing_code_groups** | List[[LinkedIndexingCodeGroup](#linked-indexing-code-group)]
-**additional_infos** | List[String]
+**further_classification** | List[[FurtherClassification](#further-classification)] |
+**unlinked_indexing_codes** | List[String] |
+**linked_indexing_code_groups** | List[[LinkedIndexingCodeGroup](#linked-indexing-code-group)] |
+**additional_infos** | List[String] |
 **text** | String |
 **source** | [Source](#source) |
 
@@ -332,7 +332,7 @@ Field | Type | Description
 **classification_status** | String | `B` - Original, `R` - Reclassified
 **classification_data_source** | String | `H` - Human, `M` - Machine, `G` - Generated, `C`
 **generating_office** | [Country](#country)
-**sequence** | Integer
+**sequence** | Integer |
 
 ##### Classifications Cpc
 Field | Type | Description
@@ -352,30 +352,30 @@ Field | Type | Description
 **version_indicator** | Date |
 **symbol_position** | String | `F` - First, `L` - Later
 **classification_value** | String | `I` - Invention, `A` - Additional
-**action_date** | Date
+**action_date** | Date |
 **classification_status** | String | `B` - Original, `R` - Reclassified
 **classification_data_source** | String | `H` - Human, `M` - Machine, `G` - Generated, `C`
-**generating_office** | [Country](#country)
-**sequence** | Integer
+**generating_office** | [Country](#country) |
+**sequence** | Integer |
 
 ##### Combination Set
 Field | Type | Description
 -------- | --------- | -------
 **group_number** | Integer |
 **combination_rank** | List[[Combination Rank](#combination-rank)] |
-**sequence** | Integer
+**sequence** | Integer |
 
 ##### Combination Rank
 Field | Type | Description
 -------- | --------- | -------
-**rank_number** | Integer
-**classification_cpc** | [Classification CPC](#classification-cpc)
+**rank_number** | Integer |
+**classification_cpc** | [Classification CPC](#classification-cpc) |
 
 ##### Classifications National
 Field | Type | Description
 -------- | --------- | -------
-**country** | [Country](#country)
-**classifications** | List[[Classification National](#classification-national)]
+**country** | [Country](#country) | 
+**classifications** | List[[Classification National](#classification-national)] |
 **source** | [Source](#source) |
 
 #### Classification National
@@ -387,24 +387,24 @@ Field | Type | Description
 ##### Further Classification
 Field | Type | Description
 -------- | --------- | -------
-**content** | String
-**sequence** | Integer
+**content** | String |
+**sequence** | Integer |
 
 ##### Ipc Class
 Field | Type | Description
 -------- | --------- | -------
-**class_type** | String
-**value** | Integer
+**class_type** | String |
+**value** | Integer |
 
 ##### References Cited
 Field | Type | Description
 -------- | --------- | -------
-**text** | String
+**text** | String |
 **citation** | List[[Citation](#citation)]
-**date_search_completed** | Date
-**place_of_search** | [Country](#country)
-**search_report_publication** | List[[Document ID](#document-id)]
-**searcher** | [Name And Address](#name-and-address)
+**date_search_completed** | Date |
+**place_of_search** | [Country](#country) |
+**search_report_publication** | List[[Document ID](#document-id)] |
+**searcher** | [Name And Address](#name-and-address) |
 **source** | [Source](#source) |
 
 ##### Citation
@@ -414,15 +414,15 @@ Field | Type | Description
 **patcit** | [Patent Citation](#patent-citation) | 
 **nplcit** | [NPL Citation](#npl-citation) | 
 **corresponding_docs** | List[[Corresponding Docs](#corresponding-docs)] | 
-**rel_passages** | List[[Rel Passage](#rel-passage)]
+**rel_passages** | List[[Rel Passage](#rel-passage)] |
 
 ##### Document ID
 Field | Type | Description
 -------- | --------- | -------
-**country** | [Country](#country)
-**doc_number** | String
-**kind** | String
-**date** | Date
+**country** | [Country](#country) |
+**doc_number** | String |
+**kind** | String |
+**date** | Date |
 **lang** | String |
 **name.value** | String |
 **name.name_type** | String | [ `legal`, `natural` ]
@@ -430,20 +430,20 @@ Field | Type | Description
 ##### Patent Citation
 Field | Type | Description
 -------- | --------- | -------
-**text** | String
-**file** | String
-**url** | String
-**rel_passages** | List[[Rel Passage](#rel-passage)]
-**document_id** | [Document ID](#document-id)
-**doc_number** | String
+**text** | String |
+**file** | String |
+**url** | String |
+**rel_passages** | List[[Rel Passage](#rel-passage)] |
+**document_id** | [Document ID](#document-id) |
+**doc_number** | String |
 **doc_number_type**| String | `EP_UNKNOWN`, `APPLICATION_NUMBER`, `PUBLICATION_NUMBER`
 
 ##### Patent Npl Citations
 Field | Type | Description
 -------- | --------- | -------
-**citation_ids** | List[String]
-**npl_record_lens_ids** | List[String]
-**npl_lens_ids** | List[String]
+**citation_ids** | List[String] |
+**npl_record_lens_ids** | List[String] |
+**npl_lens_ids** | List[String] |
 **source** | [Source](#source) |
 
 ##### Designation PCT
@@ -451,6 +451,51 @@ Field | Type | Description
 -------- | --------- | -------
 **regional** | List[[Regional](#regional)]
 **national** | [National](#national)
+
+##### Pct Or Regional Filing Data
+Field | Type | Description
+-------- | --------- | -------
+**document_id** | List[[Document Id](#document-id)] |
+**us_371c124_date** | Date |
+**us_371c12_date** | Date |
+
+##### Pct Or Regional Publishing Data
+Field | Type | Description
+-------- | --------- | -------
+**document_id** | [Document Id](#document-id) |
+**gazette_reference** | [Gazette Reference](#gazette-reference) |
+
+##### Gazette Reference
+Field | Type | Description
+-------- | --------- | -------
+**gazette_num** | String | 
+**date** | Date | 
+**text** | String | 
+**id** | Date | 
+**country** | String | 
+**lang** | String | 
+
+##### US Term Of Grant
+Field | Type | Description
+-------- | --------- | -------
+**texts** | List[String] | 
+**length_of_grants** | List[String] | 
+**lapse_of_patents** | List[[Lapse Of Patent](#lapse-of-patent)] | 
+**prior_disclosure_affidavit_fields** | List[String] | 
+**disclaimers** | List[[Us Disclaimer](#us-disclaimer)] |
+**us_term_extensions** | List[String] | 
+
+##### Lapse Of Patent
+Field | Type | Description
+-------- | --------- | -------
+**document_id** | [DocumentId](#document-id) | 
+**text** | String | 
+
+##### Us Disclaimer
+Field | Type | Description
+-------- | --------- | -------
+**date** | Date | 
+**text** | String | 
 
 ##### Regional
 Field | Type | Description
@@ -650,6 +695,15 @@ Field | Type | Description
 **search_term** | List[String]
 **search_date** | Date
 **ref_no** | List[[RefNo](#ref-no)]
+
+##### History
+Field | Type | Description
+-------- | --------- | -------
+**text** | String |
+**received** | Date | 
+**accepted** | Date |
+**revised** | Date |
+**misc** | String |
 
 ##### Categories And Relevant Claims
 Field | Type | Description

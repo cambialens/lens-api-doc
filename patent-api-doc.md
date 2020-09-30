@@ -176,8 +176,8 @@ Field | Type | Description
 **classifications_cpc** | [Classifications Cpc](#classifications-cpc)
 **classifications_national** | [Classifications National](#classifications-national)
 **references_cited** | [References Cited](#references-cited)
-**npl_citations** | 
-**designation_of_states** | 
+**npl_citations** | [Patent Npl Citations](#patent-npl-citations)
+**designation_of_states** | [Designation Of States](#designation-of-states)
 **pct_or_regional_filing_data** | 
 **pct_or_regional_publishing_data** | 
 **us_term_of_grant** | 
@@ -224,6 +224,14 @@ Field | Type | Description
 **priority_doc_attached** | Boolean |
 **sequence** | Integer |
 **source** | [Source](#source) | 
+
+##### Designation Of States
+Field | Type | Description
+-------- | --------- | -------
+**designation_pct** | [Designation Pct](#designation-pct)
+**precautionary_designation_statement** | String
+**exclusion_from_designation** | 
+**source** | [Source](#source) |
 
 ##### Invention Title
 Field | Type | Description
@@ -430,6 +438,43 @@ Field | Type | Description
 **doc_number** | String
 **doc_number_type**| String | `EP_UNKNOWN`, `APPLICATION_NUMBER`, `PUBLICATION_NUMBER`
 
+##### Patent Npl Citations
+Field | Type | Description
+-------- | --------- | -------
+**citation_ids** | List[String]
+**npl_record_lens_ids** | List[String]
+**npl_lens_ids** | List[String]
+**source** | [Source](#source) |
+
+##### Designation PCT
+Field | Type | Description
+-------- | --------- | -------
+**regional** | List[[Regional](#regional)]
+**national** | [National](#national)
+
+##### Regional
+Field | Type | Description
+-------- | --------- | -------
+**region** | String | Country code
+*country_and_protection_requests* | List[[Country And Protection Requests](#country-and-protection-requests)]
+
+##### National
+Field | Type | Description
+-------- | --------- | -------
+
+##### Country And Protection Requests
+Field | Type | Description
+-------- | --------- | -------
+**country* | String
+**protection_requests** | List[[Protection Request](#protection-request)]
+
+##### Protection Request
+Field | Type | Description
+-------- | --------- | -------
+**kind_of_protection** | String
+**document_id** | [Document ID](#document-id)
+**subset** | String
+
 ##### NPL Citation
 Field | Type | Description
 -------- | --------- | -------
@@ -460,14 +505,151 @@ Field | Type | Description
 ##### Article
 Field | Type | Description
 -------- | --------- | -------
+**text** | String
+**atl** | String
+**abstract_no** | String
+**location** | [Location](#location)
+**clazz** | List[[IpcClass](#ipc-class)]
+**keyword** | List[String]
+**cpyrt** | String
+**art_id** | String
+**ref_no** | List[[RefNo](#ref-no)]
+**author** | List[[Author](#author)]
+**subname** | List[[SubName](#subname)]
+**serial** | [Serial](#serial)
+**book** | [Book](#book)
+
+##### Ref No
+-------- | --------- | -------
+**id** | String
+**value** | String
+
+##### Author
+-------- | --------- | -------
+**id** | String
+**address_book** | [Address Book](#address-book)
+
+##### SubName
+-------- | --------- | -------
+**sub_name_type** | String
+**name** | String
+**address_book** | [Address Book](#address-book)
+
+##### Location
+Field | Type | Description
+-------- | --------- | -------
+**text** | String
+**serpart** | String
+**sersect** | String
+**chapter** | String
+**pp** | String
+**column** | String
+**para** | String
+**line** | String
+
+##### Serial
+Field | Type | Description
+-------- | --------- | -------
+**serial_title** | String
+**alt_title** | String
+**sub_names** | List[[SubName](#subname)]
+**issue** | String
+**imprint** | [Imprint](#imprint)
+**pub_date** | [NplPubDate](#Npl-pubDate)
+**description** | String
+**notes** | String
+**issn** | String
+**isbn** | String
+**pub_id** | String
+**vid** | String
+**issue_no** | String
+**cpyrt** | String
+
+##### Imprint
+Field | Type | Description
+-------- | --------- | -------
+**text** | String
+**address** | [Address](#address)
+**name.value** | String |
+**name.name_type** | String | [ `legal`, `natural` ]
+**pubdate** | [NplPubDate](#Npl-pubDate)
+
+##### Npl PubDate
+Field | Type | Description
+-------- | --------- | -------
+**time** | String
+**start_date** | Date
+**start_date** | Date
 
 ##### Book
 Field | Type | Description
 -------- | --------- | -------
+**text** | String
+**author** | List[[Author](#author)]
+**sub_name** | List[[SubName](#subname)]
+**book_title** | List[String]
+**subtitle** | String
+**edition** | String
+**imprint** | List[[Imprint](#imprint)]
+**description** | String
+**conference** | [Conference](#conference)
+**series** | [Series](#series)
+**abstract_no** | String
+**location** | List[[Location](#location)]
+**isbn** | List[String]
+**issn** | String
+**doi** | String
+**issue_no** | String
+**pub_id** | String
+**volume_id** | String
+**book_no** | String
+**notes** | String
+**clazz** | List[[Ipc Class](#ipc-class)]
+**keyword** | List[String]
+**copyright** | String
+**ref_no** | List[[RefNo](#ref-no)]
+
+##### Series
+Field | Type | Description
+-------- | --------- | -------
+**text** | String
+**mst** | String
+**msn** | String
+**issn** | String
+
+###### Conference
+Field | Type | Description
+-------- | --------- | -------
+**text** | String
+**conf_title** | String
+**conf_date** | [NplPubDate](#npl-pubDate)
+**conf_place** | List[[Address](#address)]
+**conf_sponsor** | List[[Address Book](#address-book)]
+**conf_no** | String
 
 ##### Online
 Field | Type | Description
 -------- | --------- | -------
+**text** | String
+**online_title** | List[String]
+**host_title** | String
+**edition** | String
+**history** | [History](#history)
+**series** | [Series](#series)
+**host_no** | String
+**location** | [Location](#location)
+**series** | [Series](#series)
+**notes** | String
+**avail** | String
+**clazz** | List[[IPC Class](#ipc-class)]
+**keyword** | List[String]
+**cpyrt** | String
+**issn** | String
+**isbn** | String
+**date_cit** | Date
+**search_term** | List[String]
+**search_date** | Date
+**ref_no** | List[[RefNo](#ref-no)]
 
 ##### Categories And Relevant Claims
 Field | Type | Description

@@ -33,33 +33,33 @@
  Field | Type | Description
  -------- | --------- | -------
  **lens_id** | String | Unique lens identifier e.g. `100-004-910-081-14X`
- **abstract** | String | Patent document abstract
- **applicant.address** | String |  
- **applicant.app_type** | String | 
- **applicant.name** | String |
- **applicant.residence** | String |
- **application_reference.appl_type** | String |
- **application_reference.country** | String |
- **application_reference.date** | Date | `yyyy-MM-dd`
- **application_reference.doc_number** | String |
- **application_reference.kind** | String | 
+ **application_reference.country** | String | Filing jurisdiction
+ **application_reference.date** | Date | Filing Date `yyyy-MM-dd`
+ **application_reference.doc_number** | String | Application document number
+ **application_reference.kind** | String | Application document kind code
+ **application_reference.appl_type** | String | 
+ **abstract** | String | Patent document abstract |
+ **applicant.address** | String | Applicant Address
+ **applicant.app_type** | String | Applicant type `APPLICANT`, `APPLICANT_INVENTOR`
+ **applicant.name** | String | Applicant name
+ **applicant.residence** | [Country](#country) | Applicant country of residence e.g. `US`
  **claim** | String | The claims full text
- **classifications_cpc.action_date** | Date | `yyyy-MM-dd`
- **classifications_cpc.classification_data_source** | String | 
- **classifications_cpc.classification_status** | String |
- **classifications_cpc.classification_symbol_position** | String |
- **classifications_cpc.classification_value** | String |
+ **classifications_cpc.action_date** | Date | Issue date of the patent document. `yyyy-MM-dd`
+ **classifications_cpc.classification_data_source** | String | `H` - Human, `M` - Machine, `G` - Generated, `C`
+ **classifications_cpc.classification_status** | String | `B` - Original, `R` - Reclassified
+ **classifications_cpc.classification_symbol_position** | String | `F` - First, `L` - Later
+ **classifications_cpc.classification_value** | String | `I` - Invention, `A` - Additional
  **classifications_cpc.first_symbol** | String |
- **classifications_cpc.generating_office** | String |
+ **classifications_cpc.generating_office** | [Country](#country) |
  **classifications_cpc.later_symbol** | String |
- **classifications_cpc.sequence** | String |
- **classifications_cpc.source** | String |
- **classifications_cpc.symbol** | String |
- **classifications_cpc.version_indicator** | String |
- **classifications_ipc.edition** | String |
+ **classifications_cpc.sequence** | Integer |
+ **classifications_cpc.source** | [Source](#source)  | e.g. `DOCDB`
+ **classifications_cpc.symbol** | String | e.g. `H04L47/2416`
+ **classifications_cpc.version_indicator** | Date | e.g. `2006-01-01`
+ **classifications_ipc.edition** | String | "7"
  **classifications_ipc.later_symbol** | String |
- **classifications_ipc.main_symbol** | String |
- **classifications_ipc.source** | String |
+ **classifications_ipc.main_symbol** | String | `C01G57/00`
+ **classifications_ipc.source** | [Source](#source)  | e.g. `DOCDB`
  **classifications_ipc.symbol** | String |
  **classifications_ipc.text** | String |
  **classifications_ipcr.action_date** | Date | `yyyy-MM-dd`
@@ -71,12 +71,12 @@
  **classifications_ipcr.generating_office** | String |
  **classifications_ipcr.later_symbol** | String |
  **classifications_ipcr.sequence** | String |
- **classifications_ipcr.source** | String |
+ **classifications_ipcr.source** | [Source](#source)  | e.g. `DOCDB`
  **classifications_ipcr.symbol** | String |
  **classifications_ipcr.version_indicator** | String |
  **classifications_national.first_symbol** | String |
  **classifications_national.later_symbol** | String |
- **classifications_national.source** | String |
+ **classifications_national.source** | [Source](#source)  |
  **classifications_national.symbol** | String |
  **classifications_national.symbol_position** | String |
  **country** | String |
@@ -157,7 +157,7 @@ Field | Type | Description
 **abstract** | [Abstract](#abstract)
 **claims** | List[[Claims](#claims)]
 **description** | [Description](#description)
-**publication_type** | String | [Document Type](#document-type)
+**publication_type** | [Document Type](#document-type) | 
 **legal_status** | [Legal Status Information](#legal-status-information)
 
 ##### Bibliographic Data
@@ -226,6 +226,7 @@ Field | Type | Description
 **source** | [Source](#source) | 
 
 ##### Claims
+Field | Type | Description
 -------- | --------- | -------
 **claim** | List[Claim](#claim) |
 **id** | String |
@@ -235,6 +236,7 @@ Field | Type | Description
 **docPage** | List[[Doc Page](#doc-page)] |
 
 ##### Claim
+Field | Type | Description
 -------- | --------- | -------
 **id** | String |
 **num** | String |
@@ -243,11 +245,13 @@ Field | Type | Description
 **claim_references** | List[[Claim Ref](#claim-ref)] | 
 
 ##### Claim Ref
+Field | Type | Description
 -------- | --------- | -------
 **value** | String |
 **idref** | List[String] |
 
 ##### Doc Page
+Field | Type | Description
 -------- | --------- | -------
 **id** | String |
 **file** | String |
@@ -263,6 +267,7 @@ Field | Type | Description
 **orientation** | String |
 
 ##### Description
+Field | Type | Description
 -------- | --------- | -------
 **text** | String |
 **lang** | String |
@@ -381,15 +386,15 @@ Field | Type | Description
 Field | Type | Description
 -------- | --------- | -------
 **classification_or_combination_set** |  List[[Classification CPC](#classification-cpc)] OR List[[Combination Set](#combination-set)]
-**source** | [Source](#source) |
+**source** | [Source](#source) | e.g. `DOCDB`
 
 ##### Classification CPC
 Field | Type | Description
 -------- | --------- | -------
-**section** | String | 
-**clazz** | [Ipc Class](#ipc-class) |
-**subclass** | String |
-**main_group** | String |
+**section** | String | e.g. `A`
+**clazz** | [Ipc Class](#ipc-class) | 
+**subclass** | String | e.g. `K`
+**main_group** | String | e.g. `31`
 **subgroup** | String |
 **symbol** | String |
 **version_indicator** | Date |

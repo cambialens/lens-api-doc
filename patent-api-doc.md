@@ -35,7 +35,7 @@
  **lens_id** | String | Unique lens identifier e.g. `100-004-910-081-14X`
  **abstract** | String | Patent document abstract
  **applicant.address** | String |  
- **applicant.app_type** | String | Exact
+ **applicant.app_type** | String | 
  **applicant.name** | String |
  **applicant.residence** | String |
  **application_reference.appl_type** | String |
@@ -154,9 +154,9 @@ Field | Type | Description
 **kind** | String |
 **biblio** | [Bibliographic Data](#bibliographic-data) |
 **sequence_listing** | [PatentSequenceListing](#patent-sequence-listing) |
-**abstract** | 
-**claims** | 
-**description** |
+**abstract** | [Abstract](#abstract)
+**claims** | List[[Claims](#claims)]
+**description** | [Description](#description)
 **publication_type** | String | [Document Type](#document-type)
 **legal_status** | [Legal Status Information](#legal-status-information)
 
@@ -223,6 +223,49 @@ Field | Type | Description
 **priority_doc_requested** | Boolean | 
 **priority_doc_attached** | Boolean |
 **sequence** | Integer |
+**source** | [Source](#source) | 
+
+##### Claims
+-------- | --------- | -------
+**claim** | List[Claim](#claim) |
+**id** | String |
+**lang** | String |
+**claim_type** | String |
+**status** | String |
+**docPage** | List[[Doc Page](#doc-page)] |
+
+##### Claim
+-------- | --------- | -------
+**id** | String |
+**num** | String |
+**claim_type** | String |
+**claim_text** | List[String]
+**claim_references** | List[[Claim Ref](#claim-ref)] | 
+
+##### Claim Ref
+-------- | --------- | -------
+**value** | String |
+**idref** | List[String] |
+
+##### Doc Page
+-------- | --------- | -------
+**id** | String |
+**file** | String |
+**wi** | String |
+**he** | String |
+**type** | String |
+**alt** | String |
+**pp** | String |
+**ppf** | String |
+**ppl** | String |
+**ocr** | String |
+**color** | String |
+**orientation** | String |
+
+##### Description
+-------- | --------- | -------
+**text** | String |
+**lang** | String |
 **source** | [Source](#source) | 
 
 ##### Designation Of States
@@ -437,6 +480,18 @@ Field | Type | Description
 **document_id** | [Document ID](#document-id) |
 **doc_number** | String |
 **doc_number_type**| String | `EP_UNKNOWN`, `APPLICATION_NUMBER`, `PUBLICATION_NUMBER`
+
+##### Patent Sequence Listing
+Field | Type | Description
+-------- | --------- | -------
+**seq_list_key** | String |
+**sequence_types** | List[String] | `P`, `NA`, `DNA`, `RNA`, `AA`
+**length_buckets** | List[String] | `NT_1`, `NT_2`, `NT_3`, `NT_4`, `AA_1`, `AA_2`, `AA_3`
+**tax_ids** | List[Integer] | 
+**doc_locations** | List[String] |
+**data_sources** | List[String] | 
+**count** | Integer | 
+**source** | [Source](#source) |
 
 ##### Patent Npl Citations
 Field | Type | Description
@@ -873,6 +928,14 @@ Field | Type | Description
 **fax_image** | String
 **text_string** | String
 **click_wrap** | Boolean
+
+##### Abstract
+Field | Type | Description
+-------- | --------- | -------
+**text** | String
+**lang** | String
+**source** | [Source](#source) |
+**data_format** | String | `DOCDB`, `DOCDBA`, `ORIGINAL`, `EPODOC`, `BNS`
 
 ##### Legal Status Information
 Field | Type | Description

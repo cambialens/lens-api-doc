@@ -33,17 +33,25 @@
  Field | Type | Description
  -------- | --------- | -------
  **lens_id** | String | Unique lens identifier e.g. `100-004-910-081-14X`
+ **country** | [Country](#country) | Publication Country
+ **doc_number** | String | Publication document number
+ **date_published** | Date | Publication date `yyyy-MM-dd`
+ **kind** | String | Document kind code
+ **doc_key** | String |
+ **title** | String | Title
+ **description** | String |
+ **abstract** | String | Patent document abstract |
+ **claim** | String | The claims full text
+ **year_published** | Integer | Published year e.g. `2020`
  **application_reference.country** | String | Filing jurisdiction
  **application_reference.date** | Date | Filing Date `yyyy-MM-dd`
  **application_reference.doc_number** | String | Application document number
  **application_reference.kind** | String | Application document kind code
  **application_reference.appl_type** | String | 
- **abstract** | String | Patent document abstract |
  **applicant.address** | String | Applicant Address
  **applicant.app_type** | String | Applicant type `APPLICANT`, `APPLICANT_INVENTOR`
  **applicant.name** | String | Applicant name
  **applicant.residence** | [Country](#country) | Applicant country of residence e.g. `US`
- **claim** | String | The claims full text
  **classifications_cpc.action_date** | Date | Issue date of the patent document. `yyyy-MM-dd`
  **classifications_cpc.classification_data_source** | String | `H` - Human, `M` - Machine, `G` - Generated, `C`
  **classifications_cpc.classification_status** | String | `B` - Original, `R` - Reclassified
@@ -79,32 +87,12 @@
  **classifications_national.source** | [Source](#source)  |
  **classifications_national.symbol** | String |
  **classifications_national.symbol_position** | String |
- **country** | String |
- **date_published** | Date | `yyyy-MM-dd`
- **description** | String |
- **doc_key** | String |
- **doc_number** | String |
- **has_abstract** | Boolean |
- **has_claim** | Boolean |
- **has_description** | Boolean |
- **has_title** | Boolean |
  **inventor.address** | String |
  **inventor.name** | String |
  **inventor.nationality** | String |
  **inventor.residence** | String |
  **inventor.sequence** | String |
- **kind** | String |
- **language** | String |
- **legal_status.anticipated_term_date** | Date | `yyy-MM-dd`
- **legal_status.application_expiry_date** | Date | `yyy-MM-dd`
- **legal_status.discontinued_date** | Date | `yyy-MM-dd`
- **legal_status.grant_date** | Date | `yyy-MM-dd`
- **legal_status.granted** | Boolean | 
- **legal_status.has_disclaimer** | Boolean | 
- **legal_status.ipr_type** | String | 
- **legal_status.patent_status** | String | 
- **legal_status.prosecution_stage** | String | 
- **legal_status.publication_count** | String | 
+ **language** | String | 
  **npl_citation_count** | Integer | 
  **patent_citation_count** | Integer |
  **priority_claim.country** | String |
@@ -138,8 +126,19 @@
  **reference_cited.patent_citation.sequence** | String |
  **reference_cited.patent_citation.srep_office** | String |
  **reference_cited.patent_citation.us_category** | String |
- **title** | String |
- **year_published** | Integer |
+ **legal_status.anticipated_term_date** | Date | Calculated term date of granted patent `yyy-MM-dd`
+ **legal_status.application_expiry_date** | Date | Application expiry date before grant `yyy-MM-dd`
+ **legal_status.discontinued_date** | Date | Lapse dates which can be revived `yyy-MM-dd`
+ **legal_status.grant_date** | Date | Application grant date `yyy-MM-dd` 
+ **legal_status.patent_status** | [Patent Status](#patent-status) | Calculated Patent Status
+ **legal_status.prosecution_stage** | [Prosecution Stage](#prosecution-stage) | Current stage of patent application
+ **legal_status.publication_count** | Integer | Number of publications
+ **legal_status.has_disclaimer** | Boolean | Is US patent has terminal disclaimer
+ **legal_status.granted** | Boolean | Was patent granted
+ **has_abstract** | Boolean |
+ **has_claim** | Boolean |
+ **has_description** | Boolean |
+ **has_title** | Boolean |
  
 ### Response Fields
 Field | Type | Description
@@ -954,10 +953,21 @@ Field | Type | Description
 **anticipated_term_date** | Date | Calculated Term date based on natural term date plus additional extension
 **has_disclaimer** | Boolean | Is US patent subjected to a terminal disclaimer
 **calculation_log** | List[String] | Steps used to calculate the term date
-**patent_status** | String | PENDING, DISCONTINUED, PATENTED, ACTIVE, INACTIVE, EXPIRED
-**prosecution_stage** | String | Most recent stage of application `FILING`,`EXAMINATION`,`PRE_GRANT_CHALLENGE`,`GRANT,POST_GRANT_CHALLENGE`,`INACTIVE`,`TERMINATION`
+**patent_status** | [Patent Status](#patent-status) | 
+**prosecution_stage** | [Prosecution Stage](#prosecution-stage) | Most recent stage of application
 **party_events** | List[[Party Event](#party-event)] | Assignment events history
 **publication_count** | Integer
+
+##### Patent Status
+ - `PENDING` - Application pending
+ - `DISCONTINUED` - Discontinued, Withdrawn or Rejected
+ - `PATENTED` - In case of WO application is grant in some designated state
+ - `ACTIVE` - Patent is in force
+ - `INACTIVE` - Patent is inactive with chance of revivals
+ - `EXPIRED` - Patent is not in force
+ 
+##### Prosecution Stage
+`FILING`,`EXAMINATION`,`PRE_GRANT_CHALLENGE`,`GRANT,POST_GRANT_CHALLENGE`,`INACTIVE`,`TERMINATION`
 
 ##### Party Event
 Field | Type | Description
@@ -1036,6 +1046,85 @@ Field | Type | Description
 }
 ```
 
+##### (Title: CRISPR OR Abstract: CRISPR OR Claims: CRISPR) Having Publication Date (2010-09-01 - 2020-09-30) Jurisdiction China 
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "bool": {
+                        "should": [
+                            {
+                                "match" : {
+                                    "title": "CRISPR"
+                                }
+                            },
+                            {
+                                "match" : {
+                                    "abstract": "CRISPR"
+                                }
+                            },
+                            {
+                                "match" : {
+                                    "claim": "CRISPR"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "term" : {
+                        "country": "CN"
+                    }
+                
+                },
+                {
+                    "range" : {
+                        "date_published": {
+                            "gte": "2010-09-01",
+                            "lte": "2020-09-30"
+                        }
+                    }
+                
+                }
+            ]
+        }
+    }
+}
+```
+
+##### Patent applications from 2012 to 2020 on CRISPR cas9 in the claims. 
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "term" : {
+                        "publication_type": "PATENT_APPLICATION"
+                    }
+                
+                },
+                {
+                    "match" :{
+                        "claim": "CRISPR cas9"
+                    }
+                },
+                {
+                    "range" : {
+                        "date_published": {
+                            "gte": "2012-01-01",
+                            "lte": "2020-09-30"
+                        }
+                    }
+                
+                }
+            ]
+        }
+    }
+}
+```
 
 ### Sample Data
 ```json

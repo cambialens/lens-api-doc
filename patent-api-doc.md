@@ -1,18 +1,29 @@
 ## Lens Patent API - `Beta`
 
 ### Table of Contents
-- [Endpoints](#endpoints)
+- [API Endpoints](#api-endpoints)
 - [Request Structure](#request-structure)
 - [Request Fields](#request-fields)
 - [Response Fields](#response-fields)
 - [Examples](#examples)
-- [Sample](#sample-data)
+- [Sample Data](#sample-data)
+- [Known Issues](#known-issues)
 
-### Endpoints
-
- - Getting individual patent by Lens Id `GET` `/patent/{lens_id}`
- - Query Using GET Request `GET` `/patent/search?query=...&token={api-token}`
- - Search Using POST Request `POST` `/patent/search`
+### API Endpoints
+ - Search Using POST Request `POST` `https://pmr-beta.api.lens.org/patent/search`
+ - Getting individual patent by Lens Id `GET` `https://pmr-beta.api.lens.org/patent/{lens_id}`
+ - Query Using GET Request `GET` `https://pmr-beta.api.lens.org/patent/search?query=...&token={api-token}`
+ 
+### API Access
+ Your use of the API is subject to the [Lens Terms of Use](https://about.lens.org/policies/#termsuse). Lens uses token-based API authentication, you can manage your tokens from your Lens user profile.
+ 
+ For POST Requests, you need to provide your access token in the Request Header when accessing the APIs:
+ 
+ > Example: Authorization: Bearer your-access-token
+ 
+ For GET Requests, you can provide your access token in the request parameter:
+ 
+ > Example: https://pmr-beta.api.lens.org/patent/search?token={your-access-token}
  
 ### Request Structure
 
@@ -135,10 +146,10 @@
  **legal_status.publication_count** | Integer | Number of publications
  **legal_status.has_disclaimer** | Boolean | Is US patent has terminal disclaimer
  **legal_status.granted** | Boolean | Was patent granted
- **has_abstract** | Boolean |
- **has_claim** | Boolean |
- **has_description** | Boolean |
- **has_title** | Boolean |
+ **has_abstract** | Boolean | Filter out records without abstract
+ **has_claim** | Boolean | Filter out records without claim
+ **has_description** | Boolean | Filter out records without description
+ **has_title** | Boolean | Filter out records without title
  
 ### Response Fields
 Field | Type | Description
@@ -624,16 +635,19 @@ Field | Type | Description
 **book** | [Book](#book)
 
 ##### Ref No
+Field | Type | Description
 -------- | --------- | -------
 **id** | String
 **value** | String
 
 ##### Author
+Field | Type | Description
 -------- | --------- | -------
 **id** | String
 **address_book** | [Address Book](#address-book)
 
 ##### SubName
+Field | Type | Description
 -------- | --------- | -------
 **sub_name_type** | String
 **name** | String
@@ -1259,3 +1273,6 @@ Field | Type | Description
     "results": 1
 }
 ```
+
+### Known Issues
+- The `legal_status.prosecution_stage` is sometime ambiguous over `patent_status` specially for EP. example: EP1715345B1

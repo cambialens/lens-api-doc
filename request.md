@@ -1,11 +1,47 @@
 ---
-layout: page
+layout: post-sidebar
 title: Request
 permalink: /request.html
+show_sidebar: true
+sidebar: toc
+toc:
+  - title: Scholar API
+    subfolderitems:
+      - page: Request Structure
+        url: request.html#request-structure
+      - page: Searchable Fields
+        url: request.html#searchable-fields
+      - page: Filters
+        url: request.html#filtering
+      - page: Pagination
+        url: request.html#pagination
+      - page: Sorting
+        url: request.html#sorting
+      - page: Projection
+        url: request.html#projection
+      - page: Supported Query Types
+        url: request.html#supported-query-types
+  - title: Patent API
+    subfolderitems:
+      - page: Request Structure
+        url: patent-request.html#request-structure
+      - page: Searchable Fields
+        url: patent-request.html#searchable-fields
+      - page: Filters
+        url: patent-request.html#filtering
+      - page: Pagination
+        url: patent-request.html#pagination
+      - page: Sorting
+        url: patent-request.html#sorting
+      - page: Projection
+        url: patent-request.html#projection
+      - page: Supported Query Types
+        url: patent-request.html#supported-query-types
 ---
 
 The request fields are used in queries and sort operations.
 
+<!--            
 {:.table-contents}
 - [Request Structure](#request-structure)
 - [Searchable Fields](#searchable-fields)
@@ -14,6 +50,7 @@ The request fields are used in queries and sort operations.
 - [Sorting](#sorting)
 - [Projection](#projection)
 - [Supported Query Types](#supported-query-types)
+-->
 
 ### Request Structure
 The request payload should comply with following `json` schema.

@@ -1,12 +1,28 @@
 ---
-layout: page
+layout: post-sidebar
 title: Response
 permalink: /response.html
+show_sidebar: true
+sidebar: toc
+toc:
+  - title: Scholar API
+    subfolderitems:
+      - page: Response Fields
+        url: response.html#response-fields
+      - page: Sample API Response
+        url: response.html#sample-api-response
+  - title: Patent API
+    subfolderitems:
+      - page: Metadata Fields
+        url: patent-response.html#metadata-fields
+      - page: Sample Patent Record
+        url: patent-response.html#sample-patent-record
 ---
+<!--
 {:.table-contents}
 - [Response Fields](#response-fields)
 - [Sample API Response](#sample-api-response)
-
+-->
 ### Response Fields
 
  Field | Type |  Description  | Example

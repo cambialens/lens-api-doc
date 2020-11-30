@@ -1,12 +1,28 @@
 ---
-layout: page
+layout: post-sidebar
 title: Patent Metadata
 permalink: /patent-response.html
+show_sidebar: true
+sidebar: toc
+toc:
+  - title: Scholar API
+    subfolderitems:
+      - page: Response Fields
+        url: response.html#response-fields
+      - page: Sample API Response
+        url: response.html#sample-api-response
+  - title: Patent API
+    subfolderitems:
+      - page: Metadata Fields
+        url: patent-response.html#metadata-fields
+      - page: Sample Patent Record
+        url: patent-response.html#sample-patent-record
 ---
+<!--
 {:.table-contents}
 - [Metadata Fields](#metadata-fields)
 - [Sample Patent Record](#sample-patent-record)
-
+-->
 ### Metadata Fields
 
  Field | Type |  Description  | Example

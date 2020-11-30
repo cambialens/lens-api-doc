@@ -716,3 +716,25 @@ footer.footer {
         font-size: 18px
     }
 }
+
+
+
+
+.post-layout--sidebar {
+    display: flex;
+    flex-direction: row;
+}
+
+.post-sidebar {
+    min-width: 200px;
+    margin-right: 30px;
+    position: relative;
+}
+
+.post-sidebar--sticky {
+    position: sticky;
+    top: 0;
+}
+.post-sidebar + .post-content {
+    width: calc(100% - 230px);
+}

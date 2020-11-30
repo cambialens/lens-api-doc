@@ -1,8 +1,20 @@
 ---
-layout: page
+layout: post-sidebar
 title: Examples
 permalink: /examples.html
+show_sidebar: true
+sidebar: toc
+toc:
+  - title: Scholar API
+    subfolderitems:
+      - page: Example ??
+        url: examples.html#r    
+  - title: Patent API
+    subfolderitems:
+      - page: Patent Example ??
+        url: patent-examples.html#r  
 ---
+
 ##### Find 20 records from offset 10 that match provided query
 ```json
 {

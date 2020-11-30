@@ -254,6 +254,10 @@ figure,
     margin-bottom: 15px
 }
 
+h1 {
+    font-size: 1.5rem;
+}
+
 strong {
     font-weight: 600;
 }
@@ -422,6 +426,42 @@ table td {
     border: 1px solid #e8e8e8
 }
 
+
+.main-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu li{
+    list-style-type: none;
+    padding: 0 10px;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+}
+
+.main-menu .sub-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #182735;
+    border-radius: 0 0 4px 4px;
+    z-index: 2;
+}
+
+.main-menu li:hover .sub-menu {
+    display: block;
+}
+
+.main-menu .sub-menu a {
+    white-space: nowrap;
+}
+
+
+
 .site-header {
     background: #182735;
     color: #fff;
@@ -494,7 +534,7 @@ table td {
 }
 
 .site-nav .page-link:not(:last-child) {
-    margin-right: 20px
+    margin-right: 0px;
 }
 
 @media screen and (max-width: 600px) {
@@ -541,7 +581,7 @@ table td {
         margin-left: 20px
     }
     .site-nav .page-link:not(:last-child) {
-        margin-right: 0
+        /*margin-right: 0*/
     }
 }
 
@@ -720,20 +760,23 @@ footer.footer {
 
 
 
+
+/* Sidebar Template */
 .post-layout--sidebar {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
 }
 
 .post-sidebar {
     min-width: 200px;
-    margin-right: 30px;
+    margin-left: 30px;
     position: relative;
 }
 
 .post-sidebar--sticky {
     position: sticky;
     top: 0;
+    padding-top: 15px;
 }
 .post-sidebar + .post-content {
     width: calc(100% - 230px);

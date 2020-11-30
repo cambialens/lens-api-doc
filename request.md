@@ -39,7 +39,7 @@ toc:
         url: patent-request.html#supported-query-types
 ---
 
-The request fields are used in queries and sort operations.
+
 
 <!--            
 {:.table-contents}
@@ -53,7 +53,7 @@ The request fields are used in queries and sort operations.
 -->
 
 ### Request Structure
-The request payload should comply with following `json` schema.
+The request fields are used in queries and sort operations. The request payload should comply with following `json` schema.
 
 Fields | Description |  Required
 ------- | ------| -------

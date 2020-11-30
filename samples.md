@@ -1,15 +1,43 @@
 ---
-layout: page
+layout: post-sidebar
 title: Code Samples
 permalink: /samples.html
+show_sidebar: true
+sidebar: toc
+toc:
+  - title: Scholar API
+    subfolderitems:
+      - page: R
+        url: samples.html#r
+      - page: Python
+        url: samples.html#python
+      - page: Java
+        url: samples.html#java
+      - page: NodeJs
+        url: samples.html#nodejs
+      - page: cURL
+        url: samples.html#curl      
+  - title: Patent API
+    subfolderitems:
+      - page: R
+        url: patent-samples.html#r
+      - page: Python
+        url: patent-samples.html#python
+      - page: Java
+        url: patent-samples.html#java
+      - page: NodeJs
+        url: patent-samples.html#nodejs
+      - page: cURL
+        url: patent-samples.html#curl    
 ---
-
+<!--
 {:.table-contents}
 - [R](#r)
 - [Python](#python)
 - [Java](#java)
 - [NodeJs](#nodejs)
 - [cURL](#curl)
+-->
 
 ## R
 ```r

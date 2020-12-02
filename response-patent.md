@@ -1,22 +1,16 @@
 ---
 layout: post-sidebar
-title: Patent Metadata
-permalink: /patent-response.html
+title: Patent Response
+permalink: /response-patent.html
 show_sidebar: true
 sidebar: toc
 toc:
-  - title: Scholar API
-    subfolderitems:
-      - page: Response Fields
-        url: response.html#response-fields
-      - page: Sample API Response
-        url: response.html#sample-api-response
-  - title: Patent API
+  - title: Patent API Response
     subfolderitems:
       - page: Metadata Fields
-        url: patent-response.html#metadata-fields
+        url: response-patent.html#metadata-fields
       - page: Sample Patent Record
-        url: patent-response.html#sample-patent-record
+        url: response-patent.html#sample-patent-record
 ---
 <!--
 {:.table-contents}

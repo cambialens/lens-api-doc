@@ -1,182 +1,39 @@
 ---
-layout: post-sidebar
+layout: page
 title: Examples
 permalink: /examples.html
-show_sidebar: true
-sidebar: toc
-toc:
-  - title: Scholar API
-    subfolderitems:
-      - page: Example ??
-        url: examples.html#r    
-  - title: Patent API
-    subfolderitems:
-      - page: Patent Example ??
-        url: patent-examples.html#r  
 ---
 
-##### Find 20 records from offset 10 that match provided query
-```json
-{
-  "query": "X-ray analysis of protein crystals",
-  "size": 20,
-  "from": 10
-}
-```
+### Scholar API Examples
+{:.table-contents}
+- [Find 20 records from offset 10 that match provided query](examples-scholar.html#find-20-records-from-offset-10-that-match-provided-query)
+- [Get the patent citations, scholarly citations and references for a list of scholarly works using the lens_id](examples-scholar.html#get-the-patent-citations-scholarly-citations-and-references-for-a-list-of-scholarly-works-using-the-lens_id)
+- [Get title and patent citations for a scholarly work using a doi](examples-scholar.html#get-title-and-patent-citations-for-a-scholarly-work-using-a-doi)
+- [Get scholarly works using multiple pmid](examples-scholar.html#get-scholarly-works-using-multiple-pmid)
+- [Get the metadata for scholarly works that are cited by a list of patents using the patent lens_id](examples-scholar.html#get-the-metadata-for-scholarly-works-that-are-cited-by-a-list-of-patents-using-the-patent-lens_id)
+- [Find the 10 most recently published works from an institution (sorted by published date)](examples-scholar.html#find-the-10-most-recently-published-works-from-an-institution-sorted-by-published-date)
+- [Get publication year of journal articles cited by patents](examples-scholar.html#get-publication-year-of-journal-articles-cited-by-patents)
+- [Get 30 works from an institution published between two years](examples-scholar.html#get-30-works-from-an-institution-published-between-two-years)
+- [Get scholarly works having patent citations and affiliations](examples-scholar.html#get-scholarly-works-having-patent-citations-and-affiliations)
+- [Query by author name](examples-scholar.html#query-by-author-name)
+- [Find scholarly works with a Pubmed identifier published in 2012](examples-scholar.html#find-scholarly-works-with-a-pubmed-identifier-published-in-2012)
+- [Access your collection](examples-scholar.html#access-your-collection)
+- [Using GET Requests](examples-scholar.html#using-get-requests)
 
-##### Get the patent citations, scholarly citations and references for a list of scholarly works using the `lens_id`
-```json
-{
-  "query": {
-    "terms":{
-      "lens_id": ["017-767-306-508-482", "017-624-265-921-255"]
-    }
-  },
-  "include": ["lens_id", "patent_citations", "scholarly_citations", "references"]
-}
-```
 
-##### Get title and patent citations for a scholarly work using a `doi`
-```json
-{
-  "query": {
-    "match":{
-      "doi": "10.1109/ee.1934.6540358"
-    }
-  },
-  "include":["title","patent_citations"]
-}
-```
 
-##### Get scholarly works using multiple pmid
-```json
-{
-	"query": {
-		"terms": {
-			"pmid": ["14297189", "17475107"]
-		}
-	}
-}
-```
-
-##### Get the metadata for scholarly works that are cited by a list of patents using the patent lens_id
-```json
-{
-  "query": {
-    "terms": {
-      "patent_citation.lens_id":["198-832-374-467-397", "092-513-162-449-806"]
-    }
-  }
-}
-```
-
-##### Find the 10 most recently published works from an institution (sorted by published date)
-
-```json
-{
-  "query": {"match_phrase": {"author.affiliation.name": "Harvard University"}},
-  "sort": [{"date_published": "desc"}],
-  "size": 10
-}
-```
-
-##### Get publication year of journal articles cited by patents
-```json
-{
-   "query": {
-       "bool" : {
-        "must": [
-            {"terms": { "patent_citation.lens_id": ["020-159-299-402-960", "014-680-767-794-441"]}},
-            {"match": {"source.type": "Journal"}}
-        ]
-      }
-   },
-   "include": ["year_published"],
-   "size": 50
-}
-```
-
-##### Get 30 works from an institution published between two years
-```json
-{
-  "query": {
-    "bool": {
-      "must": {"match_phrase": {"author.affiliation.name": "Harvard University"}},
-    "filter": {
-      "range": {
-        "year_published": {
-          "gte": "1999",
-          "lte": "2000"
-          }
-        }
-      }
-    }
-  },
-  "size": 30
-}
-```
-
-##### Get scholarly works having patent citations and affiliations
-```json
-{
-    "query": {
-        "bool":{
-            "must": [
-                {"match": {"has_patent_citations": true}},
-                {"match": {"has_affiliation": true}}
-            ]
-        }
-    }
-}
-```
-
-##### Query by author name
-
-```json
-{
-    "query": {
-        "match_phrase": {"author.display_name": "Craig Venter"}
-    },
-    "sort": [{"year_published": "desc"}],
-    "size": 10
-}
-```
-
-##### Find scholarly works with a Pubmed identifier published in 2012
-```json
-{
-    "query": {
-        "bool":{
-           "must":[
-             {"match":{"external_id_type": "pmid"}},
-             {"match":{"year_published": 2012}}
-           ]
-        }
-    },
-    "include":["patent_citations_count", "external_ids"]
-}
-```
-
-OR using String Based Query
-
-```json
-{
-    "query": "external_id_type: pmid AND year_published: 2012",
-    "include":["patent_citations_count", "external_ids"]
-}
-```
-
-##### Access your collection
-> `[POST] https://api.lens.org/collections/123456`
-```json
-{
-  "query": {"match": {"title": "Malaria"}},
-  "include":["title","lens_id", "authors.first_name"],
-  "size":10
-}
-```
-
-##### Using GET Requests
-> `[GET] https://api.lens.org/collections/123456?token=[your-access-token]&size=10&query=Malaria&include=authors,lens_id&sort=desc(date_published)`
-
-> `[GET] https://api.lens.org/scholarly/search?token=[your-access-token]&size=10&query=Malaria&include=authors,lens_id&sort=desc(date_published)`
+### Patent API Examples
+{:.table-contents}
+- [Find 20 records from offset 10 that match provided query](examples-patent.html#find-20-records-from-offset-10-that-match-provided-query)
+- [Get the patent citations, scholarly citations and references for a list of scholarly works using the lens_id](examples-patent.html#get-the-patent-citations-scholarly-citations-and-references-for-a-list-of-scholarly-works-using-the-lens_id)
+- [Get title and patent citations for a scholarly work using a doi](examples-patent.html#get-title-and-patent-citations-for-a-scholarly-work-using-a-doi)
+- [Get scholarly works using multiple pmid](examples-patent.html#get-scholarly-works-using-multiple-pmid)
+- [Get the metadata for scholarly works that are cited by a list of patents using the patent lens_id](examples-patent.html#get-the-metadata-for-scholarly-works-that-are-cited-by-a-list-of-patents-using-the-patent-lens_id)
+- [Find the 10 most recently published works from an institution (sorted by published date)](examples-patent.html#find-the-10-most-recently-published-works-from-an-institution-sorted-by-published-date)
+- [Get publication year of journal articles cited by patents](examples-patent.html#get-publication-year-of-journal-articles-cited-by-patents)
+- [Get 30 works from an institution published between two years](examples-patent.html#get-30-works-from-an-institution-published-between-two-years)
+- [Get scholarly works having patent citations and affiliations](examples-patent.html#get-scholarly-works-having-patent-citations-and-affiliations)
+- [Query by author name](examples-patent.html#query-by-author-name)
+- [Find scholarly works with a Pubmed identifier published in 2012](examples-patent.html#find-scholarly-works-with-a-pubmed-identifier-published-in-2012)
+- [Access your collection](examples-patent.html#access-your-collection)
+- [Using GET Requests](examples-patent.html#using-get-requests)

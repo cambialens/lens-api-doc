@@ -16,7 +16,7 @@ permalink: /support.html
 
 Version | Date Released | Notes
 ------- | ------| -------
-`1.3.1` | March 25, 2020 | - Added keyword fields `author.affiliation.name.exact`, `source.title.exact`, `funding.organisation.exact` for search request |
+`1.3.2` | March 25, 2020 | - Added keyword fields `author.affiliation.name.exact`, `source.title.exact`, `funding.organisation.exact` for search request |
 `1.3` | March 5, 2020 | - Added `GET` endpoints for Scholarly Search and Collections <br/> - Added author identifier fields (MAG, ORCID) <br/> - See [Lens Release 6.7](https://about.lens.org/news/release-6-7/) notes for details|
 `1.2` | September 9, 2019 | - Added Lens partner option <br/> - Bug fixes <br/> - Performance improvements <br/> - See [Lens Release 6.4](https://about.lens.org/news/release-6-4/) notes for details|
 `1.1` | July 22, 2019 | - Added the ability to search within a scholarly collection (user feedback) <br/> - Bug fixes|

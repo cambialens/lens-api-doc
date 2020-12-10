@@ -176,7 +176,7 @@ Field | Description |  Possible Value
 {
   "query": {
      "match":{
-     	  "has_patent_citations": true
+     	  "has_full_text": true
      }
   }
 }
@@ -190,7 +190,7 @@ Lens API provides two type of pagination based on their use:
 Use parameter `from` to define the offset and `size` to specify number of records expected. This is useful when you want to skip some records and select desired ones. Example below skips first 100 and select 50 records after that.
 ```json
 {
-  "query": "Malaria",
+  "query": "nanotechnology",
   "from": 100,
   "size":50
 }
@@ -219,13 +219,13 @@ Result can be retrieved in ascending or descending order. By default, results ar
 ```json
 {
   "sort": [
-      {"patent_citation_count":"asc"},
-      {"year_published": "desc"}
+      {"reference_cited.patent_count":"desc"},
+      {"year_published": "asc"}
   ]
 }
 ```
-For `GET` requests following structure is applicable.
-`sort=desc(date_published),asc(patent_citation_count)`
+For `GET` requests, the following structure is applicable.
+`sort=desc(reference_cited.patent_count),asc(date_published)`
 
 ### Projection
 You can control the output fields in the API [Response] using projection. There are two possible ways to do that.
@@ -233,13 +233,13 @@ You can control the output fields in the API [Response] using projection. There 
 2. **exclude**: Fields to be excluded from result
 
 ```json
- {"include":["title","patent_citations","authors.affiliations.name"]}
+ {"include":["lens_id", "title","description","claim"]}
 ```
 ```json
- {"exclude":["external_ids","references"]}
+ {"exclude":["legal_status","biblio.classifications_cpc"]}
 ```
 For `GET` requests following structure is applicable.
-`include=authors,lens_id`
+`include=lens_id,title,descriptionm,claim`
 > Note: Both *include* and *exclude* can be used in same request.
 
 ### Supported Query Types
@@ -253,7 +253,7 @@ Following queries are supported by current version of Lens API:
 {
     "query": {
         "term": {
-            "publication_type": "journal article"
+            "publication_type": "granted patent"
         }
     }
 }

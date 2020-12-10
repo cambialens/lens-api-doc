@@ -266,7 +266,7 @@ Following queries are supported by current version of Lens API:
 {
 	"query": {
 		"terms": {
-			"pmid": ["14297189", "17475107"]
+			"doc_number": ["20130227762", "1117265"]
 		}
 	}
 }
@@ -280,7 +280,7 @@ It matches each words separately. If you need to search whole phrase use [match 
 {
   "query": {
       	"match":{
-      		"author.affiliation.name": "Harvard University"
+      		"applicant.name": "IBM"
       	}
    }
 }
@@ -293,7 +293,7 @@ It matches each words separately. If you need to search whole phrase use [match 
 {
   "query": {
       	"match_phrase":{
-      		"author.affiliation.name": "Harvard University"
+      		"applicant.name": "IBM"
       	}
    }
 }

@@ -54,68 +54,113 @@ Fields | Description |  Required
 ### Searchable Fields
 For searching, following fields are supported by the system:
 
-Field | Type | Description
--------- | --------- | -------
-**lens_id** | String | Unique lens identifier e.g. `100-004-910-081-14X`
-**patent_citation.lens_id** | String | ID of Referenced by patents
-**patent_citation_count** | Integer | Number of patent citations
-**external_id_type** | String | External Identifier type (Crossref: `doi`, Microsoft Academic: `magid`, PubMed: `pmid`, PubMed Central: `pmcid`, CORE: `coreid`)
-**doi** | String | Crossref DOI Identifier
-**pmid** | String | PubMed ID Identifier
-**pmcid** | String | PubMed Central ID Identifier
-**magid** | String | Microsoft Academic ID
-**coreid** | String | CORE Identifier
-**created** | Date | Record created date e.g. `2018-05-12`, `2016-08-01T00:00:00+00:00`
-**publication_type** | String | Publication Type `conference proceedings`, `book chapter`, `journal article`, `component`, `conference proceedings article`, `dataset`, `libguide`, `reference entry`, `book`
-**publication_supplementary_type** | String | Supplementary publication type e.g. `review`, `comparative study`, `research support`
-**author.collective_name** | String | Author Collective Name
-**author.first_name** | String | The author's first name e.g. `Alexander`
-**author.last_name** | String | The author's last name e.g. `Kupco`
-**author.initials** | String | Author Initials e.g. `A`
-**author.display_name** | String | Author's full name e.g. `Alexander Kupco`
-**author.magid** | String | Author MAG identifier
-**author.orcid** | String | Author ORCID identifier
-**author.affiliation.name** | String | The institution associated with the author affiliations. e.g. `Stony Brook`
-**author.affiliation.name.exact** | String | Exactly matches the full institution name (case sensetive). e.g. `Stony Brook University`
-**author.affiliation.grid_id** | String | Affiliation grid id e.g. `grid.9018.0`
-**author.affiliation.country_code** | String | Country Code e.g. `US`,`DE`,`CH`, `FR`
-**title** | String | Title of the scholarly work e.g. `Malaria`
-**language** | String | Languages e.g. `en`, `de`, `fr`, `zh_chs`
-**chemical.mesh_id** | String | MeSH term id e.g. `D000293`
-**chemical.registry_number** | String | Chemical registration number e.g. `5Q7ZVV76EI`
-**chemical.substance_name** | String | Substance name e.g. `Antimalarials`
-**clinical_trial.id** | String | Clinical trial Identifier e.g. `nct00105716`
-**clinical_trial.registry** | String | Clinical Trial Registry e.g. `10.18810/clinical-trials-gov`
-**field_of_study** | String | Fields Of Study e.g. `Immunology`, `Malaria`
-**abstract** | String | Scholarly work abstract text
-**full_text** | String | Full Text
-**date_published** | Date | Date of publication e.g. `2009-05-22`
-**year_published** | Integer | Year of publication e.g. `1986`
-**conference.name** | String | Conference Name e.g. `International Electron Devices Meeting`
-**conference.instance** | String | Conference Instance Name e.g. `CHI 1985`
-**conference.location** | String | The location of the conference e.g. `Lihue, Kauai, HA, USA`
-**author_count** | Integer | Number of Authors
-**reference_count** | Integer | The number of works in the reference list of a scholarly work
-**scholarly_citation_count** | Integer | The number of scholarly works that cite this scholarly work
-**open_access.license** |  String | The Open Access license type e.g. `cc-by`
-**open_access.colour** |  String | The Open Access colour category e.g. `gold`, `green`
-**source.title** | String | The name of source publication in which the scholarly work appears e.g. Journal name, Book title, Conference proceedings
-**source.title.exact** | String | The full name of source publication for exact match (case sensetive).
-**source.type** | String | Source Type e.g. `Journal`, `Book Series`
-**source.publisher** | String | The publisher of the source publication `Elsevier`, `Wiley`, `American Medical Association`
-**source.issn** | String | The International Standard Serial Number of the source publication, without hyphenation e.g. `00222836`
-**source.country** |  String | The publisher's country e.g. `United States`, `United Kingdom`
-**source.asjc_codes** |  String | The All Science Journal Classification (ASJC) code e.g. `2735`
-**source.asjc_subjects** |  String | Subject is derived from journals descriptions in Crossref metadata based on the Science Journal Classification Codes e.g. `Pediatrics`, `Microbiology`, `Biophysics`
-**keyword** | String | Search Keywords
-**mesh_term.mesh_id** | String | MeSH term unique identifier. MeSH terms are the National Library of Medicine’s controlled vocabulary or subject heading list. e.g. `D000293`
-**mesh_term.mesh_heading** | String | MeSH terms are the National Library of Medicine’s controlled vocabulary or medical subject headings assigned to PubMed entries. e.g. `Phosphates`, `Immunochemistry`
-**mesh_term.qualifier_id** | String | Mesh Term Qualifier ID e.g. `Q000032`
-**mesh_term.qualifier_name** | String | Mesh Term Qualifier Name e.g. `pathology`, `immunology`, `analysis`
-**funding.organisation** | String | Name of the funding organisation e.g. `NIDCR NIH HHS`
-**funding.organisation.exact** | String | For exact matches of full organisational name (case sensetive).
-**funding.funding_id** | String | The funding organisation's project identifier e.g.`U01 DE018902`
-**funding.country** | String | The country of the funding body e.g. `United States`, `Germany`, `United Kingdom`
+ Field  |  Type  |  Description
+ --------  |  ---------  |  -------
+**lens_id** | String | Unique lens identifier. Every document in the Lens has a unique 15-digit identifier called a Lens ID. e.g. `186-488-232-022-055`
+**doc_key** | String | The unique document key for the patent document. e.g. `EP_0227762_B1_19900411`
+**doc_number** | String | The document number assigned to a patent application on publication. e.g. `20130227762`
+**docdb_id** | Integer | The DOCDB identifier for the patent document. e.g. `499168393`
+**jurisdiction** | String | The jurisidiction of the patent document. e.g. `US`
+**kind** | String | The patent document kind code (varies by jurisdiction). e.g. `A1`
+**lang** | String | The original language of the patent document. e.g. `EN`
+**date_published** | Date | Date of publication for the patent document. e.g. `2009-05-22`
+**year_published** | Integer | The year of publication for the patent document. e.g. `2009`
+**publication_type** | String | Type of patent document. e.g. `Granted Patent`
+**application_reference.jurisdiction** | String | The jurisdiction of the application. e.g. `US`
+**application_reference.date** | Date | The application filing date is the date when a patent application is first filed at a patent office. e.g. `2009-05-22`
+**application_reference.doc_number** | String | The document number of the application. e.g. `201715824814`
+**application_reference.kind** | String | The kind code of the application. e.g. `A1`
+**priority_claim.jurisdiction** | String | The jurisdiction of the priority document. e.g. `DE`
+**priority_claim.date** | Date | The publication date of the priority document. e.g. `2009-05-22`
+**priority_claim.doc_number** | String | The document number of the priority document. e.g. `1117265`
+**priority_claim.kind** | String | The kind code of the priority document. e.g. `A1`
+**cited_by_patent** | Boolean | Indicates if a patent is cited by other patents. e.g. `TRUE`
+**cites_npl** | Boolean | Indicates if a patent has cited any non-patent literature in the references. e.g. `TRUE`
+**cites_patent** | Boolean | Indicates if a patent cites other patents. e.g. `TRUE`
+**cites_resolved_npl** | Boolean | Indicates if a patent document cites non-patent literature that have been resolved to a matching Lens Scholarly Work. e.g. `TRUE`
+**has_abstract** | Boolean | Indicates if the abstract is available for the patent document. e.g. `TRUE`
+**has_agent** | Boolean | Indicates if the patent record has agent/attorney information. e.g. `TRUE`
+**has_applicant** | Boolean | Indicates if the patent record has applicant information. e.g. `TRUE`
+**has_claim** | Boolean | Indicates if the claims are available for the patent document. e.g. `TRUE`
+**has_description** | Boolean | Indicates if the description is available for the patent document. e.g. `TRUE`
+**has_full_text** | Boolean | Indicates if the full text from the PTO is available for the patent document. e.g. `TRUE`
+**has_owner** | Boolean | Indicates if the patent record has owner information. e.g. `TRUE`
+**has_inventor** | Boolean | Indicates if the patent record has i'nevntor information. e.g. `TRUE`
+**has_sequence** | Boolean | Indicates if the patent record has sequence information. e.g. `TRUE`
+**has_title** | Boolean | Indicates if the title is available for the patent document. e.g. `TRUE`
+**has_docdb** | Boolean | Indicates if the DOCDB information is available for the patent document. e.g. `TRUE`
+**abstract** | String | Searches the patent document abstract text. e.g. `A processor implements conditional vector operations in which an input vector containing multiple operands to be used in conditional operations is divided into two or more output…`
+**claim** | String | Searches the Claims recorded in the patent. e.g. `What is claimed is: 1. A method of performing a conditional vector output operation in a processor, the method comprising: receiving electrical signals representative of an input data vector…`
+**description** | String | The description text of the patent document. e.g. `This invention was made in conjuction with U.S. Government support under U.S. Army Grant No. DABT63-96-C-0037.” BACKGROUND OF THE INVENTION 1. Field of the Invention The present invention is directed to…`
+**title** | String | Title of the patent. e.g. `Fidget Spinner`
+**family.extended.member.document_id.jurisdiction** | String | The jurisdiction of the extended family member. e.g. `CN`
+**family.extended.member.document_id.date** | Date | The publication date of the extended family member. e.g. 2009-05-22
+**family.extended.member.document_id.doc_number** | String | The document number of the extended family member. e.g. `1117265`
+**family.extended.member.document_id.kind** | String | The kind code of the extended family member. e.g. `B2`
+**family.extended.member.lens_id** | String | The Lens Id of the extended family member. e.g. `106-213-498-661-220`
+**family.extended.size** | Integer | The number of extended family member documents. e.g. 12
+**family.simple.member.document_id.jurisdiction** | String | The jurisdiction of the simple family member. e.g. `EP`
+**family.simple.member.document_id.date** | Date | The publication date of the simple family member. e.g. 2009-05-22
+**family.simple.member.document_id.doc_number** | String | The document number of the simple family member. e.g. `1117265`
+**family.simple.member.document_id.kind** | String | The kind code of the simple family member. e.g. `B2`
+**family.simple.member.lens_id** | String | The Lens Id of the simple family member. e.g. `106-213-498-661-220`
+**family.simple.size** | Integer | The number of simple family member documents. e.g. 5
+**applicant.address** | String | The applicant address as recorded on the patent. e.g. `TORONTO, ONTARIA, CA`
+**applicant.name** | String | The patent applicant(s) name. e.g. `CPS Technology Holdings LLC`
+**applicant.name.keyword** | String | The patent applicant(s) name. N.B. Use this field for exact name matches. e.g. `CPS TECHNOLOGY HOLDINGS LLC`
+**applicant.residence** | String | The country of the applicant (ISO 2-digit country code). e.g. `CA`
+**applicant_count** | Integer | The number of applicants. e.g. 2
+**inventor.address** | String | The address of the inventor. e.g. `TORONTO, ONTARIA, CA`
+**inventor.name** | String | The patent inventor(s) name. e.g. `Engebretson Steven P`
+**inventor.name.keyword** | String | The patent inventor(s) name. N.B. Use this field for exact name matches. e.g. `ENGEBRETSON STEVEN P`
+**inventor.residence** | String | The country of residence of the inventor (ISO 2-digit country code). e.g. `DE`
+**inventor_count** | Integer | The number of inventors. e.g. 3
+**owner_all.address** | String | The owner address as recorded on the patent or legal event. e.g. `TORONTO, ONTARIA, CA`
+**owner_all.country** | String | The owner's country code (ISO 2-digit country code). e.g. `US`
+**owner_all.execution_date** | Date | The date of execution of ownership / assignment. e.g. 2009-05-22
+**owner_all.name** | String | The patent owner(s) name. e.g. `CPS Technology Holdings LLC`
+**owner_all.name.keyword** | String | The patent owner(s) name. N.B. Use this field for exact name matches. e.g. `CPS Technology Holdings LLC`
+**owner_all.recorded_date** | Date | The ownership / assignment event record date. e.g. 2009-05-22
+**owner_all_count** | Integer | The count of all owners of the patent. N.B. Includes current and former owners. e.g. 5
+**cited_by.patent.document_id.jurisdiction** | String | The jurisdiction of the citing patent. e.g. `EP`
+**cited_by.patent.document_id.doc_number** | String | The document number of the citing patent. e.g. `EP2020/063503`
+**cited_by.patent.document_id.kind** | String | The kind code of the citing patent. e.g. `B2`
+**cited_by.patent.lens_id** | String | The Lens Id of the citing patent. e.g. `008-840-176-449-446`
+**cited_by.patent_count** | Integer | The count of citing patents (Cited by patent count). e.g. 10
+**reference_cited.npl.external_id** | String | The resolved external identifier(s) for cited non-patent literature (DOI, PubMed ID, PubMed Central ID or Microsoft Aacademic ID). e.g. [`10.1038/nature03090`; `12345678919`]
+**reference_cited.npl.lens_id** | String | The Lens Id of the resolved non-patent literature citations (i.e. scholarly work Lens Id). e.g. `168-663-423-050-326`
+**reference_cited.npl.sequence** | Integer | The sequence of the non-patent citation string. e.g. 2
+**reference_cited.npl.text** | String | The original non-patent literature citation text. e.g. `Cormen et al., 'Introduction to Algorithms (MIT Electrical Engineering and Computer Science Series,' MIT Press, ISBN 0262031418, pp. 665-667, 695-697.`
+**reference_cited.npl_count** | Integer | The number of scholalry works cited by a patent. e.g. 2
+**reference_cited.patent.lens_id** | String | The Lens Id of the cited patent. e.g. `106-213-498-661-220`
+**reference_cited.patent.document_id.jurisdiction** | String | The jurisdiction of the cited patent. e.g. `US`
+**reference_cited.patent.document_id.date** | Date | The publication date of the cited patent. e.g. 2009-05-22
+**reference_cited.patent.document_id.doc_number** | String | The document number of the cited patent. e.g. `4590964`
+**reference_cited.patent.document_id.kind** | String | The kind code of the cited patent. e.g. `A`
+**reference_cited.patent_count** | Integer | Number of patents documents citing a given patent. e.g. 21
+**legal_status.anticipated_term_date** | Date | The anticipated termination date for granted patents. The anticipated termination date is calculated based on the natural term date plus any extensions. e.g. 2009-05-22
+**legal_status.application_expiry_date** | Date | The expiry date of the patent application because of withdrawal or abandonment. e.g. 2009-05-22
+**legal_status.discontinued_date** | Date | The discontinued date of the patent due to "unnatural death" (i.e. lapse, withdrawn, abandoned). N.B. The patent can be revived within a certain time frame. e.g. 2009-05-22
+**legal_status.grant_date** | Date | The date the patent application was granted (i.e. the application first grant date). e.g. 2009-05-22
+**legal_status.granted** | Boolean | Indicates if the patent application has been granted in one or more jurisdictions. e.g. TRUE
+**legal_status.has_disclaimer** | Boolean | Indicates if this US patent subjected to a terminal disclaimer. e.g. TRUE
+**legal_status.patent_status** | String | The calculated legal status of the patent application. e.g. `expired`, `inactive`, `active`, `patented`, `discontinued`, `withdrawn or rejected`, `pending`, `unknown`
+**legal_status.has_spc** | Boolean | Indicates if the patent has a supplementary protection certificate. e.g. TRUE
+**agent.address** | String | The agent/attorney address as recorded on the patent. e.g. `20 Red Lion Street, GB-London WC1R 4PJ(GB)`
+**agent.country** | String | The country of the agent/attorney (ISO 2-digit country code). e.g. `GB`
+**agent.name** | String | The agent/attorney name. e.g. `Chapman, Paul William et al.`
+**agent.name.keyword** | String | The patent agent/attorney name. N.B. Use this field for exact name matches. e.g. `Paul Chapman`
+**agent_count** | Integer | The number of agents/attorneys listed on the patent. e.g. 1
+**class_cpc.symbol** | String | CPC patent classification codes. e.g. `H01R11/01`
+**class_ipcr.symbol** | String | IPCR patent classification codes. e.g. `H01R13/115`
+**class_national.symbol** | String | US patent classification codes. e.g. `439/535`
+**sequence.count** | Integer | The number of biological sequences associated with a patent. e.g. 5
+**sequence.data_source** | String | The data source of the disclosed sequence. e.g. `EPO`, `EMBL`
+**sequence.document_location** | String | The patent document section of the disclosed sequence(s). e.g. `Claims`, `Description`
+**sequence.length_bucket** | String | Preset sequence length range (nucleotide: "0-100", "101-5000", "5001-100k", ">100k"; Peptide: "0-50", "51-300", ">300"). e.g. `101-5000`
+**sequence.tax_id** | String | The NCBI taxonomic identifier of the organism which the biological sequence is from. e.g. 9616
+**sequence.type** | String | The type of sequence e.g. N - nucleotide, P - peptide. e.g. `Nucleotide`, `Amino Acid`
+**reference_cited.npl_resolved_count** | Integer | The number of resolved scholalry works cited by a patent. e.g. 12
 {: .param-def }
 
 ### Filtering

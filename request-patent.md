@@ -132,11 +132,11 @@ Legal Events | **legal_status.granted** | Boolean | Indicates if the patent appl
 Legal Events | **legal_status.has_disclaimer** | Boolean | Indicates if this US patent subjected to a terminal disclaimer. e.g. `TRUE`
 Legal Events | **legal_status.patent_status** | String | The calculated legal status of the patent application. e.g. `expired`, `inactive`, `active`, `patented`, `discontinued`, `withdrawn or rejected`, `pending`, `unknown`
 Legal Events | **legal_status.has_spc** | Boolean | Indicates if the patent has a supplementary protection certificate. e.g. `TRUE`
-Attorneys | **agent.address** | String | The agent/attorney address as recorded on the patent. e.g. `20 Red Lion Street, GB-London WC1R 4PJ(GB)`
-Attorneys | **agent.country** | String | The country of the agent/attorney (ISO 2-digit country code). e.g. `GB`
-Attorneys | **agent.name** | String | The agent/attorney name. e.g. `Chapman, Paul William et al.`
-Attorneys | **agent.name.keyword** | String | The patent agent/attorney name. N.B. Use this field for exact name matches. e.g. `Paul Chapman`
-Attorneys | **agent_count** | Integer | The number of agents/attorneys listed on the patent. e.g. `1`
+Agents & Attorneys | **agent.address** | String | The agent/attorney address as recorded on the patent. e.g. `20 Red Lion Street, GB-London WC1R 4PJ(GB)`
+Agents & Attorneys | **agent.country** | String | The country of the agent/attorney (ISO 2-digit country code). e.g. `GB`
+Agents & Attorneys | **agent.name** | String | The agent/attorney name. e.g. `Chapman, Paul William et al.`
+Agents & Attorneys | **agent.name.keyword** | String | The patent agent/attorney name. N.B. Use this field for exact name matches. e.g. `Paul Chapman`
+Agents & Attorneys | **agent_count** | Integer | The number of agents/attorneys listed on the patent. e.g. `1`
 Classifications | **class_cpc.symbol** | String | CPC patent classification codes. e.g. `H01R11/01`
 Classifications | **class_ipcr.symbol** | String | IPCR patent classification codes. e.g. `H01R13/115`
 Classifications | **class_national.symbol** | String | US patent classification codes. e.g. `439/535`

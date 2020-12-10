@@ -52,7 +52,7 @@ Fields | Description |  Required
 {: .param-def }
 
 ### Searchable Fields
-For searching, following fields are supported by the system:
+For searching, the following fields are supported by the API:
 
  Group |  Field  |  Type  |  Description
  --------  |  ---------  |  ------- |  -------

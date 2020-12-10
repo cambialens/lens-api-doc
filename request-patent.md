@@ -65,7 +65,7 @@ General | **kind** | String | The patent document kind code (varies by jurisdict
 General | **lang** | String | The original language of the patent document. e.g. `EN`
 General | **date_published** | Date | Date of publication for the patent document. e.g. `2009-05-22`
 General | **year_published** | Integer | The year of publication for the patent document. e.g. `2009`
-General | **publication_type** | String | Type of patent document. e.g. `Granted Patent`
+General | **publication_type** | String | Type of patent document. e.g. `AMENDED_PATENT`, `AMENDED_PATENT`, `DESIGN_RIGHT`, `GRANTED_PATENT`, `LIMITED_PATENT`, `PATENT_APPLICATION`, `PLANT_PATENT`, `SEARCH_REPORT`, `STATUTORY_INVENTION_REGISTRATION`, `SPC`, `UNKNOWN`
 Application | **application_reference.jurisdiction** | String | The jurisdiction of the application. e.g. `US`
 Application | **application_reference.date** | Date | The application filing date is the date when a patent application is first filed at a patent office. e.g. `2009-05-22`
 Application | **application_reference.doc_number** | String | The document number of the application. e.g. `201715824814`
@@ -261,7 +261,7 @@ Following queries are supported by current version of Lens API:
 
 ##### Terms Query
 [Terms Query] allows you to search multiple *exact terms* for a provided field. A useful scenario is while searching multiple identifiers.
-> Example: Search scholarly works for multiple pmid
+> Example: Search for multiple document numbers
 ```json
 {
 	"query": {
@@ -320,22 +320,27 @@ It matches each words separately. If you need to search whole phrase use [match 
 > Example: Get journal article scholarly works of Author with last name Kondratyev having patent citations.
 ```json
 {
- "query": {
-   "bool": {
-     "must": [{
-       "match": {
-         "has_patent_citations": true
-       }},
-       {"bool": {
-         "must": [
-           {"match": {"publication_type": "journal article"}},
-           {"match": {"author.last_name": "Kondratyev"}}
-         ]
-       }
-       }
-     ]
-   }
- }
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "cited_by_patent": "true"
+                    }
+                },
+                {
+                    "match": {
+                        "publication_type": "GRANTED_PATENT"
+                    }
+                },
+                {
+                    "match": {
+                        "inventor.name": "Engebretson"
+                    }
+                }
+            ]
+        }
+    }
 }
 ```
 

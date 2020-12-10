@@ -94,73 +94,73 @@ For searching, following fields are supported by the system:
 **description** | String | The description text of the patent document. e.g. `This invention was made in conjuction with U.S. Government support under U.S. Army Grant No. DABT63-96-C-0037.” BACKGROUND OF THE INVENTION 1. Field of the Invention The present invention is directed to…`
 **title** | String | Title of the patent. e.g. `Fidget Spinner`
 **family.extended.member.document_id.jurisdiction** | String | The jurisdiction of the extended family member. e.g. `CN`
-**family.extended.member.document_id.date** | Date | The publication date of the extended family member. e.g. 2009-05-22
+**family.extended.member.document_id.date** | Date | The publication date of the extended family member. e.g. `2009-05-22`
 **family.extended.member.document_id.doc_number** | String | The document number of the extended family member. e.g. `1117265`
 **family.extended.member.document_id.kind** | String | The kind code of the extended family member. e.g. `B2`
 **family.extended.member.lens_id** | String | The Lens Id of the extended family member. e.g. `106-213-498-661-220`
-**family.extended.size** | Integer | The number of extended family member documents. e.g. 12
+**family.extended.size** | Integer | The number of extended family member documents. e.g. `12`
 **family.simple.member.document_id.jurisdiction** | String | The jurisdiction of the simple family member. e.g. `EP`
-**family.simple.member.document_id.date** | Date | The publication date of the simple family member. e.g. 2009-05-22
+**family.simple.member.document_id.date** | Date | The publication date of the simple family member. e.g. `2009-05-22`
 **family.simple.member.document_id.doc_number** | String | The document number of the simple family member. e.g. `1117265`
 **family.simple.member.document_id.kind** | String | The kind code of the simple family member. e.g. `B2`
 **family.simple.member.lens_id** | String | The Lens Id of the simple family member. e.g. `106-213-498-661-220`
-**family.simple.size** | Integer | The number of simple family member documents. e.g. 5
+**family.simple.size** | Integer | The number of simple family member documents. e.g. `5`
 **applicant.address** | String | The applicant address as recorded on the patent. e.g. `TORONTO, ONTARIA, CA`
 **applicant.name** | String | The patent applicant(s) name. e.g. `CPS Technology Holdings LLC`
 **applicant.name.keyword** | String | The patent applicant(s) name. N.B. Use this field for exact name matches. e.g. `CPS TECHNOLOGY HOLDINGS LLC`
 **applicant.residence** | String | The country of the applicant (ISO 2-digit country code). e.g. `CA`
-**applicant_count** | Integer | The number of applicants. e.g. 2
+**applicant_count** | Integer | The number of applicants. e.g. `2`
 **inventor.address** | String | The address of the inventor. e.g. `TORONTO, ONTARIA, CA`
 **inventor.name** | String | The patent inventor(s) name. e.g. `Engebretson Steven P`
 **inventor.name.keyword** | String | The patent inventor(s) name. N.B. Use this field for exact name matches. e.g. `ENGEBRETSON STEVEN P`
 **inventor.residence** | String | The country of residence of the inventor (ISO 2-digit country code). e.g. `DE`
-**inventor_count** | Integer | The number of inventors. e.g. 3
+**inventor_count** | Integer | The number of inventors. e.g. `3`
 **owner_all.address** | String | The owner address as recorded on the patent or legal event. e.g. `TORONTO, ONTARIA, CA`
 **owner_all.country** | String | The owner's country code (ISO 2-digit country code). e.g. `US`
-**owner_all.execution_date** | Date | The date of execution of ownership / assignment. e.g. 2009-05-22
+**owner_all.execution_date** | Date | The date of execution of ownership / assignment. e.g. `2009-05-22`
 **owner_all.name** | String | The patent owner(s) name. e.g. `CPS Technology Holdings LLC`
 **owner_all.name.keyword** | String | The patent owner(s) name. N.B. Use this field for exact name matches. e.g. `CPS Technology Holdings LLC`
-**owner_all.recorded_date** | Date | The ownership / assignment event record date. e.g. 2009-05-22
-**owner_all_count** | Integer | The count of all owners of the patent. N.B. Includes current and former owners. e.g. 5
+**owner_all.recorded_date** | Date | The ownership / assignment event record date. e.g. `2009-05-22`
+**owner_all_count** | Integer | The count of all owners of the patent. N.B. Includes current and former owners. e.g. `5`
 **cited_by.patent.document_id.jurisdiction** | String | The jurisdiction of the citing patent. e.g. `EP`
 **cited_by.patent.document_id.doc_number** | String | The document number of the citing patent. e.g. `EP2020/063503`
 **cited_by.patent.document_id.kind** | String | The kind code of the citing patent. e.g. `B2`
 **cited_by.patent.lens_id** | String | The Lens Id of the citing patent. e.g. `008-840-176-449-446`
-**cited_by.patent_count** | Integer | The count of citing patents (Cited by patent count). e.g. 10
-**reference_cited.npl.external_id** | String | The resolved external identifier(s) for cited non-patent literature (DOI, PubMed ID, PubMed Central ID or Microsoft Aacademic ID). e.g. [`10.1038/nature03090`; `12345678919`]
+**cited_by.patent_count** | Integer | The count of citing patents (Cited by patent count). e.g. `10`
+**reference_cited.npl.external_id** | String | The resolved external identifier(s) for cited non-patent literature (DOI, PubMed ID, PubMed Central ID or Microsoft Aacademic ID). e.g. `10.1038/nature03090`, `12345678919`
 **reference_cited.npl.lens_id** | String | The Lens Id of the resolved non-patent literature citations (i.e. scholarly work Lens Id). e.g. `168-663-423-050-326`
-**reference_cited.npl.sequence** | Integer | The sequence of the non-patent citation string. e.g. 2
+**reference_cited.npl.sequence** | Integer | The sequence of the non-patent citation string. e.g. `2`
 **reference_cited.npl.text** | String | The original non-patent literature citation text. e.g. `Cormen et al., 'Introduction to Algorithms (MIT Electrical Engineering and Computer Science Series,' MIT Press, ISBN 0262031418, pp. 665-667, 695-697.`
-**reference_cited.npl_count** | Integer | The number of scholalry works cited by a patent. e.g. 2
+**reference_cited.npl_count** | Integer | The number of scholalry works cited by a patent. e.g. `2`
 **reference_cited.patent.lens_id** | String | The Lens Id of the cited patent. e.g. `106-213-498-661-220`
 **reference_cited.patent.document_id.jurisdiction** | String | The jurisdiction of the cited patent. e.g. `US`
-**reference_cited.patent.document_id.date** | Date | The publication date of the cited patent. e.g. 2009-05-22
+**reference_cited.patent.document_id.date** | Date | The publication date of the cited patent. e.g. `2009-05-22`
 **reference_cited.patent.document_id.doc_number** | String | The document number of the cited patent. e.g. `4590964`
 **reference_cited.patent.document_id.kind** | String | The kind code of the cited patent. e.g. `A`
-**reference_cited.patent_count** | Integer | Number of patents documents citing a given patent. e.g. 21
-**legal_status.anticipated_term_date** | Date | The anticipated termination date for granted patents. The anticipated termination date is calculated based on the natural term date plus any extensions. e.g. 2009-05-22
+**reference_cited.patent_count** | Integer | Number of patents documents citing a given patent. e.g. `21`
+**legal_status.anticipated_term_date** | Date | The anticipated termination date for granted patents. The anticipated termination date is calculated based on the natural term date plus any extensions. e.g. `2009-05-22`
 **legal_status.application_expiry_date** | Date | The expiry date of the patent application because of withdrawal or abandonment. e.g. 2009-05-22
-**legal_status.discontinued_date** | Date | The discontinued date of the patent due to "unnatural death" (i.e. lapse, withdrawn, abandoned). N.B. The patent can be revived within a certain time frame. e.g. 2009-05-22
-**legal_status.grant_date** | Date | The date the patent application was granted (i.e. the application first grant date). e.g. 2009-05-22
-**legal_status.granted** | Boolean | Indicates if the patent application has been granted in one or more jurisdictions. e.g. TRUE
-**legal_status.has_disclaimer** | Boolean | Indicates if this US patent subjected to a terminal disclaimer. e.g. TRUE
+**legal_status.discontinued_date** | Date | The discontinued date of the patent due to "unnatural death" (i.e. lapse, withdrawn, abandoned). N.B. The patent can be revived within a certain time frame. e.g. `2009-05-22`
+**legal_status.grant_date** | Date | The date the patent application was granted (i.e. the application first grant date). e.g. `2009-05-22`
+**legal_status.granted** | Boolean | Indicates if the patent application has been granted in one or more jurisdictions. e.g. `TRUE`
+**legal_status.has_disclaimer** | Boolean | Indicates if this US patent subjected to a terminal disclaimer. e.g. `TRUE`
 **legal_status.patent_status** | String | The calculated legal status of the patent application. e.g. `expired`, `inactive`, `active`, `patented`, `discontinued`, `withdrawn or rejected`, `pending`, `unknown`
-**legal_status.has_spc** | Boolean | Indicates if the patent has a supplementary protection certificate. e.g. TRUE
+**legal_status.has_spc** | Boolean | Indicates if the patent has a supplementary protection certificate. e.g. `TRUE`
 **agent.address** | String | The agent/attorney address as recorded on the patent. e.g. `20 Red Lion Street, GB-London WC1R 4PJ(GB)`
 **agent.country** | String | The country of the agent/attorney (ISO 2-digit country code). e.g. `GB`
 **agent.name** | String | The agent/attorney name. e.g. `Chapman, Paul William et al.`
 **agent.name.keyword** | String | The patent agent/attorney name. N.B. Use this field for exact name matches. e.g. `Paul Chapman`
-**agent_count** | Integer | The number of agents/attorneys listed on the patent. e.g. 1
+**agent_count** | Integer | The number of agents/attorneys listed on the patent. e.g. `1`
 **class_cpc.symbol** | String | CPC patent classification codes. e.g. `H01R11/01`
 **class_ipcr.symbol** | String | IPCR patent classification codes. e.g. `H01R13/115`
 **class_national.symbol** | String | US patent classification codes. e.g. `439/535`
-**sequence.count** | Integer | The number of biological sequences associated with a patent. e.g. 5
+**sequence.count** | Integer | The number of biological sequences associated with a patent. e.g. `5`
 **sequence.data_source** | String | The data source of the disclosed sequence. e.g. `EPO`, `EMBL`
 **sequence.document_location** | String | The patent document section of the disclosed sequence(s). e.g. `Claims`, `Description`
-**sequence.length_bucket** | String | Preset sequence length range (nucleotide: "0-100", "101-5000", "5001-100k", ">100k"; Peptide: "0-50", "51-300", ">300"). e.g. `101-5000`
-**sequence.tax_id** | String | The NCBI taxonomic identifier of the organism which the biological sequence is from. e.g. 9616
+**sequence.length_bucket** | String | Preset sequence length range (nucleotide: 0-100, 101-5000, 5001-100k, >100k; Peptide: 0-50, 51-300, >300). e.g. `101-5000`
+**sequence.tax_id** | String | The NCBI taxonomic identifier of the organism which the biological sequence is from. e.g. `9616`
 **sequence.type** | String | The type of sequence e.g. N - nucleotide, P - peptide. e.g. `Nucleotide`, `Amino Acid`
-**reference_cited.npl_resolved_count** | Integer | The number of resolved scholalry works cited by a patent. e.g. 12
+**reference_cited.npl_resolved_count** | Integer | The number of resolved scholalry works cited by a patent. e.g. `12`
 {: .param-def }
 
 ### Filtering

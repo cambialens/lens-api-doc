@@ -239,7 +239,7 @@ You can control the output fields in the API [Response] using projection. There 
  {"exclude":["legal_status","biblio.classifications_cpc"]}
 ```
 For `GET` requests following structure is applicable.
-`include=lens_id,title,descriptionm,claim`
+`include=lens_id,title,description,claim`
 > Note: Both *include* and *exclude* can be used in same request.
 
 ### Supported Query Types
@@ -275,7 +275,7 @@ Following queries are supported by current version of Lens API:
 ##### Match query
 [Match query] accepts text/numbers/dates. The main use case of the match query is full-text search.
 It matches each words separately. If you need to search whole phrase use [match phrase](#match-phrase-query) query.
-> Example:
+> Example: Get patents filed by IBM
 ```json
 {
   "query": {
@@ -288,7 +288,7 @@ It matches each words separately. If you need to search whole phrase use [match 
 
 ##### Match Phrase query
 [Match phrase query] accepts text/numbers/dates. The main use case for the match query is for full-text search.
-> Example:
+> Example: Get patents filed by IBM
 ```json
 {
   "query": {
@@ -301,7 +301,7 @@ It matches each words separately. If you need to search whole phrase use [match 
 
 ##### Range query
 [Range query] query to match records within the provided range.
-> Example: Get record for year published between years 1980 and 2000
+> Example: Get patents published between years 1980 and 2000
 ```json
 {
   "query": {
@@ -317,7 +317,7 @@ It matches each words separately. If you need to search whole phrase use [match 
 
 ##### Boolean query
 [Bool Query] allows to combine multiple queries to create complex query providing precise result. It can be created using one or more of these clauses: `must`, `should`, `must_not` and `filter`. You can use `must` for `AND` operation and `should` for `OR`.
-> Example: Get journal article scholarly works of Author with last name Kondratyev having patent citations.
+> Example: Search for granted patents from inventors named "Engebretson" that have been cited by other patents.
 ```json
 {
     "query": {
@@ -346,37 +346,44 @@ It matches each words separately. If you need to search whole phrase use [match 
 
 ##### Query String Based Query
 Query different terms with explicit operators `AND`/`OR`/`NOT` to create a compact query string.
->Example: Find works from institution published between two dates having some title.
+>Example: Find patents with javascript in the title that have been filed by IBM and published between 2000 and 2018.
 ```json
-{"query": "(title:Dimensions AND author.affiliation.name:(Harvard University)) AND year_published:[2000 TO 2018]"}
+{"query": "(title:javascript AND applicant.name:(IBM)) AND year_published:[2000 TO 2018]"}
 ```
 
 If you need to use any [reserved special characters](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#_reserved_characters), you should escape them with leading backslash.
->Example: Getting by doi identifier using string based query
+>Example: Searching by CPC code using string based query
 ```json
-{"query": "doi:10.1109\\/ee.1934.6540358"}
+{"query": "class_cpc.symbol:Y02E10\\/70"}
 ```
 You can use json based format for string based query and mixed with complex boolean queries like this:
 
 ```json
 {
-	"query": {
-		"bool": {
-			"must": [{
-				"query_string": {
-					"query": "X-ray analysis of protein crystals",
-					"fields": ["title", "abstract", "full_text"],
-					"default_operator": "and"
-				}
-			}],
-			"filter": [{
-				"term": {
-					"has_affiliation": true
-				}
-			}]
-
-		}
-	}
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "query_string": {
+                        "query": "crispr-cas9",
+                        "fields": [
+                            "title",
+                            "claims",
+                            "description"
+                        ],
+                        "default_operator": "or"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "term": {
+                        "has_owner": true
+                    }
+                }
+            ]
+        }
+    }
 }
 ```
 

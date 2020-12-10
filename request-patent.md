@@ -74,21 +74,6 @@ Priority | **priority_claim.jurisdiction** | String | The jurisdiction of the pr
 Priority | **priority_claim.date** | Date | The publication date of the priority document. e.g. `2009-05-22`
 Priority | **priority_claim.doc_number** | String | The document number of the priority document. e.g. `1117265`
 Priority | **priority_claim.kind** | String | The kind code of the priority document. e.g. `A1`
-Flags | **cited_by_patent** | Boolean | Indicates if a patent is cited by other patents. e.g. `TRUE`
-Flags | **cites_npl** | Boolean | Indicates if a patent has cited any non-patent literature in the references. e.g. `TRUE`
-Flags | **cites_patent** | Boolean | Indicates if a patent cites other patents. e.g. `TRUE`
-Flags | **cites_resolved_npl** | Boolean | Indicates if a patent document cites non-patent literature that have been resolved to a matching Lens Scholarly Work. e.g. `TRUE`
-Flags | **has_abstract** | Boolean | Indicates if the abstract is available for the patent document. e.g. `TRUE`
-Flags | **has_agent** | Boolean | Indicates if the patent record has agent/attorney information. e.g. `TRUE`
-Flags | **has_applicant** | Boolean | Indicates if the patent record has applicant information. e.g. `TRUE`
-Flags | **has_claim** | Boolean | Indicates if the claims are available for the patent document. e.g. `TRUE`
-Flags | **has_description** | Boolean | Indicates if the description is available for the patent document. e.g. `TRUE`
-Flags | **has_full_text** | Boolean | Indicates if the full text from the PTO is available for the patent document. e.g. `TRUE`
-Flags | **has_owner** | Boolean | Indicates if the patent record has owner information. e.g. `TRUE`
-Flags | **has_inventor** | Boolean | Indicates if the patent record has i'nevntor information. e.g. `TRUE`
-Flags | **has_sequence** | Boolean | Indicates if the patent record has sequence information. e.g. `TRUE`
-Flags | **has_title** | Boolean | Indicates if the title is available for the patent document. e.g. `TRUE`
-Flags | **has_docdb** | Boolean | Indicates if the DOCDB information is available for the patent document. e.g. `TRUE`
 Text Fields | **abstract** | String | Searches the patent document abstract text. e.g. `A processor implements conditional vector operations in which an input vector containing multiple operands to be used in conditional operations is divided into two or more output…`
 Text Fields | **claim** | String | Searches the Claims recorded in the patent. e.g. `What is claimed is: 1. A method of performing a conditional vector output operation in a processor, the method comprising: receiving electrical signals representative of an input data vector…`
 Text Fields | **description** | String | The description text of the patent document. e.g. `This invention was made in conjuction with U.S. Government support under U.S. Army Grant No. DABT63-96-C-0037.” BACKGROUND OF THE INVENTION 1. Field of the Invention The present invention is directed to…`
@@ -169,18 +154,21 @@ You can use following pre-defined filters to refine search results:
 
 Field | Description |  Possible Value
 ------- | ------| -------
-**has_patent_citations** | Indicates if the scholarly work has been cited by a patent document. | `true`/`false`
-**has_affiliation** | Has affiliation | `true`/`false`
-**has_affiliation_grid** | Has affiliation grid | `true`/`false`
-**has_mesh_term** | Has MeSH term | `true`/`false`
-**has_chemical** | Indicates if the scholarly work has an associated chemical substance  | `true`/`false`
-**has_keyword** | Indicates if the scholarly work has keyword | `true`/`false`
-**has_clinical_trial** | Indicates if the scholarly work has clinical trial | `true`/`false`
-**has_field_of_study** | Flags if the scholarly work has a Field of Study | `true`/`false`
-**has_abstract** | Indicates if the scholarly work has abstract | `true`/`false`
-**has_fulltext** | Indicates if the scholarly work has fulltext | `true`/`false`
-**has_funding** | Indicates if the scholarly work has funding information | `true`/`false`
-**is_open_access** | Flags if the scholarly work has is Open Access | `true`/`false`
+**cited_by_patent** | Boolean | Indicates if a patent is cited by other patents. | `true`/`false`
+**cites_npl** | Boolean | Indicates if a patent has cited any non-patent literature in the references. | `true`/`false`
+**cites_patent** | Boolean | Indicates if a patent cites other patents. | `true`/`false`
+**cites_resolved_npl** | Boolean | Indicates if a patent document cites non-patent literature that have been resolved to a matching Lens Scholarly Work. | `true`/`false`
+**has_abstract** | Boolean | Indicates if the abstract is available for the patent document. | `true`/`false`
+**has_agent** | Boolean | Indicates if the patent record has agent/attorney information. | `true`/`false`
+**has_applicant** | Boolean | Indicates if the patent record has applicant information. | `true`/`false`
+**has_claim** | Boolean | Indicates if the claims are available for the patent document. | `true`/`false`
+**has_description** | Boolean | Indicates if the description is available for the patent document. | `true`/`false`
+**has_full_text** | Boolean | Indicates if the full text from the PTO is available for the patent document. | `true`/`false`
+**has_owner** | Boolean | Indicates if the patent record has owner information. | `true`/`false`
+**has_inventor** | Boolean | Indicates if the patent record has i'nevntor information. | `true`/`false`
+**has_sequence** | Boolean | Indicates if the patent record has sequence information. | `true`/`false`
+**has_title** | Boolean | Indicates if the title is available for the patent document. | `true`/`false`
+**has_docdb** | Boolean | Indicates if the DOCDB information is available for the patent document. | `true`/`false`
 {: .param-def }
 
  Example:

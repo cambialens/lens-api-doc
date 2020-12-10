@@ -154,21 +154,21 @@ You can use following pre-defined filters to refine search results:
 
 Field | Description |  Possible Value
 ------- | ------| -------
-**cited_by_patent** | Boolean | Indicates if a patent is cited by other patents. | `true`/`false`
-**cites_npl** | Boolean | Indicates if a patent has cited any non-patent literature in the references. | `true`/`false`
-**cites_patent** | Boolean | Indicates if a patent cites other patents. | `true`/`false`
-**cites_resolved_npl** | Boolean | Indicates if a patent document cites non-patent literature that have been resolved to a matching Lens Scholarly Work. | `true`/`false`
-**has_abstract** | Boolean | Indicates if the abstract is available for the patent document. | `true`/`false`
-**has_agent** | Boolean | Indicates if the patent record has agent/attorney information. | `true`/`false`
-**has_applicant** | Boolean | Indicates if the patent record has applicant information. | `true`/`false`
-**has_claim** | Boolean | Indicates if the claims are available for the patent document. | `true`/`false`
-**has_description** | Boolean | Indicates if the description is available for the patent document. | `true`/`false`
-**has_full_text** | Boolean | Indicates if the full text from the PTO is available for the patent document. | `true`/`false`
-**has_owner** | Boolean | Indicates if the patent record has owner information. | `true`/`false`
-**has_inventor** | Boolean | Indicates if the patent record has i'nevntor information. | `true`/`false`
-**has_sequence** | Boolean | Indicates if the patent record has sequence information. | `true`/`false`
-**has_title** | Boolean | Indicates if the title is available for the patent document. | `true`/`false`
-**has_docdb** | Boolean | Indicates if the DOCDB information is available for the patent document. | `true`/`false`
+**cited_by_patent** | Indicates if a patent is cited by other patents. | `true`/`false`
+**cites_npl** | Indicates if a patent has cited any non-patent literature in the references. | `true`/`false`
+**cites_patent** | Indicates if a patent cites other patents. | `true`/`false`
+**cites_resolved_npl** | Indicates if a patent document cites non-patent literature that have been resolved to a matching Lens Scholarly Work. | `true`/`false`
+**has_abstract** | Indicates if the abstract is available for the patent document. | `true`/`false`
+**has_agent** | Indicates if the patent record has agent/attorney information. | `true`/`false`
+**has_applicant** | Indicates if the patent record has applicant information. | `true`/`false`
+**has_claim** | Indicates if the claims are available for the patent document. | `true`/`false`
+**has_description** | Indicates if the description is available for the patent document. | `true`/`false`
+**has_full_text** | Indicates if the full text from the PTO is available for the patent document. | `true`/`false`
+**has_owner** | Indicates if the patent record has owner information. | `true`/`false`
+**has_inventor** | Indicates if the patent record has i'nevntor information. | `true`/`false`
+**has_sequence** | Indicates if the patent record has sequence information. | `true`/`false`
+**has_title** | Indicates if the title is available for the patent document. | `true`/`false`
+**has_docdb** | Indicates if the DOCDB information is available for the patent document. | `true`/`false`
 {: .param-def }
 
  Example:

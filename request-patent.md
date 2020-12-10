@@ -253,7 +253,7 @@ Following queries are supported by current version of Lens API:
 {
     "query": {
         "term": {
-            "publication_type": "granted patent"
+            "publication_type": "GRANTED_PATENT"
         }
     }
 }

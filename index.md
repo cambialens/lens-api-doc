@@ -18,10 +18,12 @@ We value your comments and feedback on the API via our API survey. If you or you
 You can request access to the Lens Scholarly API, Patent API or PatSeq Bulk Downloads, or manage your access plans and tokens from your [Lens user profile](https://www.lens.org/lens/user/subscriptions).
 
 #### Terms of Use
-Read our terms of use [here](https://about.lens.org/policies/#termsuse).
+* Read the Lens Scholarly API terms of use [here](https://about.lens.org/lens-scholarly-api-terms-of-use/).
+* Read the Lens Patent API terms of use [here](https://about.lens.org/lens-patent-api-terms-of-use/).
+* Read our gernearl terms of use [here](https://about.lens.org/policies/#termsuse).
 
 #### Privacy Policy
-Read our privacy policy [here](https://about.lens.org/policies/#privacypolicy).
+* Read our privacy policy [here](https://about.lens.org/policies/#privacypolicy).
 
 [//]: # (Reference Links)
 [Swagger UI]: <https://api.lens.org/swagger-ui.html>

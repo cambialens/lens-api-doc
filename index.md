@@ -5,8 +5,10 @@ title: Lens API Documentation
 
 #### API Version: `2.0`
 ---
-###### Scholarly Schema Version: `1.4`
-###### Patent Schema Version: `1.0`
+
+* Scholarly Schema Version: `1.4`
+* Patent Schema Version: `1.0`
+
 ---
 
 This service allows you to access the full corpus of Lens scholarly works and patent using the flexibility and convenience of a REST API. The versioned API allows you to perform and combine several types of searches using a number of different operations. This API documentation provides guidelines for getting you started with the API and details the request/response schema with examples. A [Swagger UI] is also provided for query development and a GitHub repository is provided for issue tracking.

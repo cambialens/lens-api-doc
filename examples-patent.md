@@ -8,15 +8,16 @@ toc:
   - title: Patent API Examples
     subfolderitems:
       - page: Find 20 records
-        url: examples-patent.html#find-20-records-from-offset-10-that-match-provided-query
-      - page: Get the patent citations
-        url: examples-patent.html#get-the-patent-citations-scholarly-citations-and-references-for-a-list-of-scholarly-works-using-the-lens_id
-      - page: Get works using a `doi`
-        url: examples-patent.html#get-title-and-patent-citations-for-a-scholarly-work-using-a-doi
-      - page: Using multiple pmid
-        url: examples-patent.html#get-scholarly-works-using-multiple-pmid
-      - page: Cited by patent lens_id
-        url: examples-patent.html#get-the-metadata-for-scholarly-works-that-are-cited-by-a-list-of-patents-using-the-patent-lens_id
+        url: examples-patent.html#find-the-20-most-recently-published-patent-records-from-offset-10-that-match-the-provided-string-query
+      - page: Granted Applications
+        url: examples-patent.html#us-applications-granted-after-2018	
+      - page: Expiring Patents
+        url: examples-patent.html#us-granted-patents-expiring-between-2020-10-10---2020-10-20	
+      - page: Patents with CRISPR in the title, abstract or claims
+        url: examples-patent.html#chinese-patents-with-crispr-in-the-title,-abstract-or-claims-published-between-2010-09-01---2020-09-30
+      - page: CRISPR Cas9 Patent applications
+      	url: examples-patent.html#patent-applications-from-2012-to-2020-with-crispr-cas9-in-the-claims
+<!--	
       - page: 10 most recently published works
         url: examples-patent.html#find-the-10-most-recently-published-works-from-an-institution-sorted-by-published-date
       - page: Publication year of articles cited by patents
@@ -33,9 +34,24 @@ toc:
         url: examples-patent.html#access-your-collection
       - page: Using GET Requests
         url: examples-patent.html#using-get-requests
+-->
 ---
 
-##### US Applications granted after 2018
+##### Find the 20 most recently published patent records from offset 10 that match the provided string query
+```json
+{
+    "query": "title:\"X-ray crystallography\"",
+    "size": 20,
+    "from": 10,
+    "sort": [
+        {
+            "date_published": "desc"
+        }
+    ]
+}
+```
+
+##### US applications granted after `2018`
 ```json
 {
     "query": {
@@ -69,7 +85,7 @@ toc:
 }
 ```
 
-##### US Granetd Patents Expiring between 2020-10-10 - 2020-10-20
+##### US Granted patents expiring between `2020-10-10` - `2020-10-20`
 ```json
 {
     "query": {
@@ -99,7 +115,7 @@ toc:
 }
 ```
 
-##### Chinese CRISPR patents `(Title: CRISPR OR Abstract: CRISPR OR Claims: CRISPR)` published between 2010-09-01 - 2020-09-30 
+##### Chinese patents with `CRISPR` in the title, abstract or claims published between 2010-09-01 - 2020-09-30 
 ```json
 {
     "query": {
@@ -148,17 +164,39 @@ toc:
     "include": ["lens_id", "biblio.publication_reference", "biblio.invention_title.text", "abstract.text", "claims.claims.claim_text"]
 }
 ```
-
-<!--
-##### Find 20 records from offset 10 that match provided query
+##### Patent applications from 2012 to 2020 with `CRISPR cas9` in the claims
 ```json
 {
-  "query": "X-ray analysis of protein crystals",
-  "size": 20,
-  "from": 10
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "term" : {
+                        "publication_type": "PATENT_APPLICATION"
+                    }
+                
+                },
+                {
+                    "match" :{
+                        "claim": "CRISPR cas9"
+                    }
+                },
+                {
+                    "range" : {
+                        "date_published": {
+                            "gte": "2012-01-01",
+                            "lte": "2020-09-30"
+                        }
+                    }
+                
+                }
+            ]
+        }
+    }
 }
 ```
 
+<!--
 ##### Get the patent citations, scholarly citations and references for a list of scholarly works using the `lens_id`
 ```json
 {
@@ -170,7 +208,6 @@ toc:
   "include": ["lens_id", "patent_citations", "scholarly_citations", "references"]
 }
 ```
-
 ##### Get title and patent citations for a scholarly work using a `doi`
 ```json
 {
@@ -182,7 +219,6 @@ toc:
   "include":["title","patent_citations"]
 }
 ```
-
 ##### Get scholarly works using multiple pmid
 ```json
 {
@@ -193,7 +229,6 @@ toc:
 	}
 }
 ```
-
 ##### Get the metadata for scholarly works that are cited by a list of patents using the patent lens_id
 ```json
 {
@@ -204,9 +239,7 @@ toc:
   }
 }
 ```
-
 ##### Find the 10 most recently published works from an institution (sorted by published date)
-
 ```json
 {
   "query": {"match_phrase": {"author.affiliation.name": "Harvard University"}},
@@ -214,7 +247,6 @@ toc:
   "size": 10
 }
 ```
-
 ##### Get publication year of journal articles cited by patents
 ```json
 {
@@ -230,7 +262,6 @@ toc:
    "size": 50
 }
 ```
-
 ##### Get 30 works from an institution published between two years
 ```json
 {
@@ -250,7 +281,6 @@ toc:
   "size": 30
 }
 ```
-
 ##### Get scholarly works having patent citations and affiliations
 ```json
 {
@@ -264,9 +294,7 @@ toc:
     }
 }
 ```
-
 ##### Query by author name
-
 ```json
 {
     "query": {
@@ -276,7 +304,6 @@ toc:
     "size": 10
 }
 ```
-
 ##### Find scholarly works with a Pubmed identifier published in 2012
 ```json
 {
@@ -291,16 +318,13 @@ toc:
     "include":["patent_citations_count", "external_ids"]
 }
 ```
-
 OR using String Based Query
-
 ```json
 {
     "query": "external_id_type: pmid AND year_published: 2012",
     "include":["patent_citations_count", "external_ids"]
 }
 ```
-
 ##### Access your collection
 > `[POST] https://api.lens.org/collections/123456`
 ```json
@@ -310,7 +334,6 @@ OR using String Based Query
   "size":10
 }
 ```
-
 ##### Using GET Requests
 > `[GET] https://api.lens.org/collections/123456?token=[your-access-token]&size=10&query=Malaria&include=authors,lens_id&sort=desc(date_published)`
 

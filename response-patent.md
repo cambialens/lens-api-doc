@@ -131,9 +131,33 @@ Field  |  Type  |  Description |  Example
 **date** | LocalDate | The publication date of the priority document. | `2009-05-22`
 **sequence** | Integer | The sequence of the Prioroty Claim Document | `3`
 
+### Title
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**text** | String | Title of the patent / invention. | `Fidget Spinner`
+**lang** | String ([Language](#language)) | The language of the patent / invention title. | `EN`
 
+### Parties
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**inventors** | List of [Inventors](#inventors) | List of Inventors associated with the patent. | 
+**applicants** | List of [Applicants](#applicants) | List of Applicants associated with the patent. | 
+**assignees** | List of [Assignees](#assignees) | List of Assignees associated with the patent. | 
+**owners_all** | List of [Owners](#owners) | List of Owners associated with the patent. | 
+**agents** | List of [Agents](#agents) | List of Agents associated with the patent. | 
 
+### Inventors
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**residence** | String ([Jurisdiction](#jurisidction)) | The country of residence of the inventor (ISO 2-digit country code). | `DE`
+**sequence** | Integer | The sequence of the inventor listed on the patent document. | `3`
+**extracted_name** | [Inventor Name](#inventor-name) | The patent inventor(s) name. | 
+**extracted_address** | String | The address of the inventor. | `TORONTO, ONTARIA, CA`
 
+### Inventor Name
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**value** | String | The patent inventor's name. | `Engebretson Steven P`
 
 
 
@@ -187,7 +211,6 @@ Field  |  Type  |  Description |  Example
 **cit_text** | string | citation free text string in the original form | `"W.C. Birtwell, et al., "The evolution of counterpulsation techniques", Medical Instrumentation, vol. 10, No. 5, Sep.-Oct. 1976."`
 {: .param-def }
 
--->
 
 ### Sample Patent Record
 ```json
@@ -311,6 +334,7 @@ Field  |  Type  |  Description |  Example
   ]
 }
 ```
+-->
 
 [//]: # (Reference Links)
 [Lens]: <http://lens.org>

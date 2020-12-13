@@ -320,6 +320,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
 `FILING`,`EXAMINATION`,`PRE_GRANT_CHALLENGE`,`GRANT,POST_GRANT_CHALLENGE`,`INACTIVE`,`TERMINATION`
 -->
 
+---
+
 ## Sample Patent Record
 ```json
 {

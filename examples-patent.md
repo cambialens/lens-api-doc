@@ -143,7 +143,9 @@ toc:
                 }
             ]
         }
-    }
+    },
+    "size" : 10,
+    "include": ["lens_id", "biblio.publication_reference", "biblio.invention_title.text", "abstract.text", "claims.claims.claim_text"]
 }
 ```
 

@@ -31,7 +31,7 @@ toc:
 **biblio** | [Bibliographic Data](#bibliographic-data) |  | 
 **families** | [Families](#families) |  | 
 **abstract** | List of [Abstract](#abstract) | The patent document abstract text. | 
-**claims** | List of [Claims](#claims) | The Claims recorded in the patent. | 
+**claims** | List of [Claims](#claims) | The Claims recorded in the patent document. | 
 **description** | [Description](#description) | The description text of the patent document. | 
 **legal_status** | [Legal Status Information](#legal-status-information) | The legal Status Information for the patent document. | 
 {: .param-def }
@@ -91,13 +91,13 @@ Field  |  Type  |  Description |  Example
 ### Claims
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
-**claims** | List of [Claims Text](#claims-text) | The list of Claims recorded in the patent. | 
+**claims** | List of [Claims Text](#claims-text) | The list of Claims recorded in the patent document. | 
 **lang** | String ([Language](#language)) | The language of the patent document claims. | `EN`
 
 ### Claims Text
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
-**claim_text** | List of String | The Claim text recorded on the patent document. | `What is claimed is: 1. A method of performing a conditional vector output operation in a processor, the method comprising: receiving electrical signals representative of an input data vector…`
+**claim_text** | List of String | The Claim text recorded in the patent document. | `What is claimed is: 1. A method of performing a conditional vector output operation in a processor, the method comprising: receiving electrical signals representative of an input data vector…`
 
 
 

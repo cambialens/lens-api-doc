@@ -17,7 +17,7 @@ toc:
 - [Metadata Fields](#metadata-fields)
 - [Sample Patent Record](#sample-patent-record)
 -->
-## Response Metadata Fields
+## Metadata Fields
 
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
@@ -283,56 +283,13 @@ Field  |  Type  |  Description |  Example
 **lens_id** | LensId | The citing patent Lens Id. | `118-962-823-688-691` |
 
 ### Document Id
- --------  |  ---------  |  ------- |  -------
  Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
 **jurisdiction** | String ([Jurisdiction](#jurisidction)) | The jurisidiction of the patent document. | `US`
 **doc_number** | String | The document number assigned to a patent application on publication. | `20130227762`
 **kind** | String | The patent document kind code (varies by jurisdiction). | `A1`
 **date** | LocalDate | Date of publication for the patent document. | `2009-05-22`
 
-
-
-<!--
-#### title
-
- Field | Type |  Description | Example
-------- |:------| -------|---------
-**lang** | string | Two letter ISO country code representing the language of the associated text | `EN`
-**text** | string | The title text | 
-{: .param-def }
-
-#### abstract
-
- Field | Type |  Description  | Example
-------- |:------| -------|---------
-**lang** | string | Two letter ISO country code representing the language of the associated text | `DE`
-**text** | string | The abstract text | 
-{: .param-def }
-
-#### family 
-
- Field | Type |  Description | Example
-------- |:------| -------|---------
-**type** | string | simple | extended | `simple`
-**size** | integer | patent family size | `43`
-**lens_id** | array of strings | patent publication Lens IDs of family members | `"195-080-781-069-750"`
-{: .param-def }
-
-#### pat_cit
-
- Field | Type |  Description | Example
-------- |:------| -------|---------
-**pub_key** | string | patent natural key | `"US_5834442_A"`
-**lens_id** | string | patent Lens ID - may be null if the natural key for the citation is not resolved | `"172-621-027-075-635"`
-{: .param-def }
-
-#### npl_cit
-
- Field | Type |  Description | Example
-------- |:------| -------|---------
-**cit_text** | string | citation free text string in the original form | `"W.C. Birtwell, et al., "The evolution of counterpulsation techniques", Medical Instrumentation, vol. 10, No. 5, Sep.-Oct. 1976."`
-{: .param-def }
--->
 
 ### Sample Patent Record
 ```json

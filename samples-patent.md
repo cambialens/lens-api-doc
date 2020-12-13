@@ -27,7 +27,7 @@ toc:
 - [cURL](#curl)
 -->
 
-## R
+### R
 ```r
 require(httr)
 getScholarlyData <- function(token, query){
@@ -51,7 +51,7 @@ data <- getScholarlyData(token, request)
 content(data, "text")
 ```
 
-## Python
+### Python
 ```python
 import requests
 url = 'https://api.lens.org/scholarly/search'
@@ -108,7 +108,7 @@ def scroll(scroll_id):
 scroll(scroll_id=None)
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -147,7 +147,7 @@ public class JavaSample {
 }
 ```
 
-## NodeJs
+### NodeJs
 ```javascript
 var request = require('request');
 
@@ -185,7 +185,7 @@ request.post(options, function(err, res, data) {
 });
 ```
 
-## cURL
+### cURL
 ```bash
 curl -X POST \
   https://api.lens.org/scholarly/search \

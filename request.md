@@ -6,7 +6,6 @@ permalink: /request.html
 
 
 ### Scholar API Request
-
 {:.table-contents}
 - [Request Structure](request-scholar.html#request-structure)
 - [Searchable Fields](request-scholar.html#searchable-fields)
@@ -18,7 +17,6 @@ permalink: /request.html
 
 
 ### Patent API Request
-
 {:.table-contents}
 - [Request Structure](request-patent.html#request-structure)
 - [Searchable Fields](request-patent.html#searchable-fields)

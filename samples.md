@@ -14,7 +14,6 @@ permalink: /samples.html
 
 
 ### Scholar API Samples
-
 {:.table-contents}
 - [R](samples-scholar.html#r)
 - [Python](samples-scholar.html#python)
@@ -24,7 +23,6 @@ permalink: /samples.html
 
 
 ### Patent API Samples
-
 {:.table-contents}
 - [R](samples-patent.html#r)
 - [Python](samples-patent.html#python)

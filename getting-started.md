@@ -1,16 +1,31 @@
 ---
-layout: page
+layout: post-sidebar
 title: Getting Started
 permalink: /getting-started.html
+show_sidebar: true
+sidebar: toc
+toc:
+  - title: 
+    subfolderitems:
+      - page: Prerequisites
+        url: getting-started.html#prerequisites
+      - page: API Resources
+        url: getting-started.html#api-resources
+      - page: API Access
+        url: getting-started.html#api-access
+      - page: Rate Limiting
+        url: getting-started.html#rate-limiting
+      - page: HTTP Responses
+        url: getting-started.html#http-responses
 ---
-
+<!--
 {:.table-contents}
 - [Prerequisites](#prerequisites)
 - [API Resources](#api-resources)
 - [API Access](#api-access)
 - [Rate Limiting](#rate-limiting)
 - [HTTP Responses](#http-responses)
-
+-->
 
 ### Prerequisites
 

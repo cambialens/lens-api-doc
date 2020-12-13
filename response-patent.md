@@ -17,7 +17,7 @@ toc:
 - [Metadata Fields](#metadata-fields)
 - [Sample Patent Record](#sample-patent-record)
 -->
-## Metadata Fields
+### Metadata Fields
 
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------

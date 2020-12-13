@@ -301,6 +301,11 @@ h6 {
     font-weight: 500;
 }
 
+hr {
+  border: 1px solid #d8e7f4;
+  margin: 30px 0;
+}
+
 a {
     color: #1a79c5;
     text-decoration: none
@@ -403,11 +408,11 @@ table {
     text-align: left;
     color: #3f3f3f;
     border-collapse: collapse;
-    border: 1px solid #e8e8e8
+    border: 1px solid #d8e7f4;
 }
 
 table tr:nth-child(even) {
-    background-color: #f7f7f7
+    background-color: #f8fafd;
 }
 
 table th,
@@ -416,16 +421,28 @@ table td {
 }
 
 table th {
-    background-color: #f0f0f0;
-    border: 1px solid #dedede;
-    border-bottom-color: #c9c9c9;
+    background-color: #e4ebf3;
+    border: 1px solid #d8e7f4;
+    border-bottom-color: #d8e7f4;
     font-weight: 600;
 }
 
 table td {
-    border: 1px solid #e8e8e8
+    border: 1px solid #d8e7f4;
 }
 
+table td strong {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  min-width: 150px;
+  display: inline-block;
+}
+
+table td strong a {
+    word-break: normal;
+}
 
 .main-menu {
     list-style-type: none;
@@ -707,7 +724,7 @@ footer.footer {
 .table-contents li {
     list-style-type: none;
     display: inline-block;
-    border: 1px solid #dadada;
+    border: 1px solid #d8e7f4;
     padding: 3px 8px;
     background: #fafafa;
     border-radius: 4px;
@@ -719,7 +736,7 @@ footer.footer {
 
 .post-content h2 {
     font-size: 32px;
-    border-bottom: 1px solid #dadada;
+    border-bottom: 1px solid #d8e7f4;
 }
 
 @media screen and (max-width: 800px) {
@@ -729,8 +746,10 @@ footer.footer {
 }
 
 .post-content h3 {
-    font-size: 30px;
-    border-bottom: 1px solid #dadada;
+    font-size: 22px;
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d8e7f4;
     padding-top: 10px;
 }
 

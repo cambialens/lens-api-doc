@@ -151,38 +151,79 @@ Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **residence** | String ([Jurisdiction](#jurisidction)) | The country of residence of the inventor (ISO 2-digit country code). | `DE`
 **sequence** | Integer | The sequence of the inventor listed on the patent document. | `3`
-**extracted_name** | [Inventor Name](#inventor-name) | The patent inventor's name. | 
+**extracted_name** | [Name](#name) | The patent inventor's name. | `Engebretson Steven P`
 **extracted_address** | String | The address of the inventor. | `TORONTO, ONTARIA, CA`
 
+<!--
 ### Inventor Name
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **value** | String | The patent inventor's name. | `Engebretson Steven P`
+-->
 
 ### Applicants
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **residence** | String ([Jurisdiction](#jurisidction)) | The country of the applicant (ISO 2-digit country code). | `CA`
 **sequence** | Integer | The sequence of the applicant listed on the patent document. | `2`
-**extracted_name** | [Applicant Name](#applicant-name) | The patent applicant's name. | 
-**extracted_address** | String | The applicant address as recorded on the patent. | `TORONTO, ONTARIA, CA`
+**extracted_name** | [Name](#name) | The patent applicant's name. | `IBM`
+**extracted_address** | String | The applicant address as recorded on the patent. | `SEATTLE, WASHINGTON, US`
 
+<!--
 ### Applicant Name
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **value** | String | The patent applicant's name. | `CPS Technology Holdings LLC`
+-->
 
 ### Assignees
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
-**extracted_name** | [Assignee Name](#assignee-name) | The patent assignee's name. | 
+**extracted_name** | [Name](#name) | The patent assignee's name. | `CPS Technology Holdings LLC`
 **extracted_address** | String | The assignee address as recorded on the patent. | `TORONTO, ONTARIA, CA`
 
+<!--
 ### Assignee Name
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **value** | String | The assignee's name. | `CPS Technology Holdings LLC`
+-->
 
+### Owners
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**recorded_date** | Date | The ownership / assignment event record date. | `2009-05-22`
+**execution_date** | Date | The date of execution of ownership / assignment. | `2009-05-22`
+**extracted_name** | [Name](#name) | The patent owner name. | `CPS Technology Holdings LLC`
+**extracted_address** | String | The owner address as recorded on the patent or legal event. | `TORONTO, ONTARIA, CA`
+**extracted_country** | String ([Jurisdiction](#jurisidction)) | The owner's country code (ISO 2-digit country code). | `US`
+
+<!--
+### Owner Name
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**value** | String | The patent owner(s) name. | `CPS Technology Holdings LLC`
+-->
+
+### Agents and Attornies
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**sequence** | Integer | The sequence of the agent/attorney as listed on the patent document. | `1`
+**extracted_name** | [Name](#name) | The agent/attorney name. | `Chapman, Paul William et al.`
+**extracted_address** | String | The agent/attorney address as recorded on the patent. | `20 Red Lion Street, GB-London WC1R 4PJ(GB)`
+**extracted_country** | String ([Jurisdiction](#jurisidction)) | The country of the agent/attorney (ISO 2-digit country code). | `GB`
+
+<!--
+### Agent/Attorney Name
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**value** | String | The agent/attorney name. | `Chapman, Paul William et al.`
+-->
+
+### Name
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**value** | String | The party name. | `Chapman, Paul William et al.`, `CPS Technology Holdings LLC`, `Chapman, Paul William et al.`
 
 
 

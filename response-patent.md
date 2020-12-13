@@ -19,25 +19,21 @@ toc:
 -->
 ### Metadata Fields
 
- Field | Type |  Description  | Example
-------- |:------| :------- |---------
-**jurisdiction** | string | patent filing jurisdiction | `"WO"`
-**lens_id** | string | patent Lens ID | `"008-525-073-655-546"`
-**pub_key** | string | patent natural key | `"EP_1944033_A2"`
-**title** | array | Array of patent [title](#title) | 
-**abstract** | array | Array of patent [abstract](#abstract) | 
-**doc_type** | string | patent document type | `"Patent Application"`
-**pub_date** | date: yyyy-mm-dd | patent publication date | `"2008-07-16"`
-**filing_date** | date: yyyy-mm-dd | patent filing date | `"2001-11-21"`
-**filing_key** | string | patent filing key | `"EP_07022824_A_20011121"`
-**family** | Array of [family](#family) objects | patent family data for both simple and extended family definitions - see https://www.epo.org/searching-for-patents/helpful-resources/first-time-here/patent-families.html  | 
-**applicant** | array of strings | patent applicants | `"NUTRICIA NV"`
-**inventor** | array of strings | patent inventors | `"VOGEL MANFRED"`
-**owner** | available for US patents | patent owners | `"RAINBOW MEDICAL LTD"`
-**classification_us** | array of strings | United States Patent classification codes | 
-**classification_cpc** | array of strings | CPC classification codes | `"A61K31/732"`
-**pat_cit** | Array of [Cited Patents](#pat_cit) | cited patent publications | 
-**npl_cit** | array of [Cited NPL](#npl_cit) objects | non-patent literature citations | 
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**lens_id** | String | Unique lens identifier. Every document in the Lens has a unique 15-digit identifier called a Lens ID. | `186-488-232-022-055`
+**jurisdiction** | String | The jurisidiction of the patent document. | `US`
+**kind** | String | The patent document kind code (varies by jurisdiction). | `A1`
+**date_published** | Date | Date of publication for the patent document. | `2009-05-22`
+**doc_key** | String | The unique document key for the patent document. | `EP_0227762_B1_19900411`
+**docdb_id** | Long | The DOCDB identifier for the patent document. | `499168393`
+**lang** | Language | The original language of the patent document. | `EN`
+**biblio** | [Bibliographic Data](#bibliographic-data) |  | 
+**families** | [Families](#families) |  | 
+**abstract** | List of [[Abstract](#abstract) | The patent document abstract text. | 
+**claims** | List of [[Claims](#claims) | The Claims recorded in the patent. | 
+**description** | [Description](#description) | The description text of the patent document. | 
+**legal_status** | [Legal Status Information](#legal-status-information) | The legal Status Information for the patent document. | 
 {: .param-def }
 
 #### title

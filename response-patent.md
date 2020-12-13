@@ -51,7 +51,28 @@ toc:
 **references_cited** | [References Cited](#references-cited) | The references cited in the patent document (patents and non-patent literature). | 
 **cited_by** | [Cited By](#cited-by) | The patents citing the patent document. | 
 
+ ### Families
 
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+### Families
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**simple_family** | [Simple Family](#simple-family) | Simple patent family (based on [DOCDB simple patent family](https://www.epo.org/searching-for-patents/helpful-resources/first-time-here/patent-families/docdb.html)). | 
+**extended_family** | [Extended Family](#extended-family) | Extended patent family (based on [INPADOC extended patent family](https://www.epo.org/searching-for-patents/helpful-resources/first-time-here/patent-families/inpadoc.html)). |   
+
+### Simple Family
+
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**members** | List of [Simple Family Members](#simple-family-members) | List of simple family members. | 
+
+### Simple Family Members
+
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**document_id** | [Document Id](#document-id) | Simple family member document Id.  | 
+**lens_id** | LensId | Simple family member Lens Id.  | `186-488-232-022-055`
 
 
 

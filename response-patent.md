@@ -73,42 +73,49 @@ Field  |  Type  |  Description |  Example
 **lens_id** | LensId | Simple family member Lens Id.  | `186-488-232-022-055`
 
 ### Extended Family
- Field  |  Type  |  Description 
- --------  |  ---------  |  -------
-**members** | List of [Extended Family Members](#extended-family-members) | List of extended family members. | 
+
+Field  |  Type  |  Description | Example
+--------  |  ---------  |  ------- | -------
+**members** | List of [Extended Family Members](#extended-family-members) | List of extended family members. |  
 
 ### Extended Family Members
- Field  |  Type  |  Description |  Example
- --------  |  ---------  |  ------- |  -------
+
+Field  |  Type  |  Description |  Example
+--------  |  ---------  |  ------- |  -------
 **document_id** | [Document Id](#document-id) | Extended family member document Id.  | 
 **lens_id** | LensId | Extended family member Lens Id.  | `186-488-232-022-055`
 
 ### Abstract
- Field  |  Type  |  Description |  Example
- --------  |  ---------  |  ------- |  -------
+
+Field  |  Type  |  Description |  Example
+--------  |  ---------  |  ------- |  -------
 **text** | String | The patent document abstract text. | `A processor implements conditional vector operations in which an input vector containing multiple operands to be used in conditional operations is divided into two or more output…`
 **lang** | String ([Language](#language)) | The language of the patent document abstract text. | `EN`
 
 ### Claims
+
  Field  |  Type  |  Description |  Example
- --------  |  ---------  |  ------- |  -------
+--------  |  ---------  |  ------- |  -------
 **claims** | List of [Claims Text](#claims-text) | The list of Claims recorded in the patent document. | 
 **lang** | String ([Language](#language)) | The language of the patent document claims. | `EN`
 
 ### Claims Text
+
  Field  |  Type  |  Description |  Example
- --------  |  ---------  |  ------- |  -------
+--------  |  ---------  |  ------- |  -------
 **claim_text** | List of String | The Claim text recorded in the patent document. | `What is claimed is: 1. A method of performing a conditional vector output operation in a processor, the method comprising: receiving electrical signals representative of an input data vector…`
 
 ### Description
- Field  |  Type  |  Description |  Example
- --------  |  ---------  |  ------- |  -------
+
+Field  |  Type  |  Description |  Example
+--------  |  ---------  |  ------- |  -------
 **text** | String | The description text of the patent document. | `This invention was made in conjuction with U.S. Government support under U.S. Army Grant No. DABT63-96-C-0037.” BACKGROUND OF THE INVENTION 1. Field of the Invention The present invention is directed to…`
 **lang** | String ([Language](#language)) | The language of the patent document description. | `EN`
 
 ### Legal Status Information
- Field  |  Type  |  Description |  Example
- --------  |  ---------  |  ------- |  -------
+
+Field  |  Type  |  Description |  Example
+--------  |  ---------  |  ------- |  -------
 **granted** | Boolean | Indicates if the patent application has been granted in one or more jurisdictions. | `TRUE`
 **grant_date** | Date | The date the patent application was granted (i.e. the application first grant date). | `2009-05-22`
 **application_expiry_date** | Date | The expiry date of the patent application because of withdrawal or abandonment. | `2009-05-22`
@@ -120,11 +127,13 @@ Field  |  Type  |  Description |  Example
 **has_spc** | Boolean | Indicates if the patent has a supplementary protection certificate. | `TRUE`
 
 ### Priority Claims
+
  Field  |  Type  |  Description 
  --------  |  ---------  |  ------- 
 **claims** | List of [Priority Claims Documents](#priority-claims-documents) | List of priority claims documents | 
 
 ### Priority Claims Documents
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **jurisdiction** | String ([Jurisdiction](#jurisidction)) | The jurisdiction of the priority document. | `DE`
@@ -134,12 +143,14 @@ Field  |  Type  |  Description |  Example
 **sequence** | Integer | The sequence of the Prioroty Claim Document | `3`
 
 ### Title
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **text** | String | Title of the patent / invention. | `Fidget Spinner`
 **lang** | String ([Language](#language)) | The language of the patent / invention title. | `EN`
 
 ### Parties
+
  Field  |  Type  |  Description 
  --------  |  ---------  |  ------- 
 **inventors** | List of [Inventors](#inventors) | List of inventors associated with the patent. | 
@@ -149,6 +160,7 @@ Field  |  Type  |  Description |  Example
 **agents** | List of [Agents and Attorneys](#agents-and-attorneys) | List of agents and attorneys associated with the patent. | 
 
 ### Inventors
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **residence** | String ([Jurisdiction](#jurisidction)) | The country of residence of the inventor (ISO 2-digit country code). | `DE`
@@ -164,6 +176,7 @@ Field  |  Type  |  Description |  Example
 -->
 
 ### Applicants
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **residence** | String ([Jurisdiction](#jurisidction)) | The country of the applicant (ISO 2-digit country code). | `CA`
@@ -179,6 +192,7 @@ Field  |  Type  |  Description |  Example
 -->
 
 ### Assignees
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **extracted_name** | [Name](#name) | The patent assignee's name. | `CPS Technology Holdings LLC`
@@ -192,6 +206,7 @@ Field  |  Type  |  Description |  Example
 -->
 
 ### Owners
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **recorded_date** | Date | The ownership / assignment event record date. | `2009-05-22`
@@ -208,6 +223,7 @@ Field  |  Type  |  Description |  Example
 -->
 
 ### Agents and Attorneys
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **sequence** | Integer | The sequence of the agent/attorney as listed on the patent document. | `1`
@@ -223,31 +239,37 @@ Field  |  Type  |  Description |  Example
 -->
 
 ### Name
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **value** | String | The party name. | `Chapman, Paul William et al.`, `CPS Technology Holdings LLC`, `Chapman, Paul William et al.`
 
 ### CPC Classifications
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **classifications** | List of [Classification Symbols](#classification-symbols) | List of CPC classification symbols. | `H01R11/01`
 
 ### IPCR Classifications
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **classifications** | List of [Classification Symbols](#classification-symbols) | List of IPCR classification symbols. | `H01R13/115`
 
 ### US Classifications
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **classifications** | List of [Classification Symbols](#classification-symbols) | List of US classification symbols. | `439/535`
 
 ### Classification Symbols
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **symbol** | String | Classification code symbol. | `H01R11/01`, `H01R13/115`, `439/535`
 
 ### References Cited
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **citations** | List of [Citations](#citations) | List of patent and NPL references cited. | 
@@ -255,6 +277,7 @@ Field  |  Type  |  Description |  Example
 **npl_count** | Integer | The number of scholalry works cited by a patent. | `2`
 
 ### Citations
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **patcit** | [Patents Cited](#patents-cited) | Patents cited in the patent documnet. | 
@@ -262,11 +285,13 @@ Field  |  Type  |  Description |  Example
 **sequence** | Integer | The sequence of the citation in the patent document. | `5`
 
 ### Patents Cited
+
  Field  |  Type  |  Description 
  --------  |  ---------  |  ------- 
 **document_id** | Array of [Document Id](#document-id) | The cited patent document Ids. | 
 
 ### NPL Cited
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **text** | String | The original non-patent literature citation text in the patent document. | `Cormen et al., 'Introduction to Algorithms (MIT Electrical Engineering and Computer Science Series,' MIT Press, ISBN 0262031418, pp. 665-667, 695-697.`
@@ -274,17 +299,20 @@ Field  |  Type  |  Description |  Example
 **external_ids** | List of String | List of external identifiers for non-patent literature citation (DOI, PubMed ID, PubMed Central ID or Microsoft Aacademic ID).  | `[10.1038/nature03090; 12345678919]`
 
 ### Cited By
+
  Field  |  Type  |  Description 
  --------  |  ---------  |  ------- 
 **patents** | List of [Cited By Patents](#cited-by-patents) | List of patents citing the patent documnet. | 
 
 ### Cited By Patents
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **document_id** | [Document Id](#document-id) | The citing patent document Id. | 
 **lens_id** | LensId | The citing patent Lens Id. | `118-962-823-688-691` |
 
 ### Document Id
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **jurisdiction** | String ([Jurisdiction](#jurisidction)) | The jurisidiction of the patent document. | `US`
@@ -297,15 +325,19 @@ Field  |  Type  |  Description |  Example
 ### Enums
 
 #### Document Types
+
 `AMENDED_PATENT`, `AMENDED_PATENT`, `DESIGN_RIGHT`, `GRANTED_PATENT`, `LIMITED_PATENT`, `PATENT_APPLICATION`, `PLANT_PATENT`, `SEARCH_REPORT`, `STATUTORY_INVENTION_REGISTRATION`, `SPC`, `UNKNOWN`
 
 ##### Jurisidction
+
 Jurisidction codes: `US`, `EP`, `WO`, `DE`, `CN`, `JP`, `GB`, etc.
 
 ##### Language
+
 Language codes:  `EN`, `FR`, `DE`, `CN` etc.
 
 ##### Patent Status
+
  - `PENDING` - Application pending
  - `DISCONTINUED` - Discontinued, Withdrawn or Rejected
  - `PATENTED` - In case of WO application is grant in some designated state
@@ -323,6 +355,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
 ---
 
 ## Sample Patent Record
+
 ```json
 {
   "lens_id": "008-525-073-655-546",
@@ -387,7 +420,6 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
       "lens_id": [
         "195-080-781-069-750",
         "164-658-285-491-42X",
-        // ...
         "189-163-739-442-204",
         "072-032-313-269-851"
       ],
@@ -397,7 +429,6 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
       "lens_id": [
         "195-080-781-069-750",
         "164-658-285-491-42X",
-         // ...
         "056-142-840-402-420",
         "083-375-113-340-231"
       ],

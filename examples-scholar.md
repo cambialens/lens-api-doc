@@ -8,31 +8,31 @@ toc:
   - title: Scholar API Examples
     subfolderitems:
       - page: Find 20 records
-        url: examples-patent.html#find-20-records-from-offset-10-that-match-provided-query
+        url: examples-scholar.html#find-20-records-from-offset-10-that-match-provided-query
       - page: Get the patent citations
-        url: examples-patent.html#get-the-patent-citations-scholarly-citations-and-references-for-a-list-of-scholarly-works-using-the-lens_id
+        url: examples-scholar.html#get-the-patent-citations-scholarly-citations-and-references-for-a-list-of-scholarly-works-using-the-lens_id
       - page: Get works using a `doi`
-        url: examples-patent.html#get-title-and-patent-citations-for-a-scholarly-work-using-a-doi
+        url: examples-scholar.html#get-title-and-patent-citations-for-a-scholarly-work-using-a-doi
       - page: Using multiple pmid
-        url: examples-patent.html#get-scholarly-works-using-multiple-pmid
+        url: examples-scholar.html#get-scholarly-works-using-multiple-pmid
       - page: Cited by patent lens_id
-        url: examples-patent.html#get-the-metadata-for-scholarly-works-that-are-cited-by-a-list-of-patents-using-the-patent-lens_id
+        url: examples-scholar.html#get-the-metadata-for-scholarly-works-that-are-cited-by-a-list-of-patents-using-the-patent-lens_id
       - page: 10 most recently published works
-        url: examples-patent.html#find-the-10-most-recently-published-works-from-an-institution-sorted-by-published-date
+        url: examples-scholar.html#find-the-10-most-recently-published-works-from-an-institution-sorted-by-published-date
       - page: Publication year of articles cited by patents
-        url: examples-patent.html#get-publication-year-of-journal-articles-cited-by-patents
+        url: examples-scholar.html#get-publication-year-of-journal-articles-cited-by-patents
       - page: 30 works published between two years
-        url: examples-patent.html#get-30-works-from-an-institution-published-between-two-years
+        url: examples-scholar.html#get-30-works-from-an-institution-published-between-two-years
       - page: Works having patent citations and affiliations
-        url: examples-patent.html#get-scholarly-works-having-patent-citations-and-affiliations
+        url: examples-scholar.html#get-scholarly-works-having-patent-citations-and-affiliations
       - page: Query by author name
-        url: examples-patent.html#query-by-author-name
+        url: examples-scholar.html#query-by-author-name
       - page: Pubmed identifier published in 2012
-        url: examples-patent.html#find-scholarly-works-with-a-pubmed-identifier-published-in-2012
+        url: examples-scholar.html#find-scholarly-works-with-a-pubmed-identifier-published-in-2012
       - page: Access your collection
-        url: examples-patent.html#access-your-collection
+        url: examples-scholar.html#access-your-collection
       - page: Using GET Requests
-        url: examples-patent.html#using-get-requests
+        url: examples-scholar.html#using-get-requests
 ---
 
 ##### Find 20 records from offset 10 that match provided query

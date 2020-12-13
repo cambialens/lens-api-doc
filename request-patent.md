@@ -24,7 +24,6 @@ toc:
 ---
 
 
-
 <!--            
 {:.table-contents}
 - [Request Structure](#request-structure)

@@ -6,7 +6,7 @@ permalink: /getting-started.html
 
 {:.table-contents}
 - [Prerequisites](#prerequisites)
-- [API Endpoints](#api-endpoints)
+- [API Resources](#api-resources)
 - [API Access](#api-access)
 - [Rate Limiting](#rate-limiting)
 - [HTTP Responses](#http-responses)
@@ -21,9 +21,14 @@ You need to have the following before you can start using Lens APIs:
 3. Basic knowledge of API structure and JSON formatting.
 4. Any API Client (cURL, Postman, etc.)
 
-### API Endpoints
+### API Resources
 
 As of the current version, Lens offers the following API endpoints:
+
+**Patents:** 
+- `[POST] https://api.lens.org/patent/search`
+- `[GET] https://api.lens.org/patent/search`
+- `[GET] https://api.lens.org/patent/{lens_id}`
 
 **Scholarly Works:** 
 - `[POST] https://api.lens.org/scholarly/search`
@@ -34,7 +39,7 @@ As of the current version, Lens offers the following API endpoints:
 - `[GET] https://api.lens.org/collections/{collection_id}`
 
 > You can access scholarly works in your collections from your [Work Area]. The `{collection_id}` can be found at the end of your collection URL, e.g. `https://www.lens.org/lens/scholar/search/results?collectionId={collection_id}`.
-> Here is an [example]({{site.baseurl}}/examples.html#access-your-collection) to illustrate how to access your collection.
+> Here is an [example](examples-scholar.html#access-your-collection) to illustrate how to access your collection.
 
 **API usage:** 
 - `[GET] https://api.lens.org/scholarly/usage`

@@ -164,7 +164,7 @@ Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **residence** | String ([Jurisdiction](#jurisidction)) | The country of the applicant (ISO 2-digit country code). | `CA`
 **sequence** | Integer | The sequence of the applicant listed on the patent document. | `2`
-**extracted_name** | [Applicant Name](#applicant-name) | The patent applicant's name. | `CPS Technology Holdings LLC`
+**extracted_name** | [Applicant Name](#applicant-name) | The patent applicant's name. | 
 **extracted_address** | String | The applicant address as recorded on the patent. | `TORONTO, ONTARIA, CA`
 
 ### Applicant Name
@@ -172,6 +172,16 @@ Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **value** | String | The patent applicant's name. | `CPS Technology Holdings LLC`
 
+### Assignees
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**extracted_name** | [Assignee Name](#assignee-name) | The patent assignee's name. | 
+**extracted_address** | String | The assignee address as recorded on the patent. | `TORONTO, ONTARIA, CA`
+
+### Assignee Name
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**value** | String | The assignee's name. | `CPS Technology Holdings LLC`
 
 
 

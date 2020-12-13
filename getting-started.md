@@ -31,7 +31,7 @@ toc:
 
 You need to have the following before you can start using Lens APIs:
 
-1. Granted access to our API service.
+1. Granted access to our API service ([request access](https://www.lens.org/lens/user/subscriptions)).
 2. Create an Access Token from your user profile page.
 3. Basic knowledge of API structure and JSON formatting.
 4. Any API Client (cURL, Postman, etc.)
@@ -57,6 +57,7 @@ As of the current version, Lens offers the following API endpoints:
 > Here is an [example](examples-scholar.html#access-your-collection) to illustrate how to access your collection.
 
 **API usage:** 
+- `[GET] https://api.lens.org/subscriptions/patent_api/usage`
 - `[GET] https://api.lens.org/scholarly/usage`
 
 **Swagger Documentation is available here:** [https://api.lens.org/swagger-ui.html](https://api.lens.org/swagger-ui.html)

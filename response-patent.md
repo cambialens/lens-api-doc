@@ -49,7 +49,7 @@ toc:
 **classifications_ipcr** | [IPCR Classifications](#ipcr-classifications) | CPC Classifications | 
 **classifications_national** | [US Classifications](#us-classifications) | CPC Classifications | 
 **references_cited** | [References Cited](#references-cited) | The references cited in the patent document (patents and non-patent literature). | 
-**cited_by** | [CitedBy](#citedby) | The patents citing the patent document. | 
+**cited_by** | [Cited By](#cited-by) | The patents citing the patent document. | 
 
 
 

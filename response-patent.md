@@ -99,6 +99,11 @@ Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **claim_text** | List of String | The Claim text recorded in the patent document. | `What is claimed is: 1. A method of performing a conditional vector output operation in a processor, the method comprising: receiving electrical signals representative of an input data vector…`
 
+### Description
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**text** | String | The description text of the patent document. | `This invention was made in conjuction with U.S. Government support under U.S. Army Grant No. DABT63-96-C-0037.” BACKGROUND OF THE INVENTION 1. Field of the Invention The present invention is directed to…`
+**lang** | String ([Language](#language)) | The language of the patent document description. | `EN`
 
 
 

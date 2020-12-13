@@ -35,6 +35,119 @@ toc:
         url: examples-patent.html#using-get-requests
 ---
 
+##### US Applications granted after 2018
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match" : {
+                        "legal_status.granted": true
+                    }
+                },
+                {
+                    "term" : {
+                        "publication_type": "PATENT_APPLICATION"
+                    }
+                },
+                {
+                    "term" : {
+                        "jurisdiction": "US"
+                    }
+                },
+                {
+                    "range": {
+                        "year_published": {
+                            "gte": 2018
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+```
+
+##### US Granetd Patents Expiring between 2020-10-10 - 2020-10-20
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match" : {
+                        "legal_status.granted": true
+                    }
+                },
+                {
+                    "term" : {
+                        "jurisdiction": "US"
+                    }
+                },
+                {
+                    "range": {
+                        "legal_status.anticipated_term_date": {
+                            "gte": "2020-10-10",
+                            "lte": "2020-10-20"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+```
+
+##### Chinese CRISPR patents `(Title: CRISPR OR Abstract: CRISPR OR Claims: CRISPR)` published between 2010-09-01 - 2020-09-30 
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "bool": {
+                        "should": [
+                            {
+                                "match" : {
+                                    "title": "CRISPR"
+                                }
+                            },
+                            {
+                                "match" : {
+                                    "abstract": "CRISPR"
+                                }
+                            },
+                            {
+                                "match" : {
+                                    "claim": "CRISPR"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "term" : {
+                        "jurisdiction": "CN"
+                    }
+                
+                },
+                {
+                    "range" : {
+                        "date_published": {
+                            "gte": "2010-09-01",
+                            "lte": "2020-09-30"
+                        }
+                    }
+                
+                }
+            ]
+        }
+    }
+}
+```
+
+<!--
 ##### Find 20 records from offset 10 that match provided query
 ```json
 {
@@ -200,3 +313,4 @@ OR using String Based Query
 > `[GET] https://api.lens.org/collections/123456?token=[your-access-token]&size=10&query=Malaria&include=authors,lens_id&sort=desc(date_published)`
 
 > `[GET] https://api.lens.org/scholarly/search?token=[your-access-token]&size=10&query=Malaria&include=authors,lens_id&sort=desc(date_published)`
+-->

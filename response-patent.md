@@ -70,7 +70,7 @@ Field  |  Type  |  Description
 Field  |  Type  |  Description |  Example
 --------  |  ---------  |  ------- |  -------
 **document_id** | [Document Id](#document-id) | Simple family member document Id.  | 
-**lens_id** | LensId | Simple family member Lens Id.  | `186-488-232-022-055`
+**lens_id** | String (LensId) | Simple family member Lens Id.  | `186-488-232-022-055`
 
 ### Extended Family
 
@@ -83,7 +83,7 @@ Field  |  Type  |  Description | Example
 Field  |  Type  |  Description |  Example
 --------  |  ---------  |  ------- |  -------
 **document_id** | [Document Id](#document-id) | Extended family member document Id.  | 
-**lens_id** | LensId | Extended family member Lens Id.  | `186-488-232-022-055`
+**lens_id** |  String (LensId) | Extended family member Lens Id.  | `186-488-232-022-055`
 
 ### Abstract
 
@@ -289,14 +289,14 @@ Field  |  Type  |  Description |  Example
  Field  |  Type  |  Description | Example
  --------  |  ---------  |  ------- | ------- 
 **document_id** | Array of [Document Id](#document-id) | The cited patent document Ids. | 
-**lens_id** | String | The cited patent document Lens Id. | `118-962-823-688-691` |
+**lens_id** |  String (LensId) | The cited patent document Lens Id. | `118-962-823-688-691` |
 
 ### NPL Cited
 
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **text** | String | The original non-patent literature citation text in the patent document. | `Cormen et al., 'Introduction to Algorithms (MIT Electrical Engineering and Computer Science Series,' MIT Press, ISBN 0262031418, pp. 665-667, 695-697.`
-**lens_id** | LensId | The Lens Id of the resolved non-patent literature citations (i.e. scholarly work Lens Id). | `168-663-423-050-326`
+**lens_id** |  String (LensId) | The Lens Id of the resolved non-patent literature citations (i.e. scholarly work Lens Id). | `168-663-423-050-326`
 **external_ids** | List of String | List of external identifiers for non-patent literature citation (DOI, PubMed ID, PubMed Central ID or Microsoft Aacademic ID).  | `[10.1038/nature03090; 12345678919]`
 
 ### Cited By
@@ -310,7 +310,7 @@ Field  |  Type  |  Description |  Example
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **document_id** | [Document Id](#document-id) | The citing patent document Id. | 
-**lens_id** | LensId | The citing patent Lens Id. | `118-962-823-688-691` |
+**lens_id** |  String (LensId) | The citing patent Lens Id. | `118-962-823-688-691` |
 
 ### Document Id
 

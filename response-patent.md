@@ -163,7 +163,7 @@ Field  |  Type  |  Description |  Example
 
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
-**residence** | String ([Jurisdiction](#jurisidction)) | The country of residence of the inventor (ISO 2-digit country code). | `DE`
+**residence** | String | The country of residence of the inventor (ISO 2-digit country code). | `DE`
 **sequence** | Integer | The sequence of the inventor listed on the patent document. | `3`
 **extracted_name** | [Name](#name) | The patent inventor's name. | `Engebretson Steven P`
 **extracted_address** | String | The address of the inventor. | `TORONTO, ONTARIA, CA`
@@ -179,7 +179,7 @@ Field  |  Type  |  Description |  Example
 
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
-**residence** | String ([Jurisdiction](#jurisidction)) | The country of the applicant (ISO 2-digit country code). | `CA`
+**residence** | String | The country of the applicant (ISO 2-digit country code). | `CA`
 **sequence** | Integer | The sequence of the applicant listed on the patent document. | `2`
 **extracted_name** | [Name](#name) | The patent applicant's name. | `IBM`
 **extracted_address** | String | The applicant address as recorded on the patent. | `SEATTLE, WASHINGTON, US`
@@ -213,7 +213,7 @@ Field  |  Type  |  Description |  Example
 **execution_date** | Date | The date of execution of ownership / assignment. | `2009-05-22`
 **extracted_name** | [Name](#name) | The patent owner name. | `CPS Technology Holdings LLC`
 **extracted_address** | String | The owner address as recorded on the patent or legal event. | `TORONTO, ONTARIA, CA`
-**extracted_country** | String ([Jurisdiction](#jurisidction)) | The owner's country code (ISO 2-digit country code). | `US`
+**extracted_country** | String | The owner's country code (ISO 2-digit country code). | `US`
 
 <!--
 ### Owner Name
@@ -229,7 +229,7 @@ Field  |  Type  |  Description |  Example
 **sequence** | Integer | The sequence of the agent/attorney as listed on the patent document. | `1`
 **extracted_name** | [Name](#name) | The agent/attorney name. | `Chapman, Paul William et al.`
 **extracted_address** | String | The agent/attorney address as recorded on the patent. | `20 Red Lion Street, GB-London WC1R 4PJ(GB)`
-**extracted_country** | String ([Jurisdiction](#jurisidction)) | The country of the agent/attorney (ISO 2-digit country code). | `GB`
+**extracted_country** | String | The country of the agent/attorney (ISO 2-digit country code). | `GB`
 
 <!--
 ### Agent/Attorney Name
@@ -326,19 +326,15 @@ Field  |  Type  |  Description |  Example
 ### Enums
 
 #### Document Types
-
 `AMENDED_PATENT`, `AMENDED_PATENT`, `DESIGN_RIGHT`, `GRANTED_PATENT`, `LIMITED_PATENT`, `PATENT_APPLICATION`, `PLANT_PATENT`, `SEARCH_REPORT`, `STATUTORY_INVENTION_REGISTRATION`, `SPC`, `UNKNOWN`
 
 ##### Jurisidction
-
 Jurisidction codes: `US`, `EP`, `WO`, `DE`, `CN`, `JP`, `GB`, etc.
 
 ##### Language
-
 Language codes:  `EN`, `FR`, `DE`, `CN` etc.
 
 ##### Patent Status
-
  - `PENDING` - Application pending
  - `DISCONTINUED` - Discontinued, Withdrawn or Rejected
  - `PATENTED` - In case of WO application is grant in some designated state

@@ -27,7 +27,7 @@ toc:
 **date_published** | Date | Date of publication for the patent document. | `2009-05-22`
 **doc_key** | String | The unique document key for the patent document. | `EP_0227762_B1_19900411`
 **docdb_id** | Long | The DOCDB identifier for the patent document. | `499168393`
-**lang** | Language | The original language of the patent document. | `EN`
+**lang** | String ([Language](#language)) | The original language of the patent document. | `EN`
 **biblio** | [Bibliographic Data](#bibliographic-data) |  | 
 **families** | [Families](#families) |  | 
 **abstract** | List of [Abstract](#abstract) | The patent document abstract text. | 
@@ -82,6 +82,22 @@ Field  |  Type  |  Description |  Example
 **document_id** | [Document Id](#document-id) | Extended family member document Id.  | 
 **lens_id** | LensId | Extended family member Lens Id.  | `186-488-232-022-055`
 
+### Abstract
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**text** | String | The patent document abstract text. | `A processor implements conditional vector operations in which an input vector containing multiple operands to be used in conditional operations is divided into two or more output…`
+**lang** | String ([Language](#language)) | The language of the patent document abstract text. | `EN`
+
+### Claims
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**claims** | List of [Claims Text](#claims-text) | The list of Claims recorded in the patent. | 
+**lang** | String ([Language](#language)) | The language of the patent document claims. | `EN`
+
+### Claims Text
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**claim_text** | List of String | The Claim text recorded on the patent document. | `What is claimed is: 1. A method of performing a conditional vector output operation in a processor, the method comprising: receiving electrical signals representative of an input data vector…`
 
 
 
@@ -104,7 +120,7 @@ Field  |  Type  |  Description |  Example
 
 
 
-
+<!--
 #### title
 
  Field | Type |  Description | Example
@@ -145,7 +161,7 @@ Field  |  Type  |  Description |  Example
 **cit_text** | string | citation free text string in the original form | `"W.C. Birtwell, et al., "The evolution of counterpulsation techniques", Medical Instrumentation, vol. 10, No. 5, Sep.-Oct. 1976."`
 {: .param-def }
 
-
+-->
 
 ### Sample Patent Record
 ```json

@@ -225,6 +225,25 @@ Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **value** | String | The party name. | `Chapman, Paul William et al.`, `CPS Technology Holdings LLC`, `Chapman, Paul William et al.`
 
+### CPC Classifications
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**classifications** | List of [Classification Symbols](#classification-symbols) | List of CPC classification symbols. | `H01R11/01`
+
+### IPCR Classifications
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**classifications** | List of [Classification Symbols](#classification-symbols) | List of IPCR classification symbols. | `H01R13/115`
+
+### US Classifications
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**classifications** | List of [Classification Symbols](#classification-symbols) | List of US classification symbols. | `439/535`
+
+### Classification Symbols
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**symbol** | String | Classification code symbol. | `H01R11/01`, `H01R13/115`, `439/535`
 
 
 

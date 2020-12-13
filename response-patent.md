@@ -105,7 +105,17 @@ Field  |  Type  |  Description |  Example
 **text** | String | The description text of the patent document. | `This invention was made in conjuction with U.S. Government support under U.S. Army Grant No. DABT63-96-C-0037.” BACKGROUND OF THE INVENTION 1. Field of the Invention The present invention is directed to…`
 **lang** | String ([Language](#language)) | The language of the patent document description. | `EN`
 
-
+### Legal Status Information
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**granted** | Boolean | Indicates if the patent application has been granted in one or more jurisdictions. | `TRUE`
+**grant_date** | Date | The date the patent application was granted (i.e. the application first grant date). | `2009-05-22`
+**application_expiry_date** | Date | The expiry date of the patent application because of withdrawal or abandonment. | `2009-05-22`
+**anticipated_term_date** | Date | The anticipated termination date for granted patents. The anticipated termination date is calculated based on the natural term date plus any extensions. | `2009-05-22`
+**discontinuation_date** | Date | The discontinuation date of the patent due to "unnatural death" (i.e. lapse, withdrawn, abandoned). N.B. The patent can be revived within a certain time frame. | `2009-05-22`
+**has_disclaimer** | Boolean | Indicates if this US patent subjected to a terminal disclaimer. | `TRUE`
+**publication_count** | Integer | The number of publications for the DocDB application | `12`
+**has_spc** | Boolean | Indicates if the patent has a supplementary protection certificate. | `TRUE`
 
 
 

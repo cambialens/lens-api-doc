@@ -30,11 +30,51 @@ toc:
 **lang** | Language | The original language of the patent document. | `EN`
 **biblio** | [Bibliographic Data](#bibliographic-data) |  | 
 **families** | [Families](#families) |  | 
-**abstract** | List of [[Abstract](#abstract) | The patent document abstract text. | 
-**claims** | List of [[Claims](#claims) | The Claims recorded in the patent. | 
+**abstract** | List of [Abstract](#abstract) | The patent document abstract text. | 
+**claims** | List of [Claims](#claims) | The Claims recorded in the patent. | 
 **description** | [Description](#description) | The description text of the patent document. | 
 **legal_status** | [Legal Status Information](#legal-status-information) | The legal Status Information for the patent document. | 
 {: .param-def }
+
+### Bibliographic Data
+
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**publication_reference** | [Document Id](#document-id) | The publication reference document Id. | 
+**application_reference** | [Document Id](#document-id) | The application reference document Id. | 
+**priority_claims** | [Priority Claims](#priority-claims) | The priotrity claims documents. | 
+**invention_title** | List of [Title](#title) | Title of the patent / invention. | 
+**parties** | [Parties](#parties) | The parties associated with the patent (applicants, inventors, owners, agents, etc.)  | 
+**classifications_cpc** | [CPC Classifications](#cpc-classifications) | CPC Classifications | 
+**classifications_ipcr** | [IPCR Classifications](#ipcr-classifications) | CPC Classifications | 
+**classifications_national** | [US Classifications](#us-classifications) | CPC Classifications | 
+**references_cited** | [References Cited](#references-cited) | The references cited in the patent document (patents and non-patent literature). | 
+**cited_by** | [CitedBy](#citedby) | The patents citing the patent document. | 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #### title
 

@@ -138,8 +138,8 @@ Field  |  Type  |  Description |  Example
 **lang** | String ([Language](#language)) | The language of the patent / invention title. | `EN`
 
 ### Parties
- Field  |  Type  |  Description |  Example
- --------  |  ---------  |  ------- |  -------
+ Field  |  Type  |  Description 
+ --------  |  ---------  |  ------- 
 **inventors** | List of [Inventors](#inventors) | List of Inventors associated with the patent. | 
 **applicants** | List of [Applicants](#applicants) | List of Applicants associated with the patent. | 
 **assignees** | List of [Assignees](#assignees) | List of Assignees associated with the patent. | 
@@ -151,7 +151,7 @@ Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **residence** | String ([Jurisdiction](#jurisidction)) | The country of residence of the inventor (ISO 2-digit country code). | `DE`
 **sequence** | Integer | The sequence of the inventor listed on the patent document. | `3`
-**extracted_name** | [Inventor Name](#inventor-name) | The patent inventor(s) name. | 
+**extracted_name** | [Inventor Name](#inventor-name) | The patent inventor's name. | 
 **extracted_address** | String | The address of the inventor. | `TORONTO, ONTARIA, CA`
 
 ### Inventor Name
@@ -159,6 +159,18 @@ Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **value** | String | The patent inventor's name. | `Engebretson Steven P`
 
+### Applicants
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**residence** | String ([Jurisdiction](#jurisidction)) | The country of the applicant (ISO 2-digit country code). | `CA`
+**sequence** | Integer | The sequence of the applicant listed on the patent document. | `2`
+**extracted_name** | [Applicant Name](#applicant-name) | The patent applicant's name. | `CPS Technology Holdings LLC`
+**extracted_address** | String | The applicant address as recorded on the patent. | `TORONTO, ONTARIA, CA`
+
+### Applicant Name
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**value** | String | The patent applicant's name. | `CPS Technology Holdings LLC`
 
 
 

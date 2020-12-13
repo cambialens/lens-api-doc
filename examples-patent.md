@@ -17,24 +17,6 @@ toc:
         url: examples-patent.html#chinese-patents-with-crispr-in-the-title,-abstract-or-claims-published-between-2010-09-01---2020-09-30
       - page: CRISPR Cas9 Patent applications
       	url: examples-patent.html#patent-applications-from-2012-to-2020-with-crispr-cas9-in-the-claims
-<!--	
-      - page: 10 most recently published works
-        url: examples-patent.html#find-the-10-most-recently-published-works-from-an-institution-sorted-by-published-date
-      - page: Publication year of articles cited by patents
-        url: examples-patent.html#get-publication-year-of-journal-articles-cited-by-patents
-      - page: 30 works published between two years
-        url: examples-patent.html#get-30-works-from-an-institution-published-between-two-years
-      - page: Works having patent citations and affiliations
-        url: examples-patent.html#get-scholarly-works-having-patent-citations-and-affiliations
-      - page: Query by author name
-        url: examples-patent.html#query-by-author-name
-      - page: Pubmed identifier published in 2012
-        url: examples-patent.html#find-scholarly-works-with-a-pubmed-identifier-published-in-2012
-      - page: Access your collection
-        url: examples-patent.html#access-your-collection
-      - page: Using GET Requests
-        url: examples-patent.html#using-get-requests
--->
 ---
 
 ##### Find the 20 most recently published patent records from offset 10 that match the provided string query

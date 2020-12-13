@@ -48,7 +48,7 @@ toc:
 **classifications_cpc** | [CPC Classifications](#cpc-classifications) | CPC Classifications | 
 **classifications_ipcr** | [IPCR Classifications](#ipcr-classifications) | IPCR Classifications | 
 **classifications_national** | [US Classifications](#us-classifications) | US Classifications | 
-**references_cited** | [References Cited](#references-cited) | The references cited in the patent document (patents and non-patent literature). | 
+**references_cited** | [References Cited](#references-cited) | The references cited in the patent document (patents and non-patent literature (NPL) ). | 
 **cited_by** | [Cited By](#cited-by) | The patents citing the patent document. | 
 
 ### Families
@@ -245,7 +245,31 @@ Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **symbol** | String | Classification code symbol. | `H01R11/01`, `H01R13/115`, `439/535`
 
+### References Cited
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**citations** | List of [Citations](#citations) | List of patent and NPL references cited. | 
+**npl_resolved_count** | Integer | The number of resolved scholalry works cited by a patent. | `12`
+**npl_count** | Integer | The number of scholalry works cited by a patent. | `2`
 
+### Citations
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**patcit** | [Patents Cited](#patents-cited) | Patents cited in the patent documnet. | 
+**nplcit** | [NPL Cited](#npl-cited) | Non-patent literature cited in the patent document. | 
+**sequence** | Integer | The sequence of the citation in the patent document. | `5`
+
+### Patents Cited
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**document_id** | Array of [Document Id](#document-id) | The cited patent document Ids. | 
+
+### NPL Cited
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**text** | String | The original non-patent literature citation text in the patent document. | `Cormen et al., 'Introduction to Algorithms (MIT Electrical Engineering and Computer Science Series,' MIT Press, ISBN 0262031418, pp. 665-667, 695-697.`
+**lens_id** | LensId | The Lens Id of the resolved non-patent literature citations (i.e. scholarly work Lens Id). | `168-663-423-050-326`
+**external_ids** | List of String | List of external identifiers for non-patent literature citation (DOI, PubMed ID, PubMed Central ID or Microsoft Aacademic ID).  | `[10.1038/nature03090; 12345678919]`
 
 
 

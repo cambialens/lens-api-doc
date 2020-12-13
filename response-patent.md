@@ -17,7 +17,7 @@ toc:
 - [Metadata Fields](#metadata-fields)
 - [Sample Patent Record](#sample-patent-record)
 -->
-### Metadata Fields
+## Response Metadata Fields
 
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
@@ -271,8 +271,24 @@ Field  |  Type  |  Description |  Example
 **lens_id** | LensId | The Lens Id of the resolved non-patent literature citations (i.e. scholarly work Lens Id). | `168-663-423-050-326`
 **external_ids** | List of String | List of external identifiers for non-patent literature citation (DOI, PubMed ID, PubMed Central ID or Microsoft Aacademic ID).  | `[10.1038/nature03090; 12345678919]`
 
+### Cited By
+ Field  |  Type  |  Description 
+ --------  |  ---------  |  ------- 
+**patents** | List of [[Cited By Patents](#cited-by-patents) | List of patents citing the patent documnet. | 
 
+### Cited By Patents
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**document_id** | [Document Id](#document-id) | The citing patent document Id. | 
+**lens_id** | LensId | The citing patent Lens Id. | `118-962-823-688-691` |
 
+### Document Id
+ --------  |  ---------  |  ------- |  -------
+ Field  |  Type  |  Description |  Example
+**jurisdiction** | String ([Jurisdiction](#jurisidction)) | The jurisidiction of the patent document. | `US`
+**doc_number** | String | The document number assigned to a patent application on publication. | `20130227762`
+**kind** | String | The patent document kind code (varies by jurisdiction). | `A1`
+**date** | LocalDate | Date of publication for the patent document. | `2009-05-22`
 
 
 
@@ -316,7 +332,7 @@ Field  |  Type  |  Description |  Example
 ------- |:------| -------|---------
 **cit_text** | string | citation free text string in the original form | `"W.C. Birtwell, et al., "The evolution of counterpulsation techniques", Medical Instrumentation, vol. 10, No. 5, Sep.-Oct. 1976."`
 {: .param-def }
-
+-->
 
 ### Sample Patent Record
 ```json
@@ -440,7 +456,6 @@ Field  |  Type  |  Description |  Example
   ]
 }
 ```
--->
 
 [//]: # (Reference Links)
 [Lens]: <http://lens.org>

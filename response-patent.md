@@ -27,6 +27,7 @@ toc:
 **date_published** | Date | Date of publication for the patent document. | `2009-05-22`
 **doc_key** | String | The unique document key for the patent document. | `EP_0227762_B1_19900411`
 **docdb_id** | Long | The DOCDB identifier for the patent document. | `499168393`
+**publication_type** | String ([Document Types](#document-types)) | Type of patent document. | 
 **lang** | String ([Language](#language)) | The original language of the patent document. | `EN`
 **biblio** | [Bibliographic Data](#bibliographic-data) |  | 
 **families** | [Families](#families) |  | 
@@ -114,6 +115,7 @@ Field  |  Type  |  Description |  Example
 **anticipated_term_date** | Date | The anticipated termination date for granted patents. The anticipated termination date is calculated based on the natural term date plus any extensions. | `2009-05-22`
 **discontinuation_date** | Date | The discontinuation date of the patent due to "unnatural death" (i.e. lapse, withdrawn, abandoned). N.B. The patent can be revived within a certain time frame. | `2009-05-22`
 **has_disclaimer** | Boolean | Indicates if this US patent subjected to a terminal disclaimer. | `TRUE`
+**patent_status** | String ([Patent Status](#patent-status)) | The calculated legal status of the patent application. | `ACTIVE`
 **publication_count** | Integer | The number of publications for the DocDB application | `12`
 **has_spc** | Boolean | Indicates if the patent has a supplementary protection certificate. | `TRUE`
 
@@ -274,7 +276,7 @@ Field  |  Type  |  Description |  Example
 ### Cited By
  Field  |  Type  |  Description 
  --------  |  ---------  |  ------- 
-**patents** | List of [[Cited By Patents](#cited-by-patents) | List of patents citing the patent documnet. | 
+**patents** | List of [Cited By Patents](#cited-by-patents) | List of patents citing the patent documnet. | 
 
 ### Cited By Patents
  Field  |  Type  |  Description |  Example
@@ -291,7 +293,31 @@ Field  |  Type  |  Description |  Example
 **date** | LocalDate | Date of publication for the patent document. | `2009-05-22`
 
 
-### Sample Patent Record
+### Enums
+
+#### Document Types
+`AMENDED_PATENT`, `AMENDED_PATENT`, `DESIGN_RIGHT`, `GRANTED_PATENT`, `LIMITED_PATENT`, `PATENT_APPLICATION`, `PLANT_PATENT`, `SEARCH_REPORT`, `STATUTORY_INVENTION_REGISTRATION`, `SPC`, `UNKNOWN`
+
+##### Jurisidction
+Jurisidction codes: `US`, `EP`, `WO`, `DE`, `CN`, `JP`, `GB`, etc.
+
+##### Language
+Language codes:  `EN`, `FR`, `DE`, `CN` etc.
+
+##### Patent Status
+ - `PENDING` - Application pending
+ - `DISCONTINUED` - Discontinued, Withdrawn or Rejected
+ - `PATENTED` - In case of WO application is grant in some designated state
+ - `ACTIVE` - Patent is in force
+ - `INACTIVE` - Patent is inactive with chance of revivals
+ - `EXPIRED` - Patent is not in force
+
+<!--
+##### Source
+`USPTO_FULLTEXT`, `USPTO_ASSIGNMENT`, `EPO_FULLTEXT`, `WIPO_FULLTEXT`, `IP_AUSTRALIA_FULLTEXT`, `DOCDB`, `DOCDB_NATIONAL_OFFICE`, `DOCDB_TRANSCRIPT`, `DOCDB_TRANSLATION`, `DOCDB_EPO`, `DOCDB_PAJ`, `INPADOC`, `LENS`, `UNKNOWN`
+-->
+
+## Sample Patent Record
 ```json
 {
   "lens_id": "008-525-073-655-546",

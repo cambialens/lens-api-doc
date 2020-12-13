@@ -10,11 +10,11 @@ toc:
       - page: Find 20 records
         url: examples-patent.html#find-the-20-most-recently-published-patent-records-from-offset-10-that-match-the-provided-string-query
       - page: Granted Applications
-        url: examples-patent.html#us-applications-granted-after-2018	
+        url: examples-patent.html#us-applications-granted-after-2018
       - page: Expiring Patents
-        url: examples-patent.html#us-granted-patents-expiring-between-2020-10-10---2020-10-20	
+        url: examples-patent.html#us-granted-patents-expiring-between-2020-10-10-2020-10-20
       - page: Patents with CRISPR in the title, abstract or claims
-        url: examples-patent.html#chinese-patents-with-crispr-in-the-title,-abstract-or-claims-published-between-2010-09-01---2020-09-30
+        url: examples-patent.html#chinese-patents-with-crispr-in-the-title,-abstract-or-claims-published-between-2010-09-01-2020-09-30
       - page: CRISPR Cas9 Patent applications
       	url: examples-patent.html#patent-applications-from-2012-to-2020-with-crispr-cas9-in-the-claims
 ---

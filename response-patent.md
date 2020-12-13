@@ -71,6 +71,17 @@ Field  |  Type  |  Description |  Example
 **document_id** | [Document Id](#document-id) | Simple family member document Id.  | 
 **lens_id** | LensId | Simple family member Lens Id.  | `186-488-232-022-055`
 
+### Extended Family
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**members** | List of [Extended Family Members](#extended-family-members) | List of extended family members. | 
+
+### Extended Family Members
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**document_id** | [Document Id](#document-id) | Extended family member document Id.  | 
+**lens_id** | LensId | Extended family member Lens Id.  | `186-488-232-022-055`
+
 
 
 

@@ -260,8 +260,8 @@ Field  |  Type  |  Description |  Example
 **sequence** | Integer | The sequence of the citation in the patent document. | `5`
 
 ### Patents Cited
- Field  |  Type  |  Description |  Example
- --------  |  ---------  |  ------- |  -------
+ Field  |  Type  |  Description 
+ --------  |  ---------  |  ------- 
 **document_id** | Array of [Document Id](#document-id) | The cited patent document Ids. | 
 
 ### NPL Cited

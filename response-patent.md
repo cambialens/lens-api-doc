@@ -140,11 +140,11 @@ Field  |  Type  |  Description |  Example
 ### Parties
  Field  |  Type  |  Description 
  --------  |  ---------  |  ------- 
-**inventors** | List of [Inventors](#inventors) | List of Inventors associated with the patent. | 
-**applicants** | List of [Applicants](#applicants) | List of Applicants associated with the patent. | 
-**assignees** | List of [Assignees](#assignees) | List of Assignees associated with the patent. | 
-**owners_all** | List of [Owners](#owners) | List of Owners associated with the patent. | 
-**agents** | List of [Agents](#agents) | List of Agents associated with the patent. | 
+**inventors** | List of [Inventors](#inventors) | List of inventors associated with the patent. | 
+**applicants** | List of [Applicants](#applicants) | List of applicants associated with the patent. | 
+**assignees** | List of [Assignees](#assignees) | List of assignees associated with the patent. | 
+**owners_all** | List of [Owners](#owners) | List of owners associated with the patent. | 
+**agents** | List of [Agents and Attorneys](#agents-and-attorneys) | List of agents and attorneys associated with the patent. | 
 
 ### Inventors
  Field  |  Type  |  Description |  Example
@@ -205,7 +205,7 @@ Field  |  Type  |  Description |  Example
 **value** | String | The patent owner(s) name. | `CPS Technology Holdings LLC`
 -->
 
-### Agents and Attornies
+### Agents and Attorneys
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **sequence** | Integer | The sequence of the agent/attorney as listed on the patent document. | `1`

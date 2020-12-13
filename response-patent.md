@@ -292,6 +292,7 @@ Field  |  Type  |  Description |  Example
 **kind** | String | The patent document kind code (varies by jurisdiction). | `A1`
 **date** | LocalDate | Date of publication for the patent document. | `2009-05-22`
 
+---
 
 ### Enums
 
@@ -315,6 +316,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
 <!--
 ##### Source
 `USPTO_FULLTEXT`, `USPTO_ASSIGNMENT`, `EPO_FULLTEXT`, `WIPO_FULLTEXT`, `IP_AUSTRALIA_FULLTEXT`, `DOCDB`, `DOCDB_NATIONAL_OFFICE`, `DOCDB_TRANSCRIPT`, `DOCDB_TRANSLATION`, `DOCDB_EPO`, `DOCDB_PAJ`, `INPADOC`, `LENS`, `UNKNOWN`
+##### Prosecution Stage
+`FILING`,`EXAMINATION`,`PRE_GRANT_CHALLENGE`,`GRANT,POST_GRANT_CHALLENGE`,`INACTIVE`,`TERMINATION`
 -->
 
 ## Sample Patent Record

@@ -58,7 +58,7 @@ As of the current version, Lens offers the following API endpoints:
 
 **API usage:** 
 - `[GET] https://api.lens.org/subscriptions/patent_api/usage`
-- `[GET] https://api.lens.org/scholarly/usage`
+- `[GET] https://api.lens.org/subscriptions/scholarly_api/usage`
 
 **Swagger Documentation is available here:** [https://api.lens.org/swagger-ui.html](https://api.lens.org/swagger-ui.html)
 

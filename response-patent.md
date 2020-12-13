@@ -38,8 +38,8 @@ toc:
 
 ### Bibliographic Data
 
- Field  |  Type  |  Description |  Example
- --------  |  ---------  |  ------- |  -------
+ Field  |  Type  |  Description 
+ --------  |  ---------  |  ------- 
 **publication_reference** | [Document Id](#document-id) | The publication reference document Id. | 
 **application_reference** | [Document Id](#document-id) | The application reference document Id. | 
 **priority_claims** | [Priority Claims](#priority-claims) | The priotrity claims documents. | 
@@ -53,15 +53,15 @@ toc:
 
 ### Families
 
-Field  |  Type  |  Description |  Example
---------  |  ---------  |  ------- |  -------
+Field  |  Type  |  Description 
+--------  |  ---------  |  ------- 
 **simple_family** | [Simple Family](#simple-family) | Simple patent family (based on [DOCDB simple patent family](https://www.epo.org/searching-for-patents/helpful-resources/first-time-here/patent-families/docdb.html)). | 
 **extended_family** | [Extended Family](#extended-family) | Extended patent family (based on [INPADOC extended patent family](https://www.epo.org/searching-for-patents/helpful-resources/first-time-here/patent-families/inpadoc.html)). |   
 
 ### Simple Family
 
-Field  |  Type  |  Description |  Example
---------  |  ---------  |  ------- |  -------
+Field  |  Type  |  Description 
+--------  |  ---------  |  -------
 **members** | List of [Simple Family Members](#simple-family-members) | List of simple family members. | 
 
 ### Simple Family Members
@@ -72,8 +72,8 @@ Field  |  Type  |  Description |  Example
 **lens_id** | LensId | Simple family member Lens Id.  | `186-488-232-022-055`
 
 ### Extended Family
- Field  |  Type  |  Description |  Example
- --------  |  ---------  |  ------- |  -------
+ Field  |  Type  |  Description 
+ --------  |  ---------  |  -------
 **members** | List of [Extended Family Members](#extended-family-members) | List of extended family members. | 
 
 ### Extended Family Members
@@ -117,8 +117,19 @@ Field  |  Type  |  Description |  Example
 **publication_count** | Integer | The number of publications for the DocDB application | `12`
 **has_spc** | Boolean | Indicates if the patent has a supplementary protection certificate. | `TRUE`
 
+### Priority Claims
+ Field  |  Type  |  Description 
+ --------  |  ---------  |  ------- 
+**claims** | List of [Priority Claims Documents](#priority-claims-documents) | List of priority claims documents | 
 
-
+### Priority Claims Documents
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**jurisdiction** | String ([Jurisdiction](#jurisidction)) | The jurisdiction of the priority document. | `DE`
+**doc_number** | String | The document number of the priority document. | `1117265`
+**kind** | String | The kind code of the priority document. | `A1`
+**date** | LocalDate | The publication date of the priority document. | `2009-05-22`
+**sequence** | Integer | The sequence of the Prioroty Claim Document | `3`
 
 
 

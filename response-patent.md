@@ -286,9 +286,10 @@ Field  |  Type  |  Description |  Example
 
 ### Patents Cited
 
- Field  |  Type  |  Description 
- --------  |  ---------  |  ------- 
+ Field  |  Type  |  Description | Example
+ --------  |  ---------  |  ------- | ------- 
 **document_id** | Array of [Document Id](#document-id) | The cited patent document Ids. | 
+**lens_id** | String | The cited patent document Lens Id. | `118-962-823-688-691` |
 
 ### NPL Cited
 

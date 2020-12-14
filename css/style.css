@@ -412,6 +412,13 @@ table {
     border: 1px solid #d8e7f4;
 }
 
+@media (max-width:768px) {
+    table {
+        overflow-x: auto;
+        display: block;
+    }
+}
+
 table tr:nth-child(even) {
     background-color: #f8fafd;
 }
@@ -449,30 +456,41 @@ table td strong a {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    text-align: left;
 }
 
 .main-menu li{
     list-style-type: none;
     padding: 0 10px;
     margin: 0;
-    display: inline-block;
+    display: block;
     position: relative;
 }
 
-.main-menu .sub-menu {
-    display: none;
-    position: absolute;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    background: #182735;
-    border-radius: 0 0 4px 4px;
-    z-index: 2;
+@media (min-width:768px) {
+    .main-menu li {
+        display: inline-block;
+    }
+    
+    .main-menu .sub-menu {
+        display: none;
+        position: absolute;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        background: #182735;
+        border-radius: 0 0 4px 4px;
+        z-index: 2;
+    }
+    
+    .main-menu li:hover .sub-menu {
+        display: block;
+    }
+
 }
 
-.main-menu li:hover .sub-menu {
-    display: block;
-}
+
+
 
 .main-menu .sub-menu a {
     white-space: nowrap;
@@ -556,7 +574,7 @@ table td strong a {
     margin-right: 0px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .site-nav {
         position: absolute;
         top: 4px;
@@ -597,10 +615,14 @@ table td strong a {
     .site-nav .page-link {
         display: block;
         padding: 5px 10px;
-        margin-left: 20px
+        margin-left: 0px;
     }
     .site-nav .page-link:not(:last-child) {
         /*margin-right: 0*/
+    }
+    
+    ul.sub-menu {
+        margin-left: 5px;
     }
 }
 
@@ -609,6 +631,15 @@ footer.footer {
     padding: 0 0 30px;
     text-align: center;
     font-size: .85rem;
+    background: #f1f1f1;
+    background: #f8fafd;
+    color: #414e59;
+    padding: 15px 0;
+    width: 100%;
+    max-width: 960px;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 .footer-heading {
@@ -661,7 +692,7 @@ footer.footer {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .footer-col {
         float: none;
         width: -webkit-calc(100% - (30px / 2));

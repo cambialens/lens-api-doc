@@ -151,9 +151,10 @@ Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- 
 **inventors** | List of [Inventors](#inventors) | List of inventors associated with the patent. | 
 **applicants** | List of [Applicants](#applicants) | List of applicants associated with the patent. | 
-**assignees** | List of [Assignees](#assignees) | List of assignees associated with the patent. | 
 **owners_all** | List of [Owners](#owners) | List of owners associated with the patent. | 
 **agents** | List of [Agents and Attorneys](#agents-and-attorneys) | List of agents and attorneys associated with the patent. | 
+
+<!-- **assignees** | List of [Assignees](#assignees) | List of assignees associated with the patent. |  -->
 
 ### Inventors
 
@@ -187,12 +188,13 @@ Field  |  Type  |  Description |  Example
 **value** | String | The patent applicant's name. | `CPS Technology Holdings LLC`
 -->
 
+<!--
 ### Assignees
-
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **extracted_name** | [Name](#name) | The patent assignee's name. | `CPS Technology Holdings LLC`
 **extracted_address** | String | The assignee address as recorded on the patent. | `TORONTO, ONTARIA, CA`
+-->
 
 <!--
 ### Assignee Name

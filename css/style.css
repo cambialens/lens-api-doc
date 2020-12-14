@@ -778,6 +778,42 @@ footer.footer {
 
 
 
+.docs-masthead {
+    background: url(header-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    color: #fff;
+    padding: 30px;
+    border-radius: 4px;
+    margin: 20px 0 30px 0;
+    font-size: 1.1rem;
+}
+
+.docs-masthead > div {
+    margin-bottom: 5px;
+}
+
+.docs-masthead h3 {
+    border-color: rgba(255, 255, 255, .35);
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.docs-masthead .badge {
+    background: #f3262d;
+    padding: 0px 4px;
+    border-radius: 4px;
+    font-size: .75rem;
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.docs-masthead footer {
+    font-size: .6rem;
+    float: right;
+}
+
 
 
 /* Sidebar Template */
@@ -787,7 +823,7 @@ footer.footer {
 }
 
 .post-sidebar {
-    min-width: 200px;
+    min-width: 220px;
     margin-left: 30px;
     position: relative;
 }
@@ -798,5 +834,46 @@ footer.footer {
     padding-top: 15px;
 }
 .post-sidebar + .post-content {
-    width: calc(100% - 230px);
+    width: calc(100% - 250px);
+    flex-shrink: 0;
+}
+
+.post-sidebar--sticky h2 {
+    border-bottom: 1px solid #d8e7f4;
+    padding-bottom: 10px;
+}
+
+
+.widget-support {
+    margin-top: 30px;
+    background: #fff;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    padding: 10px 15px;
+}
+
+.widget-support h3 {
+    font-size: 16px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    border-bottom: 1px solid #d8e7f4;
+}
+
+.widget-support p {
+    font-size: .9rem;
+    color: #414e59;
+}
+
+.widget-support .btn {
+    padding: 6px 12px;
+    font-size: .9rem;
+    color: #fff;
+    border-radius: 2px;
+    background: #1a79c5;
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.widget-support .btn:hover{
+    background: #0a5998;
 }

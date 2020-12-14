@@ -5,7 +5,7 @@ permalink: /request-patent.html
 show_sidebar: true
 sidebar: toc
 toc:
-  - title: Patent API Request
+  - title: Table of Contents
     subfolderitems:
       - page: Request Structure
         url: request-patent.html#request-structure
@@ -23,17 +23,6 @@ toc:
         url: request-patent.html#supported-query-types
 ---
 
-
-<!--            
-{:.table-contents}
-- [Request Structure](#request-structure)
-- [Searchable Fields](#searchable-fields)
-- [Filters](#filtering)
-- [Pagination](#pagination)
-- [Sorting](#sorting)
-- [Projection](#projection)
-- [Supported Query Types](#supported-query-types)
--->
 
 ### Request Structure
 The request fields are used in queries and sort operations. The request payload should comply with following `json` schema.

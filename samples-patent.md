@@ -5,7 +5,7 @@ permalink: /samples-patent.html
 show_sidebar: true
 sidebar: toc
 toc:  
-  - title: Patent API Samples
+  - title: Table of Contents
     subfolderitems:
       - page: R
         url: samples-patent.html#r
@@ -18,14 +18,7 @@ toc:
       - page: cURL
         url: samples-patent.html#curl    
 ---
-<!--
-{:.table-contents}
-- [R](#r)
-- [Python](#python)
-- [Java](#java)
-- [NodeJs](#nodejs)
-- [cURL](#curl)
--->
+
 
 ### R
 ```r

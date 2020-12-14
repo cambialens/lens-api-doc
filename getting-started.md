@@ -5,7 +5,7 @@ permalink: /getting-started.html
 show_sidebar: true
 sidebar: toc
 toc:
-  - title: 
+  - title: Table of Contents
     subfolderitems:
       - page: Prerequisites
         url: getting-started.html#prerequisites
@@ -18,14 +18,6 @@ toc:
       - page: HTTP Responses
         url: getting-started.html#http-responses
 ---
-<!--
-{:.table-contents}
-- [Prerequisites](#prerequisites)
-- [API Resources](#api-resources)
-- [API Access](#api-access)
-- [Rate Limiting](#rate-limiting)
-- [HTTP Responses](#http-responses)
--->
 
 ### Prerequisites
 

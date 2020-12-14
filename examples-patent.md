@@ -5,7 +5,7 @@ permalink: /examples-patent.html
 show_sidebar: true
 sidebar: toc
 toc:
-  - title: Patent API Examples
+  - title: Table of Contents
     subfolderitems:
       - page: Find 20 records
         url: examples-patent.html#find-the-20-most-recently-published-patent-records-from-offset-10-that-match-the-provided-string-query

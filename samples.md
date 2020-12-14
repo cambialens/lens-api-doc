@@ -1,17 +1,8 @@
 ---
-layout: page
+layout: post-sidebar
 title: Code Samples
 permalink: /samples.html  
 ---
-<!--
-{:.table-contents}
-- [R](#r)
-- [Python](#python)
-- [Java](#java)
-- [NodeJs](#nodejs)
-- [cURL](#curl)
--->
-
 
 ### Scholar API Samples
 {:.table-contents}

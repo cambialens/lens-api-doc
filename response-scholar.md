@@ -5,18 +5,14 @@ permalink: /response-scholar.html
 show_sidebar: true
 sidebar: toc
 toc:
-  - title: Scholar API Response
+  - title: Table of Contents
     subfolderitems:
       - page: Response Fields
         url: response-scholar.html#response-fields
       - page: Sample API Response
         url: response-scholar.html#sample-api-response
 ---
-<!--
-{:.table-contents}
-- [Response Fields](#response-fields)
-- [Sample API Response](#sample-api-response)
--->
+
 ### Response Fields
 
  Field | Type |  Description  | Example

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post-sidebar
 title: Examples
 permalink: /examples.html
 ---

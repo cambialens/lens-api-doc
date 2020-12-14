@@ -5,18 +5,14 @@ permalink: /response-patent.html
 show_sidebar: true
 sidebar: toc
 toc:
-  - title: Patent API Response
+  - title: Table of Contents
     subfolderitems:
       - page: Metadata Fields
         url: response-patent.html#metadata-fields
       - page: Sample Patent Record
         url: response-patent.html#sample-patent-record
 ---
-<!--
-{:.table-contents}
-- [Metadata Fields](#metadata-fields)
-- [Sample Patent Record](#sample-patent-record)
--->
+
 ### Metadata Fields
 
  Field  |  Type  |  Description |  Example

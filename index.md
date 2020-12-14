@@ -4,7 +4,7 @@ title: Lens API Documentation
 show_sidebar: true
 sidebar: toc
 toc:
-  - title: Terms of Use 
+  - title: Terms and Polices
     subfolderitems:
       - page: Scholarly API Terms
         url: https://about.lens.org/lens-scholarly-api-terms-of-use/
@@ -12,19 +12,16 @@ toc:
         url: https://about.lens.org/lens-patent-api-terms-of-use/
       - page: General Terms Of Use
         url: https://about.lens.org/policies/#termsuse
-  - title: Privacy Policy
-    subfolderitems:
       - page: Privacy Policy
         url: https://about.lens.org/policies/#privacypolicy
 ---
 
-#### API Version: `2.0`
----
-
-* Scholarly Schema Version: `1.4`
-* Patent Schema Version: `1.0`
-
----
+<div class="docs-masthead">
+    <h3>API Version: <span>2.0</span></h3>
+    <div>Scholarly Schema Version: <div class="badge">1.4</div></div>
+    <div>Patent Schema Version: <div class="badge">1.0</div></div>
+    <footer>Last Update: December 15, 2020</footer>
+</div>
 
 This service allows you to access the full corpus of Lens scholarly works and patent using the flexibility and convenience of a REST API. The versioned API allows you to perform and combine several types of searches using a number of different operations. This API documentation provides guidelines for getting you started with the API and details the request/response schema with examples. A [Swagger UI] is also provided for query development and a GitHub repository is provided for issue tracking.
 
@@ -34,17 +31,6 @@ We value your comments and feedback on the API via our API survey. If you or you
 
 You can request access to the Lens Scholarly API, Patent API or PatSeq Bulk Downloads, or manage your access plans and tokens from your [Lens user profile](https://www.lens.org/lens/user/subscriptions).
 
-<!--
-
-#### Terms of Use
-* Read the Lens Scholarly API terms of use [here](https://about.lens.org/lens-scholarly-api-terms-of-use/).
-* Read the Lens Patent API terms of use [here](https://about.lens.org/lens-patent-api-terms-of-use/).
-* Read our gernearl terms of use [here](https://about.lens.org/policies/#termsuse).
-
-#### Privacy Policy
-* Read our privacy policy [here](https://about.lens.org/policies/#privacypolicy).
-
--->
 
 [//]: # (Reference Links)
 [Swagger UI]: <https://api.lens.org/swagger-ui.html>

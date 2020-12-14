@@ -8,7 +8,7 @@ permalink: /support.html
 - If you have any issues or concerns regarding your access plan, please email [subscriptions@lens.org](mailto:subscriptions@lens.org).
 - For general questions or to provide feedback, please use the [Lens Feedback] form.
 
-#### Tips for creating issues:
+### Tips for creating issues:
 - Please provide the API request and response if possible.
 - Please provide your intention of creating the query request.
 

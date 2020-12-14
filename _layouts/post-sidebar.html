@@ -7,7 +7,7 @@
       <div class="post-layout--sidebar">
           <aside class="post-sidebar">
               <div class="post-sidebar--sticky">
-                  <h2>Table of Contents</h2>
+                  <!--<h2>Table of Contents</h2>-->
                   {% for item in page.toc %}
                   <h4><b>{{ item.title }}</b></h4>
                       <ul>
@@ -16,6 +16,8 @@
                         {% endfor %}
                       </ul>
                   {% endfor %}
+                  
+                  {% include widget-support.html %}
               </div>
           </aside>
           <div class="post-content">

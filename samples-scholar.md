@@ -5,7 +5,7 @@ permalink: /samples-scholar.html
 show_sidebar: true
 sidebar: toc
 toc:
-  - title: Scholar API Samples
+  - title: Table of Contents
     subfolderitems:
       - page: R
         url: samples-scholar.html#r
@@ -18,14 +18,6 @@ toc:
       - page: cURL
         url: samples-scholar.html#curl       
 ---
-<!--
-{:.table-contents}
-- [R](#r)
-- [Python](#python)
-- [Java](#java)
-- [NodeJs](#nodejs)
-- [cURL](#curl)
--->
 
 ### R
 ```r

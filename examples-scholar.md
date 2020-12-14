@@ -5,7 +5,7 @@ permalink: /examples-scholar.html
 show_sidebar: true
 sidebar: toc
 toc:
-  - title: Scholar API Examples
+  - title: Table of Contents
     subfolderitems:
       - page: Find 20 records
         url: examples-scholar.html#find-20-records-from-offset-10-that-match-provided-query

@@ -346,7 +346,8 @@ code {
     font-size: 15px;
     border: 0px solid #e8e8e8;
     border-radius: 3px;
-    background-color: #eef
+    background-color: #eef;
+    word-break: break-all;
 }
 
 code {
@@ -494,6 +495,7 @@ table td strong a {
     padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
 }
 
 .page-wrapper {
@@ -817,15 +819,30 @@ footer.footer {
 
 
 /* Sidebar Template */
-.post-layout--sidebar {
-    display: flex;
-    flex-direction: row-reverse;
-}
 
 .post-sidebar {
-    min-width: 220px;
-    margin-left: 30px;
-    position: relative;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .post-sidebar {
+        display: block;
+    }
+    
+    .post-layout--sidebar {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .post-sidebar {
+        min-width: 220px;
+        margin-left: 30px;
+        position: relative;
+    }
+    
+    .post-sidebar + .post-content {
+        flex-shrink: 0;
+    }
 }
 
 .post-sidebar--sticky {
@@ -833,9 +850,11 @@ footer.footer {
     top: 0;
     padding-top: 15px;
 }
-.post-sidebar + .post-content {
-    width: calc(100% - 250px);
-    flex-shrink: 0;
+
+@media (min-width: 768px) {
+    .post-sidebar + .post-content {
+        width: calc(100% - 250px);
+    }
 }
 
 .post-sidebar--sticky h2 {

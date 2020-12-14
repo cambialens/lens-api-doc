@@ -13,7 +13,7 @@ permalink: /response.html
 ### Patent API Response
 {:.table-contents}
 - [Response Fields](response-patent.html#response-fields)
-- [Sample API Response](response-patent.html#sample-api-response)
+- [Sample API Response](response-patent.html#sample-patent-record)
 
 
 

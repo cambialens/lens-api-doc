@@ -347,7 +347,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
 
 ---
 
-## Sample Patent Record
+### Sample Patent Record
 
 ```json
 {

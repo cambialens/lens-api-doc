@@ -120,6 +120,7 @@ Field  |  Type  |  Description |  Example
 **patent_status** | String ([Patent Status](#patent-status)) | The calculated legal status of the patent application. | `ACTIVE`
 **publication_count** | Integer | The number of publications for the DocDB application | `12`
 **has_spc** | Boolean | Indicates if the patent has a supplementary protection certificate. | `TRUE`
+**calculation_log** | List of String | The legal status calculation log. | [`Application Filing Date: 2001-11-21`, `Earliest Filing Date: 2001-11-21 priority to EP01984746A`, `Granted date: 2009-07-29`]
 
 <!-- **anticipated_term_date** | Date | The anticipated termination date for granted patents. The anticipated termination date is calculated based on the natural term date plus any extensions. | `2009-05-22` -->
 

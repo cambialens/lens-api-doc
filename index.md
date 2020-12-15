@@ -17,7 +17,7 @@ toc:
 ---
 
 <div class="docs-masthead">
-    <h3>API Version: <span>2.0</span></h3>
+    <h3>API Version:</h3>
     <div>Scholarly Schema Version: <div class="badge">1.4</div></div>
     <div>Patent Schema Version: <div class="badge">1.0</div></div>
     <footer>Last Update: December 15, 2020</footer>

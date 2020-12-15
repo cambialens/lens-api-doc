@@ -111,7 +111,8 @@ Citations | **reference_cited.patent.document_id.date** | Date | The publication
 Citations | **reference_cited.patent.document_id.doc_number** | String | The document number of the cited patent. e.g. `4590964`
 Citations | **reference_cited.patent.document_id.kind** | String | The kind code of the cited patent. e.g. `A`
 Citations | **reference_cited.patent_count** | Integer | Number of patents documents citing a given patent. e.g. `21`
-Legal Events | **legal_status.application_expiry_date** | Date | The expiry date of the patent application because of withdrawal or abandonment. e.g. 2009-05-22
+Legal Events | **legal_status.application_expiry_date** | Date | The expiry date of the patent application because of withdrawal or abandonment. e.g. `2009-05-22`
+Legal Events | **legal_status.anticipated_term_date** | Date | The anticipated termination date for granted patents. The anticipated termination date is calculated based on the natural term date plus any extensions. e.g. `2009-05-22`
 Legal Events | **legal_status.discontinuation_date** | Date | The discontinuation date of the patent due to "unnatural death" (i.e. lapse, withdrawn, abandoned). N.B. The patent can be revived within a certain time frame. e.g. `2009-05-22`
 Legal Events | **legal_status.grant_date** | Date | The date the patent application was granted (i.e. the application first grant date). e.g. `2009-05-22`
 Legal Events | **legal_status.granted** | Boolean | Indicates if the patent application has been granted in one or more jurisdictions. e.g. `TRUE`
@@ -134,8 +135,6 @@ Sequences | **sequence.tax_id** | String | The NCBI taxonomic identifier of the 
 Sequences | **sequence.type** | String | The type of sequence e.g. N - nucleotide, P - peptide. e.g. `Nucleotide`, `Amino Acid`
 Citations | **reference_cited.npl_resolved_count** | Integer | The number of resolved scholalry works cited by a patent. e.g. `12`
 {: .param-def }
-
-<!-- Legal Events | **legal_status.anticipated_term_date** | Date | The anticipated termination date for granted patents. The anticipated termination date is calculated based on the natural term date plus any extensions. e.g. `2009-05-22`-->
 
 ### Filtering
 You can use following pre-defined filters to refine search results:

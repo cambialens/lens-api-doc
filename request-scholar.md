@@ -36,6 +36,7 @@ Fields | Description |  Required
 **[from](#pagination)** | Integer value, defines the offset from the first result | false
 **[scroll_id](#pagination)** | Pagination parameter | false (true for next scroll requests)
 **[scroll](#pagination)** | Lifespan of Scroll scroll context in minute (e.g. 1m) | false (true for scroll context)
+**[stemming](#stemming)** | Change the ability to reduce the search word into root form | false (true by default)
 {: .param-def }
 
 ### Searchable Fields
@@ -194,6 +195,11 @@ You can control the output fields in the API [Response] using projection. There 
 For `GET` requests following structure is applicable.
 `include=authors,lens_id`
 > Note: Both *include* and *exclude* can be used in same request.
+
+# Stemming
+Stemming allows to reduce the words to root form. E.g. Constructed and constructing will be stemmed to root construct.
+Since sometime the default stemming might not give you exact result, disabling it will just search for provided form of the word.
+e.g. `"stemming": false`
 
 ### Supported Query Types
 

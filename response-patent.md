@@ -7,13 +7,13 @@ sidebar: toc
 toc:
   - title: Table of Contents
     subfolderitems:
-      - page: Metadata Fields
-        url: response-patent.html#metadata-fields
+      - page: Response Fields
+        url: response-patent.html#response-fields
       - page: Sample Patent Record
         url: response-patent.html#sample-patent-record
 ---
 
-### Metadata Fields
+### Response Fields
 
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------

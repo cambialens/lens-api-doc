@@ -23,43 +23,35 @@ toc:
 ### R
 ```r
 require(httr)
-getScholarlyData <- function(token, query){
-	url <- 'https://api.lens.org/scholarly/search'
+getPatentData <- function(token, query){
+	url <- 'https://api.lens.org/patent/search'
 	headers <- c('Authorization' = token, 'Content-Type' = 'application/json')
 	httr::POST(url = url, add_headers(.headers=headers), body = query)
 }
 token <- 'your-access-token'
 request <- '{
-	"query": {
-		"match_phrase": {
-			"author.affiliation.name": "Harvard University"
-		}
-	},
-	"size": 1,
-	"sort": [{
-		"year_published": "desc"
-	}]
+                "query": {
+                    "terms":  {
+                        "lens_id": ["031-156-664-516-153"]
+                    }
+                },
+                "include": ["biblio", "doc_key"]
 }'
-data <- getScholarlyData(token, request)
+data <- getPatentData(token, request)
 content(data, "text")
 ```
 
 ### Python
 ```python
 import requests
-url = 'https://api.lens.org/scholarly/search'
+url = 'https://api.lens.org/patent/search'
 data = '''{
-     "query": {
-           "match_phrase":{
-                "author.affiliation.name": "Harvard University"
-           }
-     },
-     "size": 1,
-     "sort": [
-           {
-                "year_published": "desc"
-           }
-     ]
+              "query": {
+                  "terms":  {
+                      "lens_id": ["031-156-664-516-153"]
+                  }
+              },
+              "include": ["biblio", "doc_key"]
 }'''
 headers = {'Authorization': 'Bearer your-access-token', 'Content-Type': 'application/json'}
 response = requests.post(url, data=data, headers=headers)
@@ -74,11 +66,14 @@ else:
 ```python
 import requests
 import time
-url = 'https://api.lens.org/scholarly/search'
+url = 'https://api.lens.org/patent/search'
 data = '''{
-     "query": "Malaria",
-     "size": 100,
-     "scroll":"1m"
+  "query": {
+      "terms":  {
+          "lens_id": ["031-156-664-516-153"]
+      }
+  },
+  "include": ["biblio", "doc_key"]
 }'''
 headers = {'Authorization': 'Bearer your_token', 'Content-Type': 'application/json'}
 
@@ -112,7 +107,7 @@ public class JavaSample {
 
     public static void main(String[] args) {
         try {
-            URL url = new URL("https://api.lens.org/scholarly/search");
+            URL url = new URL("https://api.lens.org/patent/search");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setConnectTimeout(30000);
             conn.setDoOutput(true);
@@ -120,7 +115,7 @@ public class JavaSample {
             conn.setRequestProperty("Content-Type", "application/json");
             conn.setRequestProperty("Authorization", "Bearer your-access-token");
 
-            String request = "{\"query\":{\"match_phrase\":{\"author.affiliation.name\":\"Harvard University\"}},\"size\":10,\"sort\":[{\"year_published\":\"desc\"}]}";
+            String request = "{\"query\":{\"terms\":{\"lens_id\":[\"031-156-664-516-153\"]}},\"include\":[\"biblio\",\"doc_key\"]}";
             conn.getOutputStream().write(request.getBytes(StandardCharsets.UTF_8));
 
             if (conn.getResponseCode() != 200) {
@@ -144,20 +139,15 @@ public class JavaSample {
 ```javascript
 var request = require('request');
 
-var endPoint = 'https://api.lens.org/scholarly/search';
+var endPoint = 'https://api.lens.org/patent/search';
 var token = 'your-access-token';
 var query = {
-     "query": {
-           "match_phrase":{
-                "author.affiliation.name": "Harvard University"
-           }
-     },
-     "size": 10,
-     "sort": [
-           {
-                "year_published": "desc"
-           }
-     ]
+  "query": {
+      "terms":  {
+          "lens_id": ["031-156-664-516-153"]
+      }
+  },
+  "include": ["biblio", "doc_key"]
 };
 
 var options = {
@@ -173,7 +163,6 @@ request.post(options, function(err, res, data) {
      if (err) {
            console.log(err);
      }
-
      console.log(data);
 });
 ```
@@ -181,27 +170,15 @@ request.post(options, function(err, res, data) {
 ### cURL
 ```bash
 curl -X POST \
-  https://api.lens.org/scholarly/search \
+  https://api.lens.org/patent/search \
   -H 'Authorization: Bearer your-access-token' \
   -H 'Content-Type: application/json' \
   -d '{
-	"query": {
-		"bool": {
-			"must": {
-				"match_phrase": {
-					"author.affiliation.name": "Harvard University"
-				}
-			},
-			"filter": {
-				"range": {
-					"year_published": {
-						"gte": "1999",
-						"lte": "2000"
-					}
-				}
-			}
-		}
-	},
-	"size": 50
-}'
+        "query": {
+            "terms":  {
+                "lens_id": ["031-156-664-516-153"]
+            }
+    },
+    "include": ["biblio", "doc_key"]
+  }'
 ```

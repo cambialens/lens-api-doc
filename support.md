@@ -14,9 +14,9 @@ permalink: /support.html
 
 ## Changelog
 
-API Version | Schema Version | Date Released | Notes
+API Version | Schema Versions | Date Released | Notes
 ------- | ------| ------| -------
-`2.0.0` | <br>Scholar: `1.4.0`</br> <br>Patent: `1.0.0` (relase candidate)</br> | December 15, 2020 | - Added Patent API endpoint... |
+`2.0.0` | - Scholar: `1.4.0` <br/> - Patent: `1.0.0` | December 16, 2020 | - Added Patent API endpoints <br/> - Added support for `un-stemmed` search |
 `1.3.2` | Scholar: `1.3.2` | March 25, 2020 | - Added keyword fields `author.affiliation.name.exact`, `source.title.exact`, `funding.organisation.exact` for search request |
 `1.3.0` | Scholar: `1.3.0`| March 5, 2020 | - Added `GET` endpoints for Scholarly Search and Collections <br/> - Added author identifier fields (MAG, ORCID) <br/> - See [Lens Release 6.7](https://about.lens.org/news/release-6-7/) notes for details|
 `1.2.0` | Scholar: `1.2.0`| September 9, 2019 | - Added Lens partner option <br/> - Bug fixes <br/> - Performance improvements <br/> - See [Lens Release 6.4](https://about.lens.org/news/release-6-4/) notes for details|

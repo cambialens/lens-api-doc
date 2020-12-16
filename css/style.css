@@ -254,6 +254,10 @@ figure,
     margin-bottom: 15px
 }
 
+h1 {
+    font-size: 1.5rem;
+}
+
 strong {
     font-weight: 600;
 }
@@ -297,6 +301,11 @@ h6 {
     font-weight: 500;
 }
 
+hr {
+  border: 1px solid #d8e7f4;
+  margin: 30px 0;
+}
+
 a {
     color: #1a79c5;
     text-decoration: none
@@ -337,7 +346,8 @@ code {
     font-size: 15px;
     border: 0px solid #e8e8e8;
     border-radius: 3px;
-    background-color: #eef
+    background-color: #eef;
+    word-break: break-all;
 }
 
 code {
@@ -399,11 +409,18 @@ table {
     text-align: left;
     color: #3f3f3f;
     border-collapse: collapse;
-    border: 1px solid #e8e8e8
+    border: 1px solid #d8e7f4;
+}
+
+@media (max-width:768px) {
+    table {
+        overflow-x: auto;
+        display: block;
+    }
 }
 
 table tr:nth-child(even) {
-    background-color: #f7f7f7
+    background-color: #f8fafd;
 }
 
 table th,
@@ -412,15 +429,74 @@ table td {
 }
 
 table th {
-    background-color: #f0f0f0;
-    border: 1px solid #dedede;
-    border-bottom-color: #c9c9c9;
+    background-color: #e4ebf3;
+    border: 1px solid #d8e7f4;
+    border-bottom-color: #d8e7f4;
     font-weight: 600;
 }
 
 table td {
-    border: 1px solid #e8e8e8
+    border: 1px solid #d8e7f4;
 }
+
+table td strong {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  min-width: 150px;
+  display: inline-block;
+}
+
+table td strong a {
+    word-break: normal;
+}
+
+.main-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.main-menu li{
+    list-style-type: none;
+    padding: 0 10px;
+    margin: 0;
+    display: block;
+    position: relative;
+}
+
+@media (min-width:768px) {
+    .main-menu li {
+        display: inline-block;
+    }
+    
+    .main-menu .sub-menu {
+        display: none;
+        position: absolute;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        background: #182735;
+        border-radius: 0 0 4px 4px;
+        z-index: 2;
+    }
+    
+    .main-menu li:hover .sub-menu {
+        display: block;
+    }
+
+}
+
+
+
+
+.main-menu .sub-menu a {
+    white-space: nowrap;
+}
+
+
 
 .site-header {
     background: #182735;
@@ -437,6 +513,7 @@ table td {
     padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
 }
 
 .page-wrapper {
@@ -494,10 +571,10 @@ table td {
 }
 
 .site-nav .page-link:not(:last-child) {
-    margin-right: 20px
+    margin-right: 0px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .site-nav {
         position: absolute;
         top: 4px;
@@ -538,10 +615,14 @@ table td {
     .site-nav .page-link {
         display: block;
         padding: 5px 10px;
-        margin-left: 20px
+        margin-left: 0px;
     }
     .site-nav .page-link:not(:last-child) {
-        margin-right: 0
+        /*margin-right: 0*/
+    }
+    
+    ul.sub-menu {
+        margin-left: 5px;
     }
 }
 
@@ -550,6 +631,15 @@ footer.footer {
     padding: 0 0 30px;
     text-align: center;
     font-size: .85rem;
+    background: #f1f1f1;
+    background: #f8fafd;
+    color: #414e59;
+    padding: 15px 0;
+    width: 100%;
+    max-width: 960px;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 .footer-heading {
@@ -602,7 +692,7 @@ footer.footer {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .footer-col {
         float: none;
         width: -webkit-calc(100% - (30px / 2));
@@ -647,10 +737,10 @@ footer.footer {
 }
 
 .post-title {
-    font-size: 42px;
+    font-size: 36px;
     line-height: 1;
     letter-spacing: 0;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 @media screen and (max-width: 800px) {
@@ -667,7 +757,7 @@ footer.footer {
 .table-contents li {
     list-style-type: none;
     display: inline-block;
-    border: 1px solid #dadada;
+    border: 1px solid #d8e7f4;
     padding: 3px 8px;
     background: #fafafa;
     border-radius: 4px;
@@ -679,7 +769,7 @@ footer.footer {
 
 .post-content h2 {
     font-size: 32px;
-    border-bottom: 1px solid #dadada;
+    border-bottom: 1px solid #d8e7f4;
 }
 
 @media screen and (max-width: 800px) {
@@ -689,8 +779,10 @@ footer.footer {
 }
 
 .post-content h3 {
-    font-size: 30px;
-    border-bottom: 1px solid #dadada;
+    font-size: 22px;
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d8e7f4;
     padding-top: 10px;
 }
 
@@ -715,4 +807,123 @@ footer.footer {
     .post-content h4 {
         font-size: 18px
     }
+}
+
+
+
+.docs-masthead {
+    background: url(header-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    color: #fff;
+    padding: 30px;
+    border-radius: 4px;
+    margin: 20px 0 30px 0;
+    font-size: 1.1rem;
+}
+
+.docs-masthead > div {
+    margin-bottom: 5px;
+}
+
+.docs-masthead h3 {
+    border-color: rgba(255, 255, 255, .35);
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.docs-masthead .badge {
+    background: #f3262d;
+    padding: 0px 4px;
+    border-radius: 4px;
+    font-size: .75rem;
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.docs-masthead footer {
+    font-size: .6rem;
+    float: right;
+}
+
+
+
+/* Sidebar Template */
+
+.post-sidebar {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .post-sidebar {
+        display: block;
+    }
+    
+    .post-layout--sidebar {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .post-sidebar {
+        min-width: 220px;
+        margin-left: 30px;
+        position: relative;
+    }
+    
+    .post-sidebar + .post-content {
+        flex-shrink: 0;
+    }
+}
+
+.post-sidebar--sticky {
+    position: sticky;
+    top: 0;
+    padding-top: 15px;
+}
+
+@media (min-width: 768px) {
+    .post-sidebar + .post-content {
+        width: calc(100% - 250px);
+    }
+}
+
+.post-sidebar--sticky h2 {
+    border-bottom: 1px solid #d8e7f4;
+    padding-bottom: 10px;
+}
+
+
+.widget-support {
+    margin-top: 30px;
+    background: #fff;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    padding: 10px 15px;
+}
+
+.widget-support h3 {
+    font-size: 16px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    border-bottom: 1px solid #d8e7f4;
+}
+
+.widget-support p {
+    font-size: .9rem;
+    color: #414e59;
+}
+
+.widget-support .btn {
+    padding: 6px 12px;
+    font-size: .9rem;
+    color: #fff;
+    border-radius: 2px;
+    background: #1a79c5;
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.widget-support .btn:hover{
+    background: #0a5998;
 }

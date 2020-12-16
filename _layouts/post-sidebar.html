@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  {% include header.html %}
+  <body>
+    <section class="page-wrapper">
+      <div class="post-layout--sidebar">
+          <aside class="post-sidebar">
+              <div class="post-sidebar--sticky">
+                  <!--<h2>Table of Contents</h2>-->
+                  {% for item in page.toc %}
+                  <h4><b>{{ item.title }}</b></h4>
+                      <ul>
+                        {% for entry in item.subfolderitems %}
+                          <li><a href="{{ entry.url }}">{{ entry.page }}</a></li>
+                        {% endfor %}
+                      </ul>
+                  {% endfor %}
+                  
+                  {% include widget-support.html %}
+              </div>
+          </aside>
+          <div class="post-content">
+              <h1 class="post-title">{{page.title}}</h1>
+              {{content}}
+          </div>
+      </div>
+    </section>
+    <script>
+      anchors.options.placement = 'left';
+      anchors.add('h2, h3, h4, h5, h6')
+              .add('.param-def strong');
+    </script>
+  </body>
+
+  {% include footer.html %}
+</html>

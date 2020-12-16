@@ -42,13 +42,39 @@
           </span>
         </label>
         <div class="trigger">
-          <a class="page-link" href="{{"/index.html" | relative_url }}">Home</a>
-          <a class="page-link" href="{{"/getting-started.html" | relative_url }}">Getting Started</a>
-          <a class="page-link" href="{{"/request.html" | relative_url }}">Request</a>
-          <a class="page-link" href="{{"/response.html" | relative_url }}">Response</a>
-          <a class="page-link" href="{{"/examples.html" | relative_url }}">Examples</a>
-          <a class="page-link" href="{{"/samples.html" | relative_url }}">Code Samples</a>
-          <a class="page-link" href="{{"/support.html" | relative_url }}">Support</a>
+          <ul class="main-menu">
+              <li><a class="page-link" href="{{"/index.html" | relative_url }}">Home</a></li>
+              <li><a class="page-link" href="{{"/getting-started.html" | relative_url }}">Getting Started</a></li>
+              <li>
+                  <a class="page-link" href="{{"/request.html" | relative_url }}">Request</a>
+                  <ul class="sub-menu">
+                      <li><a class="page-link" href="{{"/request-scholar.html" | relative_url }}">Scholar Request</a></li>
+                      <li><a class="page-link" href="{{"/request-patent.html" | relative_url }}">Patent Request</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a class="page-link" href="{{"/response.html" | relative_url }}">Response</a>
+                  <ul class="sub-menu">
+                      <li><a class="page-link" href="{{"/response-scholar.html" | relative_url }}">Scholar Response</a></li>
+                      <li><a class="page-link" href="{{"/response-patent.html" | relative_url }}">Patent Response</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a class="page-link" href="{{"/examples.html" | relative_url }}">Examples</a>
+                  <ul class="sub-menu">
+                      <li><a class="page-link" href="{{"/examples-scholar.html" | relative_url }}">Scholar Examples</a></li>
+                      <li><a class="page-link" href="{{"/examples-patent.html" | relative_url }}">Patent Examples</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a class="page-link" href="{{"/samples.html" | relative_url }}">Code Samples</a>
+                  <ul class="sub-menu">
+                      <li><a class="page-link" href="{{"/samples-scholar.html" | relative_url }}">Scholar Code Samples</a></li>
+                      <li><a class="page-link" href="{{"/samples-patent.html" | relative_url }}">Patent Code Samples</a></li>
+                  </ul>
+              </li>
+              <li><a class="page-link" href="{{"/support.html" | relative_url }}">Support</a></li>
+          </ul>
         </div>
     </nav>
   </div>

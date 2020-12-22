@@ -57,9 +57,10 @@ Field  |  Type  |  Description
 
 ### Simple Family
 
-Field  |  Type  |  Description 
---------  |  ---------  |  -------
+Field  |  Type  |  Description |  Example
+--------  |  ---------  |  ------- |  -------
 **members** | List of [Simple Family Members](#simple-family-members) | List of simple family members. | 
+**size** | Integer | The number of simple family member documents. | `12` 
 
 ### Simple Family Members
 
@@ -73,6 +74,7 @@ Field  |  Type  |  Description |  Example
 Field  |  Type  |  Description | Example
 --------  |  ---------  |  ------- | -------
 **members** | List of [Extended Family Members](#extended-family-members) | List of extended family members. |  
+**size** | Integer | The number of extended family member documents. | `18` 
 
 ### Extended Family Members
 

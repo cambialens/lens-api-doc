@@ -46,7 +46,8 @@ toc:
 **classifications_ipcr** | [IPCR Classifications](#ipcr-classifications) | IPCR Classifications | 
 **classifications_national** | [US Classifications](#us-classifications) | US Classifications | 
 **references_cited** | [References Cited](#references-cited) | The references cited in the patent document (patents and non-patent literature (NPL) ). | 
-**cited_by** | [Cited By](#cited-by) | The patents citing the patent document. | 
+**cited_by** | [Cited By](#cited-by) | The patents citing the patent document. |
+{: .param-def }
 
 ### Families
 
@@ -54,6 +55,7 @@ Field  |  Type  |  Description
 --------  |  ---------  |  ------- 
 **simple_family** | [Simple Family](#simple-family) | Simple patent family (based on [DOCDB simple patent family](https://www.epo.org/searching-for-patents/helpful-resources/first-time-here/patent-families/docdb.html)). | 
 **extended_family** | [Extended Family](#extended-family) | Extended patent family (based on [INPADOC extended patent family](https://www.epo.org/searching-for-patents/helpful-resources/first-time-here/patent-families/inpadoc.html)). |   
+{: .param-def }
 
 ### Simple Family
 
@@ -61,6 +63,7 @@ Field  |  Type  |  Description |  Example
 --------  |  ---------  |  ------- |  -------
 **members** | List of [Simple Family Members](#simple-family-members) | List of simple family members. | 
 **size** | Integer | The number of simple family member documents. | `12` 
+{: .param-def }
 
 ### Simple Family Members
 
@@ -68,6 +71,7 @@ Field  |  Type  |  Description |  Example
 --------  |  ---------  |  ------- |  -------
 **document_id** | [Document Id](#document-id) | Simple family member document Id.  | 
 **lens_id** | String (LensId) | Simple family member Lens Id.  | `186-488-232-022-055`
+{: .param-def }
 
 ### Extended Family
 
@@ -75,6 +79,7 @@ Field  |  Type  |  Description | Example
 --------  |  ---------  |  ------- | -------
 **members** | List of [Extended Family Members](#extended-family-members) | List of extended family members. |  
 **size** | Integer | The number of extended family member documents. | `18` 
+{: .param-def }
 
 ### Extended Family Members
 
@@ -82,6 +87,7 @@ Field  |  Type  |  Description |  Example
 --------  |  ---------  |  ------- |  -------
 **document_id** | [Document Id](#document-id) | Extended family member document Id.  | 
 **lens_id** |  String (LensId) | Extended family member Lens Id.  | `186-488-232-022-055`
+{: .param-def }
 
 ### Abstract
 
@@ -89,6 +95,7 @@ Field  |  Type  |  Description |  Example
 --------  |  ---------  |  ------- |  -------
 **text** | String | The patent document abstract text. | `A processor implements conditional vector operations in which an input vector containing multiple operands to be used in conditional operations is divided into two or more output…`
 **lang** | String ([Language](#language)) | The language of the patent document abstract text. | `EN`
+{: .param-def }
 
 ### Claims
 
@@ -96,12 +103,14 @@ Field  |  Type  |  Description |  Example
 --------  |  ---------  |  ------- |  -------
 **claims** | List of [Claims Text](#claims-text) | The list of Claims recorded in the patent document. | 
 **lang** | String ([Language](#language)) | The language of the patent document claims. | `EN`
+{: .param-def }
 
 ### Claims Text
 
  Field  |  Type  |  Description |  Example
 --------  |  ---------  |  ------- |  -------
 **claim_text** | List of String | The Claim text recorded in the patent document. | `What is claimed is: 1. A method of performing a conditional vector output operation in a processor, the method comprising: receiving electrical signals representative of an input data vector…`
+{: .param-def }
 
 ### Description
 
@@ -109,6 +118,7 @@ Field  |  Type  |  Description |  Example
 --------  |  ---------  |  ------- |  -------
 **text** | String | The description text of the patent document. | `This invention was made in conjuction with U.S. Government support under U.S. Army Grant No. DABT63-96-C-0037.” BACKGROUND OF THE INVENTION 1. Field of the Invention The present invention is directed to…`
 **lang** | String ([Language](#language)) | The language of the patent document description. | `EN`
+{: .param-def }
 
 ### Legal Status Information
 
@@ -124,12 +134,14 @@ Field  |  Type  |  Description |  Example
 **publication_count** | Integer | The number of publications for the DocDB application | `12`
 **has_spc** | Boolean | Indicates if the patent has a supplementary protection certificate. | `TRUE`
 **calculation_log** | List of String | The legal status calculation log. | [`Application Filing Date: 2001-11-21`, `Earliest Filing Date: 2001-11-21 priority to EP01984746A`, `Granted date: 2009-07-29`]
+{: .param-def }
 
 ### Priority Claims
 
  Field  |  Type  |  Description 
  --------  |  ---------  |  ------- 
 **claims** | List of [Priority Claims Documents](#priority-claims-documents) | List of priority claims documents | 
+{: .param-def }
 
 ### Priority Claims Documents
 
@@ -140,6 +152,7 @@ Field  |  Type  |  Description |  Example
 **kind** | String | The kind code of the priority document. | `A1`
 **date** | LocalDate | The publication date of the priority document. | `2009-05-22`
 **sequence** | Integer | The sequence of the Prioroty Claim Document | `3`
+{: .param-def }
 
 ### Title
 
@@ -147,6 +160,7 @@ Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **text** | String | Title of the patent / invention. | `Fidget Spinner`
 **lang** | String ([Language](#language)) | The language of the patent / invention title. | `EN`
+{: .param-def }
 
 ### Parties
 
@@ -156,6 +170,7 @@ Field  |  Type  |  Description |  Example
 **applicants** | List of [Applicants](#applicants) | List of applicants associated with the patent. | 
 **owners_all** | List of [Owners](#owners) | List of owners associated with the patent. | 
 **agents** | List of [Agents and Attorneys](#agents-and-attorneys) | List of agents and attorneys associated with the patent. | 
+{: .param-def }
 
 <!-- **assignees** | List of [Assignees](#assignees) | List of assignees associated with the patent. |  -->
 
@@ -167,6 +182,7 @@ Field  |  Type  |  Description |  Example
 **sequence** | Integer | The sequence of the inventor listed on the patent document. | `3`
 **extracted_name** | [Name](#name) | The patent inventor's name. | `Engebretson Steven P`
 **extracted_address** | String | The address of the inventor. | `TORONTO, ONTARIA, CA`
+{: .param-def }
 
 <!--
 ### Inventor Name
@@ -183,6 +199,7 @@ Field  |  Type  |  Description |  Example
 **sequence** | Integer | The sequence of the applicant listed on the patent document. | `2`
 **extracted_name** | [Name](#name) | The patent applicant's name. | `IBM`
 **extracted_address** | String | The applicant address as recorded on the patent. | `SEATTLE, WASHINGTON, US`
+{: .param-def }
 
 <!--
 ### Applicant Name
@@ -215,6 +232,7 @@ Field  |  Type  |  Description |  Example
 **extracted_name** | [Name](#name) | The patent owner name. | `CPS Technology Holdings LLC`
 **extracted_address** | String | The owner address as recorded on the patent or legal event. | `TORONTO, ONTARIA, CA`
 **extracted_country** | String | The owner's country code (ISO 2-digit country code). | `US`
+{: .param-def }
 
 <!--
 ### Owner Name
@@ -231,6 +249,7 @@ Field  |  Type  |  Description |  Example
 **extracted_name** | [Name](#name) | The agent/attorney name. | `Chapman, Paul William et al.`
 **extracted_address** | String | The agent/attorney address as recorded on the patent. | `20 Red Lion Street, GB-London WC1R 4PJ(GB)`
 **extracted_country** | String | The country of the agent/attorney (ISO 2-digit country code). | `GB`
+{: .param-def }
 
 <!--
 ### Agent/Attorney Name
@@ -244,30 +263,35 @@ Field  |  Type  |  Description |  Example
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **value** | String | The party name. | `Chapman, Paul William et al.`, `CPS Technology Holdings LLC`, `Chapman, Paul William et al.`
+{: .param-def }
 
 ### CPC Classifications
 
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **classifications** | List of [Classification Symbols](#classification-symbols) | List of CPC classification symbols. | `H01R11/01`
+{: .param-def }
 
 ### IPCR Classifications
 
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **classifications** | List of [Classification Symbols](#classification-symbols) | List of IPCR classification symbols. | `H01R13/115`
+{: .param-def }
 
 ### US Classifications
 
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **classifications** | List of [Classification Symbols](#classification-symbols) | List of US classification symbols. | `439/535`
+{: .param-def }
 
 ### Classification Symbols
 
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **symbol** | String | Classification code symbol. | `H01R11/01`, `H01R13/115`, `439/535`
+{: .param-def }
 
 ### References Cited
 
@@ -276,6 +300,7 @@ Field  |  Type  |  Description |  Example
 **citations** | List of [Citations](#citations) | List of patent and NPL references cited. | 
 **npl_resolved_count** | Integer | The number of resolved scholalry works cited by a patent. | `12`
 **npl_count** | Integer | The number of scholalry works cited by a patent. | `2`
+{: .param-def }
 
 ### Citations
 
@@ -284,6 +309,7 @@ Field  |  Type  |  Description |  Example
 **patcit** | [Patents Cited](#patents-cited) | Patents cited in the patent documnet. | 
 **nplcit** | [NPL Cited](#npl-cited) | Non-patent literature cited in the patent document. | 
 **sequence** | Integer | The sequence of the citation in the patent document. | `5`
+{: .param-def }
 
 ### Patents Cited
 
@@ -291,6 +317,7 @@ Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- | ------- 
 **document_id** | Array of [Document Id](#document-id) | The cited patent document Ids. | 
 **lens_id** |  String (LensId) | The cited patent document Lens Id. | `118-962-823-688-691` |
+{: .param-def }
 
 ### NPL Cited
 
@@ -299,12 +326,14 @@ Field  |  Type  |  Description |  Example
 **text** | String | The original non-patent literature citation text in the patent document. | `Cormen et al., 'Introduction to Algorithms (MIT Electrical Engineering and Computer Science Series,' MIT Press, ISBN 0262031418, pp. 665-667, 695-697.`
 **lens_id** |  String (LensId) | The Lens Id of the resolved non-patent literature citations (i.e. scholarly work Lens Id). | `168-663-423-050-326`
 **external_ids** | List of String | List of external identifiers for non-patent literature citation (DOI, PubMed ID, PubMed Central ID or Microsoft Aacademic ID).  | `[10.1038/nature03090; 12345678919]`
+{: .param-def }
 
 ### Cited By
 
  Field  |  Type  |  Description 
  --------  |  ---------  |  ------- 
 **patents** | List of [Cited By Patents](#cited-by-patents) | List of patents citing the patent documnet. | 
+{: .param-def }
 
 ### Cited By Patents
 
@@ -312,6 +341,7 @@ Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **document_id** | [Document Id](#document-id) | The citing patent document Id. | 
 **lens_id** |  String (LensId) | The citing patent Lens Id. | `118-962-823-688-691` |
+{: .param-def }
 
 ### Document Id
 
@@ -321,6 +351,7 @@ Field  |  Type  |  Description |  Example
 **doc_number** | String | The document number assigned to a patent application on publication. | `20130227762`
 **kind** | String | The patent document kind code (varies by jurisdiction). | `A1`
 **date** | LocalDate | Date of publication for the patent document, or filing date for the application reference. | `2009-05-22`
+{: .param-def }
 
 ---
 

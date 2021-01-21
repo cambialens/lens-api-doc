@@ -120,7 +120,7 @@ Field  |  Type  |  Description |  Example
 **lang** | String ([Language](#language)) | The language of the patent document description. | `EN`
 {: .param-def }
 
-### Legal Status Information
+### Legal Status Information 
 
 Field  |  Type  |  Description |  Example
 --------  |  ---------  |  ------- |  -------
@@ -135,6 +135,9 @@ Field  |  Type  |  Description |  Example
 **has_spc** | Boolean | Indicates if the patent has a supplementary protection certificate. | `TRUE`
 **calculation_log** | List of String | The legal status calculation log. | [`Application Filing Date: 2001-11-21`, `Earliest Filing Date: 2001-11-21 priority to EP01984746A`, `Granted date: 2009-07-29`]
 {: .param-def }
+
+**N.B.** Legal status information is derived from INPADOC data and may not be accurate.
+
 
 ### Priority Claims
 

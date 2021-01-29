@@ -12,7 +12,7 @@ permalink: /support.html
 - Please provide the API request and response if possible.
 - Please provide your intention of creating the query request.
 
-## Changelog
+## Change log
 
 API Version | Schema Versions | Date Released | Notes
 ------- | ------| ------| -------

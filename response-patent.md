@@ -131,7 +131,6 @@ Field  |  Type  |  Description |  Example
 **discontinuation_date** | Date | The discontinuation date of the patent due to "unnatural death" (i.e. lapse, withdrawn, abandoned). N.B. The patent can be revived within a certain time frame. | `2009-05-22`
 **has_disclaimer** | Boolean | Indicates if this US patent subjected to a terminal disclaimer. | `TRUE`
 **patent_status** | String ([Patent Status](#patent-status)) | The calculated legal status of the patent application. | `ACTIVE`
-**publication_count** | Integer | The number of publications for the DocDB application | `12`
 **has_spc** | Boolean | Indicates if the patent has a supplementary protection certificate. | `TRUE`
 **calculation_log** | List of String | The legal status calculation log. | [`Application Filing Date: 2001-11-21`, `Earliest Filing Date: 2001-11-21 priority to EP01984746A`, `Granted date: 2009-07-29`]
 {: .param-def }
@@ -376,6 +375,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
  - `ACTIVE` - Patent is in force
  - `INACTIVE` - Patent is inactive with chance of revivals
  - `EXPIRED` - Patent is not in force
+ - `UNKNOWN` - Unknown status 
 
 <!--
 ##### Source
@@ -979,8 +979,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
             "Application Filing Date: 2010-12-31",
             "Granted date: 2013-12-25"
         ],
-        "patent_status": "ACTIVE",
-        "publication_count": 2
+        "patent_status": "ACTIVE"
     },
     "abstract": [
         {

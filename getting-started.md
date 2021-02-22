@@ -40,6 +40,7 @@ As of the current version, Lens offers the following API endpoints:
 **Scholarly Works:** 
 - `[POST] https://api.lens.org/scholarly/search`
 - `[GET] https://api.lens.org/scholarly/search`
+- `[GET] https://api.lens.org/scholarly/{lens_id}`
 
 **Collections:** 
 - `[POST] https://api.lens.org/collections/{collection_id}`

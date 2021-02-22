@@ -16,6 +16,7 @@ permalink: /support.html
 
 API Version | Schema Versions | Date Released | Notes
 ------- | ------| ------| -------
+`2.1.0` | - Scholar: `1.5.0` <br/> - Patent: `1.1.0` | February 22, 2021 | - Added Scholarly Get by Lens ID Endpoint <br/> - Added `has_inpadoc`,`created`,`earliest_priority_date` for patent search <br/> - Better coverage of default fields for string based query <br/> - Performance improvements for Scholarly endpoints |
 `2.0.0` | - Scholar: `1.4.0` <br/> - Patent: `1.0.0` | December 16, 2020 | - Added Patent API endpoints <br/> - Added support for `un-stemmed` search |
 `1.3.2` | Scholar: `1.3.2` | March 25, 2020 | - Added keyword fields `author.affiliation.name.exact`, `source.title.exact`, `funding.organisation.exact` for search request |
 `1.3.0` | Scholar: `1.3.0`| March 5, 2020 | - Added `GET` endpoints for Scholarly Search and Collections <br/> - Added author identifier fields (MAG, ORCID) <br/> - See [Lens Release 6.7](https://about.lens.org/news/release-6-7/) notes for details|

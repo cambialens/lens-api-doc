@@ -46,6 +46,7 @@ For searching, the following fields are supported by the API:
  Group |  Field  |  Type  |  Description
  --------  |  ---------  |  ------- |  -------
 General | **lens_id** | String | Unique lens identifier. Every document in the Lens has a unique 15-digit identifier called a Lens ID. e.g. `186-488-232-022-055`
+General | **created** | Date | Earliest create date of the patent meta record
 General | **doc_key** | String | The unique document key for the patent document. e.g. `EP_0227762_B1_19900411`
 General | **doc_number** | String | The document number assigned to a patent application on publication. e.g. `20130227762`
 General | **docdb_id** | Integer | The DOCDB identifier for the patent document. e.g. `499168393`
@@ -55,6 +56,7 @@ General | **lang** | String | The original language of the patent document. e.g.
 General | **date_published** | Date | Date of publication for the patent document. e.g. `2009-05-22`
 General | **year_published** | Integer | The year of publication for the patent document. e.g. `2009`
 General | **publication_type** | String | Type of patent document. e.g. `AMENDED_PATENT`, `AMENDED_PATENT`, `DESIGN_RIGHT`, `GRANTED_PATENT`, `LIMITED_PATENT`, `PATENT_APPLICATION`, `PLANT_PATENT`, `SEARCH_REPORT`, `STATUTORY_INVENTION_REGISTRATION`, `SPC`, `UNKNOWN`
+General | **earliest_priority_date** | Date | Earliest priority Date
 Application | **application_reference.jurisdiction** | String | The jurisdiction of the application. e.g. `US`
 Application | **application_reference.date** | Date | The application filing date is the date when a patent application is first filed at a patent office. e.g. `2009-05-22`
 Application | **application_reference.doc_number** | String | The document number of the application. e.g. `201715824814`
@@ -157,6 +159,7 @@ Field | Description |  Possible Value
 **has_sequence** | Indicates if the patent record has sequence information. | `true`/`false`
 **has_title** | Indicates if the title is available for the patent document. | `true`/`false`
 **has_docdb** | Indicates if the DOCDB information is available for the patent document. | `true`/`false`
+**has_inpadoc** | Indicate if the application contains INPADOC legal events 
 {: .param-def }
 
  Example:

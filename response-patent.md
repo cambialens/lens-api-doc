@@ -369,13 +369,13 @@ Jurisidction codes: `US`, `EP`, `WO`, `DE`, `CN`, `JP`, `GB`, etc.
 Language codes:  `EN`, `FR`, `DE`, `CN` etc.
 
 ##### Patent Status
- - `PENDING` - Application pending
- - `DISCONTINUED` - Discontinued, Withdrawn or Rejected
- - `PATENTED` - In case of WO application is grant in some designated state
- - `ACTIVE` - Patent is in force
- - `INACTIVE` - Patent is inactive with chance of revivals
- - `EXPIRED` - Patent is not in force
- - `UNKNOWN` - Unknown status 
+ - `ACTIVE` - Granted patent is in force
+ - `PENDING` - Application is pending
+ - `DISCONTINUED` - Application discontinued, withdrawn or rejected, i.e. discontinuation before grant
+ - `INACTIVE` - Granted patent not in force because of lapse, non-fee payment, etc. The patent hasn't reached the term date and can be revived
+ - `EXPIRED` - Patent has reached the term date and is no longer in force
+ - `PATENTED` - PCT applications that have been granted in one or more designated states, or non-PCT granted patents without enough information to calculate the term date
+ - `UNKNOWN` -  Not enough information to calculate status 
 
 <!--
 ##### Source

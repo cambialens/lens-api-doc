@@ -66,7 +66,7 @@ else:
 ```python
 import requests
 import time
-url = 'https://api-dev.api.lens.org/patent/search'
+url = 'https://api.lens.org/patent/search'
 
 # include fields
 include = '''["biblio", "doc_key"]'''

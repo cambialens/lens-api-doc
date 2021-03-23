@@ -80,7 +80,7 @@ request_body = '''{
   "include": %s,
   "scroll": "1m"
 }''' % include
-headers = {'Authorization': 'Bearer mUlXTpA1QMsDGTXEsyMbpCYVQovuzYKQNM5007HFaYSqrpmrsCjJ', 'Content-Type': 'application/json'}
+headers = {'Authorization': 'Bearer YOUR-TOKEN', 'Content-Type': 'application/json'}
 
 # Recursive function to scroll through paginated results
 def scroll(scroll_id):

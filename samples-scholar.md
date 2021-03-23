@@ -74,29 +74,45 @@ else:
 import requests
 import time
 url = 'https://api.lens.org/scholarly/search'
-data = '''{
+
+# include fields
+include = '''["patent_citations", "lens_id"]'''
+# request body with scroll time of 1 minute
+request_body = '''{
      "query": "Malaria",
      "size": 100,
-     "scroll":"1m"
-}'''
-headers = {'Authorization': 'Bearer your_token', 'Content-Type': 'application/json'}
+     "scroll":"1m",
+     "include": %s
+}''' % include
+headers = {'Authorization': 'Bearer YOUR-TOKEN', 'Content-Type': 'application/json'}
 
+# Recursive function to scroll through paginated results
 def scroll(scroll_id):
+  # Change the request_body to prepare for next scroll api call
+  # Make sure to append the include fields to make faster response
   if scroll_id is not None:
-    global data
-    data = '''{"scroll_id": "%s"}''' % scroll_id
-  response = requests.post(url, data=data, headers=headers) 
-  if response.status_code != requests.codes.ok:
-    print response
-  elif response.status_code == requests.codes.too_many_requests:
+    global request_body
+    request_body = '''{"scroll_id": "%s", "include": %s}''' % (scroll_id, include)
+
+  # make api request
+  response = requests.post(url, data=request_body, headers=headers) 
+
+  # If rate-limited, wait for n seconds and proceed the same scroll id
+  # Since scroll time is 1 minutes, it will give sufficient time to wait and proceed
+  if response.status_code == requests.codes.too_many_requests:
     time.sleep(8)
     scroll(scroll_id)
+  # If the response is not ok here, better to stop here and debug it
+  elif response.status_code != requests.codes.ok:
+    print response.json()
+  # If the response is ok, do something with the response, take the new scroll id and iterate
   else:
     json = response.json()
-    scroll_id = json['scroll_id']
+    scroll_id = json['scroll_id'] # Extract the new scroll id from response
     print json['data'] #DO something with your data
     scroll(scroll_id)
 
+# start recursive scrolling
 scroll(scroll_id=None)
 ```
 

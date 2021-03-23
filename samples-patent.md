@@ -88,7 +88,7 @@ def scroll(scroll_id):
   # Make sure to append the include fields to make faster response
   if scroll_id is not None:
     global request_body
-    request_body = '''{"scroll_id": "%s", "include": [%s]}''' % (scroll_id, include)
+    request_body = '''{"scroll_id": "%s", "include": %s}''' % (scroll_id, include)
 
   # make api request
   response = requests.post(url, data=request_body, headers=headers) 

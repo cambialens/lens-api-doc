@@ -135,7 +135,7 @@ Field  |  Type  |  Description |  Example
 **calculation_log** | List of String | The legal status calculation log. | [`Application Filing Date: 2001-11-21`, `Earliest Filing Date: 2001-11-21 priority to EP01984746A`, `Granted date: 2009-07-29`]
 {: .param-def }
 
-**N.B.** Legal status information is derived from INPADOC data and may not be accurate.
+**N.B.** Legal status information is derived from INPADOC data and may not be accurate. For more details, please see [Patent Legal Status Calculations](https://support.lens.org/help-resources/patents/patent-legal-status-calculations/)
 
 
 ### Priority Claims

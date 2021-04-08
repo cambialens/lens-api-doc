@@ -56,7 +56,7 @@ General | **lang** | String | The original language of the patent document. e.g.
 General | **date_published** | Date | Date of publication for the patent document. e.g. `2009-05-22`
 General | **year_published** | Integer | The year of publication for the patent document. e.g. `2009`
 General | **publication_type** | String | Type of patent document. e.g. `AMENDED_PATENT`, `AMENDED_PATENT`, `DESIGN_RIGHT`, `GRANTED_PATENT`, `LIMITED_PATENT`, `PATENT_APPLICATION`, `PLANT_PATENT`, `SEARCH_REPORT`, `STATUTORY_INVENTION_REGISTRATION`, `SPC`, `UNKNOWN`
-General | **earliest_priority_date** | Date | Earliest priority date. The earliest date of filing of a patent application, anywhere in the world, to protect an invention. The priority date may be earlier than the actual filing date of an application if an application claims priority to an earlier parent application, then its earliest priority date may be the same as the parent.
+General | **earliest_priority_claim_date** | Date | Earliest priority date. The earliest date of filing of a patent application, anywhere in the world, to protect an invention. The priority date may be earlier than the actual filing date of an application if an application claims priority to an earlier parent application, then its earliest priority date may be the same as the parent.
 Application | **application_reference.jurisdiction** | String | The jurisdiction of the application. e.g. `US`
 Application | **application_reference.date** | Date | The application filing date is the date when a patent application is first filed at a patent office. e.g. `2009-05-22`
 Application | **application_reference.doc_number** | String | The document number of the application. e.g. `201715824814`

@@ -220,3 +220,57 @@ curl -X POST \
 	"size": 50
 }'
 ```
+
+#### R-Scroll Based Pagination
+```r
+token <- 'Your Access Token'
+max_results <- 100 # this sets the maximum number of records returned per query
+
+getLENSData<- function(token, query){
+  url <- 'https://api.lens.org/scholarly/search'
+  headers <- c('Authorization' = token, 'Content-Type' = 'application/json')
+  httr::POST(url = url, add_headers(.headers=headers), body = query)
+}
+
+request <- paste0('{
+	"query":  "malaria",
+	"size": "',max_results,'",
+	"scroll": "1m",
+		"include": ["lens_id", "authors", "publication_type", "title", "external_ids", "start_page", "end_page", "volume", "issue", "references", "scholarly_citations", "source_urls", "abstract", "date_published", "year_published", "references_count", "scholarly_citations_count", "source"]
+}')
+
+
+data <- getLENSData(token, request)
+
+record_json <- content(data, "text")
+record_list <- fromJSON(record_json) # convert json output from article search to list
+
+record_df <- data.frame(record_list) #convert it to a data frame
+total<- record_list[["total"]]
+
+
+# if a result contains more than the max number of records per request, use cursor based pagination
+if(total > max_results) {
+  
+  sets <- ceiling(record_list[["total"]] / max_results) #calculate the number of queries needed for those with more than the max number of results
+  
+  scroll_id <- record_list[["scroll_id"]] # extract the scroll id from the query to go back to the same search
+  
+  for (i in 2:sets){ # loop through the sets of results needed to bring back all records into a data frame
+    scroll_id <- record_list[["scroll_id"]] #extract the latest scroll_id from the last query
+    
+    request <- paste0('{"scroll_id": "', # new query based on scroll_id and including 'include' for efficiency
+                      scroll_id,
+                      '",	"include": ["lens_id", "authors", "publication_type", "title", "external_ids", "start_page", "end_page", "volume", "issue", "references", "scholarly_citations", "source_urls", "abstract", "date_published", "year_published", "references_count", "scholarly_citations_count", "source"]
+                      }')
+    
+    # perform article search and extract text results
+    data <- getLENSData(token, request)
+    record_json <- httr::content(data, "text")
+    record_list <- jsonlite::fromJSON(record_json) # convert json output from article search to list
+    new_df <- data.frame(record_list)
+    # output
+    record_df <- dplyr::bind_rows(record_df,new_df) # bind the latest search data frame to the previous data frame
+  } 
+}
+```

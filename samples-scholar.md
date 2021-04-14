@@ -68,7 +68,7 @@ else:
   print(response.text)
 ```
 
-#### Cursor based pagination
+#### Python - Cursor Based Pagination
 
 ```python
 import requests
@@ -221,7 +221,7 @@ curl -X POST \
 }'
 ```
 
-#### R-Scroll Based Pagination
+### R - Cursor Based Pagination
 ```r
 Packages <- c("dplyr", "httr", "jsonlite")
 lapply(Packages, library, character.only = TRUE)

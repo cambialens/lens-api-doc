@@ -69,7 +69,7 @@ For `GET` Requests, you can provide your access token in the request parameter:
 
 To ensure our public API endpoints remain usable by everyone and to maintain the server's optimal availability, a rate limiting mechanism is being used to temporarily block any clients that reduce the server's performance. The applied rate limits will be included in the following HTTP response headers:
 
-- `x-rate-limit-remaining-request-per-minute`: Number of requests allowed in a minute
+- `x-rate-limit-remaining-request-per-minute`: Number of remaining requests allowed in a minute
 - `x-rate-limit-retry-after-seconds`: Time in seconds until next request can be performed
 - `x-rate-limit-reset-date`: Rate limit will get reset at this date
 - `x-rate-limit-remaining-request-per-month`: Number of API calls allowed till the reset date above

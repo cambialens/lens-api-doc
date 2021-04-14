@@ -43,6 +43,77 @@ data <- getScholarlyData(token, request)
 content(data, "text")
 ```
 
+#### R - Cursor Based Pagination
+```r
+Packages <- c("dplyr", "httr", "jsonlite")
+lapply(Packages, library, character.only = TRUE)
+
+token <- 'Your Access Token'
+
+# this sets the maximum number of records returned per query
+max_results <- 100 
+
+getLensData<- function(token, query){
+  url <- 'https://api.lens.org/scholarly/search'
+  headers <- c('Authorization' = token, 'Content-Type' = 'application/json')
+  httr::POST(url = url, add_headers(.headers=headers), body = query)
+}
+
+request <- paste0('{
+	"query":  "malaria",
+	"size": "',max_results,'",
+	"scroll": "1m",
+	"include": ["lens_id", "authors", "publication_type", "title"]
+}')
+
+
+data <- getLENSData(token, request)
+
+record_json <- content(data, "text")
+
+# convert json output from article search to list
+record_list <- fromJSON(record_json) 
+
+#convert it to a data frame
+record_df <- data.frame(record_list) 
+total<- record_list[["total"]]
+
+
+# if a result contains more than the max number of records per request, use cursor based pagination
+if(total > max_results) {
+  
+  #calculate the number of queries needed for those with more than the max number of results
+  sets <- ceiling(record_list[["total"]] / max_results) 
+  
+  # extract the scroll id from the query to go back to the same search
+  scroll_id <- record_list[["scroll_id"]] 
+  
+  # loop through the sets of results needed to bring back all records into a data frame
+  for (i in 2:sets){ 
+    #extract the latest scroll_id from the last query
+    scroll_id <- record_list[["scroll_id"]] 
+    
+    # new query based on scroll_id and including 'include' for efficiency
+    request <- paste0('{"scroll_id": "', 
+                      scroll_id,
+                      '", "include": ["lens_id", "authors", "publication_type", "title"]
+                      }')
+    
+    # perform article search and extract text results
+    data <- getLENSData(token, request)
+    record_json <- httr::content(data, "text")
+    
+    # convert json output from article search to list
+    record_list <- jsonlite::fromJSON(record_json) 
+    new_df <- data.frame(record_list)
+    
+    # bind the latest search data frame to the previous data frame
+    record_df <- dplyr::bind_rows(record_df,new_df) 
+  } 
+}
+```
+###### Credit: Neal Haddaway
+
 ### Python
 ```python
 import requests
@@ -68,7 +139,7 @@ else:
   print(response.text)
 ```
 
-### Python - Cursor Based Pagination
+#### Python - Cursor Based Pagination
 
 ```python
 import requests
@@ -220,75 +291,3 @@ curl -X POST \
 	"size": 50
 }'
 ```
-
-### R - Cursor Based Pagination
-```r
-Packages <- c("dplyr", "httr", "jsonlite")
-lapply(Packages, library, character.only = TRUE)
-
-token <- 'Your Access Token'
-
-# this sets the maximum number of records returned per query
-max_results <- 100 
-
-getLensData<- function(token, query){
-  url <- 'https://api.lens.org/scholarly/search'
-  headers <- c('Authorization' = token, 'Content-Type' = 'application/json')
-  httr::POST(url = url, add_headers(.headers=headers), body = query)
-}
-
-request <- paste0('{
-	"query":  "malaria",
-	"size": "',max_results,'",
-	"scroll": "1m",
-	"include": ["lens_id", "authors", "publication_type", "title"]
-}')
-
-
-data <- getLENSData(token, request)
-
-record_json <- content(data, "text")
-
-# convert json output from article search to list
-record_list <- fromJSON(record_json) 
-
-#convert it to a data frame
-record_df <- data.frame(record_list) 
-total<- record_list[["total"]]
-
-
-# if a result contains more than the max number of records per request, use cursor based pagination
-if(total > max_results) {
-  
-  #calculate the number of queries needed for those with more than the max number of results
-  sets <- ceiling(record_list[["total"]] / max_results) 
-  
-  # extract the scroll id from the query to go back to the same search
-  scroll_id <- record_list[["scroll_id"]] 
-  
-  # loop through the sets of results needed to bring back all records into a data frame
-  for (i in 2:sets){ 
-    #extract the latest scroll_id from the last query
-    scroll_id <- record_list[["scroll_id"]] 
-    
-    # new query based on scroll_id and including 'include' for efficiency
-    request <- paste0('{"scroll_id": "', 
-                      scroll_id,
-                      '", "include": ["lens_id", "authors", "publication_type", "title"]
-                      }')
-    
-    # perform article search and extract text results
-    data <- getLENSData(token, request)
-    record_json <- httr::content(data, "text")
-    
-    # convert json output from article search to list
-    record_list <- jsonlite::fromJSON(record_json) 
-    new_df <- data.frame(record_list)
-    
-    # bind the latest search data frame to the previous data frame
-    record_df <- dplyr::bind_rows(record_df,new_df) 
-  } 
-}
-```
-
-Credit: Neal Haddaway

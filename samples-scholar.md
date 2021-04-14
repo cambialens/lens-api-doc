@@ -68,7 +68,7 @@ else:
   print(response.text)
 ```
 
-#### Python - Cursor Based Pagination
+### Python - Cursor Based Pagination
 
 ```python
 import requests

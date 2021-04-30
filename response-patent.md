@@ -304,6 +304,7 @@ Field  |  Type  |  Description |  Example
 **npl_count** | Integer | The number of scholalry works cited by a patent. | `2`
 **patent_count** | Integer | The number of patents cited by a patent. | `2`
 {: .param-def }
+> Note: Citations can be duplicated because they appear in different phases of the patenting process.
 
 ### Citations
 

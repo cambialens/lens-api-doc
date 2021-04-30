@@ -302,6 +302,7 @@ Field  |  Type  |  Description |  Example
 **citations** | List of [Citations](#citations) | List of patent and NPL references cited. | 
 **npl_resolved_count** | Integer | The number of resolved scholalry works cited by a patent. | `12`
 **npl_count** | Integer | The number of scholalry works cited by a patent. | `2`
+**patent_count** | Integer | The number of patents cited by a patent. | `2`
 {: .param-def }
 
 ### Citations

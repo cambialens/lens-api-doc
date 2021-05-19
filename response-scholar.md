@@ -39,7 +39,7 @@ toc:
  **source_urls** | List of [Source URL](#source-url) | Source Urls |
  **abstract** | String | Scholarly work abstract text |
  **date_published** | Date | Date of publication | `2009-05-22`
- **date_published_parts** | Array of Integer | Consist of year, month and day`[1974, 1, 6]`
+ **date_published_parts** | Array of Integer | Consist of year, month and day | `[1974, 1, 6]`
  **year_published** | Integer | Year of publication | `1986`
  **conference** | [Conference](#conference) | The conference instance or edition |
  **author_count** | Integer | Number of Authors | `4`

@@ -39,6 +39,7 @@ toc:
  **source_urls** | List of [Source URL](#source-url) | Source Urls |
  **abstract** | String | Scholarly work abstract text |
  **date_published** | Date | Date of publication | `2009-05-22`
+ **date_published_parts** | Array of Integer | Consist of year, month and day`[1974, 1, 6]`
  **year_published** | Integer | Year of publication | `1986`
  **conference** | [Conference](#conference) | The conference instance or edition |
  **author_count** | Integer | Number of Authors | `4`
@@ -100,7 +101,7 @@ toc:
 **title** |  String | The name of source publication in which the scholarly work appears | `Journal name, Book title, Confernce proceedings`
 **type** |  String | Source Type | `Journal`
 **publisher** |  String | The publisher of the source publication | `W.B. Saunders Ltd`
-**issn** |  Array of Object | The International Standard Serial Number of the source publication, without hyphenation | `[{"value": "10797114"}]`
+**issn** | Array of Object | [ISSN](#ISSN) | `[{"value": "10797114"}]`
 **country** |  String | The publisher's country | `United Kingdom`
 **asjc_codes** |  String | The All Science Journal Classification (ASJC) code | `2735`
 **asjc_subjects** |  String | Subject is derived from journals descriptions in Crossref metadata based on the Science Journal Classification Codes | `Pediatrics`
@@ -115,6 +116,12 @@ toc:
 **qualifier_id** | String | Mesh Term Qualifier ID | `Q000032`
 **qualifier_name** | String | Mesh Term Qualifier Name | `analysis`
 {: .param-def }
+
+#### ISSN
+Field | Type |  Description | Example
+------- |:------:| -------|---------
+**value** | String | The International Standard Serial Number  | `10797114`
+**type** | String | ISSN type | `print`, `electronic`
 
 #### Funding
 

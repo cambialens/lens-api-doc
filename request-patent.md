@@ -134,8 +134,10 @@ Sequences | **sequence.count** | Integer | The number of biological sequences as
 Sequences | **sequence.data_source** | String | The data source of the disclosed sequence. e.g. `EPO`, `EMBL`
 Sequences | **sequence.document_location** | String | The patent document section of the disclosed sequence(s). e.g. `Claims`, `Description`
 Sequences | **sequence.length_bucket** | String | Preset sequence length range (nucleotide: 0-100, 101-5000, 5001-100k, >100k; Peptide: 0-50, 51-300, >300). e.g. `101-5000`
-Sequences | **sequence.tax_id** | String | The NCBI taxonomic identifier of the organism which the biological sequence is from. e.g. `9616`
+Sequences | **sequence.organism.tax_id** | String | The NCBI taxonomic identifier of the organism which the biological sequence is from. e.g. `9616`
 Sequences | **sequence.type** | String | The type of sequence e.g. N - nucleotide, P - peptide. e.g. `Nucleotide`, `Amino Acid`
+Sequences | **sequence.organism.name** | String | Organism name e.g. `Homo sapiens`
+Sequences | **sequence.organism.name.exact** | String | Use this field for exact name matches e.g. `Homo sapiens`
 Citations | **reference_cited.npl_resolved_count** | Integer | The number of resolved scholalry works cited by a patent. e.g. `12`
 {: .param-def }
 

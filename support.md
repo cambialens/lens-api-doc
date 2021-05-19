@@ -16,6 +16,7 @@ permalink: /support.html
 
 API Version | Schema Versions | Date Released | Notes
 ------- | ------| ------| -------
+`2.1.1` | - Scholar: `1.5.0` <br/> - Patent: `1.2.5` | May 19, 2021 | - Added Patent response fields `alias_lens_ids`, `biblio.references_cited.citations.cited_phase`, `biblio.references_cited.patent_count` <br/> - Added patent request fields `earliest_priority_claim_date`, `sequence.organism.tax_id`, `sequence.organism.name`, `sequence.organism.name.exact` <br/> - Added scholarly fields `source.issn.type`, `date_published_parts`
 `2.1.0` | - Scholar: `1.5.0` <br/> - Patent: `1.1.0` | February 22, 2021 | - Added Scholarly GET endpoint for retrieving scholarly works by `Lens_id`<br/> - Added `has_inpadoc`, `created` and `earliest_priority_date` to the Patent request fields <br/> - Expanded the coverage of the default search field for string based queries <br/> - Performance improvements for Scholarly endpoints |
 `2.0.0` | - Scholar: `1.4.0` <br/> - Patent: `1.0.0` | December 16, 2020 | - Added Patent API endpoints <br/> - Added support for `un-stemmed` search |
 `1.3.2` | Scholar: `1.3.2` | March 25, 2020 | - Added keyword fields `author.affiliation.name.exact`, `source.title.exact`, `funding.organisation.exact` for search request |

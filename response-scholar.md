@@ -121,7 +121,7 @@ toc:
 Field | Type |  Description | Example
 ------- |:------:| -------|---------
 **value** | String | The International Standard Serial Number  | `10797114`
-**type** | String | ISSN type | `print`, `electronic`
+**type** | String | ISSN type | `print`, `electronic`|
 
 #### Funding
 

@@ -118,6 +118,7 @@ toc:
 {: .param-def }
 
 #### ISSN
+
 Field | Type |  Description | Example
 ------- |:------:| -------|---------
 **value** | String | The International Standard Serial Number  | `10797114`

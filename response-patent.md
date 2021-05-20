@@ -314,7 +314,7 @@ Field  |  Type  |  Description |  Example
 **patcit** | [Patents Cited](#patents-cited) | Patents cited in the patent documnet. | 
 **nplcit** | [NPL Cited](#npl-cited) | Non-patent literature cited in the patent document. | 
 **sequence** | Integer | The sequence of the citation in the patent document. | `5`
-**cited_phase** | String | Phase of patenting process when the citation was added | `SEA`
+**cited_phase** | String | The phase of the patenting process when the citation was added, see [Cited Phase](#cited-phase) | `SEA`
 {: .param-def }
 
 ### Patents Cited
@@ -380,6 +380,20 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
  - `EXPIRED` - Patent has reached the term date and is no longer in force
  - `PATENTED` - PCT applications that have been granted in one or more designated states, or non-PCT granted patents without enough information to calculate the term date
  - `UNKNOWN` -  Not enough information to calculate status 
+
+##### Cited Phase
+- `SEA` - Originates from the Search report, date search report completed
+- `ISR` - Originates from International Search Report, date international search report completed
+- `SUP` - Originates from Supplementary Search Report, date supplementary search report completed
+- `PRS` - Origin Pre-Grant/Pre-Search national, date search report completed
+- `APP` - Cited by the Applicant, date information available in EPO systems
+- `EXA` - Revealed during the Examination phase (citing document is kind-code 'A'), date information available in EPO systems
+- `OPP` - Revealed during the Opposition phase, date opposition letters filed
+- `APL` - Filed for appeal by applicant / proprietor / patentee, date appeal filed
+- `FOP` - Filed for opposition by any third party, date observation letters filed
+- `TPO` - Third party observation, date observation letters filed
+- `CH2` - Chapter 2, date international search report completed
+
 
 <!--
 ##### Source

@@ -22,7 +22,6 @@ toc:
 **kind** | String | The patent document kind code (varies by jurisdiction). | `A1`
 **date_published** | Date | Date of publication for the patent document. | `2009-05-22`
 **doc_key** | String | The unique document key for the patent document. | `EP_0227762_B1_19900411`
-**alias_lens_ids** | List | Derived lens Ids from docdb and full text identifiers 
 **docdb_id** | Long | The DOCDB identifier for the patent document. | `499168393`
 **publication_type** | String ([Document Types](#document-types)) | Type of patent document. | 
 **lang** | String ([Language](#language)) | The original language of the patent document. | `EN`

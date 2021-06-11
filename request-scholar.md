@@ -84,6 +84,7 @@ Field | Type | Description
 **conference.location** | String | The location of the conference e.g. `Lihue, Kauai, HA, USA`
 **author_count** | Integer | Number of Authors
 **reference_count** | Integer | The number of works in the reference list of a scholarly work
+**reference.lens_id** | String | The Lens ID of scholarly works cited in the reference list e.g. `007-899-176-416-740`
 **scholarly_citation_count** | Integer | The number of scholarly works that cite this scholarly work
 **open_access.license** |  String | The Open Access license type e.g. `cc-by`
 **open_access.colour** |  String | The Open Access colour category e.g. `gold`, `green`

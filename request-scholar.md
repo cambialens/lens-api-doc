@@ -167,6 +167,8 @@ You can specify records per page using `size` (default 20 and max 1000) and cont
 > - The lifespan of scroll_id is limited to 1 minute for the current API version. Using expired scroll_id will result bad request HTTP response.
 > - Parameter `size` will be used for first scroll query and will remain the same for whole scroll context. Hence, using size in each scroll request will not have any effect.
 > - Cursor based pagination is only applicable to `POST` requests.
+> - For optimal performance, we recommend limiting the number of items (e.g. `lens_ids`) in a single terms query to 10,000.
+
 
 ### Sorting
 Result can be retrieved in ascending or descending order. By default, results are sorted with most relevant matches first. Use the following format and [fields](#searchable-fields) to apply sorting to the API response.

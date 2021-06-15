@@ -131,11 +131,11 @@ Classifications | **class_cpc.symbol** | String | CPC patent classification code
 Classifications | **class_ipcr.symbol** | String | IPCR patent classification codes. e.g. `H01R13/115`
 Classifications | **class_national.symbol** | String | US patent classification codes. e.g. `439/535`
 Sequences | **sequence.count** | Integer | The number of biological sequences associated with a patent. e.g. `5`
-Sequences | **sequence.data_source** | String | The data source of the disclosed sequence. e.g. `EPO`, `EMBL`
-Sequences | **sequence.document_location** | String | The patent document section of the disclosed sequence(s). e.g. `Claims`, `Description`
-Sequences | **sequence.length_bucket** | String | Preset sequence length range (nucleotide: 0-100, 101-5000, 5001-100k, >100k; Peptide: 0-50, 51-300, >300). e.g. `101-5000`
+Sequences | **sequence.data_source** | String | The data source of the disclosed sequence. `DDBJPAT`: DDBJ patent division, `EMBLPAT_EBI`: EMBL-EBI patent division, `USPTO_FULLTEXT_RB`: USPTO full-text, `EP_SEQL`: EPO, `GBPAT_NCBI`: GenBank patent division, `WIPO_SEQL`: WIPO, `GBPAT_EBI`, `CIPO_BSL`: CIPO, `GBPAT_DDBJ`, `USPTO_FULLTEXT_GB`, `USPTO_PSIPS`, `DE_MEGA`, `EP_MEGA`
+Sequences | **sequence.document_location** | String | The patent document section of the disclosed sequence(s): `DDESC`: detailed description, `CLAIM`: claims, `BSUMM`: summary, `BDRAW`: drawings, `WDESC`: full-text
+Sequences | **sequence.length_bucket** | String | Preset sequence length range (nucleotide: 0-100, 101-5000, 5001-100k, >100k; amino acids: 0-50, 51-300, >300). e.g. `NT_101-5000` or `AA_301`
 Sequences | **sequence.organism.tax_id** | String | The NCBI taxonomic identifier of the organism which the biological sequence is from. e.g. `9616`
-Sequences | **sequence.type** | String | The type of sequence e.g. N - nucleotide, P - peptide. e.g. `Nucleotide`, `Amino Acid`
+Sequences | **sequence.type** | String | The type of sequence e.g. `N` - nucleotide (including `DNA` and `RNA` sub-types), `P` - peptides/proteins
 Sequences | **sequence.organism.name** | String | Organism name e.g. `Homo sapiens`
 Sequences | **sequence.organism.name.exact** | String | Use this field for exact name matches e.g. `Homo sapiens`
 Citations | **reference_cited.npl_resolved_count** | Integer | The number of resolved scholalry works cited by a patent. e.g. `12`

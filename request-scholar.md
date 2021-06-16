@@ -125,7 +125,6 @@ Field | Description |  Possible Value
 **has_funding** | Indicates if the scholarly work has funding information | `true`/`false`
 **is_open_access** | Flags if the scholarly work has is Open Access | `true`/`false`
 **in_analytics_set** | Indicates if the scholarly work is part of the analytic dataset. | `true`/`false`
-
 {: .param-def }
 
  Example:

@@ -106,7 +106,7 @@ Citations | **cited_by.patent_count** | Integer | The count of citing patents (C
 Citations | **reference_cited.npl.external_id** | String | The resolved external identifier(s) for cited non-patent literature (DOI, PubMed ID, PubMed Central ID or Microsoft Aacademic ID). e.g. `10.1038/nature03090`, `12345678919`
 Citations | **reference_cited.npl.lens_id** | String | The Lens Id of the resolved non-patent literature citations (i.e. scholarly work Lens Id). e.g. `168-663-423-050-326`
 Citations | **reference_cited.npl.text** | String | The original unresolved non-patent literature citation text. e.g. `Cormen et al., 'Introduction to Algorithms (MIT Electrical Engineering and Computer Science Series,' MIT Press, ISBN 0262031418, pp. 665-667, 695-697.`
-Citations | **reference_cited.npl_count** | Integer | The number of scholalry works cited by a patent. e.g. `2`
+Citations | **reference_cited.npl_count** | Integer | The number of original non-patent literature citations. e.g. `2`
 Citations | **reference_cited.npl_resolved_count** | Integer | The number of resolved scholalry works cited by a patent. e.g. `12`
 Citations | **reference_cited.patent.lens_id** | String | The Lens Id of the cited patent. e.g. `106-213-498-661-220`
 Citations | **reference_cited.patent.document_id.jurisdiction** | String | The jurisdiction of the cited patent. e.g. `US`

@@ -99,9 +99,14 @@ Owners | **owner_all.name** | String | The patent owner(s) name. e.g. `CPS Techn
 Owners | **owner_all.name.exact** | String | The patent owner(s) name. N.B. Use this field for exact name matches. e.g. `CPS Technology Holdings LLC`
 Owners | **owner_all.recorded_date** | Date | The ownership / assignment event record date. e.g. `2009-05-22`
 Owners | **owner_all_count** | Integer | The count of all owners of the patent. N.B. Includes current and former owners. e.g. `5`
-Examiners | **primary_examiner.name** | String | Primary examiner's name
-Examiners | **primary_examiner.name.exact** | String | Examiner's name for exact name matches
-Examiners | **assistant_examiner.name** | String | Assistant examiner's name
+Examiners | **examiner.name** | String | The patent examiner name. e.g. `Jack W Keith`
+Examiners | **examiner.name.exact** | String | The patent examiner name. N.B. Use this field for exact name matches.
+Examiners | **examiner.department** | String | The patent examiner department. e.g. `3646`
+Examiners | **primary_examiner.name** | String | The primary patent examiner name. e.g. `Jack W Keith`
+Examiners | **primary_examiner.name.exact** | String | The primary patent examiner name. N.B. Use this field for exact name matches.
+Examiners | **primary_examiner.department** | String | The primary patent examiner department. e.g. `3646`
+Examiners | **assistant_examiner.name** | String | The assistant patent examiner name. e.g. `Lily C Garner` 
+Examiners | **assistant_examiner.name** | String | The assistant patent examiner name. N.B. Use this field for exact name matches. 
 Citations | **cited_by.patent.document_id.jurisdiction** | String | The jurisdiction of the citing patent. e.g. `EP`
 Citations | **cited_by.patent.document_id.doc_number** | String | The document number of the citing patent. e.g. `EP2020/063503`
 Citations | **cited_by.patent.document_id.kind** | String | The kind code of the citing patent. e.g. `B2`

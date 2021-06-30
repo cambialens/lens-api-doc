@@ -83,21 +83,24 @@ Families | **family.simple.member.lens_id** | String | The Lens Id of the simple
 Families | **family.simple.size** | Integer | The number of simple family member documents. e.g. `5`
 Applicants | **applicant.address** | String | The applicant address as recorded on the patent. e.g. `TORONTO, ONTARIA, CA`
 Applicants | **applicant.name** | String | The patent applicant(s) name. e.g. `CPS Technology Holdings LLC`
-Applicants | **applicant.name.keyword** | String | The patent applicant(s) name. N.B. Use this field for exact name matches. e.g. `CPS TECHNOLOGY HOLDINGS LLC`
+Applicants | **applicant.name.exact** | String | The patent applicant(s) name. N.B. Use this field for exact name matches. e.g. `CPS TECHNOLOGY HOLDINGS LLC`
 Applicants | **applicant.residence** | String | The country of the applicant (ISO 2-digit country code). e.g. `CA`
 Applicants | **applicant_count** | Integer | The number of applicants. e.g. `2`
 Inventors | **inventor.address** | String | The address of the inventor. e.g. `TORONTO, ONTARIA, CA`
 Inventors | **inventor.name** | String | The patent inventor(s) name. e.g. `Engebretson Steven P`
-Inventors | **inventor.name.keyword** | String | The patent inventor(s) name. N.B. Use this field for exact name matches. e.g. `ENGEBRETSON STEVEN P`
+Inventors | **inventor.name.exact** | String | The patent inventor(s) name. N.B. Use this field for exact name matches. e.g. `ENGEBRETSON STEVEN P`
 Inventors | **inventor.residence** | String | The country of residence of the inventor (ISO 2-digit country code). e.g. `DE`
 Inventors | **inventor_count** | Integer | The number of inventors. e.g. `3`
 Owners | **owner_all.address** | String | The owner address as recorded on the patent or legal event. e.g. `TORONTO, ONTARIA, CA`
 Owners | **owner_all.country** | String | The owner's country code (ISO 2-digit country code). e.g. `US`
 Owners | **owner_all.execution_date** | Date | The date of execution of ownership / assignment. e.g. `2009-05-22`
 Owners | **owner_all.name** | String | The patent owner(s) name. e.g. `CPS Technology Holdings LLC`
-Owners | **owner_all.name.keyword** | String | The patent owner(s) name. N.B. Use this field for exact name matches. e.g. `CPS Technology Holdings LLC`
+Owners | **owner_all.name.exact** | String | The patent owner(s) name. N.B. Use this field for exact name matches. e.g. `CPS Technology Holdings LLC`
 Owners | **owner_all.recorded_date** | Date | The ownership / assignment event record date. e.g. `2009-05-22`
 Owners | **owner_all_count** | Integer | The count of all owners of the patent. N.B. Includes current and former owners. e.g. `5`
+Examiners | **primary_examiner.name** | String | Primary examiner's name
+Examiners | **primary_examiner.name.exact** | String | Examiner's name for exact name matches
+Examiners | **assistant_examiner.name** | String | Assistant examiner's name
 Citations | **cited_by.patent.document_id.jurisdiction** | String | The jurisdiction of the citing patent. e.g. `EP`
 Citations | **cited_by.patent.document_id.doc_number** | String | The document number of the citing patent. e.g. `EP2020/063503`
 Citations | **cited_by.patent.document_id.kind** | String | The kind code of the citing patent. e.g. `B2`
@@ -125,7 +128,7 @@ Legal Events | **legal_status.has_spc** | Boolean | Indicates if the patent has 
 Agents & Attorneys | **agent.address** | String | The agent/attorney address as recorded on the patent. e.g. `20 Red Lion Street, GB-London WC1R 4PJ(GB)`
 Agents & Attorneys | **agent.country** | String | The country of the agent/attorney (ISO 2-digit country code). e.g. `GB`
 Agents & Attorneys | **agent.name** | String | The agent/attorney name. e.g. `Chapman, Paul William et al.`
-Agents & Attorneys | **agent.name.keyword** | String | The patent agent/attorney name. N.B. Use this field for exact name matches. e.g. `Paul Chapman`
+Agents & Attorneys | **agent.name.exact** | String | The patent agent/attorney name. N.B. Use this field for exact name matches. e.g. `Paul Chapman`
 Agents & Attorneys | **agent_count** | Integer | The number of agents/attorneys listed on the patent. e.g. `1`
 Classifications | **class_cpc.symbol** | String | CPC patent classification codes. e.g. `H01R11/01`
 Classifications | **class_ipcr.symbol** | String | IPCR patent classification codes. e.g. `H01R13/115`

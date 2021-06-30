@@ -172,6 +172,7 @@ Field  |  Type  |  Description |  Example
 **applicants** | List of [Applicants](#applicants) | List of applicants associated with the patent. | 
 **owners_all** | List of [Owners](#owners) | List of owners associated with the patent. | 
 **agents** | List of [Agents and Attorneys](#agents-and-attorneys) | List of agents and attorneys associated with the patent. | 
+**examiners** | List of [Examiners](#examiners) | List of examiners | 
 {: .param-def }
 
 <!-- **assignees** | List of [Assignees](#assignees) | List of assignees associated with the patent. |  -->
@@ -251,6 +252,15 @@ Field  |  Type  |  Description |  Example
 **extracted_name** | [Name](#name) | The agent/attorney name. | `Chapman, Paul William et al.`
 **extracted_address** | String | The agent/attorney address as recorded on the patent. | `20 Red Lion Street, GB-London WC1R 4PJ(GB)`
 **extracted_country** | String | The country of the agent/attorney (ISO 2-digit country code). | `GB`
+{: .param-def }
+
+### Examiners
+
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**primary_examiner.extracted_name** | [Name](#name) | The Primary examiner's name. | `Terapane; John F.`
+**primary_examiner.department** | String | Primary Examiner's department. | `2844`
+**assistant_examiner.extracted_name** | [Name](#name) | The Assistant examiner's name. | `Wolffe; Susan`
 {: .param-def }
 
 <!--

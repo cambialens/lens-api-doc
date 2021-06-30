@@ -157,7 +157,8 @@ Field | Description |  Possible Value
 **has_description** | Indicates if the description is available for the patent document. | `true`/`false`
 **has_full_text** | Indicates if the full text from the PTO is available for the patent document. | `true`/`false`
 **has_owner** | Indicates if the patent record has owner information. | `true`/`false`
-**has_inventor** | Indicates if the patent record has i'nevntor information. | `true`/`false`
+**has_examiner** | Indicates if the patent record has examiner information. | `true`/`false`
+**has_inventor** | Indicates if the patent record has inevntor information. | `true`/`false`
 **has_sequence** | Indicates if the patent record has sequence information. | `true`/`false`
 **has_title** | Indicates if the title is available for the patent document. | `true`/`false`
 **has_docdb** | Indicates if the DOCDB information is available for the patent document. | `true`/`false`

@@ -143,6 +143,7 @@ Field  |  Type  |  Description |  Example
  Field  |  Type  |  Description 
  --------  |  ---------  |  ------- 
 **claims** | List of [Priority Claims Documents](#priority-claims-documents) | List of priority claims documents | 
+**earliest_claim** | [Earliest Priority Claim](#priority-claims-documents) | Earliest priority claim | 
 {: .param-def }
 
 ### Priority Claims Documents
@@ -154,6 +155,13 @@ Field  |  Type  |  Description |  Example
 **kind** | String | The kind code of the priority document. | `A1`
 **date** | LocalDate | The publication date of the priority document. | `2009-05-22`
 **sequence** | Integer | The sequence of the Prioroty Claim Document | `3`
+{: .param-def }
+
+### Earliest Priority Claim
+
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**date** | Date | Earliest priority date. The earliest date of filing of a patent application, anywhere in the world, to protect an invention. The priority date may be earlier than the actual filing date of an application if an application claims priority to an earlier parent application, then its earliest priority date may be the same as the parent. | `2009-05-22`
 {: .param-def }
 
 ### Title

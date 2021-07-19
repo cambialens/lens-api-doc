@@ -143,7 +143,7 @@ Field  |  Type  |  Description |  Example
  Field  |  Type  |  Description 
  --------  |  ---------  |  ------- 
 **claims** | List of [Priority Claims Documents](#priority-claims-documents) | List of priority claims documents | 
-**earliest_claim** | [Earliest Priority Claim](#priority-claims-documents) | Earliest priority claim | 
+**earliest_claim** | [Earliest Priority Claim](#earliest-priority-claim) | Earliest priority claim | 
 {: .param-def }
 
 ### Priority Claims Documents

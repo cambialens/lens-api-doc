@@ -19,6 +19,7 @@ toc:
  --------  |  ---------  |  ------- |  -------
 **lens_id** | String | Unique lens identifier. Every document in the Lens has a unique 15-digit identifier called a Lens ID. | `186-488-232-022-055`
 **jurisdiction** | String | The jurisidiction of the patent document. | `US`
+**doc_number** | String | The document number assigned to a patent application on publication. | `20130227762`
 **kind** | String | The patent document kind code (varies by jurisdiction). | `A1`
 **date_published** | Date | Date of publication for the patent document. | `2009-05-22`
 **doc_key** | String | The unique document key for the patent document. | `EP_0227762_B1_19900411`

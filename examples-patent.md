@@ -17,6 +17,11 @@ toc:
         url: examples-patent.html#chinese-patents-with-crispr-in-the-title-or-abstract-or-claims-published-between-2010-09-01-to-2020-09-30
       - page: CRISPR Cas9 Patent applications
         url: examples-patent.html#patent-applications-from-2012-to-2020-with-crispr-cas9-in-the-claims
+      - page: US Patents by document number
+        url: examples-patent.html#us-patents-by-document-number
+      - page: Search for Dcument Identifiers
+        url: examples-patent.html#search-for-document-identifiers
+        
 ---
 
 ##### Find the 20 most recently published patent records from offset 10 that match the provided string query

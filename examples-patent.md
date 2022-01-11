@@ -193,3 +193,16 @@ toc:
     "include": ["lens_id", "biblio.publication_reference", "biblio.invention_title", "abstract", "claims"]
 }
 ```
+
+##### Search for document identifiers
+```json
+{
+    "query": {
+        "terms": {
+            "ids": ["US 8625931", "US_8626565_B2", "EP_0227762_B1_19900411", "EP 0227762 B1", "EP_0227762_B1", "EP0227762B1", "EP0227762", "145-564-229-856-440", "US 7,654,321 B2", "7,654,321", "US 2021/0191781 A1"]
+        }
+    },
+    "size": 10,
+    "include": ["lens_id", "biblio.publication_reference", "biblio.invention_title", "abstract", "claims"]
+}
+```

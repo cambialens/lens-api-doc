@@ -177,3 +177,19 @@ toc:
     }
 }
 ```
+
+##### US Patents by document number
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {"terms": {"doc_number": ["8625931", "8626565","8626684"]}},
+                {"term": {"jurisdiction": "US"}}
+            ]
+        }
+    },
+    "size": 10,
+    "include": ["lens_id", "biblio.publication_reference", "biblio.invention_title", "abstract", "claims"]
+}
+```

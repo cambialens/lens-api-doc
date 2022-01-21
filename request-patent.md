@@ -311,6 +311,10 @@ It matches each words separately. If you need to search whole phrase use [match 
    }
 }
 ```
+> Note: Both **Match** and **Match Phrase** are used for text searching but the difference is how they do it. For example, searching for `"Cleveland, OH"` differs between Match and Match Phrase like this:
+>* **Match**: standard search in which each word is matched separately (for example: `Cleveland` OR `OH`)
+>* **Match Phrase**: matches the exact phrase provided. In this case it will match the exact text `Cleveland, OH`
+
 
 ##### Range query
 [Range query] query to match records within the provided range.

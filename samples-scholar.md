@@ -187,6 +187,59 @@ def scroll(scroll_id):
 scroll(scroll_id=None)
 ```
 
+#### Python - Cursor Based Pagination - List of Identifiers
+Use this script of you have a large list of Lens identifiers to send in the request. Sends 5,000 identifiers per request.
+
+```python
+import requests
+import time
+import itertools
+
+url = 'https://api.lens.org/scholarly/search'
+headers = {'Authorization': 'Bearer YOUR-TOKEN', 'Content-Type': 'application/json'}
+
+# Recursive function to scroll through paginated results
+def scroll(scroll_id, request_body):
+  # Change the request_body to prepare for next scroll api call
+  # Make sure to append the include fields to make faster response
+  if scroll_id is not None:
+    request_body = '''{"scroll_id": "%s", "include": %s}''' % (scroll_id, include)
+
+  # make api request
+  response = requests.post(url, data=request_body, headers=headers) 
+
+  # If rate-limited, wait for n seconds and proceed the same scroll id
+  # Since scroll time is 1 minutes, it will give sufficient time to wait and proceed
+  if response.status_code == requests.codes.too_many_requests:
+    time.sleep(8)
+    scroll(scroll_id, request_body)
+  # If the response is not ok here, better to stop here and debug it
+  elif response.status_code != requests.codes.ok:
+    print response.json()
+  # If the response is ok, do something with the response, take the new scroll id and iterate
+  else:
+    json = response.json()
+    scroll_id = json['scroll_id'] # Extract the new scroll id from response
+    print json['data'] #DO something with your data
+    scroll(scroll_id, request_body)
+
+include = '''["lens_id", "patent_citations"]'''
+identifiers = [list of Lens identifiers which can be more than 10K]
+# take 5000 at a time from the list and scroll for the 5000
+for ids in itertools.islice(identifiers, 5000):
+  request_body = '''{
+    "query": {
+        "terms":  {
+          "lens_id":'''+(json.dumps(ids))+'''
+      }
+    },
+    "include": %s
+  }''' % include
+
+  # start recursive scrolling
+  scroll(scroll_id=None, request_body)
+```
+
 ### Java
 ```java
 import java.io.*;

@@ -61,12 +61,18 @@ Field | Type | Description
 **author.last_name** | String | The author's last name e.g. `Kupco`
 **author.initials** | String | Author Initials e.g. `A`
 **author.display_name** | String | Author's full name e.g. `Alexander Kupco`
-**author.magid** | String | Author MAG identifier
-**author.orcid** | String | Author ORCID identifier
+**author.magid** | String | Author MAG identifier 
+**author.orcid** | String | Author ORCID identifier e.g. `0000-0001-5352-4498`
 **author.affiliation.name** | String | The institution associated with the author affiliations. e.g. `Stony Brook`
 **author.affiliation.name.exact** | String | Exactly matches the full institution name (case sensetive). e.g. `Stony Brook University`
-**author.affiliation.grid_id** | String | Affiliation grid id e.g. `grid.9018.0`
-**author.affiliation.country_code** | String | Country Code e.g. `US`,`DE`,`CH`, `FR`
+**author.affiliation.name_original** | String | The author's original affiliation including the institution name and address. e.g. `School of Engineering and Applied Sciences, Harvard University, Cambridge, Massachusetts USA`
+**author.affiliation.grid_id** | String | The institution GRID identifier e.g. `grid.9018.0`. **N.B** GRID identifiers will be deprecated in future and replaced with [ROR identifiers](https://ror.org/).
+**author.affiliation.ror_id** | String | The institution ROR identifier e.g. `https://ror.org/03yrm5c26`
+**author.affiliation.country_code** | String | The institution Country Code e.g. `US`,`DE`,`CH`,`FR`, etc. **N.B** this field will be deprecated in future, we recommend using the `author.affiliation.address.country_code` field instead. 
+**author.affiliation.address.country_code** | String | The alpha-2 country code of the institution e.g. `US`,`DE`,`CH`,`FR`, etc.
+**author.affiliation.address.city** | String | The institution city e.g. `Tokyo`
+**author.affiliation.address.state_code** | String | The institution state e.g. `US-NY`
+**author.affiliation.type** | String | The institution type e.g. `Government`, `Company`, `Facility`, `Healthcare`, `Education`
 **title** | String | Title of the scholarly work e.g. `Malaria`
 **language** | String | Languages e.g. `en`, `de`, `fr`, `zh_chs`
 **chemical.mesh_id** | String | MeSH term id e.g. `D000293`
@@ -114,7 +120,9 @@ Field | Description |  Possible Value
 ------- | ------| -------
 **has_patent_citations** | Indicates if the scholarly work has been cited by a patent document. | `true`/`false`
 **has_affiliation** | Has affiliation | `true`/`false`
-**has_affiliation_grid** | Has affiliation grid | `true`/`false`
+**has_affiliation_grid** | Has affiliation GRID identifier. N.B. GRID identifiers will be deprecated in future and replaced with [ROR identifiers](https://ror.org/) | `true`/`false`
+**has_affiliation_ror** | Has affiliation ROR identifier | `true`/`false`
+**has_orcid** | Has an author ORCID identifier | `true`/`false`
 **has_mesh_term** | Has MeSH term | `true`/`false`
 **has_chemical** | Indicates if the scholarly work has an associated chemical substance  | `true`/`false`
 **has_keyword** | Indicates if the scholarly work has keyword | `true`/`false`
@@ -125,6 +133,8 @@ Field | Description |  Possible Value
 **has_funding** | Indicates if the scholarly work has funding information | `true`/`false`
 **is_open_access** | Flags if the scholarly work has is Open Access | `true`/`false`
 **in_analytics_set** | Indicates if the scholarly work is part of the analytic dataset. | `true`/`false`
+**source.is_diamond** | Non-APC Journal flag - Indicates if the journal does not have article processing charges (APCs), i.e. Diamond Open Access journals. | `true`/`false`
+
 {: .param-def }
 
  Example:

@@ -66,9 +66,9 @@ Field | Type | Description
 **author.affiliation.name** | String | The institution associated with the author affiliations. e.g. `Stony Brook`
 **author.affiliation.name.exact** | String | Exactly matches the full institution name (case sensetive). e.g. `Stony Brook University`
 **author.affiliation.name_original** | String | The author's original affiliation including the institution name and address. e.g. `School of Engineering and Applied Sciences, Harvard University, Cambridge, Massachusetts USA`
-**author.affiliation.grid_id** | String | The institution GRID identifier e.g. `grid.9018.0`. **N.B** GRID identifiers will be deprecated in future and replaced with [ROR identifiers](https://ror.org/).
+**author.affiliation.grid_id** | String | The institution GRID identifier e.g. `grid.9018.0`. *N.B* GRID identifiers will be deprecated in future and replaced with [ROR identifiers](https://ror.org/).
 **author.affiliation.ror_id** | String | The institution ROR identifier e.g. `https://ror.org/03yrm5c26`
-**author.affiliation.country_code** | String | The institution Country Code e.g. `US`,`DE`,`CH`,`FR`, etc. **N.B** this field will be deprecated in future, we recommend using the `author.affiliation.address.country_code` field instead. 
+**author.affiliation.country_code** | String | The institution Country Code e.g. `US`,`DE`,`CH`,`FR`, etc. *N.B* this field will be deprecated in future, we recommend using the `author.affiliation.address.country_code` field instead. 
 **author.affiliation.address.country_code** | String | The alpha-2 country code of the institution e.g. `US`,`DE`,`CH`,`FR`, etc.
 **author.affiliation.address.city** | String | The institution city e.g. `Tokyo`
 **author.affiliation.address.state_code** | String | The institution state e.g. `US-NY`

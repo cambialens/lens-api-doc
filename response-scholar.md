@@ -25,7 +25,7 @@ toc:
  **publication_supplementary_type** | Array of String | Supplementary publication type | `["review"]`
  **authors** | Array of [Author](#author) | Authors| |
  **title** | String | Title of the scholarly work | `Malaria`
- **external_ids** | Array of [Id](#id) | The external identifier(s) for a scholarly work (DOI, PubMed ID, PubMed Central ID, Microsoft Academic ID or CORE) | |
+ **external_ids** | Array of [Ids](#ids) | The external identifier(s) for a scholarly work (DOI, PubMed ID, PubMed Central ID, Microsoft Academic ID or CORE) | |
  **start_page** | String | Start page | `893`
  **end_page** | String | End page | `916`
  **volume** | String | Volume | `32`
@@ -67,7 +67,7 @@ toc:
 **last_name** | String | The author's last name | `Kupco`
 **initials** | String | Author Initials | `A`
 **affiliations** | Array of [Affiliation](#affiliation) | The institution/affiliations associated with Author.
-**ids** | Array of [Id](#id) | Author's MAG, ORCID identifiers | `[{"type": "magid", "value": "1234567890"}]`
+**ids** | Array of [Ids](#ids) | Author's MAG, ORCID identifiers | `[{"type": "magid", "value": "1234567890"}]`
 {: .param-def }
 
 #### Affiliation
@@ -77,7 +77,9 @@ toc:
 **name** | String | The institution associated with the author affiliations. | `Stony Brook University`
 **grid_id** | String | Affiliation grid id | `grid.9018.0`
 **country_code** | String | Comma separated country codes | `DE`
+**ids** | Array of [Ids](#ids) | The external institution identifiers associated with the author's affiliation
 {: .param-def }
+
 
 #### Reference
 
@@ -168,12 +170,12 @@ Field | Type |  Description | Example
 **url** | String | URL String | `http://cds.cern.ch/record/2291692`
 {: .param-def }
 
-#### ID
+#### Ids
 
  Field | Type |  Description | Example
 ------- |:------:| -------|---------
-**type** | String | The type/s of external identifiers for the scholarly work | `doi`, `pmid`, `magid`
-**value** | String | The external identifier(s) for a scholarly work | `10.1016/s0031-3955(16)34861-1`
+**type** | String | The type/s of external identifiers for the scholarly work, author, institution, etc. | `doi`, `pmid`, `magid`, `orcid`, `grid`, `ror`, etc.
+**value** | String | The external identifier(s) for the scholarly work, author, institution, etc. | `10.1016/s0031-3955(16)34861-1`, `0000-0003-3902-2234`, `grid.425957.8`, `https://ror.org/056x7d368`, etc.
 {: .param-def }
 
 ### Sample API Response

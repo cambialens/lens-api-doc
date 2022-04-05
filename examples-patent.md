@@ -211,3 +211,8 @@ toc:
     "include": ["lens_id", "biblio.publication_reference", "biblio.invention_title", "abstract", "claims"]
 }
 ```
+
+
+##### Using GET Requests
+
+> `[GET] https://api.lens.org/patent/search?token=[your-access-token]&size=10&query=YOUR_QUERY&include=biblio,lens_id&sort=desc(date_published)`

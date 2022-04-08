@@ -118,6 +118,7 @@ You can use following pre-defined filters to refine search results:
 
 Field | Description |  Possible Value
 ------- | ------| -------
+**is_referenced_by_scholarly** | Indicates if the scholarly work has been cited by a another scholarly work at least once. | `true`/`false`
 **has_patent_citations** | Indicates if the scholarly work has been cited by a patent document. | `true`/`false`
 **has_affiliation** | Has affiliation | `true`/`false`
 **has_affiliation_grid** | Has affiliation GRID identifier. N.B. GRID identifiers will be deprecated in future and replaced with [ROR identifiers](https://ror.org/) | `true`/`false`

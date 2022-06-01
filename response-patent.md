@@ -374,7 +374,7 @@ Field  |  Type  |  Description |  Example
 **jurisdiction** | String ([Jurisdiction](#jurisidction)) | The jurisidiction of the patent document. | `US`
 **doc_number** | String | The document number assigned to a patent application on publication. | `20130227762`
 **kind** | String | The patent document kind code (varies by jurisdiction). | `A1`
-**date** | LocalDate | Date of publication for the patent document, or filing date for the application reference. **Note** date information for [Cited By Patents](#cited-by-patents) is not always available. | `2009-05-22`
+**date** | LocalDate | Date of publication for the patent document, or filing date for the application reference. **NB** date information for [Cited By Patents](#cited-by-patents) is not always available. | `2009-05-22`
 {: .param-def }
 
 ---

@@ -48,11 +48,12 @@ Field | Type | Description
 **patent_citation.lens_id** | String | ID of Referenced by patents
 **patent_citation_count** | Integer | Number of patent citations
 **external_id_type** | String | External Identifier type (Crossref: `doi`, Microsoft Academic: `magid`, PubMed: `pmid`, PubMed Central: `pmcid`, CORE: `coreid`)
-**doi** | String | Crossref DOI Identifier
-**pmid** | String | PubMed ID Identifier
-**pmcid** | String | PubMed Central ID Identifier
-**magid** | String | Microsoft Academic ID
-**coreid** | String | CORE Identifier
+**ids.doi** | String | Crossref DOI Identifier
+**ids.pmid** | String | PubMed ID Identifier
+**ids.pmcid** | String | PubMed Central ID Identifier
+**ids.magid** | String | Microsoft Academic ID
+**ids.coreid** | String | CORE Identifier
+**ids.openalex** | String | OpenAlex Identifier
 **created** | Date | Record created date e.g. `2018-05-12`, `2016-08-01T00:00:00+00:00`
 **publication_type** | String | Publication Type `conference proceedings`, `book chapter`, `journal article`, `component`, `conference proceedings article`, `dataset`, `libguide`, `reference entry`, `book`
 **publication_supplementary_type** | String | Supplementary publication type e.g. `review`, `comparative study`, `research support`

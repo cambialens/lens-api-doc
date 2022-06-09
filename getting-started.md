@@ -37,10 +37,18 @@ As of the current version, Lens offers the following API endpoints:
 - `[GET] https://api.lens.org/patent/search`
 - `[GET] https://api.lens.org/patent/{lens_id}`
 
+**Patent Data Schema:** 
+- `[POST] https://api.lens.org/schema/patent`
+- `[GET] https://api.lens.org/schema/patent`
+
 **Scholarly Works:** 
 - `[POST] https://api.lens.org/scholarly/search`
 - `[GET] https://api.lens.org/scholarly/search`
 - `[GET] https://api.lens.org/scholarly/{lens_id}`
+
+**Scholarly Works Data Schema:** 
+- `[POST] https://api.lens.org/schema/scholarly`
+- `[GET] https://api.lens.org/schema/scholarly`
 
 **Collections:** 
 - `[POST] https://api.lens.org/collections/{collection_id}`
@@ -53,7 +61,9 @@ As of the current version, Lens offers the following API endpoints:
 - `[GET] https://api.lens.org/subscriptions/patent_api/usage`
 - `[GET] https://api.lens.org/subscriptions/scholarly_api/usage`
 
+
 **Swagger Documentation is available here:** [https://api.lens.org/swagger-ui.html](https://api.lens.org/swagger-ui.html)
+
 
 ### API Access
 

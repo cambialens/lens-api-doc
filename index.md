@@ -21,7 +21,7 @@ toc:
     <h4>Available API Resources:</h4>
     <div>Scholarly Schema Version: <div class="badge">1.6.2</div></div>
     <div>Patent Schema Version: <div class="badge">1.4.0</div></div>
-    <footer>Last Update: June 29, 2021</footer>
+    <footer>Last Update: June 9, 2022</footer>
 </div>
 
 This service allows you to access the full corpus of Lens scholarly works and patent using the flexibility and convenience of a REST API. The versioned API allows you to perform and combine several types of searches using a number of different operations. This API documentation provides guidelines for getting you started with the API and details the request/response schema with examples. A [Swagger UI] is also provided for query development and a GitHub repository is provided for issue tracking.

@@ -16,6 +16,7 @@ permalink: /support.html
 
 API Version | Schema Versions | Date Released | Notes
 ------- | ------| ------| -------
+`2.5.0` | - Scholar: `1.6.2` <br/> - Patent: `1.4.0` | Jun 9, 2022 | - Added scholarly request fields: `ids.doi`, `ids.pmid`, `ids.pmcid`, `ids.magid`, `ids.coreid` and `ids.openalex`  <br/> - Added data schema endpoints.
 `2.4.0` | - Scholar: `1.6.1` <br/> - Patent: `1.3.1` | Feb 15, 2022 | - Added scholarly request fields: `author.affiliation.ror_id`, `author.affiliation.name_original`, `source.is_diamond`, `author.affiliation.address.city`, `author.affiliation.address.state_code`, `author.affiliation.address.country_code`, `author.affiliation.type`, `has_affiliation_ror`  <br/> - Added scholarly response field: `authors.affiliations.ids` <br/> - Added `maxResultPerPage` subscription plan parameter to the API usage endpoints
 `2.2.2` | - Scholar: `1.5.2` <br/> - Patent: `1.2.7` | Jun 29, 2021 | - Added Patent response fields `biblio.parties.examiners` <br/> - Added patent request fields `has_examiner` - Added `language` support in request <br/> - Added scholarly search fields `reference.lens_id`, `in_analytics_set`
 `2.1.1` | - Scholar: `1.5.0` <br/> - Patent: `1.2.5` | May 19, 2021 | - Added Patent response fields `biblio.references_cited.citations.cited_phase`, `biblio.references_cited.patent_count` <br/> - Added patent request fields `earliest_priority_claim_date`, `sequence.organism.tax_id`, `sequence.organism.name`, `sequence.organism.name.exact` <br/> - Added scholarly fields `source.issn.type`, `date_published_parts`

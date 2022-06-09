@@ -30,7 +30,7 @@ We have described several supported query types and use cases in the documentati
 
 We value your comments and feedback on the API via our API survey. If you or your library have not taken it yet, please [take our survey](https://lensorg.typeform.com/to/QM6aMm). For current API users, please follow the attribution requirements and make sure the Lens logo is visible on your website if you are using Lens data. For new users, upon completing the scholarly API request, please make sure to provide your full name, your organisation address (official email address as well please), and a comprehensive description of the intended use of the scholarly data.
 
-You can request access to the Lens Scholarly API, Patent API or PatSeq Bulk Downloads, or manage your access plans and tokens from your [Lens user profile](https://www.lens.org/lens/user/subscriptions).
+You can request access to the Lens Scholarly API, Patent API or PatSeq Bulk Downloads, or manage your access plans and tokens from your [Lens user profile](https://www.lens.org/lens/user/subscriptions/requested).
 
 
 [//]: # (Reference Links)

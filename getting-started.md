@@ -38,7 +38,6 @@ As of the current version, Lens offers the following API endpoints:
 - `[GET] https://api.lens.org/patent/{lens_id}`
 
 **Patent Data Schema:** 
-- `[POST] https://api.lens.org/schema/patent`
 - `[GET] https://api.lens.org/schema/patent`
 
 **Scholarly Works:** 
@@ -47,7 +46,6 @@ As of the current version, Lens offers the following API endpoints:
 - `[GET] https://api.lens.org/scholarly/{lens_id}`
 
 **Scholarly Works Data Schema:** 
-- `[POST] https://api.lens.org/schema/scholarly`
 - `[GET] https://api.lens.org/schema/scholarly`
 
 **Collections:** 

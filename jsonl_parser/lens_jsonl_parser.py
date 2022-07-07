@@ -1,9 +1,9 @@
 import json
 import os
 import sys
-from jsonl_parser.models import Work, Author
-from jsonl_parser.parsers import WorkParser
-from jsonl_parser.writers import WorkCsvWriter
+from models import Work, Author
+from parsers import WorkParser
+from writers import WorkCsvWriter
 
 json_file = sys.argv[1]
 with open(json_file, 'r', encoding='utf-8-sig') as input_file:

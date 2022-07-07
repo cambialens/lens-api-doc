@@ -2,7 +2,7 @@
 import csv
 from typing import List
 
-from jsonl_parser.models import Affiliation, Author, Work
+from models import Affiliation, Author, Work
 
 class WorkCsvWriter:
 	def __init__(self, location):

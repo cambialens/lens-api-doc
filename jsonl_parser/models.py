@@ -1,5 +1,3 @@
-from email.utils import make_msgid
-
 class Work:
 	def __init__(self, lens_id, title, publication_type, authors, magid, doi, coreid, patent_citations, abstract):
 		self.lens_id = lens_id
@@ -28,4 +26,3 @@ class Affiliation:
 		self.ror = ror
 		self.grid_id = grid_id
 		self.country_code = country_code
-		

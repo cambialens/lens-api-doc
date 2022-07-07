@@ -1,4 +1,4 @@
-from jsonl_parser.models import Work, Author, Affiliation
+from models import Work, Author, Affiliation
 
 class WorkParser:
 

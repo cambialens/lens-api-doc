@@ -374,7 +374,7 @@ Field  |  Type  |  Description |  Example
 **jurisdiction** | String ([Jurisdiction](#jurisidction)) | The jurisidiction of the patent document. | `US`
 **doc_number** | String | The document number assigned to a patent application on publication. | `20130227762`
 **kind** | String | The patent document kind code (varies by jurisdiction). | `A1`
-**date** | LocalDate | Date of publication for the patent document, or filing date for the application reference. | `2009-05-22`
+**date** | LocalDate | Date of publication for the patent document, or filing date for the application reference. N.B. date information for [Cited By Patents](#cited-by-patents) is not always available. | `2009-05-22`
 {: .param-def }
 
 ---
@@ -456,7 +456,10 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                     "date": "2010-12-31",
                     "sequence": 1
                 }
-            ]
+            ],
+            "earliest_claim": {
+                "date": "2010-12-31"
+            }
         },
         "invention_title": [
             {
@@ -530,6 +533,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
             "owners_all": [
                 {
                     "recorded_date": "2013-12-11",
+                    "execution_date": "2013-12-11",
                     "extracted_name": {
                         "value": "PROGENIKA BIOPHARMA, S.A."
                     }
@@ -574,7 +578,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                             "date": "2006-07-20"
                         },
                         "lens_id": "185-701-234-511-622"
-                    }
+                    },
+                    "cited_phase": "SEA"
                 },
                 {
                     "sequence": 2,
@@ -582,11 +587,12 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                         "text": "AVENT N D ET AL: \"The bloodgen project of the European Union, 2003-2009\", TRANSFUSION MEDICINE AND HEMOTHERAPY 2009 S. KARGER AG CHE LNKD- DOI:10.1159/000218192, vol. 36, no. 3, June 2009 (2009-06-01), pages 162 - 167, XP002633276, ISSN: 1660-3796",
                         "lens_id": "004-047-148-411-345",
                         "external_ids": [
-                            "pmc2980524",
                             "10.1159/000218192",
+                            "pmc2980524",
                             "21113258"
                         ]
-                    }
+                    },
+                    "cited_phase": "SEA"
                 },
                 {
                     "sequence": 3,
@@ -595,10 +601,11 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                         "lens_id": "125-529-168-227-632",
                         "external_ids": [
                             "10.1111/j.1537-2995.2009.02573.x",
-                            "pmc2908519",
-                            "20088832"
+                            "20088832",
+                            "pmc2908519"
                         ]
-                    }
+                    },
+                    "cited_phase": "SEA"
                 },
                 {
                     "sequence": 4,
@@ -606,10 +613,11 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                         "text": "PHAM BACH-NGA ET AL: \"Heterogeneous molecular background of the weak C, VS+, hr(B)-, Hr(B)- phenotype in black persons\", TRANSFUSION (MALDEN), vol. 49, no. 3, March 2009 (2009-03-01), pages 495 - 504, XP002633278, ISSN: 0041-1132",
                         "lens_id": "086-240-354-498-516",
                         "external_ids": [
-                            "10.1111/j.1537-2995.2008.02005.x",
-                            "19040491"
+                            "19040491",
+                            "10.1111/j.1537-2995.2008.02005.x"
                         ]
-                    }
+                    },
+                    "cited_phase": "SEA"
                 },
                 {
                     "sequence": 5,
@@ -621,7 +629,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                             "date": "2006-03-30"
                         },
                         "lens_id": "071-147-450-571-460"
-                    }
+                    },
+                    "cited_phase": "SEA"
                 },
                 {
                     "sequence": 6,
@@ -633,7 +642,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                             "date": "2001-10-31"
                         },
                         "lens_id": "033-566-032-105-609"
-                    }
+                    },
+                    "cited_phase": "SEA"
                 },
                 {
                     "sequence": 7,
@@ -641,21 +651,23 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                         "text": "FAAS B H W ET AL: \"Rh E/e genotyping by allele-specific primer amplification\", BLOOD, AMERICAN SOCIETY OF HEMATOLOGY, US, vol. 85, no. 3, 1 January 1995 (1995-01-01), pages 829 - 832, XP002614101, ISSN: 0006-4971",
                         "lens_id": "017-174-583-162-658",
                         "external_ids": [
-                            "7833484",
-                            "10.1182/blood.v85.3.829.bloodjournal853829"
+                            "10.1182/blood.v85.3.829.bloodjournal853829",
+                            "7833484"
                         ]
-                    }
+                    },
+                    "cited_phase": "SEA"
                 },
                 {
                     "sequence": 8,
                     "nplcit": {
-                        "text": "MAASKANT-VAN WIJK P A ET AL: \"GENOTYPING OR RHD BY MULTIPLEX POLYMERASE CHAIN REACTIONS ANALYSIS OF SIX RHD-SPECIFIC EXONS\", TRANSFUSION, AMERICAN ASSOCIATION OF BLOOD BANKS, BETHESDA, MD, US, vol. 11, no. 38, 1 November 1998 (1998-11-01), pages 1015 - 1021, XP008005129, ISSN: 0041-1132, DOI: DOI:10.1046/J.1537-2995.1998.38111299056309.X",
+                        "text": "MAASKANT-VAN WIJK P A ET AL: \"GENOTYPING OR RHD BY MULTIPLEX POLYMERASE CHAIN REACTIONS ANALYSIS OF SIX RHD-SPECIFIC EXONS\", TRANSFUSION, AMERICAN ASSOCIATION OF BLOOD BANKS, BETHESDA, MD, US, vol. 11, no. 38, 1 November 1998 (1998-11-01), pages 1015 - 1021, XP008005129, ISSN: 0041-1132, DOI: 10.1046/J.1537-2995.1998.38111299056309.X",
                         "lens_id": "059-652-196-800-856",
                         "external_ids": [
-                            "10.1046/j.1537-2995.1998.38111299056309.x",
-                            "9838930"
+                            "9838930",
+                            "10.1046/j.1537-2995.1998.38111299056309.x"
                         ]
-                    }
+                    },
+                    "cited_phase": "SEA"
                 },
                 {
                     "sequence": 9,
@@ -667,7 +679,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                             "date": "2011-01-13"
                         },
                         "lens_id": "187-498-666-224-100"
-                    }
+                    },
+                    "cited_phase": "SEA"
                 },
                 {
                     "sequence": 1,
@@ -679,7 +692,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                             "date": "2008-12-31"
                         },
                         "lens_id": "096-184-763-479-702"
-                    }
+                    },
+                    "cited_phase": "APP"
                 },
                 {
                     "sequence": 2,
@@ -691,7 +705,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                             "date": "2010-01-07"
                         },
                         "lens_id": "082-610-612-867-442"
-                    }
+                    },
+                    "cited_phase": "APP"
                 },
                 {
                     "sequence": 3,
@@ -703,7 +718,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                             "date": "2010-01-07"
                         },
                         "lens_id": "080-193-167-878-372"
-                    }
+                    },
+                    "cited_phase": "APP"
                 },
                 {
                     "sequence": 4,
@@ -715,7 +731,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                             "date": "2010-01-07"
                         },
                         "lens_id": "160-241-370-254-307"
-                    }
+                    },
+                    "cited_phase": "APP"
                 },
                 {
                     "sequence": 5,
@@ -727,7 +744,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                             "date": "2010-01-07"
                         },
                         "lens_id": "189-848-800-128-321"
-                    }
+                    },
+                    "cited_phase": "APP"
                 },
                 {
                     "sequence": 6,
@@ -739,7 +757,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                             "date": "2010-01-07"
                         },
                         "lens_id": "091-724-438-661-108"
-                    }
+                    },
+                    "cited_phase": "APP"
                 },
                 {
                     "sequence": 7,
@@ -751,7 +770,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                             "date": "2010-01-07"
                         },
                         "lens_id": "180-004-304-457-874"
-                    }
+                    },
+                    "cited_phase": "APP"
                 },
                 {
                     "sequence": 8,
@@ -763,7 +783,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                             "date": "2010-01-07"
                         },
                         "lens_id": "014-308-334-256-321"
-                    }
+                    },
+                    "cited_phase": "APP"
                 },
                 {
                     "sequence": 9,
@@ -775,7 +796,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                             "date": "2010-01-14"
                         },
                         "lens_id": "149-519-969-815-807"
-                    }
+                    },
+                    "cited_phase": "APP"
                 },
                 {
                     "sequence": 10,
@@ -787,7 +809,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                             "date": "2010-01-14"
                         },
                         "lens_id": "134-590-889-498-511"
-                    }
+                    },
+                    "cited_phase": "APP"
                 },
                 {
                     "sequence": 11,
@@ -799,13 +822,15 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                             "date": "2010-01-14"
                         },
                         "lens_id": "087-699-367-879-444"
-                    }
+                    },
+                    "cited_phase": "APP"
                 },
                 {
                     "sequence": 12,
                     "nplcit": {
                         "text": "M. E. REID; C. LOMAS-FRANCIS: \"The Blood Group Antigen FactsBook\", 2004, ELSEVIER LTD."
-                    }
+                    },
+                    "cited_phase": "APP"
                 },
                 {
                     "sequence": 13,
@@ -814,10 +839,11 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                         "lens_id": "125-529-168-227-632",
                         "external_ids": [
                             "10.1111/j.1537-2995.2009.02573.x",
-                            "pmc2908519",
-                            "20088832"
+                            "20088832",
+                            "pmc2908519"
                         ]
-                    }
+                    },
+                    "cited_phase": "APP"
                 },
                 {
                     "sequence": 14,
@@ -825,10 +851,11 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                         "text": "BACH-NGA PHAM; THIERRY PEYRARD; GENEVIEVE JUSZCZAK; ISABELLE DUBEAUX; DOMINIQUE GIEN; ANTOINE BLANCHER; JEAN-PIERRE CARTRON; PHILI: \"Heterogeneous molecular background of the weak C, VS+, hrB-, HrB- phenotype in black persons\", TRANSFUSION, vol. 49, 2009, pages 495 - 504",
                         "lens_id": "086-240-354-498-516",
                         "external_ids": [
-                            "10.1111/j.1537-2995.2008.02005.x",
-                            "19040491"
+                            "19040491",
+                            "10.1111/j.1537-2995.2008.02005.x"
                         ]
-                    }
+                    },
+                    "cited_phase": "APP"
                 },
                 {
                     "sequence": 15,
@@ -839,28 +866,23 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                             "10.1046/j.1537-2995.2002.00096.x",
                             "12084173"
                         ]
-                    }
+                    },
+                    "cited_phase": "APP"
                 },
                 {
                     "sequence": 16,
                     "nplcit": {
                         "text": "M. E. REID; C. LOMAS-FRANCIS.: \"The Blood group antigen FactsBook\", 2004, ELSEVIER LTD."
-                    }
+                    },
+                    "cited_phase": "APP"
                 }
             ],
-            "npl_resolved_count": 8,
-            "npl_count": 10
+            "patent_count": 15,
+            "npl_count": 10,
+            "npl_resolved_count": 8
         },
         "cited_by": {
             "patents": [
-                {
-                    "document_id": {
-                        "jurisdiction": "US",
-                        "doc_number": "9359643",
-                        "kind": "B2"
-                    },
-                    "lens_id": "007-584-344-944-889"
-                },
                 {
                     "document_id": {
                         "jurisdiction": "US",
@@ -879,30 +901,30 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                 },
                 {
                     "document_id": {
+                        "jurisdiction": "US",
+                        "doc_number": "9359643",
+                        "kind": "B2"
+                    },
+                    "lens_id": "007-584-344-944-889"
+                },
+                {
+                    "document_id": {
+                        "jurisdiction": "WO",
+                        "doc_number": "2014135331",
+                        "kind": "A1"
+                    },
+                    "lens_id": "089-849-576-069-505"
+                },
+                {
+                    "document_id": {
                         "jurisdiction": "WO",
                         "doc_number": "2012171990",
                         "kind": "A1"
                     },
                     "lens_id": "084-623-881-707-629"
-                },
-                {
-                    "document_id": {
-                        "jurisdiction": "WO",
-                        "doc_number": "2014135331",
-                        "kind": "A1"
-                    },
-                    "lens_id": "089-849-576-069-505"
-                },
-                {
-                    "document_id": {
-                        "jurisdiction": "WO",
-                        "doc_number": "2014135331",
-                        "kind": "A1"
-                    },
-                    "lens_id": "089-849-576-069-505"
                 }
             ],
-            "count": 6
+            "patent_count": 5
         }
     },
     "families": {
@@ -1013,7 +1035,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
         "anticipated_term_date": "2030-12-31",
         "calculation_log": [
             "Application Filing Date: 2010-12-31",
-            "Granted date: 2013-12-25"
+            "Granted Date: 2013-12-25",
+            "Anticipated Termination Date: 2030-12-31"
         ],
         "patent_status": "ACTIVE"
     },
@@ -1043,12 +1066,12 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                 },
                 {
                     "claim_text": [
-                        "A method according to any one of the preceding claims, wherein:\n a) the method further comprises determining the RHD and RHC antigen phenotypes of the subject; and/or \n b) the method comprises detecting the presence or absence of a blood type variant selected from:  RHD*DIIIa ;  RHD*DIVa-2;  or  RHD*DIIIa-CE(4-7)-D  or  RHD*DIIIa-CE(4-7)-D )-like blood type variants, e.g. wherein the method comprises detecting the presence or absence of  RHD*DIIIa-CE(4-7)-D  or  RHD*DIIIa-CE(4-7)-D )-like blood type variants; and/or \n c) marker (iii) is the SNP within RHD exon 4 at position 602 of the RHD coding sequence (rs1053355); and/or \n d) the RHCE*C allele is determined by determining the..."
+                        "A method according to any one of the preceding claims, wherein:\n a) the method further comprises determining the RHD and RHC antigen phenotypes of the subject; and/or \n b) the method comprises detecting the presence or absence of a blood type variant selected from:  RHD*DIIIa ;  RHD*DIVa-2;  or  RHD*DIIIa-CE(4-7)-D  or  RHD*DIIIa-CE(4-7)-D )-like blood type variants, e.g. wherein the method comprises detecting the presence or absence of  RHD*DIIIa-CE(4-7)-D  or  RHD*DIIIa-CE(4-7)-D )-like blood type variants; and/or \n c) marker (iii) is the SNP within RHD exon 4 at position 602 of the RHD coding sequence (rs1053355); and/or \n d) the RHCE*C allele is determined by determining the presence or absence of RHCE*C intron 2, or any one of the following positions in the RHCE coding sequence: position 307 (exon 2), position 48 (exon 1), position 150 (exon 2), position 178 (exon 2), position 201 (exon 2) and/or position 203 (exon 2)."
                     ]
                 },
                 {
                     "claim_text": [
-                        "A method according to any one of the preceding claims, wherein the sample comprises nucleic acid and the method comprises amplifying the nucleic acid or a portion thereof by PCR using primers, e.g. wherein:\n a) the PCR primers for determining the RHCE*C allele are a forward PCR primer specific for RHCE*C, and a non-specific reverse PCR primer, e.g. wherein\n (i) the non-specific reverse primer is shared with RHD, RHC*C and/or RHC*c; and/or \n (ii) the PCR primers comprise:\n Forward: 5'-GGCCACCACCATTTGAA-3' (SEQ ID NO: 3) \n Reverse: 5'-CCATGAACATGCCACTTCAC-3'..."
+                        "A method according to any one of the preceding claims, wherein the sample comprises nucleic acid and the method comprises amplifying the nucleic acid or a portion thereof by PCR using primers, e.g. wherein:\n a) the PCR primers for determining the RHCE*C allele are a forward PCR primer specific for RHCE*C, and a non-specific reverse PCR primer, e.g. wherein\n (i) the non-specific reverse primer is shared with RHD, RHC*C and/or RHC*c; and/or \n (ii) the PCR primers comprise:\n Forward: 5'-GGCCACCACCATTTGAA-3' (SEQ ID NO: 3) \n Reverse: 5'-CCATGAACATGCCACTTCAC-3', (SEQ ID NO: 4) \nor a variant thereof having up to 4 nucleotide alterations; and/or \n b) the PCR primers for determining the RHD/CE Hex03 allele are forward and reverse PCR primers targeting sequences located in introns 2 and 3, or introns 3 and 2, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-TCCTGGCTCTCCCTCTCT-3' (SEQ ID NO: 9) \n Reverse primer: 5'-TTTTCAAAACCCCGGAAG-3 (SEQ ID NO: 10) \nor a variant thereof having up to 4 nucleotide alterations; and/or \n c) the PCR primers for determining the SNP within RHD exon 4 at position 602 of the RHD coding sequence (rs1053355) are forward and reverse primers targeting sequences located in introns 3 and 4, or introns 4 and 3, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-GCTCTGAACTTTCTCCAAGGACT-3' (SEQ ID NO: 17) \n Reverse primer: 5'-ATTCTGCTCAGCCCAAGTAG-3' (SEQ ID NO: 18) or a variant thereof having up to 4 nucleotide alterations; and/or \n d) the PCR primers for determining the SNP within RHD exon 5 at position 667 of the  RHD  coding sequence (rs1053356) are forward and reverse primers targeting sequences located in introns 4 and 5, or introns 5 and 4, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-TTGAATTAAGCACTTCACAGAGCA-3' (SEQ ID NO: 19) \n Reverse primer: 5'-CACCTTGCTGATCTTCCC-3' (SEQ ID NO: 20) or a variant thereof having up to 4 nucleotide alterations; and/or \n e) the PCR primers for determining the SNP within RHD exon 6 at position 819 of the  RHD  coding sequence are forward and reverse primers targeting sequences located in introns 5 and 6, or introns 6 and 5, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-AGTAGTGAGCTGGCCCATCA-3' (SEQ ID NO: 21) \n Reverse primer: 5'-CTTCAGCCAAAGCAGAGGAG-3' (SEQ ID NO: 22) \nor a variant thereof having up to 4 nucleotide alterations; and/or \n f) the PCR primers for determining the SNP within RHD exon 7 at position 1048 of the  RHD  coding sequence (rs41307826) are forward and reverse primers targeting sequences located in introns 6 and 7, or introns 7 and 6, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-ACAAACTCCCCGATGATGTGAGTG-3' (SEQ ID NO: 35) \n Reverse primer: 5'-GAGGCTGAGAAAGGTTAAGCCA-3' (SEQ ID NO: 36) \nor a variant thereof having up to 4 nucleotide alterations; and/or \n g) as dependent from claim 3, the PCR primers for determining the RHD exon 3 allele are forward and reverse primers targeting sequences located in introns 2 and 3, or introns 3 and 2, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-TCCTGGCTCTCCCTCTCT-3' (SEQ ID NO: 15) \n Reverse primer: 5'-GTTGTCTTTATTTTTCAAAACCCT-3' (SEQ ID NO: 16) \nor a variant thereof having up to 4 nucleotide alterations."
                     ]
                 },
                 {
@@ -1063,7 +1086,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                 },
                 {
                     "claim_text": [
-                        "A method according to any one of the preceding claims, wherein determining the presence, absence or SNP variant of a marker comprises contacting nucleic acid containing each marker with one or more probes, e.g. wherein:\n a) as dependent from claim 3, the probes for determining the presence or absence of RHD/CE Hex03 or RHD exon 3 contact an SNP located in both RHD/CE Hex03 and RHD exon 3, wherein one SNP variant is specific for RHD/CE Hex03, and another SNP variant is specific for RHD exon 3, e.g. wherein\n (i) the SNP is at position 410 of the coding sequence, located within both RHD/CE Hex03 and RHD exon 3; and/or \n (ii) the probes comprise:\n (1) 5'-TTTTACAGACGCCTGCTACCATG-3'..."
+                        "A method according to any one of the preceding claims, wherein determining the presence, absence or SNP variant of a marker comprises contacting nucleic acid containing each marker with one or more probes, e.g. wherein:\n a) as dependent from claim 3, the probes for determining the presence or absence of RHD/CE Hex03 or RHD exon 3 contact an SNP located in both RHD/CE Hex03 and RHD exon 3, wherein one SNP variant is specific for RHD/CE Hex03, and another SNP variant is specific for RHD exon 3, e.g. wherein\n (i) the SNP is at position 410 of the coding sequence, located within both RHD/CE Hex03 and RHD exon 3; and/or \n (ii) the probes comprise:\n (1) 5'-TTTTACAGACGCCTGCTACCATG-3', (SEQ ID NO: 5) \n (2) 5'-CATGGTAGCAGGCGTCTGTAAAA-3', (SEQ ID NO: 6) \n (3) 5'-TTTTACAGACGTCTGCTACCATG-3', (SEQ ID NO: 7) and \n (4) 5'-CATGGTAGCAGACGTCTGTAAAA-3', (SEQ ID NO: 8) \nor a variant of any one of probes 1 to 4 having up to 4 nucleotide alterations; and/or \n b) the probes for determining the absence or SNP variant of the SNP at: position 602 of the  RHD  coding sequence located within exon 4 (rs1053355), position 667 of the  RHD  coding sequence located within exon 5 (rs1053356), or position 819 of the  RHD  coding sequence located within exon 6 comprise:\n (i) RHD exon 4:\n (1) 5'-ATAAAGATCAGACAGCAACGATACC-3' (SEQ ID NO: 23) \n (2) 5'-TAAAGATCAGACAGCAACGATAC-3' (SEQ ID NO: 24) \n (3) 5'-ATAAAGATCAGAGAGCAACGATACC-3' (SEQ ID NO: 25) \n (4) 5'-TAAAGATCAGAGAGCAACGATAC-3' (SEQ ID NO: 26) \nor a variant of any one of probes 1 to 4 having up to 4 nucleotide alterations; \n (ii) RHD exon 5:\n (1) 5'-CTGGCCAAGTTTCAACTCTGC-3' (SEQ ID NO: 27) \n (2) 5'-TGGCCAAGTTTCAACTCTG-3' (SEQ ID NO: 28) \n (3) 5'-CTGGCCAAGTGTCAACTCTGC-3' (SEQ ID NO: 29) \n (4) 5'-TGGCCAAGTGTCAACTCTG-3' (SEQ ID NO: 30) \nor a variant of any one of probes 1 to 4 having up to 4 nucleotide alterations; \n (iii) RHD exon 6:\n (1) 5'-GTGCACAGTGCGGTGTTGGCAGG-3' (SEQ ID NO: 31) \n (2) 5'- TGCACAGTGCGGTGTTGGCAG -3' (SEQ ID NO: 32) \n (3) 5'- GTGCACAGTGCAGTGTTGGCAGG -3' (SEQ ID NO: 33) \n (4) 5'-TGCACAGTGCAGTGTTGGCAG-3' (SEQ ID NO: 34) \nor a variant of any one of probes 1 to 4 having up to 4 nucleotide alterations. \n c) the probes for determining the SNP variant of the SNP at position 1048 of the  RHD  coding sequence located within exon 7 (rs41307826)comprise:\n (1) 5'-TGCTGGTGCTTGATACCGTCGGA-3' (SEQ ID NO: 37) \n (2) 5'-GCTGGTGCTTGATACCGTCGG-3' (SEQ ID NO: 38) \n (3) 5'-TGCTGGTGCTTCATACCGTCGGA-3' (SEQ ID NO: 39) \n (4) 5'-GCTGGTGCTTCATACCGTCGG-3' (SEQ ID NO: 40) \nor a variant of any one of probes 1 to 4 having up to 4 nucleotide alterations."
                     ]
                 },
                 {
@@ -1098,7 +1121,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                 },
                 {
                     "claim_text": [
-                        "A kit for genotyping a subject, the kit comprising a set of PCR primers according to any one of claims 10 to 12, and a set of probes according to any one of claims 13 or 14." 
+                        "A kit for genotyping a subject, the kit comprising a set of PCR primers according to any one of claims 10 to 12, and a set of probes according to any one of claims 13 or 14."
                     ]
                 }
             ],
@@ -1111,6 +1134,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
     },
     "publication_type": "PATENT_APPLICATION"
 }
+
 ```
 
 [//]: # (Reference Links)

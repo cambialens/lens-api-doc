@@ -175,13 +175,14 @@ def scroll(scroll_id):
     scroll(scroll_id)
   # If the response is not ok here, better to stop here and debug it
   elif response.status_code != requests.codes.ok:
-    print response.json()
+    print(response.json())
   # If the response is ok, do something with the response, take the new scroll id and iterate
   else:
     json = response.json()
-    scroll_id = json['scroll_id'] # Extract the new scroll id from response
-    print json['data'] #DO something with your data
-    scroll(scroll_id)
+    if json.get('results') is not None and json['results'] > 0:
+        scroll_id = json['scroll_id'] # Extract the new scroll id from response
+        print(json['data']) #DO something with your data
+        scroll(scroll_id)
 
 # start recursive scrolling
 scroll(scroll_id=None)
@@ -215,12 +216,12 @@ def scroll(scroll_id, request_body):
     scroll(scroll_id, request_body)
   # If the response is not ok here, better to stop here and debug it
   elif response.status_code != requests.codes.ok:
-    print response.json()
+    print(response.json())
   # If the response is ok, do something with the response, take the new scroll id and iterate
   else:
     json = response.json()
     scroll_id = json['scroll_id'] # Extract the new scroll id from response
-    print json['data'] #DO something with your data
+    print(json['data']) #DO something with your data
     scroll(scroll_id, request_body)
 
 include = '''["lens_id", "patent_citations"]'''

@@ -12,13 +12,14 @@ class WorkParser:
 		publisher = ''
 		source_country = ''
 		source = work_json['source'] if 'source' in work_json else []
-		for key, value in source.items():
-			if key == 'title':
-				source_title = value
-			elif key == 'publisher':
-				publisher = value
-			elif key == 'country':
-				source_country = value
+		if bool(source):
+			for key, value in source.items():
+				if key == 'title':
+					source_title = value
+				elif key == 'publisher':
+					publisher = value
+				elif key == 'country':
+					source_country = value
 		authors = self.__get_authors(work_json['authors']) if 'authors' in work_json else []
 		external_ids = work_json['external_ids'] if 'external_ids' in work_json else []
 		magid = ''
@@ -54,16 +55,17 @@ class WorkParser:
 		open_access = work_json['open_access'] if 'open_access' in work_json else []
 		open_access_license=''
 		open_access_colour=''
-		for key, value in open_access.items():
-			if key == 'license':
-				open_access_license = value
-			elif key == 'colour':
-				open_access_colour = value
+		if bool(open_access):
+			for key, value in open_access.items():
+				if key == 'license':
+					open_access_license = value
+				elif key == 'colour':
+					open_access_colour = value
 
-		return Work(lens_id, title, date_published, publication_year, publication_type, source_title, publisher, 
-					source_country, authors, magid, doi, coreid, patent_citation_lens_ids, abstract,volume,issue_number, 
+		return Work(lens_id, title, date_published, publication_year, publication_type, source_title, publisher,
+					source_country, authors, magid, doi, coreid, patent_citation_lens_ids, abstract,volume,issue_number,
 					start_page, end_page, fields_of_study, keywords,mesh_terms, external_url,pmid, microsoft_academic_id,
-					pmcid, citing_patents_count, references,citing_works_count,is_open_access,open_access_license, 
+					pmcid, citing_patents_count, references,citing_works_count,is_open_access,open_access_license,
 					open_access_colour)
 
 	def __get_authors(self, authors_json):

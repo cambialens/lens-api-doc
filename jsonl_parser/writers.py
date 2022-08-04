@@ -1,4 +1,3 @@
-#writers
 import csv
 from typing import List
 
@@ -9,7 +8,7 @@ class WorkCsvWriter:
 		work_headers = ['lens_id', 'title', 'date_published', 'publication_year', 'publication_type', 'source_title',
 						'publisher', 'source_country', 'magid', 'doi', 'coreid','patent_citations','abstract','volume',
 						'issue_number', 'start_page', 'end_page', 'fields_of_study', 'keywords', 'source_urls','external_url',
-						'pmid', 'microsoft_academic_id', 'pmcid','citing_patents_count','references','citing_works_count', 
+						'pmid', 'microsoft_academic_id', 'pmcid','citing_patents_count','references','citing_works_count',
 						'is_open_access','open_access_license', 'open_access_colour']
 		author_headers = ['lens_id', 'author_sub_id', 'first_name', 'last_name', 'initials', 'magid']
 		affiliation_headers = ['lens_id', 'author_sub_id', 'name', 'magid', 'grid', 'ror', 'grid_id', 'country_code']

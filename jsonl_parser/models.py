@@ -1,6 +1,6 @@
 class Work:
-	def __init__(self, lens_id, title, date_published, publication_year,publication_type, source_title, publisher, 
-				source_country, authors, magid, doi, coreid, patent_citations,abstract, volume, issue_number,start_page, 
+	def __init__(self, lens_id, title, date_published, publication_year,publication_type, source_title, publisher,
+				source_country, authors, magid, doi, coreid, patent_citations,abstract, volume, issue_number,start_page,
 				end_page, fields_of_study, keywords, mesh_terms, external_url,pmid, microsoft_academic_id, pmcid,
 				citing_patents_count, references, citing_works_count, is_open_access,open_access_license, open_access_colour):
 		self.lens_id = lens_id

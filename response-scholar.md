@@ -175,7 +175,7 @@ Field | Type |  Description | Example
  Field | Type |  Description | Example
 ------- |:------:| -------|---------
 **type** | String | The type/s of external identifiers for the scholarly work, author, institution, etc. | `doi`, `pmid`, `magid`, `orcid`, `grid`, `ror`, etc.
-**value** | String | The external identifier(s) for the scholarly work, author, institution, etc. | `10.1016/s0031-3955(16)34861-1`, `0000-0003-3902-2234`, `grid.425957.8`, `https://ror.org/056x7d368`, etc.
+**value** | String | The external identifier(s) for the scholarly work, author, institution, etc. | `10.1016/s0031-3955(16)34861-1`, `0000-0003-3902-2234`, `grid.425957.8`, `056x7d368`, etc.
 {: .param-def }
 
 ### Sample API Response

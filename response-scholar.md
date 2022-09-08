@@ -75,7 +75,7 @@ toc:
  Field | Type |  Description | Example
 ------- |:------| -------|---------
 **name** | String | The institution associated with the author affiliations. | `Stony Brook University`
-**grid_id** | String | Affiliation grid id | `grid.9018.0`
+**grid_id** | String | Affiliation grid id. **NB** This field is being deprecated, please use the [ids](#ids) field instead. | `grid.9018.0`
 **country_code** | String | Comma separated country codes | `DE`
 **ids** | Array of [Ids](#ids) | The external institution identifiers associated with the author's affiliation
 {: .param-def }

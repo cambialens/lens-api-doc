@@ -17,9 +17,9 @@ toc:
 ---
 
 <div class="docs-masthead">
-    <h3>Lens API <div class="badge">2.5.0</div></h3>
+    <h3>Lens API <div class="badge">2.5.3</div></h3>
     <h4>Available API Resources:</h4>
-    <div>Scholarly Schema Version: <div class="badge">1.6.2</div></div>
+    <div>Scholarly Schema Version: <div class="badge">1.6.3</div></div>
     <div>Patent Schema Version: <div class="badge">1.4.0</div></div>
     <footer>Last Update: June 9, 2022</footer>
 </div>

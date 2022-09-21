@@ -164,7 +164,7 @@ Use parameter `from` to define the offset and `size` to specify number of record
 }
 ```
 Similarly for `GET` requests, the following parameters are applicable: `size=50&from=100`
-> Note: 
+> **Note**: 
 > - Offset/size based paginations is suitable for small result sets only and does not work on result sets of more that 1000 records. For larger volume data downloads, use Cursor Based Pagination.
 
 ##### Cursor Based Pagination
@@ -177,7 +177,7 @@ You can specify records per page using `size` (default 20 and max 1000) and cont
   "scroll": "1m"
 }
 ```
-> Note: 
+> **Note**: 
 > - The lifespan of scroll_id is limited to 1 minute for the current API version. Using expired scroll_id will result bad request HTTP response.
 > - Parameter `size` will be used for first scroll query and will remain the same for whole scroll context. Hence, using size in each scroll request will not have any effect.
 > - Cursor based pagination is only applicable to `POST` requests.
@@ -210,7 +210,7 @@ You can control the output fields in the API [Response] using projection. There 
 ```
 For `GET` requests following structure is applicable.
 `include=authors,lens_id`
-> Note: Both *include* and *exclude* can be used in same request.
+> **Note**: Both *include* and *exclude* can be used in same request.
 
 # Stemming
 Stemming allows to reduce the words to root form. E.g. Constructed and constructing will be stemmed to root construct.
@@ -246,6 +246,8 @@ Following queries are supported by current version of Lens API:
 	}
 }
 ```
+> **Note**: 
+> Avoid using the `term` and `terms` queries for text fields. To search text field values, we recommend using the `match` and `match Phrase` queries instead.
 
 ##### Match query
 [Match query] accepts text/numbers/dates. The main use case of the match query is full-text search.
@@ -274,7 +276,7 @@ It matches each words separately. If you need to search whole phrase use [match 
 }
 ```
 
-> Note: Both **Match** and **Match Phrase** are used for text searching but the difference is how they do it. For example, searching for `"Cleveland, OH"` differs between Match and Match Phrase like this:
+> **Note**: Both **Match** and **Match Phrase** are used for text searching but the difference is how they do it. For example, searching for `"Cleveland, OH"` differs between Match and Match Phrase like this:
 >* **Match**: standard search in which each word is matched separately (for example: `Cleveland` OR `OH`)
 >* **Match Phrase**: matches the exact phrase provided. In this case it will match the exact text `Cleveland, OH`
 

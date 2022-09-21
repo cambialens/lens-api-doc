@@ -285,7 +285,7 @@ Following queries are supported by current version of Lens API:
 }
 ```
 > **Note**: 
-> * Avoid using the `Term` and `Terms` queries for text fields. To search text field values, we recommend using the `Match` and `Match Phrase` queries instead.
+> * Avoid using the [Term](#term-query) and [Terms](#terms-query) queries for text fields. To search text field values, we recommend using the [Match](#match-query) and [Match Phrase](#match-phrase-query) queries instead.
 
 ##### Match query
 [Match query] accepts text/numbers/dates. The main use case of the match query is full-text search.

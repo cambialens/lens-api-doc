@@ -247,7 +247,7 @@ Following queries are supported by current version of Lens API:
 }
 ```
 > **Note**: 
-> Avoid using the `term` and `terms` queries for text fields. To search text field values, we recommend using the `match` and `match Phrase` queries instead.
+> Avoid using the [Term](#term-query) and [Terms](#terms-query) queries for text fields. To search text field values, we recommend using the [Match](#match-query) and [Match Phrase](#match-phrase-query) queries instead.
 
 ##### Match query
 [Match query] accepts text/numbers/dates. The main use case of the match query is full-text search.
@@ -279,7 +279,6 @@ It matches each words separately. If you need to search whole phrase use [match 
 > **Note**: Both **Match** and **Match Phrase** are used for text searching but the difference is how they do it. For example, searching for `"Cleveland, OH"` differs between Match and Match Phrase like this:
 >* **Match**: standard search in which each word is matched separately (for example: `Cleveland` OR `OH`)
 >* **Match Phrase**: matches the exact phrase provided. In this case it will match the exact text `Cleveland, OH`
-
 
 
 

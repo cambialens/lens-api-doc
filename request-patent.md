@@ -219,17 +219,17 @@ You can specify records per page using `size` (default 20 and max 100-500, refer
 > - For optimal performance, we recommend limiting the number of items (e.g. `lens_ids`) in a single terms query to 10,000.
 
 ### Sorting
-Result can be retrieved in ascending or descending order. By default, results are sorted with most relevant matches first. Use the following format and [fields](#searchable-fields) to apply sorting to the API response.
+Result can be retrieved in ascending or descending order. Use the following format and [fields](#searchable-fields) to apply sorting to the API response. Results can also be sorted by relevance score using `relevance`.
 ```json
 {
   "sort": [
       {"reference_cited.patent_count":"desc"},
-      {"year_published": "asc"}
+      {"year_published": "asc"},
+      {"relevance": "desc"}
   ]
 }
 ```
-For `GET` requests, the following structure is applicable.
-`sort=desc(reference_cited.patent_count),asc(date_published)`
+For `GET` requests, the following structure is applicable: `sort=desc(reference_cited.patent_count),asc(date_published),desc(relevance)`
 
 ### Projection
 You can control the output fields in the API [Response] using projection. There are two possible ways to do that.

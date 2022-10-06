@@ -345,7 +345,7 @@ You can use json based format for string based query and mixed with complex bool
             "must": [
                 {
                     "query_string": {
-                        "query": "X-ray analysis of protein crystals",
+                        "query": "\"X-ray analysis of protein crystals\"",
                         "fields": [
                             "title",
                             "abstract",

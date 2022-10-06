@@ -212,7 +212,7 @@ For `GET` requests following structure is applicable.
 `include=authors,lens_id`
 > **Note**: Both *include* and *exclude* can be used in same request.
 
-# Stemming
+### Stemming
 Stemming allows to reduce the words to root form. E.g. Constructed and constructing will be stemmed to root construct.
 Since sometime the default stemming might not give you exact result, disabling it will just search for provided form of the word.
 e.g. `"stemming": false`
@@ -220,6 +220,7 @@ e.g. `"stemming": false`
 ### Supported Query Types
 
 Following queries are supported by current version of Lens API:
+> **Note**: The Lens API query requests use a modified form of the Elasticsearch Query DSL. For more details on the Elasticsearch query syntax, we recommend reading this guide on the query syntax: [Elasticsearch Query DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html)
 
 ##### Term Query
 [Term Query] operates in a single term and search for *exact term* in the field provided.

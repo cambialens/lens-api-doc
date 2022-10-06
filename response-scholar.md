@@ -191,200 +191,589 @@ Field | Type |  Description | Example
 ```json
 {
     "total": 1,
-    "data": [
+    "data":
+    [
         {
-            "patent_citations": [
+            "lens_id": "086-713-276-176-892",
+            "title": "A randomised non-comparative phase II trial of cixutumumab (IMC-A12) or ramucirumab (IMC-1121B) plus mitoxantrone and prednisone in men with metastatic docetaxel-pretreated castration-resistant prostate cancer",
+            "publication_type": "journal article",
+            "year_published": 2015,
+            "date_published": "2015-06-13T00:00:00.000000+00:00",
+            "date_published_parts":
+            [
+                2015,
+                6,
+                13
+            ],
+            "created": "2018-05-12T02:39:28.395000+00:00",
+            "external_ids":
+            [
+                {
+                    "type": "magid",
+                    "value": "2113210954"
+                },
+                {
+                    "type": "coreid",
+                    "value": "82196673"
+                },
+                {
+                    "type": "pmid",
+                    "value": "26082390"
+                },
+                {
+                    "type": "pmcid",
+                    "value": "pmc5024789"
+                },
+                {
+                    "type": "doi",
+                    "value": "10.1016/j.ejca.2015.05.019"
+                }
+            ],
+            "patent_citations":
+            [
                 {
                     "lens_id": "122-064-734-901-067"
                 }
             ],
             "patent_citations_count": 1,
-            "lens_id": "086-713-276-176-892",
-            "created": "2018-05-12T02:39:28.395000+00:00",
-            "open_access": {
+            "open_access":
+            {
                 "license": "cc-by-nc-nd",
                 "colour": "hybrid"
             },
-            "publication_type": "journal article",
-            "publication_supplementary_type": [
-                "clinical trial, phase ii",
-                "multicenter study",
-                "randomized controlled trial",
-                "research support, non-u.s. gov't"
-            ],
-            "authors": [
+            "authors":
+            [
                 {
-                    "collective_name": null,
                     "first_name": "Maha",
                     "last_name": "Hussain",
                     "initials": "M",
-                    "affiliations": [
+                    "ids":
+                    [
+                        {
+                            "type": "magid",
+                            "value": "2105158973"
+                        }
+                    ],
+                    "affiliations":
+                    [
                         {
                             "name": "University of Michigan",
-                            "grid_id": "grid.214458.e",
+                            "ids":
+                            [
+                                {
+                                    "type": "magid",
+                                    "value": "27837315"
+                                },
+                                {
+                                    "type": "grid",
+                                    "value": "grid.214458.e"
+                                },
+                                {
+                                    "type": "fundref",
+                                    "value": "100007270"
+                                },
+                                {
+                                    "type": "ror",
+                                    "value": "00jmfr291"
+                                }
+                            ],
                             "country_code": "US"
                         }
                     ]
                 },
                 {
-                    "collective_name": null,
                     "first_name": "Dana E.",
                     "last_name": "Rathkopf",
                     "initials": "DE",
-                    "affiliations": [
+                    "ids":
+                    [
+                        {
+                            "type": "orcid",
+                            "value": "0000-0002-4503-7582"
+                        },
+                        {
+                            "type": "magid",
+                            "value": "722834404"
+                        }
+                    ],
+                    "affiliations":
+                    [
                         {
                             "name": "Memorial Sloan Kettering Cancer Center",
-                            "grid_id": "grid.51462.34",
+                            "ids":
+                            [
+                                {
+                                    "type": "magid",
+                                    "value": "1334819555"
+                                },
+                                {
+                                    "type": "grid",
+                                    "value": "grid.51462.34"
+                                },
+                                {
+                                    "type": "ror",
+                                    "value": "02yrq0923"
+                                }
+                            ],
                             "country_code": "US"
                         }
                     ]
                 },
                 {
-                    "collective_name": null,
                     "first_name": "Glenn",
                     "last_name": "Liu",
                     "initials": "G",
-                    "affiliations": [
+                    "ids":
+                    [
+                        {
+                            "type": "magid",
+                            "value": "2133546628"
+                        }
+                    ],
+                    "affiliations":
+                    [
                         {
                             "name": "University of Wisconsin-Madison",
-                            "grid_id": "grid.14003.36",
+                            "ids":
+                            [
+                                {
+                                    "type": "magid",
+                                    "value": "135310074"
+                                },
+                                {
+                                    "type": "grid",
+                                    "value": "grid.14003.36"
+                                },
+                                {
+                                    "type": "fundref",
+                                    "value": "100007015"
+                                },
+                                {
+                                    "type": "wikidata",
+                                    "value": "q838330"
+                                },
+                                {
+                                    "type": "ror",
+                                    "value": "01y2jtd41"
+                                }
+                            ],
                             "country_code": "US"
                         }
                     ]
                 },
                 {
-                    "collective_name": null,
                     "first_name": "Andrew J.",
                     "last_name": "Armstrong",
                     "initials": "AJ",
-                    "affiliations": [
+                    "ids":
+                    [
+                        {
+                            "type": "magid",
+                            "value": "2172156363"
+                        }
+                    ],
+                    "affiliations":
+                    [
                         {
                             "name": "Duke University",
-                            "grid_id": "grid.26009.3d",
+                            "ids":
+                            [
+                                {
+                                    "type": "magid",
+                                    "value": "170897317"
+                                },
+                                {
+                                    "type": "grid",
+                                    "value": "grid.26009.3d"
+                                },
+                                {
+                                    "type": "fundref",
+                                    "value": "100006510"
+                                },
+                                {
+                                    "type": "wikidata",
+                                    "value": "q168751"
+                                },
+                                {
+                                    "type": "ror",
+                                    "value": "00py81415"
+                                }
+                            ],
                             "country_code": "US"
                         }
                     ]
                 },
                 {
-                    "collective_name": null,
                     "first_name": "Kevin",
                     "last_name": "Kelly",
                     "initials": "K",
-                    "affiliations": [
+                    "ids":
+                    [
+                        {
+                            "type": "magid",
+                            "value": "2097407452"
+                        }
+                    ],
+                    "affiliations":
+                    [
                         {
                             "name": "Thomas Jefferson University",
-                            "grid_id": "grid.265008.9",
+                            "ids":
+                            [
+                                {
+                                    "type": "magid",
+                                    "value": "149251103"
+                                },
+                                {
+                                    "type": "grid",
+                                    "value": "grid.265008.9"
+                                },
+                                {
+                                    "type": "ror",
+                                    "value": "00ysqcn41"
+                                }
+                            ],
                             "country_code": "US"
                         }
                     ]
                 },
                 {
-                    "collective_name": null,
                     "first_name": "Anna C.",
                     "last_name": "Ferrari",
                     "initials": "AC",
-                    "affiliations": [
+                    "ids":
+                    [
+                        {
+                            "type": "magid",
+                            "value": "2312728207"
+                        }
+                    ],
+                    "affiliations":
+                    [
                         {
                             "name": "New York University",
-                            "grid_id": "grid.137628.9",
+                            "ids":
+                            [
+                                {
+                                    "type": "magid",
+                                    "value": "57206974"
+                                },
+                                {
+                                    "type": "grid",
+                                    "value": "grid.137628.9"
+                                },
+                                {
+                                    "type": "fundref",
+                                    "value": "100006732"
+                                },
+                                {
+                                    "type": "wikidata",
+                                    "value": "q49210"
+                                },
+                                {
+                                    "type": "ror",
+                                    "value": "0190ak572"
+                                }
+                            ],
                             "country_code": "US"
                         }
                     ]
                 },
                 {
-                    "collective_name": null,
                     "first_name": "John D.",
                     "last_name": "Hainsworth",
                     "initials": "JD",
-                    "affiliations": [
+                    "ids":
+                    [
+                        {
+                            "type": "magid",
+                            "value": "2145549068"
+                        }
+                    ],
+                    "affiliations":
+                    [
                         {
                             "name": "Sarah Cannon Research Institute",
-                            "grid_id": "grid.477834.b",
+                            "ids":
+                            [
+                                {
+                                    "type": "magid",
+                                    "value": "172427033"
+                                },
+                                {
+                                    "type": "grid",
+                                    "value": "grid.477834.b"
+                                },
+                                {
+                                    "type": "wikidata",
+                                    "value": "q30270369"
+                                },
+                                {
+                                    "type": "ror",
+                                    "value": "03cp5cj42"
+                                }
+                            ],
                             "country_code": "GB"
                         }
                     ]
                 },
                 {
-                    "collective_name": null,
                     "first_name": "Adarsh",
                     "last_name": "Joshi",
                     "initials": "A",
-                    "affiliations": [
+                    "ids":
+                    [
+                        {
+                            "type": "magid",
+                            "value": "2097035297"
+                        }
+                    ],
+                    "affiliations":
+                    [
                         {
                             "name": "Eli Lilly and Company",
-                            "grid_id": "grid.488258.b",
-                            "country_code": "IT"
+                            "ids":
+                            [
+                                {
+                                    "type": "magid",
+                                    "value": "168537998"
+                                },
+                                {
+                                    "type": "grid",
+                                    "value": "grid.417540.3"
+                                },
+                                {
+                                    "type": "fundref",
+                                    "value": "100004312"
+                                },
+                                {
+                                    "type": "ror",
+                                    "value": "01qat3289"
+                                }
+                            ],
+                            "country_code": "US"
                         }
                     ]
                 },
                 {
-                    "collective_name": null,
                     "first_name": "Rebecca R.",
                     "last_name": "Hozak",
                     "initials": "RR",
-                    "affiliations": [
+                    "ids":
+                    [
+                        {
+                            "type": "magid",
+                            "value": "2182553763"
+                        }
+                    ],
+                    "affiliations":
+                    [
                         {
                             "name": "Eli Lilly and Company",
-                            "grid_id": "grid.488258.b",
-                            "country_code": "IT"
+                            "ids":
+                            [
+                                {
+                                    "type": "magid",
+                                    "value": "168537998"
+                                },
+                                {
+                                    "type": "grid",
+                                    "value": "grid.417540.3"
+                                },
+                                {
+                                    "type": "fundref",
+                                    "value": "100004312"
+                                },
+                                {
+                                    "type": "ror",
+                                    "value": "01qat3289"
+                                }
+                            ],
+                            "country_code": "US"
                         }
                     ]
                 },
                 {
-                    "collective_name": null,
                     "first_name": "Ling",
                     "last_name": "Yang",
                     "initials": "L",
-                    "affiliations": [
+                    "ids":
+                    [
+                        {
+                            "type": "magid",
+                            "value": "2250633597"
+                        }
+                    ],
+                    "affiliations":
+                    [
                         {
                             "name": "Eli Lilly and Company",
-                            "grid_id": "grid.488258.b",
-                            "country_code": "IT"
+                            "ids":
+                            [
+                                {
+                                    "type": "magid",
+                                    "value": "168537998"
+                                },
+                                {
+                                    "type": "grid",
+                                    "value": "grid.417540.3"
+                                },
+                                {
+                                    "type": "fundref",
+                                    "value": "100004312"
+                                },
+                                {
+                                    "type": "ror",
+                                    "value": "01qat3289"
+                                }
+                            ],
+                            "country_code": "US"
                         }
                     ]
                 },
                 {
-                    "collective_name": null,
                     "first_name": "Jonathan D.",
                     "last_name": "Schwartz",
                     "initials": "JD",
-                    "affiliations": [
+                    "ids":
+                    [
+                        {
+                            "type": "magid",
+                            "value": "2155041711"
+                        }
+                    ],
+                    "affiliations":
+                    [
                         {
                             "name": "Eli Lilly and Company",
-                            "grid_id": "grid.488258.b",
-                            "country_code": "IT"
+                            "ids":
+                            [
+                                {
+                                    "type": "magid",
+                                    "value": "168537998"
+                                },
+                                {
+                                    "type": "grid",
+                                    "value": "grid.417540.3"
+                                },
+                                {
+                                    "type": "fundref",
+                                    "value": "100004312"
+                                },
+                                {
+                                    "type": "ror",
+                                    "value": "01qat3289"
+                                }
+                            ],
+                            "country_code": "US"
                         }
                     ]
                 },
                 {
-                    "collective_name": null,
                     "first_name": "Celestia S.",
                     "last_name": "Higano",
                     "initials": "CS",
-                    "affiliations": [
+                    "ids":
+                    [
                         {
-                            "name": "University of Washington",
-                            "grid_id": "grid.34477.33",
-                            "country_code": "US"
+                            "type": "magid",
+                            "value": "2560077320"
+                        }
+                    ],
+                    "affiliations":
+                    [
+                        {
+                            "name": "Fred Hutchinson Cancer Research Center",
+                            "ids":
+                            [
+                                {
+                                    "type": "magid",
+                                    "value": "1326427960"
+                                },
+                                {
+                                    "type": "grid",
+                                    "value": "grid.475296.b"
+                                },
+                                {
+                                    "type": "ror",
+                                    "value": "00wdsp051"
+                                }
+                            ],
+                            "country_code": "ZA"
                         }
                     ]
                 }
             ],
-            "title": "A randomised non-comparative phase II trial of cixutumumab (IMC-A12) or ramucirumab (IMC-1121B) plus mitoxantrone and prednisone in men with metastatic docetaxel-pretreated castration-resistant prostate cancer",
+            "source":
+            {
+                "title": "European journal of cancer (Oxford, England : 1990)",
+                "type": "Journal",
+                "publisher": "Elsevier Limited",
+                "issn":
+                [
+                    {
+                        "type": "unknown",
+                        "value": "18790852"
+                    },
+                    {
+                        "type": "print",
+                        "value": "09598049"
+                    }
+                ],
+                "country": "United Kingdom",
+                "asjc_codes":
+                [
+                    "1306",
+                    "2730"
+                ],
+                "asjc_subjects":
+                [
+                    "Oncology",
+                    "Cancer Research"
+                ]
+            },
+            "fields_of_study":
+            [
+                "Internal medicine",
+                "Oncology",
+                "Cixutumumab",
+                "Prednisone",
+                "Ramucirumab",
+                "Prostate cancer",
+                "Mitoxantrone",
+                "Docetaxel",
+                "Regimen",
+                "Phases of clinical research",
+                "Medicine"
+            ],
+            "keywords":
+            [
+                "Cixutumumab",
+                "Mitoxantrone",
+                "Prednisone",
+                "Prostate cancer",
+                "Ramucirumab"
+            ],
+            "publication_supplementary_type":
+            [
+                "clinical trial, phase ii",
+                "multicenter study",
+                "randomized controlled trial",
+                "research support, non-u.s. gov't"
+            ],
             "volume": "51",
             "issue": "13",
-            "languages": [
+            "languages":
+            [
                 "en"
             ],
-            "references": [
+            "references":
+            [
                 {
                     "lens_id": "003-415-704-045-340"
                 },
                 {
                     "lens_id": "006-027-163-131-418"
-                },
-                {
-                    "lens_id": "007-652-362-542-447"
                 },
                 {
                     "lens_id": "010-839-632-959-305"
@@ -432,6 +821,9 @@ Field | Type |  Description | Example
                     "lens_id": "043-201-312-439-671"
                 },
                 {
+                    "lens_id": "043-546-849-370-25X"
+                },
+                {
                     "lens_id": "046-041-414-632-674"
                 },
                 {
@@ -471,9 +863,6 @@ Field | Type |  Description | Example
                     "lens_id": "094-489-992-059-749"
                 },
                 {
-                    "lens_id": "095-400-716-937-253"
-                },
-                {
                     "lens_id": "096-654-301-744-608"
                 },
                 {
@@ -489,14 +878,8 @@ Field | Type |  Description | Example
                     "lens_id": "155-152-241-876-905"
                 }
             ],
-            "keywords": [
-                "Cixutumumab",
-                "Mitoxantrone",
-                "Prednisone",
-                "Prostate cancer",
-                "Ramucirumab"
-            ],
-            "mesh_terms": [
+            "mesh_terms":
+            [
                 {
                     "mesh_heading": "Adenocarcinoma",
                     "qualifier_name": "drug therapy",
@@ -520,6 +903,10 @@ Field | Type |  Description | Example
                     "qualifier_name": "administration & dosage",
                     "mesh_id": "D000911",
                     "qualifier_id": "Q000008"
+                },
+                {
+                    "mesh_heading": "Antibodies, Monoclonal, Humanized",
+                    "mesh_id": "D061067"
                 },
                 {
                     "mesh_heading": "Antineoplastic Combined Chemotherapy Protocols",
@@ -600,11 +987,17 @@ Field | Type |  Description | Example
                     "mesh_id": "D055815"
                 }
             ],
-            "chemicals": [
+            "chemicals":
+            [
                 {
                     "substance_name": "Antibodies, Monoclonal",
                     "registry_number": "0",
                     "mesh_id": "D000911"
+                },
+                {
+                    "substance_name": "Antibodies, Monoclonal, Humanized",
+                    "registry_number": "0",
+                    "mesh_id": "D061067"
                 },
                 {
                     "substance_name": "Taxoids",
@@ -612,14 +1005,14 @@ Field | Type |  Description | Example
                     "mesh_id": "D043823"
                 },
                 {
-                    "substance_name": "anti-IGF-1R antibody A12",
-                    "registry_number": "0",
-                    "mesh_id": "C557414"
-                },
-                {
                     "substance_name": "Docetaxel",
                     "registry_number": "15H5577CQD",
                     "mesh_id": "D000077143"
+                },
+                {
+                    "substance_name": "cixutumumab",
+                    "registry_number": "2285XW22DR",
+                    "mesh_id": "C557414"
                 },
                 {
                     "substance_name": "Mitoxantrone",
@@ -637,40 +1030,23 @@ Field | Type |  Description | Example
                     "mesh_id": "D011241"
                 }
             ],
-            "clinical_trials": [
+            "clinical_trials":
+            [
                 {
                     "id": "nct00683475",
                     "registry": "10.18810/clinical-trials-gov"
                 }
             ],
-            "fields_of_study": [
-                "M.2",
-                "Immunology",
-                "Cixutumumab",
-                "Prednisone",
-                "Ramucirumab",
-                "Prostate cancer",
-                "Mitoxantrone",
-                "Docetaxel",
-                "Regimen",
-                "Medicine"
-            ],
-            "funding": [
+            "funding":
+            [
                 {
                     "org": "NCI NIH HHS",
                     "funding_id": "P30 CA008748",
                     "country": "United States"
                 }
             ],
-            "source_urls": [
-                {
-                    "type": "unknown",
-                    "url": "http://www.ejcancer.com/article/S0959-8049(15)00450-5/pdf"
-                },
-                {
-                    "type": "html",
-                    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5024789/"
-                },
+            "source_urls":
+            [
                 {
                     "type": "html",
                     "url": "https://www.scholars.northwestern.edu/en/publications/a-randomised-non-comparative-phase-ii-trial-of-cixutumumab-imc-a1"
@@ -680,63 +1056,66 @@ Field | Type |  Description | Example
                     "url": "https://www.sciencedirect.com/science/article/pii/S0959804915004505"
                 },
                 {
+                    "type": "html",
+                    "url": "https://core.ac.uk/display/82196673"
+                },
+                {
+                    "type": "html",
+                    "url": "https://www.ncbi.nlm.nih.gov/pubmed/26082390"
+                },
+                {
+                    "type": "html",
+                    "url": "https://europepmc.org/abstract/MED/26082390"
+                },
+                {
+                    "type": "html",
+                    "url": "https://pubmed.ncbi.nlm.nih.gov/26082390/"
+                },
+                {
+                    "type": "unknown",
+                    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0959804915004505#!"
+                },
+                {
                     "type": "core_fulltext",
                     "url": "https://core.ac.uk/download/pdf/82196673.pdf"
                 }
             ],
-            "abstract": "Abstract Background Cixutumumab, a human monoclonal antibody (HuMAb), targets the insulin-like growth factor receptor. Ramucirumab is a recombinant HuMAb that binds to vascular endothelial growth factor receptor-2. A non-comparative randomised phase II study evaluated cixutumumab or ramucirumab plus mitoxantrone and prednisone (MP) in metastatic castration-resistant prostate cancer (mCRPC). Patients and methods Men with progressive mCRPC during or after docetaxel therapy received mitoxantrone 12 mg/m 2 on day 1 and prednisone 5 mg twice daily and were randomised 1:1 to receive either cixutumumab or ramucirumab 6 mg/kg intravenously weekly in a 21-day cycle. Primary end-point was composite progression-free survival (cPFS). Secondary end-points included safety, response, radiographic progression-free survival (PFS) and overall survival (OS). Sample size was based on a 50% increase in median cPFS from 2.6 (MP) to 3.9 months (either combination). Results 132 men were treated (66 per arm). Median cPFS was 4.1 months (95% confidence interval (CI), 2.2–5.6) for cixutumumab and 6.7 months (95% CI, 4.5–8.3) for ramucirumab. Median time to radiographic progression was 7.5 months for cixutumumab and 10.2 months for ramucirumab, with a median OS of 10.8 and 13.0 months, respectively. Fatigue was the most frequent adverse event (AE). Incidence of most non-haematologic grade 3–4 AEs was Conclusion Combinations of cixutumumab or ramucirumab plus MP were feasible and associated with moderate toxicities in docetaxel-pretreated men with mCRPC. Of the two regimens, the ramucirumab regimen is worthy of further testing based on the observed cPFS relative to the historical control.",
-            "year_published": 2015,
-            "references_count": 37,
-            "scholarly_citations_count": 10,
-            "external_ids": [
-                {
-                    "type": "magid",
-                    "value": "2113210954"
-                },
-                {
-                    "type": "pmid",
-                    "value": "26082390"
-                },
-                {
-                    "type": "doi",
-                    "value": "10.1016/j.ejca.2015.05.019"
-                }
-            ],
+            "abstract": "Abstract Background Cixutumumab, a human monoclonal antibody  (HuMAb), targets the insulin-like growth factor receptor...",
+            "references_count": 36,
+            "scholarly_citations_count": 26,
             "start_page": "1714",
             "end_page": "1724",
-            "source": {
-                "title": "European Journal of Cancer",
-                "type": "Journal",
-                "publisher": "Elsevier BV",
-                "issn": [
-                    {
-                        "value": "09598049"
-                    }
-                ],
-                "country": "United Kingdom",
-                "asjc_codes": [
-                    "1306",
-                    "2730"
-                ],
-                "asjc_subjects": [
-                    "Oncology",
-                    "Cancer Research"
-                ]
-            },
-            "scholarly_citations": [
+            "scholarly_citations":
+            [
                 "000-201-187-558-654",
+                "003-526-658-910-015",
+                "003-873-121-875-383",
+                "007-302-126-599-214",
+                "010-213-946-021-323",
+                "013-615-059-072-408",
+                "013-724-699-030-436",
+                "014-223-693-822-29X",
+                "018-109-129-610-567",
+                "021-609-846-309-864",
                 "026-107-871-228-662",
+                "026-389-814-274-812",
                 "028-262-672-178-175",
                 "030-115-779-382-725",
                 "035-630-845-016-108",
                 "037-016-998-061-439",
+                "041-068-995-918-23X",
+                "046-312-772-821-709",
+                "054-371-103-868-542",
+                "055-935-439-115-752",
                 "062-343-220-167-149",
                 "067-043-485-486-441",
+                "085-619-841-835-92X",
+                "086-063-652-233-255",
                 "145-126-752-104-913",
-                "174-636-795-252-301"
+                "153-500-774-834-922"
             ],
             "author_count": 12,
-            "date_published": "2015-06-13T00:00:00+00:00"
+            "is_open_access": true
         }
     ],
     "results": 1

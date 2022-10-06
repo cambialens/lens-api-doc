@@ -185,17 +185,17 @@ You can specify records per page using `size` (default 20 and max 1000) and cont
 
 
 ### Sorting
-Result can be retrieved in ascending or descending order. By default, results are sorted with most relevant matches first. Use the following format and [fields](#searchable-fields) to apply sorting to the API response.
+Result can be retrieved in ascending or descending order. Use the following format and [fields](#searchable-fields) to apply sorting to the API response. Results can also be sorted by relevance score using `relevance`.
 ```json
 {
   "sort": [
-      {"patent_citation_count":"asc"},
-      {"year_published": "desc"}
+      {"patent_citation_count":"desc"},
+      {"year_published": "asc"},
+      {"relevance": "desc"}
   ]
 }
 ```
-For `GET` requests following structure is applicable.
-`sort=desc(date_published),asc(patent_citation_count)`
+For `GET` requests following structure is applicable: `sort=desc(patent_citation_count),asc(date_published),desc(relevance)`
 
 ### Projection
 You can control the output fields in the API [Response] using projection. There are two possible ways to do that.

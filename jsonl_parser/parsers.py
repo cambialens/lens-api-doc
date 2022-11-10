@@ -25,6 +25,8 @@ class WorkParser:
 		magid = ''
 		doi = ''
 		coreid = ''
+		pmid = ''
+		pmcid = ''
 		# Can there be multiple id with same type?
 		for external_id in external_ids:
 			type = external_id.get('type')
@@ -32,8 +34,12 @@ class WorkParser:
 				magid = external_id['value']
 			elif type == 'doi':
 				doi = external_id['value']
+			elif type == 'pmid':
+				pmid = external_id['value']
 			elif type == 'coreid':
 				coreid = external_id['value']
+			elif type == 'pmcid':
+				pmcid = external_id['value']
 		patent_citations = work_json['patent_citations'] if 'patent_citations' in work_json else []
 		patent_citation_lens_ids = [pc['lens_id'] for pc in patent_citations]
 		abstract = work_json.get('abstract')
@@ -45,10 +51,7 @@ class WorkParser:
 		keywords = ','.join(work_json.get('keywords')) if 'keywords' in work_json else ''
 		mesh_terms = self.__get_meshterms(work_json['mesh_terms']) if 'mesh_terms' in work_json else []
 		external_url = work_json.get('external_url')
-		pmid = work_json.get('pmid')
-		microsoft_academic_id = work_json.get('microsoft_academic_id')
-		pmcid = work_json.get('pmcid')
-		citing_patents_count = work_json.get('citing_patents_count')
+		citing_patents_count = work_json.get('patent_citations_count')
 		references = self.__get_reference(work_json['references']) if 'references' in work_json else ''
 		citing_works_count = work_json.get('citing_works_count')
 		is_open_access = work_json.get('is_open_access')
@@ -64,8 +67,8 @@ class WorkParser:
 
 		return Work(lens_id, title, date_published, publication_year, publication_type, source_title, publisher,
 					source_country, authors, magid, doi, coreid, patent_citation_lens_ids, abstract,volume,issue_number,
-					start_page, end_page, fields_of_study, keywords,mesh_terms, external_url,pmid, microsoft_academic_id,
-					pmcid, citing_patents_count, references,citing_works_count,is_open_access,open_access_license,
+					start_page, end_page, fields_of_study, keywords,mesh_terms, external_url,pmid, pmcid,
+					citing_patents_count, references,citing_works_count,is_open_access,open_access_license, 
 					open_access_colour)
 
 	def __get_authors(self, authors_json):
@@ -87,12 +90,14 @@ class WorkParser:
 		affiliations = []
 		for affiliation in affiliations_json:
 			name = affiliation.get('name')
-			magid = affiliation.get('magid')
-			grid = affiliation.get('grid')
-			ror = affiliation.get('ror')
+			ids = affiliation['ids'] if 'ids' in affiliation else []
+			ror = ''
+			for id in ids:
+				if id['type'] == 'ror':
+					ror = id['value']
 			grid_id = affiliation.get('grid_id')
 			country_code = affiliation.get('country_code')
-			affiliations.append(Affiliation(name, magid, grid, ror, grid_id, country_code))
+			affiliations.append(Affiliation(name, ror, grid_id, country_code))
 		return affiliations
 
 	def __get_meshterms(self, mesh_terms_json):

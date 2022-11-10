@@ -8,10 +8,10 @@ class WorkCsvWriter:
 		work_headers = ['lens_id', 'title', 'date_published', 'publication_year', 'publication_type', 'source_title',
 						'publisher', 'source_country', 'magid', 'doi', 'coreid','patent_citations','abstract','volume',
 						'issue_number', 'start_page', 'end_page', 'fields_of_study', 'keywords', 'source_urls','external_url',
-						'pmid', 'microsoft_academic_id', 'pmcid','citing_patents_count','references','citing_works_count',
+						'pmid', 'pmcid','citing_patents_count','references','citing_works_count',
 						'is_open_access','open_access_license', 'open_access_colour']
 		author_headers = ['lens_id', 'author_sub_id', 'first_name', 'last_name', 'initials', 'magid']
-		affiliation_headers = ['lens_id', 'author_sub_id', 'name', 'magid', 'grid', 'ror', 'grid_id', 'country_code']
+		affiliation_headers = ['lens_id', 'author_sub_id', 'name', 'ror', 'grid_id', 'country_code']
 		mesh_term_headers = ['lens_id', 'mesh_id', 'mesh_heading', 'qualifier_id', 'qualifier_name']
 
 		self.work_csv_file = open(location + '/works.csv', 'w', newline='', encoding='utf-8')
@@ -64,7 +64,6 @@ class WorkCsvWriter:
 						'keywords': work.keywords,
 						'external_url': work.external_url,
 						'pmid': work.pmid,
-						'microsoft_academic_id': work.microsoft_academic_id,
 						'pmcid': work.pmcid,
 						'citing_patents_count': work.citing_patents_count,
 						'references': work.references,
@@ -78,7 +77,6 @@ class WorkCsvWriter:
 	def __write_authors(self, lens_id, authors: List[Author]):
 		author_sub_id = 1
 		for author in authors:
-			self.__write_affiliaions(lens_id, author_sub_id, author.affiliations)
 			authors_dist = {
 								'lens_id': lens_id, 
 								'author_sub_id': author_sub_id, 
@@ -88,6 +86,7 @@ class WorkCsvWriter:
 								'magid': author.magid
 							}
 			self.author_writer.writerow(authors_dist)
+			self.__write_affiliaions(lens_id, author_sub_id, author.affiliations)
 			author_sub_id += 1
 
 	def __write_affiliaions(self, lens_id, author_sub_id, affiliations: List[Affiliation]):
@@ -96,8 +95,6 @@ class WorkCsvWriter:
 									'lens_id': lens_id, 
 									'author_sub_id': author_sub_id, 
 									'name': affiliation.name, 
-									'magid': affiliation.magid, 
-									'grid': affiliation.grid, 
 									'ror': affiliation.ror, 
 									'grid_id':affiliation.grid_id, 
 									'country_code': affiliation.country_code
@@ -114,3 +111,4 @@ class WorkCsvWriter:
 								'qualifier_name': meshterm.qualifier_name
 							}
 			self.meshterm_csv_writer.writerow(mesh_term_dist)
+

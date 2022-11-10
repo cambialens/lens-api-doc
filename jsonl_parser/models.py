@@ -1,8 +1,8 @@
 class Work:
-	def __init__(self, lens_id, title, date_published, publication_year,publication_type, source_title, publisher,
-				source_country, authors, magid, doi, coreid, patent_citations,abstract, volume, issue_number,start_page,
-				end_page, fields_of_study, keywords, mesh_terms, external_url,pmid, microsoft_academic_id, pmcid,
-				citing_patents_count, references, citing_works_count, is_open_access,open_access_license, open_access_colour):
+	def __init__(self, lens_id, title, date_published, publication_year, publication_type, source_title, publisher,
+				source_country, authors, magid, doi, coreid, patent_citations, abstract, volume, issue_number,start_page,
+				end_page, fields_of_study, keywords, mesh_terms, external_url, pmid, pmcid,
+				citing_patents_count, references, citing_works_count, is_open_access, open_access_license, open_access_colour):
 		self.lens_id = lens_id
 		self.title = title
 		self.date_published = date_published
@@ -26,7 +26,6 @@ class Work:
 		self.mesh_terms = mesh_terms
 		self.external_url = external_url
 		self.pmid = pmid
-		self.microsoft_academic_id = microsoft_academic_id
 		self.pmcid = pmcid
 		self.citing_patents_count = citing_patents_count
 		self.references = references
@@ -34,7 +33,6 @@ class Work:
 		self.is_open_access = is_open_access
 		self.open_access_license = open_access_license
 		self.open_access_colour = open_access_colour
-
 
 class Author:
 	def __init__(self, first_name, last_name, initials, magid, affiliations):
@@ -45,10 +43,8 @@ class Author:
 		self.affiliations = affiliations
 
 class Affiliation:
-	def __init__(self, name, magid, grid, ror, grid_id, country_code):
+	def __init__(self, name, ror, grid_id, country_code):
 		self.name = name
-		self.magid = magid
-		self.grid = grid
 		self.ror = ror
 		self.grid_id = grid_id
 		self.country_code = country_code

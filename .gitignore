@@ -3,3 +3,6 @@ _site
 .jekyll-metadata
 output
 Gemfile.lock
+jsonl_parser/__pycache__/writers.cpython-310.pyc
+jsonl_parser/__pycache__/parsers.cpython-310.pyc
+jsonl_parser/__pycache__/models.cpython-310.pyc

@@ -39,6 +39,7 @@ Fields | Description |  Required
 **[scroll](#pagination)** | Lifespan of Scroll scroll context in minute (e.g. 1m) | false (true for scroll context)
 **[stemming](#stemming)** | Change the ability to reduce the search word into root form | false (true by default)
 **[language](#language)** | For multi-lingual fulltext search | false (`EN` by default)
+**[regex](#regex)** | For Query String based queries containing regular expressions | false (false by default)
 {: .param-def }
 
 ### Searchable Fields
@@ -254,6 +255,16 @@ e.g. `"stemming": false`
 
 ### Language
 Available search language codes: `AR`, `DE`, `EN`, `ES`, `FR`, `JA`, `KO`, `PT`, `RU`, `ZH`
+
+### Regex
+Regex allows the use of regular expressions in [Query String based query](#query-string-based-query), e.g. `"regex": true`
+```json
+{
+    "query": "field_of_study:/.*[Ee]conom.*/",
+    "regex": true
+}
+```
+
 
 ### Supported Query Types
 

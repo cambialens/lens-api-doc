@@ -37,6 +37,7 @@ Fields | Description |  Required
 **[scroll_id](#pagination)** | Pagination parameter | false (true for next scroll requests)
 **[scroll](#pagination)** | Lifespan of Scroll scroll context in minute (e.g. 1m) | false (true for scroll context)
 **[stemming](#stemming)** | Change the ability to reduce the search word into root form | false (true by default)
+**[regex](#regex)** | For Query String based queries containing regular expressions | false (false by default)
 {: .param-def }
 
 ### Searchable Fields
@@ -216,6 +217,15 @@ For `GET` requests following structure is applicable.
 Stemming allows to reduce the words to root form. E.g. Constructed and constructing will be stemmed to root construct.
 Since sometime the default stemming might not give you exact result, disabling it will just search for provided form of the word.
 e.g. `"stemming": false`
+
+### Regex
+Regex allows the use of regular expressions in [Query String based query](#query-string-based-query), e.g. `"regex": true`
+```json
+{
+    "query": "field_of_study:/.*[Ee]conom.*/",
+    "regex": true
+}
+```
 
 ### Supported Query Types
 

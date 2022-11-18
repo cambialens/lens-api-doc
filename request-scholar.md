@@ -100,7 +100,7 @@ Field | Type | Description
 **source.title.exact** | String | The full name of source publication for exact match. N.B. this field is case sensitive.
 **source.type** | String | Source Type e.g. `Journal`, `Book Series`
 **source.publisher** | String | The publisher of the source publication `Elsevier`, `Wiley`, `American Medical Association`
-**source.issn** | String | The International Standard Serial Number of the source publication, without hyphenation e.g. `00222836`. N.B. this field is case sensitive.
+**source.issn** | String | The International Standard Serial Number of the source publication, without hyphenation e.g. `00222836`, `1474547x`. N.B. this field is case sensitive.
 **source.country** |  String | The publisher's country e.g. `United States`, `United Kingdom`. N.B. this field is case sensitive.
 **source.asjc_codes** |  String | The All Science Journal Classification (ASJC) code e.g. `2735`
 **source.asjc_subjects** |  String | Subject is derived from journals descriptions in Crossref metadata based on the Science Journal Classification Codes e.g. `Pediatrics`, `Microbiology`, `Biophysics`

@@ -261,10 +261,6 @@ Field | Type |  Description | Example
                             "ids":
                             [
                                 {
-                                    "type": "magid",
-                                    "value": "27837315"
-                                },
-                                {
                                     "type": "grid",
                                     "value": "grid.214458.e"
                                 },
@@ -303,10 +299,6 @@ Field | Type |  Description | Example
                             "ids":
                             [
                                 {
-                                    "type": "magid",
-                                    "value": "1334819555"
-                                },
-                                {
                                     "type": "grid",
                                     "value": "grid.51462.34"
                                 },
@@ -336,10 +328,6 @@ Field | Type |  Description | Example
                             "name": "University of Wisconsin-Madison",
                             "ids":
                             [
-                                {
-                                    "type": "magid",
-                                    "value": "135310074"
-                                },
                                 {
                                     "type": "grid",
                                     "value": "grid.14003.36"
@@ -379,10 +367,6 @@ Field | Type |  Description | Example
                             "ids":
                             [
                                 {
-                                    "type": "magid",
-                                    "value": "170897317"
-                                },
-                                {
                                     "type": "grid",
                                     "value": "grid.26009.3d"
                                 },
@@ -421,10 +405,6 @@ Field | Type |  Description | Example
                             "ids":
                             [
                                 {
-                                    "type": "magid",
-                                    "value": "149251103"
-                                },
-                                {
                                     "type": "grid",
                                     "value": "grid.265008.9"
                                 },
@@ -454,10 +434,6 @@ Field | Type |  Description | Example
                             "name": "New York University",
                             "ids":
                             [
-                                {
-                                    "type": "magid",
-                                    "value": "57206974"
-                                },
                                 {
                                     "type": "grid",
                                     "value": "grid.137628.9"
@@ -497,10 +473,6 @@ Field | Type |  Description | Example
                             "ids":
                             [
                                 {
-                                    "type": "magid",
-                                    "value": "172427033"
-                                },
-                                {
                                     "type": "grid",
                                     "value": "grid.477834.b"
                                 },
@@ -534,10 +506,6 @@ Field | Type |  Description | Example
                             "name": "Eli Lilly and Company",
                             "ids":
                             [
-                                {
-                                    "type": "magid",
-                                    "value": "168537998"
-                                },
                                 {
                                     "type": "grid",
                                     "value": "grid.417540.3"
@@ -573,10 +541,6 @@ Field | Type |  Description | Example
                             "ids":
                             [
                                 {
-                                    "type": "magid",
-                                    "value": "168537998"
-                                },
-                                {
                                     "type": "grid",
                                     "value": "grid.417540.3"
                                 },
@@ -610,10 +574,6 @@ Field | Type |  Description | Example
                             "name": "Eli Lilly and Company",
                             "ids":
                             [
-                                {
-                                    "type": "magid",
-                                    "value": "168537998"
-                                },
                                 {
                                     "type": "grid",
                                     "value": "grid.417540.3"
@@ -649,10 +609,6 @@ Field | Type |  Description | Example
                             "ids":
                             [
                                 {
-                                    "type": "magid",
-                                    "value": "168537998"
-                                },
-                                {
                                     "type": "grid",
                                     "value": "grid.417540.3"
                                 },
@@ -686,10 +642,6 @@ Field | Type |  Description | Example
                             "name": "Fred Hutchinson Cancer Research Center",
                             "ids":
                             [
-                                {
-                                    "type": "magid",
-                                    "value": "1326427960"
-                                },
                                 {
                                     "type": "grid",
                                     "value": "grid.475296.b"

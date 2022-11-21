@@ -1,8 +1,8 @@
 class Work:
-	def __init__(self, lens_id, title, date_published, publication_year, publication_type, source_title, publisher,
-				source_country, authors, magid, doi, coreid, patent_citations, abstract, volume, issue_number,start_page,
-				end_page, fields_of_study, keywords, mesh_terms, external_url, pmid, pmcid,
-				citing_patents_count, references, citing_works_count, is_open_access, open_access_license, open_access_colour):
+	def __init__(self, lens_id, title, date_published, publication_year, publication_type, source_title, issn, publisher,
+				source_country, authors, magid, doi, abstract, volume, issue_number,start_page, end_page, fields_of_study,
+				keywords, chemicals, funding, mesh_terms, source_urls, external_url, pmid, pmcid, citing_patents_count,
+				references, citing_works_count, is_open_access, open_access_license, open_access_colour):
 		self.lens_id = lens_id
 		self.title = title
 		self.date_published = date_published
@@ -10,12 +10,11 @@ class Work:
 		self.publication_type = publication_type
 		self.source_title = source_title
 		self.publisher = publisher
+		self.issn = issn
 		self.source_country = source_country
 		self.authors = authors
 		self.magid = magid
 		self.doi = doi
-		self.coreid = coreid
-		self.patent_citations = patent_citations
 		self.abstract = abstract
 		self.volume = volume
 		self.issue_number = issue_number
@@ -23,7 +22,10 @@ class Work:
 		self.end_page = end_page
 		self.fields_of_study = fields_of_study
 		self.keywords = keywords
+		self.chemicals = chemicals
+		self.funding = funding
 		self.mesh_terms = mesh_terms
+		self.source_urls = source_urls
 		self.external_url = external_url
 		self.pmid = pmid
 		self.pmcid = pmcid
@@ -35,11 +37,12 @@ class Work:
 		self.open_access_colour = open_access_colour
 
 class Author:
-	def __init__(self, first_name, last_name, initials, magid, affiliations):
+	def __init__(self, first_name, last_name, initials, magid, orcidid, affiliations):
 		self.first_name = first_name
 		self.last_name = last_name
 		self.initials = initials
 		self.magid = magid
+		self.orcidid = orcidid
 		self.affiliations = affiliations
 
 class Affiliation:

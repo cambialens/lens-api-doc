@@ -5,12 +5,12 @@ from models import Affiliation, Author, Work, MeshTerms
 
 class WorkCsvWriter:
 	def __init__(self, location):
-		work_headers = ['lens_id', 'title', 'date_published', 'publication_year', 'publication_type', 'source_title',
-						'publisher', 'source_country', 'magid', 'doi', 'coreid','patent_citations','abstract','volume',
-						'issue_number', 'start_page', 'end_page', 'fields_of_study', 'keywords', 'source_urls','external_url',
-						'pmid', 'pmcid','citing_patents_count','references','citing_works_count',
-						'is_open_access','open_access_license', 'open_access_colour']
-		author_headers = ['lens_id', 'author_sub_id', 'first_name', 'last_name', 'initials', 'magid']
+		work_headers = ['Lens ID', 'Title', 'Date Published', 'Publication Year', 'Publication Type', 'Source Title', 'ISSNs', 'Publisher',
+						'Source Country', 'Abstract', 'Volume', 'Issue Number', 'Start Page','End Page', 'Fields of Study', 'Keywords',
+						'Chemicals', 'Funding', 'Source URLs', 'External URL', 'PMID', 'DOI', 'Microsoft Academic ID', 'PMCID', 
+						'Citing Patents Count', 'References', 'Citing Works Count','Is Open Access', 'Open Access License', 'Open Access Colour']
+
+		author_headers = ['lens_id', 'author_sub_id', 'first_name', 'last_name', 'initials', 'magid', 'orcidid']
 		affiliation_headers = ['lens_id', 'author_sub_id', 'name', 'ror', 'grid_id', 'country_code']
 		mesh_term_headers = ['lens_id', 'mesh_id', 'mesh_heading', 'qualifier_id', 'qualifier_name']
 
@@ -43,34 +43,36 @@ class WorkCsvWriter:
 
 	def __write_work(self, work: Work):
 		work_dist = {
-						'lens_id': work.lens_id, 
-						'title': work.title,
-						'date_published': work.date_published,
-						'publication_year':work.publication_year,
-						'publication_type': work.publication_type,
-						'source_title': work.source_title,
-						'publisher': work.publisher,
-						'source_country': work.source_country,
-						'magid': work.magid,
-						'doi': work.doi,
-						'coreid': work.coreid,
-						'patent_citations': ';'.join(work.patent_citations),
-						'abstract': work.abstract,
-						'volume': work.volume,
-						'issue_number': work.issue_number, 
-						'start_page': work.start_page,
-						'end_page': work.end_page,
-						'fields_of_study': work.fields_of_study,
-						'keywords': work.keywords,
-						'external_url': work.external_url,
-						'pmid': work.pmid,
-						'pmcid': work.pmcid,
-						'citing_patents_count': work.citing_patents_count,
-						'references': work.references,
-						'citing_works_count': work.citing_works_count,
-						'is_open_access': work.is_open_access,
-						'open_access_license': work.open_access_license,
-						'open_access_colour': work.open_access_colour
+						'Lens ID': work.lens_id, 
+						'Title': work.title,
+						'Date Published': work.date_published,
+						'Publication Year':work.publication_year,
+						'Publication Type': work.publication_type,
+						'Source Title': work.source_title,
+						'ISSNs': work.issn,
+						'Publisher': work.publisher,
+						'Source Country': work.source_country,
+						'Microsoft Academic ID': work.magid,
+						'DOI': work.doi,
+						'Abstract': work.abstract,
+						'Volume': work.volume,
+						'Issue Number': work.issue_number, 
+						'Start Page': work.start_page,
+						'End Page': work.end_page,
+						'Fields of Study': work.fields_of_study,
+						'Keywords': work.keywords,
+						'Chemicals': work.chemicals,
+						'Funding': work.funding,
+						'Source URLs': work.source_urls,
+						'External URL': work.external_url,
+						'PMID': work.pmid,
+						'PMCID': work.pmcid,
+						'Citing Patents Count': work.citing_patents_count,
+						'References': work.references,
+						'Citing Works Count': work.citing_works_count,
+						'Is Open Access': work.is_open_access,
+						'Open Access License': work.open_access_license,
+						'Open Access Colour': work.open_access_colour
 					}
 		self.work_writer.writerow(work_dist)
 
@@ -83,7 +85,8 @@ class WorkCsvWriter:
 								'first_name': author.first_name, 
 								'last_name': author.last_name, 
 								'initials': author.initials, 
-								'magid': author.magid
+								'magid': author.magid,
+								'orcidid': author.orcidid
 							}
 			self.author_writer.writerow(authors_dist)
 			self.__write_affiliaions(lens_id, author_sub_id, author.affiliations)

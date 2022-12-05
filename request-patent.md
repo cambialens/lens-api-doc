@@ -130,7 +130,7 @@ Legal Events | **legal_status.discontinuation_date** | Date | The discontinuatio
 Legal Events | **legal_status.grant_date** | Date | The date the patent application was granted (i.e. the application first grant date). e.g. `2009-05-22`
 Legal Events | **legal_status.granted** | Boolean | Indicates if the patent application has been granted in one or more jurisdictions. e.g. `TRUE`
 Legal Events | **legal_status.has_disclaimer** | Boolean | Indicates if this US patent subjected to a terminal disclaimer. e.g. `TRUE`
-Legal Events | **legal_status.grant_event** | Boolean | Indicates if the patent application/simple family has one or more Grant events in INPADOC. e.g. `TRUE`
+Legal Events | **legal_status.has_grant_event** | Boolean | Indicates if the patent application/simple family has one or more Grant events in INPADOC. e.g. `TRUE`
 Legal Events | **legal_status.has_entry_into_national_phase** | Boolean | Indicates if the patent application/simple family has entered the National Phase in INPADOC. e.g. `TRUE`
 Legal Events | **legal_status.patent_status** | String | The calculated legal status of the patent application. e.g. `expired`, `inactive`, `active`, `patented`, `discontinued`, `withdrawn or rejected`, `pending`, `unknown`
 Legal Events | **legal_status.has_spc** | Boolean | Indicates if the patent has a supplementary protection certificate. e.g. `TRUE`

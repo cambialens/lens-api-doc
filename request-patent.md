@@ -40,6 +40,7 @@ Fields | Description |  Required
 **[stemming](#stemming)** | Change the ability to reduce the search word into root form | false (true by default)
 **[language](#language)** | For multi-lingual fulltext search | false (`EN` by default)
 **[regex](#regex)** | For Query String based queries containing regular expressions | false (false by default)
+**[group_by](#group-by-family)** | For group by patent family queries. Supports group by `SIMPLE_FAMILY` and `EXTENDED_FAMILY` | false
 {: .param-def }
 
 ### Searchable Fields
@@ -266,6 +267,9 @@ Regex allows the use of regular expressions in [Query String based query](#query
     "regex": true
 }
 ```
+
+### Group by Family
+Group by patent family queries supports group by `SIMPLE_FAMILY` and `EXTENDED_FAMILY`, e.g. `"group_by": "SIMPLE_FAMILY"`
 
 
 ### Supported Query Types

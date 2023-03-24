@@ -21,7 +21,7 @@ toc:
  **patent_citations_count** | Integer | Number of patent citations | `10`
  **lens_id** | String | Unique lens identifier | `100-004-910-081-14X`
  **created** | Date | Record created date | `2016-08-01T00:00:00+00:00`
- **publication_type** | String | Publication Type | `journal article`
+ **publication_type** | String ([Publication Types](#publication-types)) | Publication Type | `journal article`
  **publication_supplementary_type** | Array of String | Supplementary publication type | `["review"]`
  **authors** | Array of [Author](#author) | Authors| |
  **title** | String | Title of the scholarly work | `Malaria`
@@ -177,6 +177,12 @@ Field | Type |  Description | Example
 **type** | String | The type/s of external identifiers for the scholarly work, author, institution, etc. | `doi`, `pmid`, `magid`, `orcid`, `grid`, `ror`, etc.
 **value** | String | The external identifier(s) for the scholarly work, author, institution, etc. | `10.1016/s0031-3955(16)34861-1`, `0000-0003-3902-2234`, `grid.425957.8`, `056x7d368`, etc.
 {: .param-def }
+
+
+### Enums
+
+#### Publication Types
+`journal article`, `letter`, `editorial`, `news`, `book`, `book chapter`, `conference proceedings article`, `conference proceedings`, `dataset`, `journal`, `journal issue`, `journal volume`, `report`, `standard`, `dissertation`, `clinical trial`, `clinical study`, `libguide`, `reference entry`, `working paper`, `component`, `review`, `preprint`, `other`, `unknown`
 
 ### Sample API Response
 **Request:**

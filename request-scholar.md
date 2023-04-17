@@ -37,10 +37,11 @@ Fields | Description |  Required
 **[scroll_id](#pagination)** | Pagination parameter | false (true for next scroll requests)
 **[scroll](#pagination)** | Lifespan of Scroll scroll context in minute (e.g. 1m) | false (true for scroll context)
 **[stemming](#stemming)** | Change the ability to reduce the search word into root form | false (true by default)
+**[regex](#regex)** | For Query String based queries containing regular expressions | false (false by default)
 {: .param-def }
 
 ### Searchable Fields
-For searching, following fields are supported by the system:
+For searching, the following fields are supported in the API:
 
 Field | Type | Description
 -------- | --------- | -------
@@ -55,8 +56,8 @@ Field | Type | Description
 **ids.coreid** | String | CORE Identifier
 **ids.openalex** | String | OpenAlex Identifier
 **created** | Date | Record created date e.g. `2018-05-12`, `2016-08-01T00:00:00+00:00`
-**publication_type** | String | Publication Type `conference proceedings`, `book chapter`, `journal article`, `component`, `conference proceedings article`, `dataset`, `libguide`, `reference entry`, `book`
-**publication_supplementary_type** | String | Supplementary publication type e.g. `review`, `comparative study`, `research support`
+**publication_type** | String | Publication Type `conference proceedings`, `book chapter`, `journal article`, `component`, `conference proceedings article`, `dataset`, `libguide`, `reference entry`, `book`. N.B. this field is case sensitive.
+**publication_supplementary_type** | String | Supplementary publication type e.g. `review`, `comparative study`, `research support`. N.B. this field is case sensitive.
 **author.collective_name** | String | Author Collective Name
 **author.first_name** | String | The author's first name e.g. `Alexander`
 **author.last_name** | String | The author's last name e.g. `Kupco`
@@ -65,52 +66,52 @@ Field | Type | Description
 **author.magid** | String | Author MAG identifier 
 **author.orcid** | String | Author ORCID identifier e.g. `0000-0001-5352-4498`
 **author.affiliation.name** | String | The institution associated with the author affiliations. e.g. `Stony Brook`
-**author.affiliation.name.exact** | String | Exactly matches the full institution name (case sensetive). e.g. `Stony Brook University`
+**author.affiliation.name.exact** | String | Exactly matches the full institution name, e.g. `Stony Brook University`. N.B. this field is case sensitive.
 **author.affiliation.name_original** | String | The author's original affiliation including the institution name and address. e.g. `School of Engineering and Applied Sciences, Harvard University, Cambridge, Massachusetts USA`
-**author.affiliation.grid_id** | String | The institution GRID identifier e.g. `grid.9018.0`. *N.B* GRID identifiers will be deprecated in future and replaced with [ROR identifiers](https://ror.org/).
-**author.affiliation.ror_id** | String | The institution ROR identifier e.g. `https://ror.org/03yrm5c26`
+**author.affiliation.grid_id** | String | The institution GRID identifier e.g. `grid.9018.0`. N.B. GRID identifiers will be deprecated in future and replaced with [ROR identifiers](https://ror.org/).
+**author.affiliation.ror_id** | String | The institution ROR identifier e.g. `03yrm5c26`. N.B. this field is case sensitive.
 **author.affiliation.country_code** | String | The institution Country Code e.g. `US`,`DE`,`CH`,`FR`, etc. *N.B* this field will be deprecated in future, we recommend using the `author.affiliation.address.country_code` field instead. 
-**author.affiliation.address.country_code** | String | The alpha-2 country code of the institution e.g. `US`,`DE`,`CH`,`FR`, etc.
-**author.affiliation.address.city** | String | The institution city e.g. `Tokyo`
-**author.affiliation.address.state_code** | String | The institution state e.g. `US-NY`
-**author.affiliation.type** | String | The institution type e.g. `Government`, `Company`, `Facility`, `Healthcare`, `Education`
+**author.affiliation.address.country_code** | String | The alpha-2 country code of the institution e.g. `US`,`DE`,`CH`,`FR`, etc. N.B. this field is case sensitive.
+**author.affiliation.address.city** | String | The institution city e.g. `Tokyo`. N.B. this field is case sensitive.
+**author.affiliation.address.state_code** | String | The institution state e.g. `US-NY`. N.B. this field is case sensitive.
+**author.affiliation.type** | String | The institution type e.g. `Government`, `Company`, `Facility`, `Healthcare`, `Education`. N.B. this field is case sensitive.
 **title** | String | Title of the scholarly work e.g. `Malaria`
 **language** | String | Languages e.g. `en`, `de`, `fr`, `zh_chs`
-**chemical.mesh_id** | String | MeSH term id e.g. `D000293`
+**chemical.mesh_ui** | String | Chemical MeSH term unique identifier e.g. `D000293`. N.B. this field is case sensitive.
 **chemical.registry_number** | String | Chemical registration number e.g. `5Q7ZVV76EI`
 **chemical.substance_name** | String | Substance name e.g. `Antimalarials`
-**clinical_trial.id** | String | Clinical trial Identifier e.g. `nct00105716`
-**clinical_trial.registry** | String | Clinical Trial Registry e.g. `10.18810/clinical-trials-gov`
+**clinical_trial.id** | String | Clinical trial Identifier e.g. `nct00105716`. N.B. this field is case sensitive.
+**clinical_trial.registry** | String | Clinical Trial Registry e.g. `10.18810/clinical-trials-gov`. N.B. this field is case sensitive.
 **field_of_study** | String | Fields Of Study e.g. `Immunology`, `Malaria`
 **abstract** | String | Scholarly work abstract text
 **full_text** | String | Full Text
 **date_published** | Date | Date of publication e.g. `2009-05-22`
 **year_published** | Integer | Year of publication e.g. `1986`
 **conference.name** | String | Conference Name e.g. `International Electron Devices Meeting`
-**conference.instance** | String | Conference Instance Name e.g. `CHI 1985`
-**conference.location** | String | The location of the conference e.g. `Lihue, Kauai, HA, USA`
+**conference.instance** | String | Conference Instance Name e.g. `CHI 1985`. N.B. this field is case sensitive.
+**conference.location** | String | The location of the conference e.g. `Lihue, Kauai, HA, USA`. N.B. this field is case sensitive.
 **author_count** | Integer | Number of Authors
 **reference_count** | Integer | The number of works in the reference list of a scholarly work
 **reference.lens_id** | String | The Lens ID of scholarly works cited in the reference list e.g. `007-899-176-416-740`
 **scholarly_citation_count** | Integer | The number of scholarly works that cite this scholarly work
-**open_access.license** |  String | The Open Access license type e.g. `cc-by`
-**open_access.colour** |  String | The Open Access colour category e.g. `gold`, `green`
+**open_access.license** |  String | The Open Access license type e.g. `cc-by`. N.B. this field is case sensitive.
+**open_access.colour** |  String | The Open Access colour category e.g. `gold`, `green`, `bronze`, `hybrid`, `unknown`. N.B. this field is case sensitive.
 **source.title** | String | The name of source publication in which the scholarly work appears e.g. Journal name, Book title, Conference proceedings
-**source.title.exact** | String | The full name of source publication for exact match (case sensetive).
+**source.title.exact** | String | The full name of source publication for exact match. N.B. this field is case sensitive.
 **source.type** | String | Source Type e.g. `Journal`, `Book Series`
 **source.publisher** | String | The publisher of the source publication `Elsevier`, `Wiley`, `American Medical Association`
-**source.issn** | String | The International Standard Serial Number of the source publication, without hyphenation e.g. `00222836`
-**source.country** |  String | The publisher's country e.g. `United States`, `United Kingdom`
+**source.issn** | String | The International Standard Serial Number of the source publication, without hyphenation e.g. `00222836`, `1474547x`. N.B. this field is case sensitive.
+**source.country** |  String | The publisher's country e.g. `United States`, `United Kingdom`. N.B. this field is case sensitive.
 **source.asjc_codes** |  String | The All Science Journal Classification (ASJC) code e.g. `2735`
 **source.asjc_subjects** |  String | Subject is derived from journals descriptions in Crossref metadata based on the Science Journal Classification Codes e.g. `Pediatrics`, `Microbiology`, `Biophysics`
-**keyword** | String | Search Keywords
-**mesh_term.mesh_id** | String | MeSH term unique identifier. MeSH terms are the National Library of Medicine’s controlled vocabulary or subject heading list. e.g. `D000293`
-**mesh_term.mesh_heading** | String | MeSH terms are the National Library of Medicine’s controlled vocabulary or medical subject headings assigned to PubMed entries. e.g. `Phosphates`, `Immunochemistry`
+**keyword** | String | Keywords for the scholarly work from PubMed. N.B. this field is case sensitive.
+**mesh_term.mesh_ui** | String | MeSH term unique identifier. MeSH terms are the National Library of Medicine’s controlled vocabulary or subject heading list. e.g. `D000293`. N.B. this field is case sensitive.
+**mesh_term.mesh_heading** | String | MeSH terms are the National Library of Medicine’s controlled vocabulary or medical subject headings assigned to PubMed entries. e.g. `Phosphates`, `Immunochemistry`. N.B. this field is case sensitive.
 **mesh_term.qualifier_id** | String | Mesh Term Qualifier ID e.g. `Q000032`
 **mesh_term.qualifier_name** | String | Mesh Term Qualifier Name e.g. `pathology`, `immunology`, `analysis`
 **funding.organisation** | String | Name of the funding organisation e.g. `NIDCR NIH HHS`
-**funding.organisation.exact** | String | For exact matches of full organisational name (case sensetive).
-**funding.funding_id** | String | The funding organisation's project identifier e.g.`U01 DE018902`
+**funding.organisation.exact** | String | For exact matches of full organisational name. N.B. this field is case sensitive.
+**funding.funding_id** | String | The funding organisation's project identifier e.g.`U01 DE018902`. N.B. this field is case sensitive.
 **funding.country** | String | The country of the funding body e.g. `United States`, `Germany`, `United Kingdom`
 {: .param-def }
 
@@ -164,7 +165,7 @@ Use parameter `from` to define the offset and `size` to specify number of record
 }
 ```
 Similarly for `GET` requests, the following parameters are applicable: `size=50&from=100`
-> Note: 
+> **Note**: 
 > - Offset/size based paginations is suitable for small result sets only and does not work on result sets of more that 1000 records. For larger volume data downloads, use Cursor Based Pagination.
 
 ##### Cursor Based Pagination
@@ -177,7 +178,7 @@ You can specify records per page using `size` (default 20 and max 1000) and cont
   "scroll": "1m"
 }
 ```
-> Note: 
+> **Note**: 
 > - The lifespan of scroll_id is limited to 1 minute for the current API version. Using expired scroll_id will result bad request HTTP response.
 > - Parameter `size` will be used for first scroll query and will remain the same for whole scroll context. Hence, using size in each scroll request will not have any effect.
 > - Cursor based pagination is only applicable to `POST` requests.
@@ -185,17 +186,17 @@ You can specify records per page using `size` (default 20 and max 1000) and cont
 
 
 ### Sorting
-Result can be retrieved in ascending or descending order. By default, results are sorted with most relevant matches first. Use the following format and [fields](#searchable-fields) to apply sorting to the API response.
+Result can be retrieved in ascending or descending order. Use the following format and [fields](#searchable-fields) to apply sorting to the API response. Results can also be sorted by relevance score using `relevance`.
 ```json
 {
   "sort": [
-      {"patent_citation_count":"asc"},
-      {"year_published": "desc"}
+      {"patent_citation_count":"desc"},
+      {"year_published": "asc"},
+      {"relevance": "desc"}
   ]
 }
 ```
-For `GET` requests following structure is applicable.
-`sort=desc(date_published),asc(patent_citation_count)`
+For `GET` requests following structure is applicable: `sort=desc(patent_citation_count),asc(date_published),desc(relevance)`
 
 ### Projection
 You can control the output fields in the API [Response] using projection. There are two possible ways to do that.
@@ -210,16 +211,26 @@ You can control the output fields in the API [Response] using projection. There 
 ```
 For `GET` requests following structure is applicable.
 `include=authors,lens_id`
-> Note: Both *include* and *exclude* can be used in same request.
+> **Note**: Both *include* and *exclude* can be used in same request.
 
-# Stemming
+### Stemming
 Stemming allows to reduce the words to root form. E.g. Constructed and constructing will be stemmed to root construct.
 Since sometime the default stemming might not give you exact result, disabling it will just search for provided form of the word.
 e.g. `"stemming": false`
 
+### Regex
+Regex allows the use of regular expressions in [Query String based query](#query-string-based-query), e.g. `"regex": true`
+```json
+{
+    "query": "field_of_study:/.*[Ee]conom.*/",
+    "regex": true
+}
+```
+
 ### Supported Query Types
 
 Following queries are supported by current version of Lens API:
+> **Note**: The Lens API query requests use a modified form of the Elasticsearch Query DSL. For more details on the Elasticsearch query syntax, we recommend reading this guide on the query syntax: [Elasticsearch Query DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html)
 
 ##### Term Query
 [Term Query] operates in a single term and search for *exact term* in the field provided.
@@ -246,6 +257,8 @@ Following queries are supported by current version of Lens API:
 	}
 }
 ```
+> **Note**: 
+> Avoid using the [Term](#term-query) and [Terms](#terms-query) queries for text fields. To search text field values, we recommend using the [Match](#match-query) and [Match Phrase](#match-phrase-query) queries instead.
 
 ##### Match query
 [Match query] accepts text/numbers/dates. The main use case of the match query is full-text search.
@@ -274,10 +287,9 @@ It matches each words separately. If you need to search whole phrase use [match 
 }
 ```
 
-> Note: Both **Match** and **Match Phrase** are used for text searching but the difference is how they do it. For example, searching for `"Cleveland, OH"` differs between Match and Match Phrase like this:
+> **Note**: Both **Match** and **Match Phrase** are used for text searching but the difference is how they do it. For example, searching for `"Cleveland, OH"` differs between Match and Match Phrase like this:
 >* **Match**: standard search in which each word is matched separately (for example: `Cleveland` OR `OH`)
 >* **Match Phrase**: matches the exact phrase provided. In this case it will match the exact text `Cleveland, OH`
-
 
 
 
@@ -338,23 +350,30 @@ You can use json based format for string based query and mixed with complex bool
 
 ```json
 {
-	"query": {
-		"bool": {
-			"must": [{
-				"query_string": {
-					"query": "X-ray analysis of protein crystals",
-					"fields": ["title", "abstract", "full_text"],
-					"default_operator": "and"
-				}
-			}],
-			"filter": [{
-				"term": {
-					"has_affiliation": true
-				}
-			}]
-
-		}
-	}
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "query_string": {
+                        "query": "\"X-ray analysis of protein crystals\"",
+                        "fields": [
+                            "title",
+                            "abstract",
+                            "full_text"
+                        ],
+                        "default_operator": "and"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "term": {
+                        "has_affiliation": true
+                    }
+                }
+            ]
+        }
+    }
 }
 ```
 

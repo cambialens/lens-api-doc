@@ -39,6 +39,8 @@ Fields | Description |  Required
 **[scroll](#pagination)** | Lifespan of Scroll scroll context in minute (e.g. 1m) | false (true for scroll context)
 **[stemming](#stemming)** | Change the ability to reduce the search word into root form | false (true by default)
 **[language](#language)** | For multi-lingual fulltext search | false (`EN` by default)
+**[regex](#regex)** | For Query String based queries containing regular expressions | false (false by default)
+**[group_by](#group-by-family)** | For group by patent family queries. Supports group by `SIMPLE_FAMILY` and `EXTENDED_FAMILY` | false
 {: .param-def }
 
 ### Searchable Fields
@@ -129,6 +131,8 @@ Legal Events | **legal_status.discontinuation_date** | Date | The discontinuatio
 Legal Events | **legal_status.grant_date** | Date | The date the patent application was granted (i.e. the application first grant date). e.g. `2009-05-22`
 Legal Events | **legal_status.granted** | Boolean | Indicates if the patent application has been granted in one or more jurisdictions. e.g. `TRUE`
 Legal Events | **legal_status.has_disclaimer** | Boolean | Indicates if this US patent subjected to a terminal disclaimer. e.g. `TRUE`
+Legal Events | **legal_status.has_grant_event** | Boolean | Indicates if the patent application/simple family has one or more Grant events in INPADOC. e.g. `TRUE`
+Legal Events | **legal_status.has_entry_into_national_phase** | Boolean | Indicates if the patent application/simple family has entered the National Phase in INPADOC. e.g. `TRUE`
 Legal Events | **legal_status.patent_status** | String | The calculated legal status of the patent application. e.g. `expired`, `inactive`, `active`, `patented`, `discontinued`, `withdrawn or rejected`, `pending`, `unknown`
 Legal Events | **legal_status.has_spc** | Boolean | Indicates if the patent has a supplementary protection certificate. e.g. `TRUE`
 Agents & Attorneys | **agent.address** | String | The agent/attorney address as recorded on the patent. e.g. `20 Red Lion Street, GB-London WC1R 4PJ(GB)`
@@ -151,7 +155,7 @@ Citations | **reference_cited.npl_resolved_count** | Integer | The number of res
 {: .param-def }
 
 ### Filtering
-You can use following pre-defined filters to refine search results:
+You can use the following pre-defined filters to refine your search results:
 
 Field | Description |  Possible Value
 ------- | ------| -------
@@ -199,7 +203,7 @@ Use parameter `from` to define the offset and `size` to specify number of record
 }
 ```
 Similarly for `GET` requests, the following parameters are applicable: `size=50&from=100`
-> Note: 
+> **Note**: 
 > - Offset/size based paginations is suitable for small result sets only and does not work on result sets of more that 1000 records. For larger volume data downloads, use Cursor Based Pagination.
 
 ##### Cursor Based Pagination
@@ -212,24 +216,24 @@ You can specify records per page using `size` (default 20 and max 100-500, refer
   "scroll": "1m"
 }
 ```
-> Note: 
+> **Note**: 
 > - The lifespan of scroll_id is limited to 1 minute for the current API version. Using expired scroll_id will result bad request HTTP response.
 > - Parameter `size` will be used for first scroll query and will remain the same for whole scroll context. Hence, using size in each scroll request will not have any effect.
 > - Cursor based pagination is only applicable to `POST` requests.
 > - For optimal performance, we recommend limiting the number of items (e.g. `lens_ids`) in a single terms query to 10,000.
 
 ### Sorting
-Result can be retrieved in ascending or descending order. By default, results are sorted with most relevant matches first. Use the following format and [fields](#searchable-fields) to apply sorting to the API response.
+Result can be retrieved in ascending or descending order. Use the following format and [fields](#searchable-fields) to apply sorting to the API response. Results can also be sorted by relevance score using `relevance`.
 ```json
 {
   "sort": [
       {"reference_cited.patent_count":"desc"},
-      {"year_published": "asc"}
+      {"year_published": "asc"},
+      {"relevance": "desc"}
   ]
 }
 ```
-For `GET` requests, the following structure is applicable.
-`sort=desc(reference_cited.patent_count),asc(date_published)`
+For `GET` requests, the following structure is applicable: `sort=desc(reference_cited.patent_count),asc(date_published),desc(relevance)`
 
 ### Projection
 You can control the output fields in the API [Response] using projection. There are two possible ways to do that.
@@ -244,20 +248,34 @@ You can control the output fields in the API [Response] using projection. There 
 ```
 For `GET` requests following structure is applicable.
 `include=lens_id,title,description,claim`
-> Note: Both *include* and *exclude* can be used in same request.
+> **Note**: Both *include* and *exclude* can be used in same request.
 
 
-# Stemming
+### Stemming
 Stemming allows to reduce the words to root form. E.g. Constructed and constructing will be stemmed to root construct.
 Since sometime the default stemming might not give you exact result, disabling it will just search for provided form of the word.
 e.g. `"stemming": false`
 
-# Language
+### Language
 Available search language codes: `AR`, `DE`, `EN`, `ES`, `FR`, `JA`, `KO`, `PT`, `RU`, `ZH`
+
+### Regex
+Regex allows the use of regular expressions in [Query String based query](#query-string-based-query), e.g. `"regex": true`
+```json
+{
+    "query": "field_of_study:/.*[Ee]conom.*/",
+    "regex": true
+}
+```
+
+### Group by Family
+Group by patent family queries supports group by `SIMPLE_FAMILY` and `EXTENDED_FAMILY`, e.g. `"group_by": "SIMPLE_FAMILY"`
+
 
 ### Supported Query Types
 
 Following queries are supported by current version of Lens API:
+> **Note**: The Lens API query requests use a modified form of the Elasticsearch Query DSL. For more details on the Elasticsearch query syntax, we recommend reading this guide on the query syntax: [Elasticsearch Query DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html)
 
 ##### Term Query
 [Term Query] operates in a single term and search for *exact term* in the field provided.
@@ -284,6 +302,8 @@ Following queries are supported by current version of Lens API:
 	}
 }
 ```
+> **Note**: 
+> * Avoid using the [Term](#term-query) and [Terms](#terms-query) queries for text fields. To search text field values, we recommend using the [Match](#match-query) and [Match Phrase](#match-phrase-query) queries instead.
 
 ##### Match query
 [Match query] accepts text/numbers/dates. The main use case of the match query is full-text search.
@@ -311,7 +331,7 @@ It matches each words separately. If you need to search whole phrase use [match 
    }
 }
 ```
-> Note: Both **Match** and **Match Phrase** are used for text searching but the difference is how they do it. For example, searching for `"Cleveland, OH"` differs between Match and Match Phrase like this:
+> **Note**: Both **Match** and **Match Phrase** are used for text searching but the difference is how they do it. For example, searching for `"Cleveland, OH"` differs between Match and Match Phrase like this:
 >* **Match**: standard search in which each word is matched separately (for example: `Cleveland` OR `OH`)
 >* **Match Phrase**: matches the exact phrase provided. In this case it will match the exact text `Cleveland, OH`
 

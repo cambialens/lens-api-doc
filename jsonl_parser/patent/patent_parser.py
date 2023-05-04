@@ -6,10 +6,10 @@ class PatentParser:
         lens_id = patent_json.get('lens_id')
         jurisdiction = patent_json.get('jurisdiction')
         kind = patent_json.get('kind')
-        display_key = patent_json.get('doc_key')
+        display_key = self.__get_docnumber(jurisdiction, patent_json.get('doc_number'), kind)
         title = patent_json.get('title')
         abstract = self.__get_object(patent_json, 'abstract')
-        abstract_text = abstract[0].get('text') if abstract[0] is not None else ''
+        abstract_text = abstract[0].get('text') if abstract else ''
 
         document_type = patent_json.get('publication_type')
         biblio = patent_json.get('biblio') if 'biblio' in patent_json else {}
@@ -17,7 +17,10 @@ class PatentParser:
         publication_date = self.__get_string(biblio, 'publication_reference', 'date')
         publication_year = publication_date.split('-')[0]
         # Application reference
-        application_number = self.__get_string(biblio, 'application_reference', 'doc_number')
+        application_jurisdiction = self.__get_string(biblio, 'application_reference', 'jurisdiction')
+        application_kind = self.__get_string(biblio, 'application_reference', 'kind')
+        application_doc_number = self.__get_string(biblio, 'application_reference', 'doc_number')
+        application_number = self.__get_docnumber(application_jurisdiction, application_doc_number, application_kind)
         application_date = self.__get_string(biblio, 'application_reference', 'date')
         # Priority claims
         priority_claims = self.__get_object(biblio, 'priority_claims')
@@ -32,17 +35,22 @@ class PatentParser:
         applicants = self.__get_string(biblio, 'parties', 'applicants', 'extracted_name', 'value')
         inventors = self.__get_string(biblio, 'parties', 'inventors', 'extracted_name', 'value')
         owners = self.__get_string(biblio, 'parties', 'owners_all', 'extracted_name', 'value')
+        url = 'https://lens.org/' + lens_id
         npl_resolved_lens_ids = self.__get_string(biblio, 'references_cited', 'citations', 'nplcit', 'lens_id')
         npl_resolved_external_ids = self.__get_string(biblio, 'references_cited', 'citations', 'nplcit', 'external_ids')
-        npl_citations = self.__get_string(biblio, 'references_cited', 'npl_count')
+        npl_citations = self.__get_string(biblio, 'references_cited', 'citations', 'nplcit', 'text')
         npl_resolved_citation_count = self.__get_number(biblio, 'references_cited', 'npl_resolved_count')
         cites_patent_count = self.__get_number(biblio, 'references_cited', 'patent_count')
+        cited_by_patent_count = self.__get_number(biblio,'cited_by', 'patent_count')
         extended_family_size = self.__get_number(patent_json, 'families', 'extended_family', 'size')
         simple_family_size = self.__get_number(patent_json, 'families', 'simple_family', 'size')
         legal_status = self.__get_string(patent_json, 'legal_status', 'patent_status')
 
         return Patent(lens_id, jurisdiction, kind, display_key, publication_date, publication_year, application_number,
-                application_date, priority_numbers, earliest_priority_date, title, abstract_text, applicants, inventors, owners, document_type, cites_patent_count, simple_family_size, extended_family_size,cpc_classification, ipcr_classification, us_classification, npl_citations,npl_resolved_citation_count, npl_resolved_lens_ids, npl_resolved_external_ids, npl_citations, legal_status)
+                application_date, priority_numbers, earliest_priority_date, title, abstract_text, applicants, inventors, owners, url,
+                document_type, cites_patent_count, cited_by_patent_count, simple_family_size, extended_family_size,cpc_classification, ipcr_classification,
+                us_classification, npl_citations,npl_resolved_citation_count, npl_resolved_lens_ids, npl_resolved_external_ids, npl_citations,
+                legal_status)
                 
     def __get_object(self, root, element):
         if root is None:
@@ -71,3 +79,7 @@ class PatentParser:
             return ';'.join(filter(None, map(lambda item: self.__get_value(item, default, *args), root)))
         else:
             return ValueError("Expected root to be dict, found " + str(type(root)))
+        
+    def __get_docnumber(self, jurisdictions, doc_number, kind):
+        new_doc_number = ' '.join([jurisdictions, doc_number, kind])
+        return(new_doc_number)

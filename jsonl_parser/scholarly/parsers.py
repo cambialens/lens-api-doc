@@ -11,7 +11,7 @@ class WorkParser:
 		external_url = None
 		lens_id = work_json.get('lens_id')
 		title = work_json.get('title')
-		date_published = work_json.get('date_published')
+		date_published = (datetime.fromisoformat(work_json.get('date_published'))).date() if work_json.get('date_published') is not None else ''
 		publication_year = work_json.get('year_published')
 		publication_type = work_json.get('publication_type')
 		authors = self.__get_authors(work_json['authors']) if 'authors' in work_json else []
@@ -26,9 +26,9 @@ class WorkParser:
 		funding = self.__get_value(work_json.get('funding'), 'org')
 		mesh_terms = self.__get_meshterms(work_json['mesh_terms']) if 'mesh_terms' in work_json else []
 		citing_patents_count = work_json.get('patent_citations_count')
-		references = self.__get_value(work_json.get('references'), lens_id)
-		citing_works_count = work_json.get('citing_works_count')
-		is_open_access = work_json.get('is_open_access')
+		references = self.__get_value(work_json.get('references'), 'lens_id')
+		citing_works_count = work_json.get('scholarly_citations_count')
+		is_open_access = work_json.get('is_open_access') if 'is_open_access' in work_json else 'False'
 		source_urls = self.__get_value(work_json, 'source_urls', 'url')
 		source = work_json.get('source')
 		source_title = self.__get_value(source, 'title')
@@ -52,7 +52,6 @@ class WorkParser:
 					pmid = value
 				elif type == 'pmcid':
 					pmcid = value
-		
 		
 		return Work(lens_id, title, date_published, publication_year, publication_type, source_title, issn, publisher, 
 					source_country, authors, magid, doi, abstract, volume, issue_number, start_page, end_page, fields_of_study, 
@@ -116,7 +115,6 @@ class WorkParser:
 				external_url = "https://www.ncbi.nlm.nih.gov/pmc/articles/" + value
 		return external_url
 	
-
 	def __get_value(self, root,  *args):
 		if root is None:
 			return ''

@@ -1,7 +1,7 @@
 class Patent:
 	def __init__(self, lens_id, jurisdiction, kind, display_key, publication_date, publication_year, application_number,
-                application_date, priority_numbers, earliest_priority_date, title, abstract, applicants, inventors, owners,
-                document_type, cites_patent_count, simple_family_size, extended_family_size, cpc_classification, 
+                application_date, priority_numbers, earliest_priority_date, title, abstract, applicants, inventors, owners, url,
+                document_type, cites_patent_count, cited_by_patent_count, simple_family_size, extended_family_size, cpc_classification, 
                 ipcr_classification, us_classification, npl_citation_count,npl_resolved_citation_count, npl_resolved_lens_ids,
                 npl_resolved_external_ids, npl_citations, legal_status):
                 self.lens_id = lens_id
@@ -19,8 +19,10 @@ class Patent:
                 self.applicants = applicants
                 self.inventors = inventors
                 self.owners = owners
+                self.url = url
                 self.document_type = document_type
                 self.cites_patent_count = cites_patent_count
+                self.cited_by_patent_count = cited_by_patent_count
                 self.simple_family_size = simple_family_size
                 self.extended_family_size = extended_family_size
                 self.cpc_classification = cpc_classification

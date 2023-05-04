@@ -6,12 +6,12 @@ from model import Patent
 
 class PatentCsvWriter:
 	def __init__(self, patent_csv_file):
-		patent_headers = ['lens_id', 'jurisdiction', 'kind', 'display_key', 'publication_date', 'publication_year', 
-        'application_number', 'application_date', 'priority_numbers', 'earliest_priority_date', 'title', 'abstract',
-        'applicants', 'inventors', 'owners', 'document_type', 'cites_patent_count',
-        'simple_family_size', 'extended_family_size', 'cpc_classification', 'ipcr_classification',
-        'us_classification', 'npl_citation_count', 'npl_resolved_citation_count', 'npl_resolved_lens_ids',
-        'npl_resolved_external_ids', 'npl_citations', 'legal_status']
+		patent_headers = ['Lens ID', 'Jurisdiction', 'Kind', 'Display Key', 'Publication Date', 'Publication Year', 
+        'Application Number', 'Application Date', 'Priority Numbers', 'Earliest Priority Date', 'Title', 'Abstract',
+        'Applicants', 'Inventors', 'Owners', 'URL', 'Document Type', 'Cites Patent Count', 'Cited By Patent Count', 
+        'Simple Family Size', 'Extended Family Size', 'CPC Classification', 'IPCR Classification',
+        'US Classification', 'NPL Citation Count', 'NPL Resolved Citation Count', 'NPL Resolved Lens IDs',
+        'NPL Resolved External IDs', 'NPL Citations', 'Legal Status']
 
 		self.patent_writer = csv.DictWriter(patent_csv_file, fieldnames=patent_headers)
 
@@ -22,33 +22,35 @@ class PatentCsvWriter:
 
 	def __write_patent(self, patent: Patent):
 		patent_dist = {
-						'lens_id' : patent.lens_id,
-                		'jurisdiction' : patent.jurisdiction,
-                		'kind' : patent.kind,
-                		'display_key' : patent.display_key,
-                		'publication_date' : patent.publication_date,
-                		'publication_year' : patent.publication_year,
-                		'application_number' : patent.application_number,
-                		'application_date' : patent.application_date,
-                        'priority_numbers' : patent.priority_numbers,
-                		'earliest_priority_date': patent.earliest_priority_date,
-                		'title' : patent.title,
-                		'abstract' : patent.abstract,
-                		'applicants' : patent.applicants,
-                		'inventors' : patent.inventors,
-                		'owners' : patent.owners,
-                		'document_type' : patent.document_type,
-                		'cites_patent_count' : patent.cites_patent_count,
-                		'simple_family_size' : patent.simple_family_size,
-                		'extended_family_size' : patent.extended_family_size,
-                		'cpc_classification' : patent.cpc_classification,
-                		'ipcr_classification' : patent.ipcr_classification,
-                		'us_classification' : patent.us_classification,
-                		'npl_citation_count' : patent.npl_citation_count,
-                		'npl_resolved_citation_count' : patent.npl_resolved_citation_count,
-                		'npl_resolved_lens_ids' : patent.npl_resolved_lens_ids,
-                		'npl_resolved_external_ids' : patent.npl_resolved_external_ids,
-                		'npl_citations' : patent.npl_citations,
-                		'legal_status' : patent.legal_status
+						'Lens ID' : patent.lens_id,
+                		'Jurisdiction' : patent.jurisdiction,
+                		'Kind' : patent.kind,
+                		'Display Key' : patent.display_key,
+                		'Publication Date' : patent.publication_date,
+                		'Publication Year' : patent.publication_year,
+                		'Application Number' : patent.application_number,
+                		'Application Date' : patent.application_date,
+                        'Priority Numbers' : patent.priority_numbers,
+                		'Earliest Priority Date': patent.earliest_priority_date,
+                		'Title' : patent.title,
+                		'Abstract' : patent.abstract,
+                		'Applicants' : patent.applicants,
+                		'Inventors' : patent.inventors,
+                		'Owners' : patent.owners,
+						'URL' : patent.url,
+                		'Document Type' : patent.document_type,
+                		'Cites Patent Count' : patent.cites_patent_count,
+						'Cited By Patent Count' : patent.cited_by_patent_count,
+                		'Simple Family Size' : patent.simple_family_size,
+                		'Extended Family Size' : patent.extended_family_size,
+                		'CPC Classification' : patent.cpc_classification,
+                		'IPCR Classification' : patent.ipcr_classification,
+                		'US Classification' : patent.us_classification,
+                		'NPL Citation Count' : patent.npl_citation_count,
+                		'NPL Resolved Citation Count' : patent.npl_resolved_citation_count,
+                		'NPL Resolved Lens IDs' : patent.npl_resolved_lens_ids,
+                		'NPL Resolved External IDs' : patent.npl_resolved_external_ids,
+                		'NPL Citations' : patent.npl_citations,
+                		'Legal Status' : patent.legal_status
 					}
 		self.patent_writer.writerow(patent_dist)

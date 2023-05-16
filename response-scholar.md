@@ -75,6 +75,7 @@ toc:
  Field | Type |  Description | Example
 ------- |:------| -------|---------
 **name** | String | The institution associated with the author affiliations. | `Stony Brook University`
+**name_original** | String | The author's original affiliation including the institution name and address. | `School of Engineering and Applied Sciences, Harvard University, Cambridge, Massachusetts USA`
 **grid_id** | String | Affiliation grid id. **NB** This field is deprecated, please use the [ids](#ids) field instead. | `grid.9018.0`
 **country_code** | String | Comma separated country codes | `DE`
 **ids** | Array of [Ids](#ids) | The external institution identifiers associated with the author's affiliation

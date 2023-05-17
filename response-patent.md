@@ -424,717 +424,733 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
 
 ### Sample Patent Record
 
+**Request:**
 ```json
 {
-    "lens_id": "031-156-664-516-153",
-    "jurisdiction": "EP",
-    "doc_number": "2471949",
-    "kind": "A1",
-    "date_published": "2012-07-04",
-    "doc_key": "EP_2471949_A1_20120704",
-    "docdb_id": 364714255,
-    "lang": "en",
-    "biblio": {
-        "publication_reference": {
+  "query":{
+  	"match":{"lens_id":"031-156-664-516-153"}
+  }
+}
+```
+
+**Response:**
+```json
+{
+    "total": 1,
+    "max_score": 16.704784,
+    "data": [
+        {
+            "lens_id": "031-156-664-516-153",
             "jurisdiction": "EP",
             "doc_number": "2471949",
             "kind": "A1",
-            "date": "2012-07-04"
-        },
-        "application_reference": {
-            "jurisdiction": "EP",
-            "doc_number": "10197481",
-            "kind": "A",
-            "date": "2010-12-31"
-        },
-        "priority_claims": {
-            "claims": [
-                {
+            "date_published": "2012-07-04",
+            "doc_key": "EP_2471949_A1_20120704",
+            "docdb_id": 364714255,
+            "lang": "en",
+            "biblio": {
+                "publication_reference": {
+                    "jurisdiction": "EP",
+                    "doc_number": "2471949",
+                    "kind": "A1",
+                    "date": "2012-07-04"
+                },
+                "application_reference": {
                     "jurisdiction": "EP",
                     "doc_number": "10197481",
                     "kind": "A",
-                    "date": "2010-12-31",
-                    "sequence": 1
+                    "date": "2010-12-31"
+                },
+                "priority_claims": {
+                    "claims": [
+                        {
+                            "jurisdiction": "EP",
+                            "doc_number": "10197481",
+                            "kind": "A",
+                            "date": "2010-12-31",
+                            "sequence": 1
+                        }
+                    ],
+                    "earliest_claim": {
+                        "date": "2010-12-31"
+                    }
+                },
+                "invention_title": [
+                    {
+                        "text": "Verfahren zur Identifizierung durch Molekulartechniken von genetischen Varianten, die kein D-Antigen (D-) und das veränderte C-Antigen (C+W) codieren",
+                        "lang": "de"
+                    },
+                    {
+                        "text": "Method for the identification by molecular techniques of genetic variants that encode no D antigen (D-) and altered C antigen (C+W)",
+                        "lang": "en"
+                    },
+                    {
+                        "text": "Procédé pour l'identification par des techniques moléculaires de variantes génétiques ne codant pas d'antigène D (D-) et qui codent l'antigène C modifié (C+W)",
+                        "lang": "fr"
+                    }
+                ],
+                "parties": {
+                    "applicants": [
+                        {
+                            "residence": "ES",
+                            "extracted_name": {
+                                "value": "PROGENIKA BIOPHARMA SA"
+                            }
+                        }
+                    ],
+                    "inventors": [
+                        {
+                            "residence": "ES",
+                            "sequence": 1,
+                            "extracted_name": {
+                                "value": "OCHOA JORGE"
+                            }
+                        },
+                        {
+                            "residence": "ES",
+                            "sequence": 2,
+                            "extracted_name": {
+                                "value": "LOPEZ MONICA"
+                            }
+                        },
+                        {
+                            "residence": "ES",
+                            "sequence": 3,
+                            "extracted_name": {
+                                "value": "TEJEDOR DIEGO"
+                            }
+                        },
+                        {
+                            "residence": "ES",
+                            "sequence": 4,
+                            "extracted_name": {
+                                "value": "MARTINEZ ANTONIO"
+                            }
+                        },
+                        {
+                            "residence": "ES",
+                            "sequence": 5,
+                            "extracted_name": {
+                                "value": "SIMON LAUREANO"
+                            }
+                        }
+                    ],
+                    "agents": [
+                        {
+                            "extracted_name": {
+                                "value": "Casley, Christopher Stuart"
+                            },
+                            "extracted_address": "Mewburn Ellis LLP \n33 Gutter Lane, London\nEC2V 8AS",
+                            "extracted_country": "GB"
+                        }
+                    ],
+                    "owners_all": [
+                        {
+                            "recorded_date": "2013-12-11",
+                            "execution_date": "2013-12-11",
+                            "extracted_name": {
+                                "value": "PROGENIKA BIOPHARMA, S.A."
+                            }
+                        }
+                    ]
+                },
+                "classifications_ipcr": {
+                    "classifications": [
+                        {
+                            "symbol": "C12Q1/68"
+                        }
+                    ]
+                },
+                "classifications_cpc": {
+                    "classifications": [
+                        {
+                            "symbol": "A61K35/14"
+                        },
+                        {
+                            "symbol": "C12Q1/6881"
+                        },
+                        {
+                            "symbol": "C12Q1/6881"
+                        },
+                        {
+                            "symbol": "C12Q2600/156"
+                        },
+                        {
+                            "symbol": "C12Q2600/156"
+                        }
+                    ]
+                },
+                "references_cited": {
+                    "citations": [
+                        {
+                            "sequence": 1,
+                            "patcit": {
+                                "document_id": {
+                                    "jurisdiction": "WO",
+                                    "doc_number": "2006075254",
+                                    "kind": "A2",
+                                    "date": "2006-07-20"
+                                },
+                                "lens_id": "185-701-234-511-622"
+                            },
+                            "cited_phase": "SEA"
+                        },
+                        {
+                            "sequence": 2,
+                            "nplcit": {
+                                "text": "AVENT N D ET AL: \"The bloodgen project of the European Union, 2003-2009\", TRANSFUSION MEDICINE AND HEMOTHERAPY 2009 S. KARGER AG CHE LNKD- DOI:10.1159/000218192, vol. 36, no. 3, June 2009 (2009-06-01), pages 162 - 167, XP002633276, ISSN: 1660-3796",
+                                "lens_id": "004-047-148-411-345",
+                                "external_ids": [
+                                    "pmc2980524",
+                                    "21113258",
+                                    "10.1159/000218192"
+                                ]
+                            },
+                            "cited_phase": "SEA"
+                        },
+                        {
+                            "sequence": 3,
+                            "nplcit": {
+                                "text": "WESTHOFF CONNIE M ET AL: \"DIIIa and DIII Type 5 are encoded by the same allele and are associated with altered RHCE*ce alleles: clinical implications\", TRANSFUSION (MALDEN), vol. 50, no. 6, June 2010 (2010-06-01), pages 1303 - 1311, XP002633277, ISSN: 0041-1132",
+                                "lens_id": "125-529-168-227-632",
+                                "external_ids": [
+                                    "pmc2908519",
+                                    "20088832",
+                                    "10.1111/j.1537-2995.2009.02573.x"
+                                ]
+                            },
+                            "cited_phase": "SEA"
+                        },
+                        {
+                            "sequence": 4,
+                            "nplcit": {
+                                "text": "PHAM BACH-NGA ET AL: \"Heterogeneous molecular background of the weak C, VS+, hr(B)-, Hr(B)- phenotype in black persons\", TRANSFUSION (MALDEN), vol. 49, no. 3, March 2009 (2009-03-01), pages 495 - 504, XP002633278, ISSN: 0041-1132",
+                                "lens_id": "086-240-354-498-516",
+                                "external_ids": [
+                                    "19040491",
+                                    "10.1111/j.1537-2995.2008.02005.x"
+                                ]
+                            },
+                            "cited_phase": "SEA"
+                        },
+                        {
+                            "sequence": 5,
+                            "patcit": {
+                                "document_id": {
+                                    "jurisdiction": "WO",
+                                    "doc_number": "2006032897",
+                                    "kind": "A2",
+                                    "date": "2006-03-30"
+                                },
+                                "lens_id": "071-147-450-571-460"
+                            },
+                            "cited_phase": "SEA"
+                        },
+                        {
+                            "sequence": 6,
+                            "patcit": {
+                                "document_id": {
+                                    "jurisdiction": "DE",
+                                    "doc_number": "10049363",
+                                    "kind": "A1",
+                                    "date": "2001-10-31"
+                                },
+                                "lens_id": "033-566-032-105-609"
+                            },
+                            "cited_phase": "SEA"
+                        },
+                        {
+                            "sequence": 7,
+                            "nplcit": {
+                                "text": "FAAS B H W ET AL: \"Rh E/e genotyping by allele-specific primer amplification\", BLOOD, AMERICAN SOCIETY OF HEMATOLOGY, US, vol. 85, no. 3, 1 January 1995 (1995-01-01), pages 829 - 832, XP002614101, ISSN: 0006-4971",
+                                "lens_id": "017-174-583-162-658",
+                                "external_ids": [
+                                    "7833484",
+                                    "10.1182/blood.v85.3.829.bloodjournal853829"
+                                ]
+                            },
+                            "cited_phase": "SEA"
+                        },
+                        {
+                            "sequence": 8,
+                            "nplcit": {
+                                "text": "MAASKANT-VAN WIJK P A ET AL: \"GENOTYPING OR RHD BY MULTIPLEX POLYMERASE CHAIN REACTIONS ANALYSIS OF SIX RHD-SPECIFIC EXONS\", TRANSFUSION, AMERICAN ASSOCIATION OF BLOOD BANKS, BETHESDA, MD, US, vol. 11, no. 38, 1 November 1998 (1998-11-01), pages 1015 - 1021, XP008005129, ISSN: 0041-1132, DOI: 10.1046/J.1537-2995.1998.38111299056309.X",
+                                "lens_id": "059-652-196-800-856",
+                                "external_ids": [
+                                    "10.1046/j.1537-2995.1998.38111299056309.x",
+                                    "9838930"
+                                ]
+                            },
+                            "cited_phase": "SEA"
+                        },
+                        {
+                            "sequence": 9,
+                            "patcit": {
+                                "document_id": {
+                                    "jurisdiction": "WO",
+                                    "doc_number": "2011003921",
+                                    "kind": "A2",
+                                    "date": "2011-01-13"
+                                },
+                                "lens_id": "187-498-666-224-100"
+                            },
+                            "cited_phase": "SEA"
+                        },
+                        {
+                            "sequence": 1,
+                            "patcit": {
+                                "document_id": {
+                                    "jurisdiction": "WO",
+                                    "doc_number": "2009000084",
+                                    "kind": "A1",
+                                    "date": "2008-12-31"
+                                },
+                                "lens_id": "096-184-763-479-702"
+                            },
+                            "cited_phase": "APP"
+                        },
+                        {
+                            "sequence": 2,
+                            "patcit": {
+                                "document_id": {
+                                    "jurisdiction": "WO",
+                                    "doc_number": "2010000210",
+                                    "kind": "A1",
+                                    "date": "2010-01-07"
+                                },
+                                "lens_id": "082-610-612-867-442"
+                            },
+                            "cited_phase": "APP"
+                        },
+                        {
+                            "sequence": 3,
+                            "patcit": {
+                                "document_id": {
+                                    "jurisdiction": "WO",
+                                    "doc_number": "2010000380",
+                                    "kind": "A1",
+                                    "date": "2010-01-07"
+                                },
+                                "lens_id": "080-193-167-878-372"
+                            },
+                            "cited_phase": "APP"
+                        },
+                        {
+                            "sequence": 4,
+                            "patcit": {
+                                "document_id": {
+                                    "jurisdiction": "WO",
+                                    "doc_number": "2010000635",
+                                    "kind": "A1",
+                                    "date": "2010-01-07"
+                                },
+                                "lens_id": "160-241-370-254-307"
+                            },
+                            "cited_phase": "APP"
+                        },
+                        {
+                            "sequence": 5,
+                            "patcit": {
+                                "document_id": {
+                                    "jurisdiction": "WO",
+                                    "doc_number": "2010000972",
+                                    "kind": "A1",
+                                    "date": "2010-01-07"
+                                },
+                                "lens_id": "189-848-800-128-321"
+                            },
+                            "cited_phase": "APP"
+                        },
+                        {
+                            "sequence": 6,
+                            "patcit": {
+                                "document_id": {
+                                    "jurisdiction": "WO",
+                                    "doc_number": "2010002366",
+                                    "kind": "A1",
+                                    "date": "2010-01-07"
+                                },
+                                "lens_id": "091-724-438-661-108"
+                            },
+                            "cited_phase": "APP"
+                        },
+                        {
+                            "sequence": 7,
+                            "patcit": {
+                                "document_id": {
+                                    "jurisdiction": "WO",
+                                    "doc_number": "2010002367",
+                                    "kind": "A1",
+                                    "date": "2010-01-07"
+                                },
+                                "lens_id": "180-004-304-457-874"
+                            },
+                            "cited_phase": "APP"
+                        },
+                        {
+                            "sequence": 8,
+                            "patcit": {
+                                "document_id": {
+                                    "jurisdiction": "WO",
+                                    "doc_number": "2010003113",
+                                    "kind": "A1",
+                                    "date": "2010-01-07"
+                                },
+                                "lens_id": "014-308-334-256-321"
+                            },
+                            "cited_phase": "APP"
+                        },
+                        {
+                            "sequence": 9,
+                            "patcit": {
+                                "document_id": {
+                                    "jurisdiction": "WO",
+                                    "doc_number": "2010003649",
+                                    "kind": "A1",
+                                    "date": "2010-01-14"
+                                },
+                                "lens_id": "149-519-969-815-807"
+                            },
+                            "cited_phase": "APP"
+                        },
+                        {
+                            "sequence": 10,
+                            "patcit": {
+                                "document_id": {
+                                    "jurisdiction": "WO",
+                                    "doc_number": "2010003664",
+                                    "kind": "A1",
+                                    "date": "2010-01-14"
+                                },
+                                "lens_id": "134-590-889-498-511"
+                            },
+                            "cited_phase": "APP"
+                        },
+                        {
+                            "sequence": 11,
+                            "patcit": {
+                                "document_id": {
+                                    "jurisdiction": "WO",
+                                    "doc_number": "2010003809",
+                                    "kind": "A2",
+                                    "date": "2010-01-14"
+                                },
+                                "lens_id": "087-699-367-879-444"
+                            },
+                            "cited_phase": "APP"
+                        },
+                        {
+                            "sequence": 12,
+                            "nplcit": {
+                                "text": "M. E. REID; C. LOMAS-FRANCIS: \"The Blood Group Antigen FactsBook\", 2004, ELSEVIER LTD."
+                            },
+                            "cited_phase": "APP"
+                        },
+                        {
+                            "sequence": 13,
+                            "nplcit": {
+                                "text": "CONNIE M.; WESTHOFF, SUNITHA VEGE; CHRISTINE HALTER-HIPSKY; TRINA WHORLEY; KIM HUE-ROYE; CHRISTINE LOMAS-FRANCIS; MARION E.: \"Dllla and Dill Type 5 are encoded by the same allele and are associated with altered RHCE*ce alleles: clinical implications\", REID. TRANSFUSION, vol. 50, 2010, pages 1303 - 1311",
+                                "lens_id": "125-529-168-227-632",
+                                "external_ids": [
+                                    "pmc2908519",
+                                    "20088832",
+                                    "10.1111/j.1537-2995.2009.02573.x"
+                                ]
+                            },
+                            "cited_phase": "APP"
+                        },
+                        {
+                            "sequence": 14,
+                            "nplcit": {
+                                "text": "BACH-NGA PHAM; THIERRY PEYRARD; GENEVIEVE JUSZCZAK; ISABELLE DUBEAUX; DOMINIQUE GIEN; ANTOINE BLANCHER; JEAN-PIERRE CARTRON; PHILI: \"Heterogeneous molecular background of the weak C, VS+, hrB-, HrB- phenotype in black persons\", TRANSFUSION, vol. 49, 2009, pages 495 - 504",
+                                "lens_id": "086-240-354-498-516",
+                                "external_ids": [
+                                    "19040491",
+                                    "10.1111/j.1537-2995.2008.02005.x"
+                                ]
+                            },
+                            "cited_phase": "APP"
+                        },
+                        {
+                            "sequence": 15,
+                            "nplcit": {
+                                "text": "MARTINE G.H.M.; TAX, C.; ELLEN VAN DER SCHOOT; RENE' VAN DOORN; LOTTE DOUGLAS-BERGER; DICK J.; VAN RHENEN; PETRA A.; MAASKANT-VAN: \"RHC and RHc genotyping in different ethnic groups\", TRANSFUSION, vol. 42, 2002, pages 6234 - 644",
+                                "lens_id": "028-957-496-647-171",
+                                "external_ids": [
+                                    "10.1046/j.1537-2995.2002.00096.x",
+                                    "12084173"
+                                ]
+                            },
+                            "cited_phase": "APP"
+                        },
+                        {
+                            "sequence": 16,
+                            "nplcit": {
+                                "text": "M. E. REID; C. LOMAS-FRANCIS.: \"The Blood group antigen FactsBook\", 2004, ELSEVIER LTD."
+                            },
+                            "cited_phase": "APP"
+                        }
+                    ],
+                    "patent_count": 15,
+                    "npl_count": 10,
+                    "npl_resolved_count": 8
+                },
+                "cited_by": {
+                    "patents": [
+                        {
+                            "document_id": {
+                                "jurisdiction": "WO",
+                                "doc_number": "2014135331",
+                                "kind": "A1"
+                            },
+                            "lens_id": "089-849-576-069-505"
+                        },
+                        {
+                            "document_id": {
+                                "jurisdiction": "WO",
+                                "doc_number": "2012171990",
+                                "kind": "A1"
+                            },
+                            "lens_id": "084-623-881-707-629"
+                        },
+                        {
+                            "document_id": {
+                                "jurisdiction": "US",
+                                "doc_number": "9359643",
+                                "kind": "B2"
+                            },
+                            "lens_id": "007-584-344-944-889"
+                        },
+                        {
+                            "document_id": {
+                                "jurisdiction": "US",
+                                "doc_number": "10253366",
+                                "kind": "B2"
+                            },
+                            "lens_id": "172-445-088-115-557"
+                        },
+                        {
+                            "document_id": {
+                                "jurisdiction": "US",
+                                "doc_number": "9637788",
+                                "kind": "B2"
+                            },
+                            "lens_id": "138-800-291-931-331"
+                        }
+                    ],
+                    "patent_count": 5
                 }
-            ],
-            "earliest_claim": {
-                "date": "2010-12-31"
-            }
-        },
-        "invention_title": [
-            {
-                "text": "Verfahren zur Identifizierung durch Molekulartechniken von genetischen Varianten, die kein D-Antigen (D-) und das veränderte C-Antigen (C+W) codieren",
-                "lang": "de"
             },
-            {
-                "text": "Method for the identification by molecular techniques of genetic variants that encode no D antigen (D-) and altered C antigen (C+W)",
-                "lang": "en"
+            "families": {
+                "simple_family": {
+                    "members": [
+                        {
+                            "document_id": {
+                                "jurisdiction": "EP",
+                                "doc_number": "2471949",
+                                "kind": "B1",
+                                "date": "2013-12-25"
+                            },
+                            "lens_id": "033-643-087-926-128"
+                        },
+                        {
+                            "document_id": {
+                                "jurisdiction": "EP",
+                                "doc_number": "2471949",
+                                "kind": "A1",
+                                "date": "2012-07-04"
+                            },
+                            "lens_id": "031-156-664-516-153"
+                        },
+                        {
+                            "document_id": {
+                                "jurisdiction": "US",
+                                "doc_number": "20120172239",
+                                "kind": "A1",
+                                "date": "2012-07-05"
+                            },
+                            "lens_id": "095-621-040-202-546"
+                        },
+                        {
+                            "document_id": {
+                                "jurisdiction": "ES",
+                                "doc_number": "2445709",
+                                "kind": "T3",
+                                "date": "2014-03-04"
+                            },
+                            "lens_id": "192-287-095-019-170"
+                        },
+                        {
+                            "document_id": {
+                                "jurisdiction": "US",
+                                "doc_number": "20160060696",
+                                "kind": "A1",
+                                "date": "2016-03-03"
+                            },
+                            "lens_id": "126-336-041-308-107"
+                        }
+                    ],
+                    "size": 5
+                },
+                "extended_family": {
+                    "members": [
+                        {
+                            "document_id": {
+                                "jurisdiction": "EP",
+                                "doc_number": "2471949",
+                                "kind": "B1",
+                                "date": "2013-12-25"
+                            },
+                            "lens_id": "033-643-087-926-128"
+                        },
+                        {
+                            "document_id": {
+                                "jurisdiction": "EP",
+                                "doc_number": "2471949",
+                                "kind": "A1",
+                                "date": "2012-07-04"
+                            },
+                            "lens_id": "031-156-664-516-153"
+                        },
+                        {
+                            "document_id": {
+                                "jurisdiction": "ES",
+                                "doc_number": "2445709",
+                                "kind": "T3",
+                                "date": "2014-03-04"
+                            },
+                            "lens_id": "192-287-095-019-170"
+                        },
+                        {
+                            "document_id": {
+                                "jurisdiction": "US",
+                                "doc_number": "20120172239",
+                                "kind": "A1",
+                                "date": "2012-07-05"
+                            },
+                            "lens_id": "095-621-040-202-546"
+                        },
+                        {
+                            "document_id": {
+                                "jurisdiction": "US",
+                                "doc_number": "20160060696",
+                                "kind": "A1",
+                                "date": "2016-03-03"
+                            },
+                            "lens_id": "126-336-041-308-107"
+                        }
+                    ],
+                    "size": 5
+                }
             },
-            {
-                "text": "Procédé pour l'identification par des techniques moléculaires de variantes génétiques ne codant pas d'antigène D (D-) et qui codent l'antigène C modifié (C+W)",
-                "lang": "fr"
-            }
-        ],
-        "parties": {
-            "applicants": [
+            "legal_status": {
+                "granted": true,
+                "grant_date": "2013-12-25",
+                "anticipated_term_date": "2030-12-31",
+                "calculation_log": [
+                    "Application Filing Date: 2010-12-31",
+                    "Granted Date: 2013-12-25",
+                    "Anticipated Termination Date: 2030-12-31"
+                ],
+                "patent_status": "ACTIVE"
+            },
+            "abstract": [
                 {
-                    "residence": "ES",
-                    "extracted_name": {
-                        "value": "PROGENIKA BIOPHARMA SA"
-                    }
+                    "text": "The invention relates to the field of genotyping and blood cell antigen determination. In particular, the invention adresses the problem of discriminating the RHD*DIIIa-CE(4-7)-D or RHD*DIIIa-CE(4-7)-D )-like blood type variants, which express the C +w antigen and lack a D antigen, from RHD*DIIIa , RHD*DIVa-2 and other blood type variants. The invention provides methods for genotyping a subject, comprising: a) determining at least 4 markers in a sample that has been obtained from the subject, wherein the markers comprise: (i) the presence or absence of an RHCE*C allele; (ii) the presence or absence of an RHD/RHCE hybrid exon 3 (RHD/CE Hex03) allele; (iii) the absence of, or a single nucleotide polymorphism (SNP) variant within, of any one of the SNPs at position 602 of RHD exon 4, position 667 of RHD exon 5, or position 819 of RHD exon 6; and (iv) the absence of, or SNP variant within, of the SNP at position 1048 of RHD exon 7. The invention also provides products, in particular, probes, primers and kits for use in such methods.",
+                    "lang": "en"
                 }
             ],
-            "inventors": [
-                {
-                    "residence": "ES",
-                    "sequence": 1,
-                    "extracted_name": {
-                        "value": "OCHOA JORGE"
-                    }
-                },
-                {
-                    "residence": "ES",
-                    "sequence": 2,
-                    "extracted_name": {
-                        "value": "LOPEZ MONICA"
-                    }
-                },
-                {
-                    "residence": "ES",
-                    "sequence": 3,
-                    "extracted_name": {
-                        "value": "TEJEDOR DIEGO"
-                    }
-                },
-                {
-                    "residence": "ES",
-                    "sequence": 4,
-                    "extracted_name": {
-                        "value": "MARTINEZ ANTONIO"
-                    }
-                },
-                {
-                    "residence": "ES",
-                    "sequence": 5,
-                    "extracted_name": {
-                        "value": "SIMON LAUREANO"
-                    }
-                }
-            ],
-            "agents": [
-                {
-                    "extracted_name": {
-                        "value": "Casley, Christopher Stuart"
-                    },
-                    "extracted_address": "Mewburn Ellis LLP \n33 Gutter Lane, London\nEC2V 8AS",
-                    "extracted_country": "GB"
-                }
-            ],
-            "owners_all": [
-                {
-                    "recorded_date": "2013-12-11",
-                    "execution_date": "2013-12-11",
-                    "extracted_name": {
-                        "value": "PROGENIKA BIOPHARMA, S.A."
-                    }
-                }
-            ]
-        },
-        "classifications_ipcr": {
-            "classifications": [
-                {
-                    "symbol": "C12Q1/68"
-                }
-            ]
-        },
-        "classifications_cpc": {
-            "classifications": [
-                {
-                    "symbol": "A61K35/14"
-                },
-                {
-                    "symbol": "C12Q1/6881"
-                },
-                {
-                    "symbol": "C12Q1/6881"
-                },
-                {
-                    "symbol": "C12Q2600/156"
-                },
-                {
-                    "symbol": "C12Q2600/156"
-                }
-            ]
-        },
-        "references_cited": {
-            "citations": [
-                {
-                    "sequence": 1,
-                    "patcit": {
-                        "document_id": {
-                            "jurisdiction": "WO",
-                            "doc_number": "2006075254",
-                            "kind": "A2",
-                            "date": "2006-07-20"
-                        },
-                        "lens_id": "185-701-234-511-622"
-                    },
-                    "cited_phase": "SEA"
-                },
-                {
-                    "sequence": 2,
-                    "nplcit": {
-                        "text": "AVENT N D ET AL: \"The bloodgen project of the European Union, 2003-2009\", TRANSFUSION MEDICINE AND HEMOTHERAPY 2009 S. KARGER AG CHE LNKD- DOI:10.1159/000218192, vol. 36, no. 3, June 2009 (2009-06-01), pages 162 - 167, XP002633276, ISSN: 1660-3796",
-                        "lens_id": "004-047-148-411-345",
-                        "external_ids": [
-                            "10.1159/000218192",
-                            "pmc2980524",
-                            "21113258"
-                        ]
-                    },
-                    "cited_phase": "SEA"
-                },
-                {
-                    "sequence": 3,
-                    "nplcit": {
-                        "text": "WESTHOFF CONNIE M ET AL: \"DIIIa and DIII Type 5 are encoded by the same allele and are associated with altered RHCE*ce alleles: clinical implications\", TRANSFUSION (MALDEN), vol. 50, no. 6, June 2010 (2010-06-01), pages 1303 - 1311, XP002633277, ISSN: 0041-1132",
-                        "lens_id": "125-529-168-227-632",
-                        "external_ids": [
-                            "10.1111/j.1537-2995.2009.02573.x",
-                            "20088832",
-                            "pmc2908519"
-                        ]
-                    },
-                    "cited_phase": "SEA"
-                },
-                {
-                    "sequence": 4,
-                    "nplcit": {
-                        "text": "PHAM BACH-NGA ET AL: \"Heterogeneous molecular background of the weak C, VS+, hr(B)-, Hr(B)- phenotype in black persons\", TRANSFUSION (MALDEN), vol. 49, no. 3, March 2009 (2009-03-01), pages 495 - 504, XP002633278, ISSN: 0041-1132",
-                        "lens_id": "086-240-354-498-516",
-                        "external_ids": [
-                            "19040491",
-                            "10.1111/j.1537-2995.2008.02005.x"
-                        ]
-                    },
-                    "cited_phase": "SEA"
-                },
-                {
-                    "sequence": 5,
-                    "patcit": {
-                        "document_id": {
-                            "jurisdiction": "WO",
-                            "doc_number": "2006032897",
-                            "kind": "A2",
-                            "date": "2006-03-30"
-                        },
-                        "lens_id": "071-147-450-571-460"
-                    },
-                    "cited_phase": "SEA"
-                },
-                {
-                    "sequence": 6,
-                    "patcit": {
-                        "document_id": {
-                            "jurisdiction": "DE",
-                            "doc_number": "10049363",
-                            "kind": "A1",
-                            "date": "2001-10-31"
-                        },
-                        "lens_id": "033-566-032-105-609"
-                    },
-                    "cited_phase": "SEA"
-                },
-                {
-                    "sequence": 7,
-                    "nplcit": {
-                        "text": "FAAS B H W ET AL: \"Rh E/e genotyping by allele-specific primer amplification\", BLOOD, AMERICAN SOCIETY OF HEMATOLOGY, US, vol. 85, no. 3, 1 January 1995 (1995-01-01), pages 829 - 832, XP002614101, ISSN: 0006-4971",
-                        "lens_id": "017-174-583-162-658",
-                        "external_ids": [
-                            "10.1182/blood.v85.3.829.bloodjournal853829",
-                            "7833484"
-                        ]
-                    },
-                    "cited_phase": "SEA"
-                },
-                {
-                    "sequence": 8,
-                    "nplcit": {
-                        "text": "MAASKANT-VAN WIJK P A ET AL: \"GENOTYPING OR RHD BY MULTIPLEX POLYMERASE CHAIN REACTIONS ANALYSIS OF SIX RHD-SPECIFIC EXONS\", TRANSFUSION, AMERICAN ASSOCIATION OF BLOOD BANKS, BETHESDA, MD, US, vol. 11, no. 38, 1 November 1998 (1998-11-01), pages 1015 - 1021, XP008005129, ISSN: 0041-1132, DOI: 10.1046/J.1537-2995.1998.38111299056309.X",
-                        "lens_id": "059-652-196-800-856",
-                        "external_ids": [
-                            "9838930",
-                            "10.1046/j.1537-2995.1998.38111299056309.x"
-                        ]
-                    },
-                    "cited_phase": "SEA"
-                },
-                {
-                    "sequence": 9,
-                    "patcit": {
-                        "document_id": {
-                            "jurisdiction": "WO",
-                            "doc_number": "2011003921",
-                            "kind": "A2",
-                            "date": "2011-01-13"
-                        },
-                        "lens_id": "187-498-666-224-100"
-                    },
-                    "cited_phase": "SEA"
-                },
-                {
-                    "sequence": 1,
-                    "patcit": {
-                        "document_id": {
-                            "jurisdiction": "WO",
-                            "doc_number": "2009000084",
-                            "kind": "A1",
-                            "date": "2008-12-31"
-                        },
-                        "lens_id": "096-184-763-479-702"
-                    },
-                    "cited_phase": "APP"
-                },
-                {
-                    "sequence": 2,
-                    "patcit": {
-                        "document_id": {
-                            "jurisdiction": "WO",
-                            "doc_number": "2010000210",
-                            "kind": "A1",
-                            "date": "2010-01-07"
-                        },
-                        "lens_id": "082-610-612-867-442"
-                    },
-                    "cited_phase": "APP"
-                },
-                {
-                    "sequence": 3,
-                    "patcit": {
-                        "document_id": {
-                            "jurisdiction": "WO",
-                            "doc_number": "2010000380",
-                            "kind": "A1",
-                            "date": "2010-01-07"
-                        },
-                        "lens_id": "080-193-167-878-372"
-                    },
-                    "cited_phase": "APP"
-                },
-                {
-                    "sequence": 4,
-                    "patcit": {
-                        "document_id": {
-                            "jurisdiction": "WO",
-                            "doc_number": "2010000635",
-                            "kind": "A1",
-                            "date": "2010-01-07"
-                        },
-                        "lens_id": "160-241-370-254-307"
-                    },
-                    "cited_phase": "APP"
-                },
-                {
-                    "sequence": 5,
-                    "patcit": {
-                        "document_id": {
-                            "jurisdiction": "WO",
-                            "doc_number": "2010000972",
-                            "kind": "A1",
-                            "date": "2010-01-07"
-                        },
-                        "lens_id": "189-848-800-128-321"
-                    },
-                    "cited_phase": "APP"
-                },
-                {
-                    "sequence": 6,
-                    "patcit": {
-                        "document_id": {
-                            "jurisdiction": "WO",
-                            "doc_number": "2010002366",
-                            "kind": "A1",
-                            "date": "2010-01-07"
-                        },
-                        "lens_id": "091-724-438-661-108"
-                    },
-                    "cited_phase": "APP"
-                },
-                {
-                    "sequence": 7,
-                    "patcit": {
-                        "document_id": {
-                            "jurisdiction": "WO",
-                            "doc_number": "2010002367",
-                            "kind": "A1",
-                            "date": "2010-01-07"
-                        },
-                        "lens_id": "180-004-304-457-874"
-                    },
-                    "cited_phase": "APP"
-                },
-                {
-                    "sequence": 8,
-                    "patcit": {
-                        "document_id": {
-                            "jurisdiction": "WO",
-                            "doc_number": "2010003113",
-                            "kind": "A1",
-                            "date": "2010-01-07"
-                        },
-                        "lens_id": "014-308-334-256-321"
-                    },
-                    "cited_phase": "APP"
-                },
-                {
-                    "sequence": 9,
-                    "patcit": {
-                        "document_id": {
-                            "jurisdiction": "WO",
-                            "doc_number": "2010003649",
-                            "kind": "A1",
-                            "date": "2010-01-14"
-                        },
-                        "lens_id": "149-519-969-815-807"
-                    },
-                    "cited_phase": "APP"
-                },
-                {
-                    "sequence": 10,
-                    "patcit": {
-                        "document_id": {
-                            "jurisdiction": "WO",
-                            "doc_number": "2010003664",
-                            "kind": "A1",
-                            "date": "2010-01-14"
-                        },
-                        "lens_id": "134-590-889-498-511"
-                    },
-                    "cited_phase": "APP"
-                },
-                {
-                    "sequence": 11,
-                    "patcit": {
-                        "document_id": {
-                            "jurisdiction": "WO",
-                            "doc_number": "2010003809",
-                            "kind": "A2",
-                            "date": "2010-01-14"
-                        },
-                        "lens_id": "087-699-367-879-444"
-                    },
-                    "cited_phase": "APP"
-                },
-                {
-                    "sequence": 12,
-                    "nplcit": {
-                        "text": "M. E. REID; C. LOMAS-FRANCIS: \"The Blood Group Antigen FactsBook\", 2004, ELSEVIER LTD."
-                    },
-                    "cited_phase": "APP"
-                },
-                {
-                    "sequence": 13,
-                    "nplcit": {
-                        "text": "CONNIE M.; WESTHOFF, SUNITHA VEGE; CHRISTINE HALTER-HIPSKY; TRINA WHORLEY; KIM HUE-ROYE; CHRISTINE LOMAS-FRANCIS; MARION E.: \"Dllla and Dill Type 5 are encoded by the same allele and are associated with altered RHCE*ce alleles: clinical implications\", REID. TRANSFUSION, vol. 50, 2010, pages 1303 - 1311",
-                        "lens_id": "125-529-168-227-632",
-                        "external_ids": [
-                            "10.1111/j.1537-2995.2009.02573.x",
-                            "20088832",
-                            "pmc2908519"
-                        ]
-                    },
-                    "cited_phase": "APP"
-                },
-                {
-                    "sequence": 14,
-                    "nplcit": {
-                        "text": "BACH-NGA PHAM; THIERRY PEYRARD; GENEVIEVE JUSZCZAK; ISABELLE DUBEAUX; DOMINIQUE GIEN; ANTOINE BLANCHER; JEAN-PIERRE CARTRON; PHILI: \"Heterogeneous molecular background of the weak C, VS+, hrB-, HrB- phenotype in black persons\", TRANSFUSION, vol. 49, 2009, pages 495 - 504",
-                        "lens_id": "086-240-354-498-516",
-                        "external_ids": [
-                            "19040491",
-                            "10.1111/j.1537-2995.2008.02005.x"
-                        ]
-                    },
-                    "cited_phase": "APP"
-                },
-                {
-                    "sequence": 15,
-                    "nplcit": {
-                        "text": "MARTINE G.H.M.; TAX, C.; ELLEN VAN DER SCHOOT; RENE' VAN DOORN; LOTTE DOUGLAS-BERGER; DICK J.; VAN RHENEN; PETRA A.; MAASKANT-VAN: \"RHC and RHc genotyping in different ethnic groups\", TRANSFUSION, vol. 42, 2002, pages 6234 - 644",
-                        "lens_id": "028-957-496-647-171",
-                        "external_ids": [
-                            "10.1046/j.1537-2995.2002.00096.x",
-                            "12084173"
-                        ]
-                    },
-                    "cited_phase": "APP"
-                },
-                {
-                    "sequence": 16,
-                    "nplcit": {
-                        "text": "M. E. REID; C. LOMAS-FRANCIS.: \"The Blood group antigen FactsBook\", 2004, ELSEVIER LTD."
-                    },
-                    "cited_phase": "APP"
-                }
-            ],
-            "patent_count": 15,
-            "npl_count": 10,
-            "npl_resolved_count": 8
-        },
-        "cited_by": {
-            "patents": [
-                {
-                    "document_id": {
-                        "jurisdiction": "US",
-                        "doc_number": "9637788",
-                        "kind": "B2"
-                    },
-                    "lens_id": "138-800-291-931-331"
-                },
-                {
-                    "document_id": {
-                        "jurisdiction": "US",
-                        "doc_number": "10253366",
-                        "kind": "B2"
-                    },
-                    "lens_id": "172-445-088-115-557"
-                },
-                {
-                    "document_id": {
-                        "jurisdiction": "US",
-                        "doc_number": "9359643",
-                        "kind": "B2"
-                    },
-                    "lens_id": "007-584-344-944-889"
-                },
-                {
-                    "document_id": {
-                        "jurisdiction": "WO",
-                        "doc_number": "2014135331",
-                        "kind": "A1"
-                    },
-                    "lens_id": "089-849-576-069-505"
-                },
-                {
-                    "document_id": {
-                        "jurisdiction": "WO",
-                        "doc_number": "2012171990",
-                        "kind": "A1"
-                    },
-                    "lens_id": "084-623-881-707-629"
-                }
-            ],
-            "patent_count": 5
-        }
-    },
-    "families": {
-        "simple_family": {
-            "members": [
-                {
-                    "document_id": {
-                        "jurisdiction": "EP",
-                        "doc_number": "2471949",
-                        "kind": "B1",
-                        "date": "2013-12-25"
-                    },
-                    "lens_id": "033-643-087-926-128"
-                },
-                {
-                    "document_id": {
-                        "jurisdiction": "EP",
-                        "doc_number": "2471949",
-                        "kind": "A1",
-                        "date": "2012-07-04"
-                    },
-                    "lens_id": "031-156-664-516-153"
-                },
-                {
-                    "document_id": {
-                        "jurisdiction": "US",
-                        "doc_number": "20120172239",
-                        "kind": "A1",
-                        "date": "2012-07-05"
-                    },
-                    "lens_id": "095-621-040-202-546"
-                },
-                {
-                    "document_id": {
-                        "jurisdiction": "ES",
-                        "doc_number": "2445709",
-                        "kind": "T3",
-                        "date": "2014-03-04"
-                    },
-                    "lens_id": "192-287-095-019-170"
-                },
-                {
-                    "document_id": {
-                        "jurisdiction": "US",
-                        "doc_number": "20160060696",
-                        "kind": "A1",
-                        "date": "2016-03-03"
-                    },
-                    "lens_id": "126-336-041-308-107"
-                }
-            ],
-            "size": 5
-        },
-        "extended_family": {
-            "members": [
-                {
-                    "document_id": {
-                        "jurisdiction": "EP",
-                        "doc_number": "2471949",
-                        "kind": "B1",
-                        "date": "2013-12-25"
-                    },
-                    "lens_id": "033-643-087-926-128"
-                },
-                {
-                    "document_id": {
-                        "jurisdiction": "EP",
-                        "doc_number": "2471949",
-                        "kind": "A1",
-                        "date": "2012-07-04"
-                    },
-                    "lens_id": "031-156-664-516-153"
-                },
-                {
-                    "document_id": {
-                        "jurisdiction": "ES",
-                        "doc_number": "2445709",
-                        "kind": "T3",
-                        "date": "2014-03-04"
-                    },
-                    "lens_id": "192-287-095-019-170"
-                },
-                {
-                    "document_id": {
-                        "jurisdiction": "US",
-                        "doc_number": "20120172239",
-                        "kind": "A1",
-                        "date": "2012-07-05"
-                    },
-                    "lens_id": "095-621-040-202-546"
-                },
-                {
-                    "document_id": {
-                        "jurisdiction": "US",
-                        "doc_number": "20160060696",
-                        "kind": "A1",
-                        "date": "2016-03-03"
-                    },
-                    "lens_id": "126-336-041-308-107"
-                }
-            ],
-            "size": 5
-        }
-    },
-    "legal_status": {
-        "granted": true,
-        "grant_date": "2013-12-25",
-        "anticipated_term_date": "2030-12-31",
-        "calculation_log": [
-            "Application Filing Date: 2010-12-31",
-            "Granted Date: 2013-12-25",
-            "Anticipated Termination Date: 2030-12-31"
-        ],
-        "patent_status": "ACTIVE"
-    },
-    "abstract": [
-        {
-            "text": "The invention relates to the field of genotyping and blood cell antigen determination. In particular, the invention adresses the problem of discriminating the RHD*DIIIa-CE(4-7)-D or RHD*DIIIa-CE(4-7)-D )-like blood type variants, which express the C +w antigen and lack a D antigen, from RHD*DIIIa , RHD*DIVa-2 and other blood type variants. The invention provides methods for genotyping a subject, comprising: a) determining at least 4 markers in a sample that has been obtained from the subject, wherein the markers comprise: (i) the presence or absence of an RHCE*C allele; (ii) the presence or absence of an RHD/RHCE hybrid exon 3 (RHD/CE Hex03) allele; (iii) the absence of, or a single nucleotide polymorphism (SNP) variant within, of any one of the SNPs at position 602 of RHD exon 4, position 667 of RHD exon 5, or position 819 of RHD exon 6; and (iv) the absence of, or SNP variant within, of the SNP at position 1048 of RHD exon 7. The invention also provides products, in particular, probes, primers and kits for use in such methods.",
-            "lang": "en"
-        }
-    ],
-    "claims": [
-        {
             "claims": [
                 {
-                    "claim_text": [
-                        "A method of genotyping a subject, the method comprising:\n determining at least 4 markers in a sample that has been obtained from the subject, wherein the markers comprise:\n (i) the presence or absence of an RHCE*C allele; \n (ii) the presence or absence of an RHD/RHCE hybrid exon 3 (RHD/CE Hex03) allele; \n (iii) the absence of, or a single nucleotide polymorphism (SNP) variant within, any one of RHD exon 4,  RHD  exon 5, or  RHD  exon 6; and \n (iv) the absence of, or SNP variant within, RHD exon 7."
-                    ]
-                },
-                {
-                    "claim_text": [
-                        "A method according to claim 1, wherein:\n a) the SNP variant within  RHD  exon 4 is at position 602 of the  RHD  coding sequence (rs1053355), the SNP variant within  RHD  exon 5 is at position 667 of the  RHD  coding sequence (rs1053356), the SNP variant within  RHD  exon 6 is at position 819 of the  RHD  coding sequence; and/or \n b) the SNP variant within  RHD  exon 7 is at position 1048 of the  RHD  coding sequence (rs41307826)."
-                    ]
-                },
-                {
-                    "claim_text": [
-                        "A method according to claim 1 or 2, wherein the markers further comprise:\n (v) the presence or absence of an RHD exon 3 allele."
-                    ]
-                },
-                {
-                    "claim_text": [
-                        "A method according to any one of the preceding claims, wherein:\n a) the method further comprises determining the RHD and RHC antigen phenotypes of the subject; and/or \n b) the method comprises detecting the presence or absence of a blood type variant selected from:  RHD*DIIIa ;  RHD*DIVa-2;  or  RHD*DIIIa-CE(4-7)-D  or  RHD*DIIIa-CE(4-7)-D )-like blood type variants, e.g. wherein the method comprises detecting the presence or absence of  RHD*DIIIa-CE(4-7)-D  or  RHD*DIIIa-CE(4-7)-D )-like blood type variants; and/or \n c) marker (iii) is the SNP within RHD exon 4 at position 602 of the RHD coding sequence (rs1053355); and/or \n d) the RHCE*C allele is determined by determining the presence or absence of RHCE*C intron 2, or any one of the following positions in the RHCE coding sequence: position 307 (exon 2), position 48 (exon 1), position 150 (exon 2), position 178 (exon 2), position 201 (exon 2) and/or position 203 (exon 2)."
-                    ]
-                },
-                {
-                    "claim_text": [
-                        "A method according to any one of the preceding claims, wherein the sample comprises nucleic acid and the method comprises amplifying the nucleic acid or a portion thereof by PCR using primers, e.g. wherein:\n a) the PCR primers for determining the RHCE*C allele are a forward PCR primer specific for RHCE*C, and a non-specific reverse PCR primer, e.g. wherein\n (i) the non-specific reverse primer is shared with RHD, RHC*C and/or RHC*c; and/or \n (ii) the PCR primers comprise:\n Forward: 5'-GGCCACCACCATTTGAA-3' (SEQ ID NO: 3) \n Reverse: 5'-CCATGAACATGCCACTTCAC-3', (SEQ ID NO: 4) \nor a variant thereof having up to 4 nucleotide alterations; and/or \n b) the PCR primers for determining the RHD/CE Hex03 allele are forward and reverse PCR primers targeting sequences located in introns 2 and 3, or introns 3 and 2, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-TCCTGGCTCTCCCTCTCT-3' (SEQ ID NO: 9) \n Reverse primer: 5'-TTTTCAAAACCCCGGAAG-3 (SEQ ID NO: 10) \nor a variant thereof having up to 4 nucleotide alterations; and/or \n c) the PCR primers for determining the SNP within RHD exon 4 at position 602 of the RHD coding sequence (rs1053355) are forward and reverse primers targeting sequences located in introns 3 and 4, or introns 4 and 3, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-GCTCTGAACTTTCTCCAAGGACT-3' (SEQ ID NO: 17) \n Reverse primer: 5'-ATTCTGCTCAGCCCAAGTAG-3' (SEQ ID NO: 18) or a variant thereof having up to 4 nucleotide alterations; and/or \n d) the PCR primers for determining the SNP within RHD exon 5 at position 667 of the  RHD  coding sequence (rs1053356) are forward and reverse primers targeting sequences located in introns 4 and 5, or introns 5 and 4, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-TTGAATTAAGCACTTCACAGAGCA-3' (SEQ ID NO: 19) \n Reverse primer: 5'-CACCTTGCTGATCTTCCC-3' (SEQ ID NO: 20) or a variant thereof having up to 4 nucleotide alterations; and/or \n e) the PCR primers for determining the SNP within RHD exon 6 at position 819 of the  RHD  coding sequence are forward and reverse primers targeting sequences located in introns 5 and 6, or introns 6 and 5, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-AGTAGTGAGCTGGCCCATCA-3' (SEQ ID NO: 21) \n Reverse primer: 5'-CTTCAGCCAAAGCAGAGGAG-3' (SEQ ID NO: 22) \nor a variant thereof having up to 4 nucleotide alterations; and/or \n f) the PCR primers for determining the SNP within RHD exon 7 at position 1048 of the  RHD  coding sequence (rs41307826) are forward and reverse primers targeting sequences located in introns 6 and 7, or introns 7 and 6, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-ACAAACTCCCCGATGATGTGAGTG-3' (SEQ ID NO: 35) \n Reverse primer: 5'-GAGGCTGAGAAAGGTTAAGCCA-3' (SEQ ID NO: 36) \nor a variant thereof having up to 4 nucleotide alterations; and/or \n g) as dependent from claim 3, the PCR primers for determining the RHD exon 3 allele are forward and reverse primers targeting sequences located in introns 2 and 3, or introns 3 and 2, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-TCCTGGCTCTCCCTCTCT-3' (SEQ ID NO: 15) \n Reverse primer: 5'-GTTGTCTTTATTTTTCAAAACCCT-3' (SEQ ID NO: 16) \nor a variant thereof having up to 4 nucleotide alterations."
-                    ]
-                },
-                {
-                    "claim_text": [
-                        "A method according to claim 5, wherein the amplified nucleic acid comprises a label, e.g. wherein\n a) the label comprises a biotinylated nucleotide; and/or \n b) the label comprises a fluorescent moiety."
-                    ]
-                },
-                {
-                    "claim_text": [
-                        "A method according to any one of the preceding claims, wherein the sample comprises nucleic acid, and the method comprises amplifying the nucleic acid or a portion thereof by PCR using primers, fragmenting the amplified nucleic acid, and labelling the fragmented nucleic acid with biotinylated ddNTPS using a terminal deoxynucleotidyl transferase (TdT) enzyme."
-                    ]
-                },
-                {
-                    "claim_text": [
-                        "A method according to any one of the preceding claims, wherein determining the presence, absence or SNP variant of a marker comprises contacting nucleic acid containing each marker with one or more probes, e.g. wherein:\n a) as dependent from claim 3, the probes for determining the presence or absence of RHD/CE Hex03 or RHD exon 3 contact an SNP located in both RHD/CE Hex03 and RHD exon 3, wherein one SNP variant is specific for RHD/CE Hex03, and another SNP variant is specific for RHD exon 3, e.g. wherein\n (i) the SNP is at position 410 of the coding sequence, located within both RHD/CE Hex03 and RHD exon 3; and/or \n (ii) the probes comprise:\n (1) 5'-TTTTACAGACGCCTGCTACCATG-3', (SEQ ID NO: 5) \n (2) 5'-CATGGTAGCAGGCGTCTGTAAAA-3', (SEQ ID NO: 6) \n (3) 5'-TTTTACAGACGTCTGCTACCATG-3', (SEQ ID NO: 7) and \n (4) 5'-CATGGTAGCAGACGTCTGTAAAA-3', (SEQ ID NO: 8) \nor a variant of any one of probes 1 to 4 having up to 4 nucleotide alterations; and/or \n b) the probes for determining the absence or SNP variant of the SNP at: position 602 of the  RHD  coding sequence located within exon 4 (rs1053355), position 667 of the  RHD  coding sequence located within exon 5 (rs1053356), or position 819 of the  RHD  coding sequence located within exon 6 comprise:\n (i) RHD exon 4:\n (1) 5'-ATAAAGATCAGACAGCAACGATACC-3' (SEQ ID NO: 23) \n (2) 5'-TAAAGATCAGACAGCAACGATAC-3' (SEQ ID NO: 24) \n (3) 5'-ATAAAGATCAGAGAGCAACGATACC-3' (SEQ ID NO: 25) \n (4) 5'-TAAAGATCAGAGAGCAACGATAC-3' (SEQ ID NO: 26) \nor a variant of any one of probes 1 to 4 having up to 4 nucleotide alterations; \n (ii) RHD exon 5:\n (1) 5'-CTGGCCAAGTTTCAACTCTGC-3' (SEQ ID NO: 27) \n (2) 5'-TGGCCAAGTTTCAACTCTG-3' (SEQ ID NO: 28) \n (3) 5'-CTGGCCAAGTGTCAACTCTGC-3' (SEQ ID NO: 29) \n (4) 5'-TGGCCAAGTGTCAACTCTG-3' (SEQ ID NO: 30) \nor a variant of any one of probes 1 to 4 having up to 4 nucleotide alterations; \n (iii) RHD exon 6:\n (1) 5'-GTGCACAGTGCGGTGTTGGCAGG-3' (SEQ ID NO: 31) \n (2) 5'- TGCACAGTGCGGTGTTGGCAG -3' (SEQ ID NO: 32) \n (3) 5'- GTGCACAGTGCAGTGTTGGCAGG -3' (SEQ ID NO: 33) \n (4) 5'-TGCACAGTGCAGTGTTGGCAG-3' (SEQ ID NO: 34) \nor a variant of any one of probes 1 to 4 having up to 4 nucleotide alterations. \n c) the probes for determining the SNP variant of the SNP at position 1048 of the  RHD  coding sequence located within exon 7 (rs41307826)comprise:\n (1) 5'-TGCTGGTGCTTGATACCGTCGGA-3' (SEQ ID NO: 37) \n (2) 5'-GCTGGTGCTTGATACCGTCGG-3' (SEQ ID NO: 38) \n (3) 5'-TGCTGGTGCTTCATACCGTCGGA-3' (SEQ ID NO: 39) \n (4) 5'-GCTGGTGCTTCATACCGTCGG-3' (SEQ ID NO: 40) \nor a variant of any one of probes 1 to 4 having up to 4 nucleotide alterations."
-                    ]
-                },
-                {
-                    "claim_text": [
-                        "A method according to claim 8, wherein\n a) one or more of the probes comprise a label, e.g. wherein the label is a fluorescent moiety; and/or \n b) one or more of the probes is attached to a solid support or conjugated to one or more particles.."
-                    ]
-                },
-                {
-                    "claim_text": [
-                        "A set of primers for amplifying nucleic acid comprising at least four of the markers described in claim 1, 2, 3, 4(c), and 4(d), e.g. wherein the set of primers comprises at least three primer pairs selected from the primers set forth in:\n (i) claim 5(a), \n (ii) claim 5(b), \n (iii) any one of claims 5(c), 5(d) or 5(e) \n (iv) claim 5(f), and \n (v) claim 5(g)."
-                    ]
-                },
-                {
-                    "claim_text": [
-                        "A set of primers for amplifying nucleic acid comprising at least three primer pairs selected from the primers set forth in:\n (i) claim 3(a)(ii), \n (ii) claim 3(b)(i), \n (iii) any one of claims 3(c)(i), 3(d)(i) or 3(e)(i), \n (iv) claim 3(f)(i), and \n (v) claim 3(g)(i)."
-                    ]
-                },
-                {
-                    "claim_text": [
-                        "A set of primers for amplifying nucleic acid , wherein at least 50% are the primer pairs described in claim 10 or 11."
-                    ]
-                },
-                {
-                    "claim_text": [
-                        "A set of probes for determining the presence, absence or single nucleotide polymorphism (SNP) variant of at least three of the markers described in claim 1, 2, 3, 2(c) and 2(d), e.g. wherein:\n a) the set of probes comprises the probes described in claims 8(a), 8(b) and 8(c)."
-                    ]
-                },
-                {
-                    "claim_text": [
-                        "A set of probes according to claim 13, wherein:\n a) the probes are immobilised on a solid support or conjugated to one or more particles, e.g. wherein the solid support comprises one or more attached labels, e.g. wherein the label is a fluorochrome; and/or \n b) one or more probes comprise a label, e.g wherein the label is a fluorescent moiety."
-                    ]
-                },
-                {
-                    "claim_text": [
-                        "A kit for genotyping a subject, the kit comprising a set of PCR primers according to any one of claims 10 to 12, and a set of probes according to any one of claims 13 or 14."
-                    ]
+                    "claims": [
+                        {
+                            "claim_text": [
+                                "A method of genotyping a subject, the method comprising:\n determining at least 4 markers in a sample that has been obtained from the subject, wherein the markers comprise:\n (i) the presence or absence of an RHCE*C allele; \n (ii) the presence or absence of an RHD/RHCE hybrid exon 3 (RHD/CE Hex03) allele; \n (iii) the absence of, or a single nucleotide polymorphism (SNP) variant within, any one of RHD exon 4,  RHD  exon 5, or  RHD  exon 6; and \n (iv) the absence of, or SNP variant within, RHD exon 7."
+                            ]
+                        },
+                        {
+                            "claim_text": [
+                                "A method according to claim 1, wherein:\n a) the SNP variant within  RHD  exon 4 is at position 602 of the  RHD  coding sequence (rs1053355), the SNP variant within  RHD  exon 5 is at position 667 of the  RHD  coding sequence (rs1053356), the SNP variant within  RHD  exon 6 is at position 819 of the  RHD  coding sequence; and/or \n b) the SNP variant within  RHD  exon 7 is at position 1048 of the  RHD  coding sequence (rs41307826)."
+                            ]
+                        },
+                        {
+                            "claim_text": [
+                                "A method according to claim 1 or 2, wherein the markers further comprise:\n (v) the presence or absence of an RHD exon 3 allele."
+                            ]
+                        },
+                        {
+                            "claim_text": [
+                                "A method according to any one of the preceding claims, wherein:\n a) the method further comprises determining the RHD and RHC antigen phenotypes of the subject; and/or \n b) the method comprises detecting the presence or absence of a blood type variant selected from:  RHD*DIIIa ;  RHD*DIVa-2;  or  RHD*DIIIa-CE(4-7)-D  or  RHD*DIIIa-CE(4-7)-D )-like blood type variants, e.g. wherein the method comprises detecting the presence or absence of  RHD*DIIIa-CE(4-7)-D  or  RHD*DIIIa-CE(4-7)-D )-like blood type variants; and/or \n c) marker (iii) is the SNP within RHD exon 4 at position 602 of the RHD coding sequence (rs1053355); and/or \n d) the RHCE*C allele is determined by determining the presence or absence of RHCE*C intron 2, or any one of the following positions in the RHCE coding sequence: position 307 (exon 2), position 48 (exon 1), position 150 (exon 2), position 178 (exon 2), position 201 (exon 2) and/or position 203 (exon 2)."
+                            ]
+                        },
+                        {
+                            "claim_text": [
+                                "A method according to any one of the preceding claims, wherein the sample comprises nucleic acid and the method comprises amplifying the nucleic acid or a portion thereof by PCR using primers, e.g. wherein:\n a) the PCR primers for determining the RHCE*C allele are a forward PCR primer specific for RHCE*C, and a non-specific reverse PCR primer, e.g. wherein\n (i) the non-specific reverse primer is shared with RHD, RHC*C and/or RHC*c; and/or \n (ii) the PCR primers comprise:\n Forward: 5'-GGCCACCACCATTTGAA-3' (SEQ ID NO: 3) \n Reverse: 5'-CCATGAACATGCCACTTCAC-3', (SEQ ID NO: 4) \nor a variant thereof having up to 4 nucleotide alterations; and/or \n b) the PCR primers for determining the RHD/CE Hex03 allele are forward and reverse PCR primers targeting sequences located in introns 2 and 3, or introns 3 and 2, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-TCCTGGCTCTCCCTCTCT-3' (SEQ ID NO: 9) \n Reverse primer: 5'-TTTTCAAAACCCCGGAAG-3 (SEQ ID NO: 10) \nor a variant thereof having up to 4 nucleotide alterations; and/or \n c) the PCR primers for determining the SNP within RHD exon 4 at position 602 of the RHD coding sequence (rs1053355) are forward and reverse primers targeting sequences located in introns 3 and 4, or introns 4 and 3, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-GCTCTGAACTTTCTCCAAGGACT-3' (SEQ ID NO: 17) \n Reverse primer: 5'-ATTCTGCTCAGCCCAAGTAG-3' (SEQ ID NO: 18) or a variant thereof having up to 4 nucleotide alterations; and/or \n d) the PCR primers for determining the SNP within RHD exon 5 at position 667 of the  RHD  coding sequence (rs1053356) are forward and reverse primers targeting sequences located in introns 4 and 5, or introns 5 and 4, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-TTGAATTAAGCACTTCACAGAGCA-3' (SEQ ID NO: 19) \n Reverse primer: 5'-CACCTTGCTGATCTTCCC-3' (SEQ ID NO: 20) or a variant thereof having up to 4 nucleotide alterations; and/or \n e) the PCR primers for determining the SNP within RHD exon 6 at position 819 of the  RHD  coding sequence are forward and reverse primers targeting sequences located in introns 5 and 6, or introns 6 and 5, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-AGTAGTGAGCTGGCCCATCA-3' (SEQ ID NO: 21) \n Reverse primer: 5'-CTTCAGCCAAAGCAGAGGAG-3' (SEQ ID NO: 22) \nor a variant thereof having up to 4 nucleotide alterations; and/or \n f) the PCR primers for determining the SNP within RHD exon 7 at position 1048 of the  RHD  coding sequence (rs41307826) are forward and reverse primers targeting sequences located in introns 6 and 7, or introns 7 and 6, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-ACAAACTCCCCGATGATGTGAGTG-3' (SEQ ID NO: 35) \n Reverse primer: 5'-GAGGCTGAGAAAGGTTAAGCCA-3' (SEQ ID NO: 36) \nor a variant thereof having up to 4 nucleotide alterations; and/or \n g) as dependent from claim 3, the PCR primers for determining the RHD exon 3 allele are forward and reverse primers targeting sequences located in introns 2 and 3, or introns 3 and 2, respectively, e.g. wherein\n (i) the PCR primers comprise:\n Forward primer: 5'-TCCTGGCTCTCCCTCTCT-3' (SEQ ID NO: 15) \n Reverse primer: 5'-GTTGTCTTTATTTTTCAAAACCCT-3' (SEQ ID NO: 16) \nor a variant thereof having up to 4 nucleotide alterations."
+                            ]
+                        },
+                        {
+                            "claim_text": [
+                                "A method according to claim 5, wherein the amplified nucleic acid comprises a label, e.g. wherein\n a) the label comprises a biotinylated nucleotide; and/or \n b) the label comprises a fluorescent moiety."
+                            ]
+                        },
+                        {
+                            "claim_text": [
+                                "A method according to any one of the preceding claims, wherein the sample comprises nucleic acid, and the method comprises amplifying the nucleic acid or a portion thereof by PCR using primers, fragmenting the amplified nucleic acid, and labelling the fragmented nucleic acid with biotinylated ddNTPS using a terminal deoxynucleotidyl transferase (TdT) enzyme."
+                            ]
+                        },
+                        {
+                            "claim_text": [
+                                "A method according to any one of the preceding claims, wherein determining the presence, absence or SNP variant of a marker comprises contacting nucleic acid containing each marker with one or more probes, e.g. wherein:\n a) as dependent from claim 3, the probes for determining the presence or absence of RHD/CE Hex03 or RHD exon 3 contact an SNP located in both RHD/CE Hex03 and RHD exon 3, wherein...."
+                            ]
+                        },
+                        {
+                            "claim_text": [
+                                "A method according to claim 8, wherein\n a) one or more of the probes comprise a label, e.g. wherein the label is a fluorescent moiety; and/or \n b) one or more of the probes is attached to a solid support or conjugated to one or more particles.."
+                            ]
+                        },
+                        {
+                            "claim_text": [
+                                "A set of primers for amplifying nucleic acid comprising at least four of the markers described in claim 1, 2, 3, 4(c), and 4(d), e.g. wherein the set of primers comprises at least three primer pairs selected from the primers set forth in:\n (i) claim 5(a), \n (ii) claim 5(b), \n (iii) any one of claims 5(c), 5(d) or 5(e) \n (iv) claim 5(f), and \n (v) claim 5(g)."
+                            ]
+                        },
+                        {
+                            "claim_text": [
+                                "A set of primers for amplifying nucleic acid comprising at least three primer pairs selected from the primers set forth in:\n (i) claim 3(a)(ii), \n (ii) claim 3(b)(i), \n (iii) any one of claims 3(c)(i), 3(d)(i) or 3(e)(i), \n (iv) claim 3(f)(i), and \n (v) claim 3(g)(i)."
+                            ]
+                        },
+                        {
+                            "claim_text": [
+                                "A set of primers for amplifying nucleic acid , wherein at least 50% are the primer pairs described in claim 10 or 11."
+                            ]
+                        },
+                        {
+                            "claim_text": [
+                                "A set of probes for determining the presence, absence or single nucleotide polymorphism (SNP) variant of at least three of the markers described in claim 1, 2, 3, 2(c) and 2(d), e.g. wherein:\n a) the set of probes comprises the probes described in claims 8(a), 8(b) and 8(c)."
+                            ]
+                        },
+                        {
+                            "claim_text": [
+                                "A set of probes according to claim 13, wherein:\n a) the probes are immobilised on a solid support or conjugated to one or more particles, e.g. wherein the solid support comprises one or more attached labels, e.g. wherein the label is a fluorochrome; and/or \n b) one or more probes comprise a label, e.g wherein the label is a fluorescent moiety."
+                            ]
+                        },
+                        {
+                            "claim_text": [
+                                "A kit for genotyping a subject, the kit comprising a set of PCR primers according to any one of claims 10 to 12, and a set of probes according to any one of claims 13 or 14."
+                            ]
+                        }
+                    ],
+                    "lang": "en"
                 }
             ],
-            "lang": "en"
+            "description": {
+                "text": "Field of the Invention The invention relates to methods for genotyping and blood cell antigen determination, which in particular may discriminate the  RHD*DIIIa-CE(4-7)-D  or  RHD*DIIIa-CE(4-7)-D )-like blood type variants, which express the C +W  antigen and lack a D antigen, from  RHD*DIIIa ,  RHD*DIVa-2  and other blood type variants. The invention also relates to products...",
+                "lang": "en"
+            },
+            "publication_type": "PATENT_APPLICATION"
         }
     ],
-    "description": {
-        "text": "Field of the Invention The invention relates to methods for genotyping and blood cell antigen determination, which in particular may discriminate the  RHD*DIIIa-CE(4-7)-D  or  RHD*DIIIa-CE(4-7)-D )-like blood type variants, which express the C +W  antigen and lack a D antigen, from  RHD*DIIIa ,  RHD*DIVa-2  and other blood type variants. The invention also relates to products, in particular, probes, primers and kits for use in such methods. Background to the Invention The success of blood transfusion often depends on the degree of compatibility between donor and recipient. The degree of compatibility, in turn...",
-        "lang": "en"
-    },
-    "publication_type": "PATENT_APPLICATION"
+    "results": 1
 }
-
 ```
 
 [//]: # (Reference Links)

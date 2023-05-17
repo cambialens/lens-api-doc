@@ -230,7 +230,7 @@ Regex allows the use of regular expressions in [Query String based query](#query
 ### Minimum Score
 The minimum score represents the relevance score based on the query matching score used in Elasticsearch. This can be used to This can be used to limit the response to the most relevant results and can be used in 2-steps:
 
-   1. Performs an initial API request to get the `max_score`. N.B. the size of the request needs to be greater than 0 to return the `max_score`.
+   1. Perform an initial API request to get the `max_score`. N.B. the size of the request needs to be greater than 0 to return the `max_score`.
    2. You can then filter by the `min_score` in subsequent requests.
 
 For example, if the `max_score` is 14.9 and there are 236K results in total from the initial request, you can pass the `min_score` as 14 (i.e. less than max_score) in the subsequent request to limit the response to the most relevant results only.

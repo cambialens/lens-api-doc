@@ -39,6 +39,7 @@ class PatentParser:
         npl_resolved_lens_ids = self.__get_string(biblio, 'references_cited', 'citations', 'nplcit', 'lens_id')
         npl_resolved_external_ids = self.__get_string(biblio, 'references_cited', 'citations', 'nplcit', 'external_ids')
         npl_citations = self.__get_string(biblio, 'references_cited', 'citations', 'nplcit', 'text')
+        npl_citations_count = self.__get_number(biblio, 'references_cited', 'npl_count')
         npl_resolved_citation_count = self.__get_number(biblio, 'references_cited', 'npl_resolved_count')
         cites_patent_count = self.__get_number(biblio, 'references_cited', 'patent_count')
         cited_by_patent_count = self.__get_number(biblio,'cited_by', 'patent_count')
@@ -49,7 +50,7 @@ class PatentParser:
         return Patent(lens_id, jurisdiction, kind, display_key, publication_date, publication_year, application_number,
                 application_date, priority_numbers, earliest_priority_date, title, abstract_text, applicants, inventors, owners, url,
                 document_type, cites_patent_count, cited_by_patent_count, simple_family_size, extended_family_size,cpc_classification, ipcr_classification,
-                us_classification, npl_citations,npl_resolved_citation_count, npl_resolved_lens_ids, npl_resolved_external_ids, npl_citations,
+                us_classification, npl_citations_count, npl_resolved_citation_count, npl_resolved_lens_ids, npl_resolved_external_ids, npl_citations,
                 legal_status)
                 
     def __get_object(self, root, element):

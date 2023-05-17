@@ -198,75 +198,72 @@ Field | Type |  Description | Example
 ```json
 {
     "total": 1,
-    "data":
-    [
+    "max_score": 18.879501,
+    "data": [
         {
             "lens_id": "086-713-276-176-892",
             "title": "A randomised non-comparative phase II trial of cixutumumab (IMC-A12) or ramucirumab (IMC-1121B) plus mitoxantrone and prednisone in men with metastatic docetaxel-pretreated castration-resistant prostate cancer",
             "publication_type": "journal article",
             "year_published": 2015,
             "date_published": "2015-06-13T00:00:00.000000+00:00",
-            "date_published_parts":
-            [
+            "date_published_parts": [
                 2015,
                 6,
                 13
             ],
             "created": "2018-05-12T02:39:28.395000+00:00",
-            "external_ids":
-            [
+            "external_ids": [
                 {
-                    "type": "magid",
-                    "value": "2113210954"
+                    "type": "pmcid",
+                    "value": "pmc5024789"
                 },
                 {
                     "type": "coreid",
                     "value": "82196673"
                 },
                 {
-                    "type": "pmid",
-                    "value": "26082390"
+                    "type": "magid",
+                    "value": "2113210954"
                 },
                 {
-                    "type": "pmcid",
-                    "value": "pmc5024789"
+                    "type": "pmid",
+                    "value": "26082390"
                 },
                 {
                     "type": "doi",
                     "value": "10.1016/j.ejca.2015.05.019"
                 }
             ],
-            "patent_citations":
-            [
+            "patent_citations": [
                 {
                     "lens_id": "122-064-734-901-067"
                 }
             ],
             "patent_citations_count": 1,
-            "open_access":
-            {
+            "open_access": {
                 "license": "cc-by-nc-nd",
                 "colour": "hybrid"
             },
-            "authors":
-            [
+            "authors": [
                 {
                     "first_name": "Maha",
                     "last_name": "Hussain",
                     "initials": "M",
-                    "ids":
-                    [
+                    "ids": [
                         {
                             "type": "magid",
                             "value": "2105158973"
                         }
                     ],
-                    "affiliations":
-                    [
+                    "affiliations": [
                         {
                             "name": "University of Michigan",
-                            "ids":
-                            [
+                            "name_original": "University of Michigan Comprehensive Cancer Center, Ann Arbor, MI, United States;",
+                            "ids": [
+                                {
+                                    "type": "magid",
+                                    "value": "27837315"
+                                },
                                 {
                                     "type": "grid",
                                     "value": "grid.214458.e"
@@ -280,6 +277,7 @@ Field | Type |  Description | Example
                                     "value": "00jmfr291"
                                 }
                             ],
+                            "grid_id": "grid.214458.e",
                             "country_code": "US"
                         }
                     ]
@@ -288,8 +286,7 @@ Field | Type |  Description | Example
                     "first_name": "Dana E.",
                     "last_name": "Rathkopf",
                     "initials": "DE",
-                    "ids":
-                    [
+                    "ids": [
                         {
                             "type": "orcid",
                             "value": "0000-0002-4503-7582"
@@ -299,12 +296,15 @@ Field | Type |  Description | Example
                             "value": "722834404"
                         }
                     ],
-                    "affiliations":
-                    [
+                    "affiliations": [
                         {
                             "name": "Memorial Sloan Kettering Cancer Center",
-                            "ids":
-                            [
+                            "name_original": "Memorial Sloan Kettering New York NY United States",
+                            "ids": [
+                                {
+                                    "type": "magid",
+                                    "value": "1334819555"
+                                },
                                 {
                                     "type": "grid",
                                     "value": "grid.51462.34"
@@ -314,6 +314,7 @@ Field | Type |  Description | Example
                                     "value": "02yrq0923"
                                 }
                             ],
+                            "grid_id": "grid.51462.34",
                             "country_code": "US"
                         }
                     ]
@@ -322,19 +323,21 @@ Field | Type |  Description | Example
                     "first_name": "Glenn",
                     "last_name": "Liu",
                     "initials": "G",
-                    "ids":
-                    [
+                    "ids": [
                         {
                             "type": "magid",
                             "value": "2133546628"
                         }
                     ],
-                    "affiliations":
-                    [
+                    "affiliations": [
                         {
                             "name": "University of Wisconsin-Madison",
-                            "ids":
-                            [
+                            "name_original": "University of Wisconsin, Carbone Cancer Center, Madison, WI, United States.",
+                            "ids": [
+                                {
+                                    "type": "magid",
+                                    "value": "135310074"
+                                },
                                 {
                                     "type": "grid",
                                     "value": "grid.14003.36"
@@ -352,6 +355,7 @@ Field | Type |  Description | Example
                                     "value": "01y2jtd41"
                                 }
                             ],
+                            "grid_id": "grid.14003.36",
                             "country_code": "US"
                         }
                     ]
@@ -360,19 +364,21 @@ Field | Type |  Description | Example
                     "first_name": "Andrew J.",
                     "last_name": "Armstrong",
                     "initials": "AJ",
-                    "ids":
-                    [
+                    "ids": [
                         {
                             "type": "magid",
                             "value": "2172156363"
                         }
                     ],
-                    "affiliations":
-                    [
+                    "affiliations": [
                         {
                             "name": "Duke University",
-                            "ids":
-                            [
+                            "name_original": "Duke Cancer Institute and Duke Prostate Center, Duke University, Durham, NC, United States",
+                            "ids": [
+                                {
+                                    "type": "magid",
+                                    "value": "170897317"
+                                },
                                 {
                                     "type": "grid",
                                     "value": "grid.26009.3d"
@@ -390,6 +396,7 @@ Field | Type |  Description | Example
                                     "value": "00py81415"
                                 }
                             ],
+                            "grid_id": "grid.26009.3d",
                             "country_code": "US"
                         }
                     ]
@@ -398,19 +405,21 @@ Field | Type |  Description | Example
                     "first_name": "Kevin",
                     "last_name": "Kelly",
                     "initials": "K",
-                    "ids":
-                    [
+                    "ids": [
                         {
                             "type": "magid",
                             "value": "2097407452"
                         }
                     ],
-                    "affiliations":
-                    [
+                    "affiliations": [
                         {
                             "name": "Thomas Jefferson University",
-                            "ids":
-                            [
+                            "name_original": "Thomas Jefferson Univ., Philadelphia, PA (United States)",
+                            "ids": [
+                                {
+                                    "type": "magid",
+                                    "value": "149251103"
+                                },
                                 {
                                     "type": "grid",
                                     "value": "grid.265008.9"
@@ -420,6 +429,7 @@ Field | Type |  Description | Example
                                     "value": "00ysqcn41"
                                 }
                             ],
+                            "grid_id": "grid.265008.9",
                             "country_code": "US"
                         }
                     ]
@@ -428,19 +438,21 @@ Field | Type |  Description | Example
                     "first_name": "Anna C.",
                     "last_name": "Ferrari",
                     "initials": "AC",
-                    "ids":
-                    [
+                    "ids": [
                         {
                             "type": "magid",
                             "value": "2312728207"
                         }
                     ],
-                    "affiliations":
-                    [
+                    "affiliations": [
                         {
                             "name": "New York University",
-                            "ids":
-                            [
+                            "name_original": "New York University Clinical Cancer Center, New York, NY, United States.",
+                            "ids": [
+                                {
+                                    "type": "magid",
+                                    "value": "57206974"
+                                },
                                 {
                                     "type": "grid",
                                     "value": "grid.137628.9"
@@ -458,6 +470,7 @@ Field | Type |  Description | Example
                                     "value": "0190ak572"
                                 }
                             ],
+                            "grid_id": "grid.137628.9",
                             "country_code": "US"
                         }
                     ]
@@ -466,19 +479,21 @@ Field | Type |  Description | Example
                     "first_name": "John D.",
                     "last_name": "Hainsworth",
                     "initials": "JD",
-                    "ids":
-                    [
+                    "ids": [
                         {
                             "type": "magid",
                             "value": "2145549068"
                         }
                     ],
-                    "affiliations":
-                    [
+                    "affiliations": [
                         {
                             "name": "Sarah Cannon Research Institute",
-                            "ids":
-                            [
+                            "name_original": "Sarah Cannon Research Institute, Nashville, TN, United States",
+                            "ids": [
+                                {
+                                    "type": "magid",
+                                    "value": "172427033"
+                                },
                                 {
                                     "type": "grid",
                                     "value": "grid.477834.b"
@@ -492,6 +507,7 @@ Field | Type |  Description | Example
                                     "value": "03cp5cj42"
                                 }
                             ],
+                            "grid_id": "grid.477834.b",
                             "country_code": "GB"
                         }
                     ]
@@ -500,19 +516,21 @@ Field | Type |  Description | Example
                     "first_name": "Adarsh",
                     "last_name": "Joshi",
                     "initials": "A",
-                    "ids":
-                    [
+                    "ids": [
                         {
                             "type": "magid",
                             "value": "2097035297"
                         }
                     ],
-                    "affiliations":
-                    [
+                    "affiliations": [
                         {
                             "name": "Eli Lilly and Company",
-                            "ids":
-                            [
+                            "name_original": "Eli Lilly and Company, Bridgewater, NJ, United States.",
+                            "ids": [
+                                {
+                                    "type": "magid",
+                                    "value": "168537998"
+                                },
                                 {
                                     "type": "grid",
                                     "value": "grid.417540.3"
@@ -526,6 +544,7 @@ Field | Type |  Description | Example
                                     "value": "01qat3289"
                                 }
                             ],
+                            "grid_id": "grid.417540.3",
                             "country_code": "US"
                         }
                     ]
@@ -534,19 +553,21 @@ Field | Type |  Description | Example
                     "first_name": "Rebecca R.",
                     "last_name": "Hozak",
                     "initials": "RR",
-                    "ids":
-                    [
+                    "ids": [
                         {
                             "type": "magid",
                             "value": "2182553763"
                         }
                     ],
-                    "affiliations":
-                    [
+                    "affiliations": [
                         {
                             "name": "Eli Lilly and Company",
-                            "ids":
-                            [
+                            "name_original": "Eli Lilly and Company, Indianapolis, IN (United States)",
+                            "ids": [
+                                {
+                                    "type": "magid",
+                                    "value": "168537998"
+                                },
                                 {
                                     "type": "grid",
                                     "value": "grid.417540.3"
@@ -560,6 +581,7 @@ Field | Type |  Description | Example
                                     "value": "01qat3289"
                                 }
                             ],
+                            "grid_id": "grid.417540.3",
                             "country_code": "US"
                         }
                     ]
@@ -568,19 +590,21 @@ Field | Type |  Description | Example
                     "first_name": "Ling",
                     "last_name": "Yang",
                     "initials": "L",
-                    "ids":
-                    [
+                    "ids": [
                         {
                             "type": "magid",
                             "value": "2250633597"
                         }
                     ],
-                    "affiliations":
-                    [
+                    "affiliations": [
                         {
                             "name": "Eli Lilly and Company",
-                            "ids":
-                            [
+                            "name_original": "Eli Lilly and Company, Bridgewater, NJ, United States.",
+                            "ids": [
+                                {
+                                    "type": "magid",
+                                    "value": "168537998"
+                                },
                                 {
                                     "type": "grid",
                                     "value": "grid.417540.3"
@@ -594,6 +618,7 @@ Field | Type |  Description | Example
                                     "value": "01qat3289"
                                 }
                             ],
+                            "grid_id": "grid.417540.3",
                             "country_code": "US"
                         }
                     ]
@@ -602,19 +627,21 @@ Field | Type |  Description | Example
                     "first_name": "Jonathan D.",
                     "last_name": "Schwartz",
                     "initials": "JD",
-                    "ids":
-                    [
+                    "ids": [
                         {
                             "type": "magid",
                             "value": "2155041711"
                         }
                     ],
-                    "affiliations":
-                    [
+                    "affiliations": [
                         {
                             "name": "Eli Lilly and Company",
-                            "ids":
-                            [
+                            "name_original": "Eli Lilly and Company, Bridgewater, NJ, United States.",
+                            "ids": [
+                                {
+                                    "type": "magid",
+                                    "value": "168537998"
+                                },
                                 {
                                     "type": "grid",
                                     "value": "grid.417540.3"
@@ -628,6 +655,7 @@ Field | Type |  Description | Example
                                     "value": "01qat3289"
                                 }
                             ],
+                            "grid_id": "grid.417540.3",
                             "country_code": "US"
                         }
                     ]
@@ -636,40 +664,61 @@ Field | Type |  Description | Example
                     "first_name": "Celestia S.",
                     "last_name": "Higano",
                     "initials": "CS",
-                    "ids":
-                    [
+                    "ids": [
                         {
                             "type": "magid",
                             "value": "2560077320"
                         }
                     ],
-                    "affiliations":
-                    [
+                    "affiliations": [
                         {
                             "name": "Fred Hutchinson Cancer Research Center",
-                            "ids":
-                            [
+                            "name_original": "University of Washington, Fred Hutchinson Cancer Research Center, Seattle, WA, United States",
+                            "ids": [
                                 {
                                     "type": "grid",
-                                    "value": "grid.475296.b"
+                                    "value": "grid.270240.3"
                                 },
                                 {
                                     "type": "ror",
-                                    "value": "00wdsp051"
+                                    "value": "007ps6h72"
                                 }
                             ],
-                            "country_code": "ZA"
+                            "grid_id": "grid.270240.3",
+                            "country_code": "US"
+                        },
+                        {
+                            "name": "University of Washington",
+                            "name_original": "University of Washington, Fred Hutchinson Cancer Research Center, Seattle, WA, United States",
+                            "ids": [
+                                {
+                                    "type": "fundref",
+                                    "value": "100007812"
+                                },
+                                {
+                                    "type": "orgref",
+                                    "value": "31776"
+                                },
+                                {
+                                    "type": "grid",
+                                    "value": "grid.34477.33"
+                                },
+                                {
+                                    "type": "ror",
+                                    "value": "00cvxb145"
+                                }
+                            ],
+                            "grid_id": "grid.34477.33",
+                            "country_code": "US"
                         }
                     ]
                 }
             ],
-            "source":
-            {
+            "source": {
                 "title": "European journal of cancer (Oxford, England : 1990)",
                 "type": "Journal",
                 "publisher": "Elsevier Limited",
-                "issn":
-                [
+                "issn": [
                     {
                         "type": "unknown",
                         "value": "18790852"
@@ -680,19 +729,16 @@ Field | Type |  Description | Example
                     }
                 ],
                 "country": "United Kingdom",
-                "asjc_codes":
-                [
+                "asjc_codes": [
                     "1306",
                     "2730"
                 ],
-                "asjc_subjects":
-                [
-                    "Oncology",
-                    "Cancer Research"
+                "asjc_subjects": [
+                    "Cancer Research",
+                    "Oncology"
                 ]
             },
-            "fields_of_study":
-            [
+            "fields_of_study": [
                 "Internal medicine",
                 "Oncology",
                 "Cixutumumab",
@@ -705,16 +751,14 @@ Field | Type |  Description | Example
                 "Phases of clinical research",
                 "Medicine"
             ],
-            "keywords":
-            [
+            "keywords": [
                 "Cixutumumab",
                 "Mitoxantrone",
                 "Prednisone",
                 "Prostate cancer",
                 "Ramucirumab"
             ],
-            "publication_supplementary_type":
-            [
+            "publication_supplementary_type": [
                 "clinical trial, phase ii",
                 "multicenter study",
                 "randomized controlled trial",
@@ -722,12 +766,10 @@ Field | Type |  Description | Example
             ],
             "volume": "51",
             "issue": "13",
-            "languages":
-            [
+            "languages": [
                 "en"
             ],
-            "references":
-            [
+            "references": [
                 {
                     "lens_id": "003-415-704-045-340"
                 },
@@ -837,8 +879,7 @@ Field | Type |  Description | Example
                     "lens_id": "155-152-241-876-905"
                 }
             ],
-            "mesh_terms":
-            [
+            "mesh_terms": [
                 {
                     "mesh_heading": "Adenocarcinoma",
                     "qualifier_name": "drug therapy",
@@ -946,8 +987,7 @@ Field | Type |  Description | Example
                     "mesh_id": "D055815"
                 }
             ],
-            "chemicals":
-            [
+            "chemicals": [
                 {
                     "substance_name": "Antibodies, Monoclonal",
                     "registry_number": "0",
@@ -989,23 +1029,20 @@ Field | Type |  Description | Example
                     "mesh_id": "D011241"
                 }
             ],
-            "clinical_trials":
-            [
+            "clinical_trials": [
                 {
                     "id": "nct00683475",
                     "registry": "10.18810/clinical-trials-gov"
                 }
             ],
-            "funding":
-            [
+            "funding": [
                 {
                     "org": "NCI NIH HHS",
                     "funding_id": "P30 CA008748",
                     "country": "United States"
                 }
             ],
-            "source_urls":
-            [
+            "source_urls": [
                 {
                     "type": "html",
                     "url": "https://www.scholars.northwestern.edu/en/publications/a-randomised-non-comparative-phase-ii-trial-of-cixutumumab-imc-a1"
@@ -1039,13 +1076,12 @@ Field | Type |  Description | Example
                     "url": "https://core.ac.uk/download/pdf/82196673.pdf"
                 }
             ],
-            "abstract": "Abstract Background Cixutumumab, a human monoclonal antibody  (HuMAb), targets the insulin-like growth factor receptor...",
+            "abstract": "Abstract Background Cixutumumab, a human monoclonal antibody (HuMAb), targets the insulin-like growth factor receptor. Ramucirumab is a recombinant HuMAb that binds to vascular endothelial growth factor receptor-2. A non-comparative randomised phase II study evaluated cixutumumab or ramucirumab plus mitoxantrone and prednisone (MP) in metastatic castration-resistant prostate cancer (mCRPC). Patients and methods Men with progressive mCRPC during or after docetaxel therapy received mitoxantrone 12 mg/m2 on day 1 and prednisone 5 mg twice daily and were randomised 1:1 to receive either cixutumumab or ramucirumab 6 mg/kg intravenously weekly in a 21-day cycle. Primary end-point was composite progression-free survival (cPFS). Secondary end-points included safety, response, radiographic progression-free survival (PFS) and overall survival (OS). Sample size was based on a 50% increase in median cPFS from 2.6 (MP) to 3.9 months (either combination). Results 132 men were treated (66 per arm). Median cPFS was 4.1 months (95% confidence interval (CI), 2.2–5.6) for cixutumumab and 6.7 months (95% CI, 4.5–8.3) for ramucirumab. Median time to radiographic progression was 7.5 months for cixutumumab and 10.2 months for ramucirumab, with a median OS of 10.8 and 13.0 months, respectively. Fatigue was the most frequent adverse event (AE). Incidence of most non-haematologic grade 3–4 AEs was Conclusion Combinations of cixutumumab or ramucirumab plus MP were feasible and associated with moderate toxicities in docetaxel-pretreated men with mCRPC. Of the two regimens, the ramucirumab regimen is worthy of further testing based on the observed cPFS relative to the historical control.",
             "references_count": 36,
-            "scholarly_citations_count": 26,
+            "scholarly_citations_count": 27,
             "start_page": "1714",
             "end_page": "1724",
-            "scholarly_citations":
-            [
+            "scholarly_citations": [
                 "000-201-187-558-654",
                 "003-526-658-910-015",
                 "003-873-121-875-383",
@@ -1070,6 +1106,7 @@ Field | Type |  Description | Example
                 "067-043-485-486-441",
                 "085-619-841-835-92X",
                 "086-063-652-233-255",
+                "132-091-200-995-616",
                 "145-126-752-104-913",
                 "153-500-774-834-922"
             ],

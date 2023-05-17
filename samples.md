@@ -11,7 +11,7 @@ permalink: /samples.html
 - [Java](samples-scholar.html#java)
 - [NodeJs](samples-scholar.html#nodejs)
 - [cURL](samples-scholar.html#curl)
-- [JSONL Parser](https://github.com/cambialens/lens-api-doc/tree/master/jsonl_parser/scholar) (Python) 
+- [JSONL Parser](https://github.com/cambialens/lens-api-doc/tree/master/jsonl_parser/scholarly) (Python) 
 
 
 ### Patent API Samples

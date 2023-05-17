@@ -194,7 +194,6 @@ Field | Description |  Possible Value
 Lens API provides two type of pagination based on their use:
 
 ##### Offset/Size Based Pagination
-
 Use parameter `from` to define the offset and `size` to specify number of records expected. This is useful when you want to skip some records and select desired ones. Example below skips first 100 and select 50 records after that.
 ```json
 {
@@ -208,7 +207,6 @@ Similarly for `GET` requests, the following parameters are applicable: `size=50&
 > - Offset/size based paginations is suitable for small result sets only and does not work on result sets of more that 1000 records. For larger volume data downloads, use Cursor Based Pagination.
 
 ##### Cursor Based Pagination
-
 You can specify records per page using `size` (default 20 and max 100-500, refer to your API plan for your max records per request) and context alive time `scroll` (default 1 minute). You will receive a `scroll_id` in response, which should be passed via request body to access next set of results. Since the `scroll_id` tends to change every time after each successful requests, please use the most recent `scroll_id` to access next page. This is not suited for real time user requests.
 
 ```json
@@ -275,16 +273,15 @@ Group by patent family queries supports group by `SIMPLE_FAMILY` and `EXTENDED_F
 ### Minimum Score
 The minimum score represents the relevance score based on the query matching score used in Elasticsearch. This can be used to This can be used to limit the response to the most relevant results and can be used in 2-steps:
 
-   1. Performs an initial API request to get the `max_score`. N.B. the size of the request needs to be greater than 0 to return the `max_score`.
+   1. Perform an initial API request to get the `max_score`. N.B. the size of the request needs to be greater than 0 to return the `max_score`.
    2. You can then filter by the `min_score` in subsequent requests.
 
 For example, if the `max_score` is 14.9 and there are 236K results in total from the initial request, you can pass the `min_score` as 14 (i.e. less than max_score) in the subsequent request to limit the response to the most relevant results only.
 
-Please note:
-
-  * The `max_score` will be returned as 0 if size is 0 or if a sort is applied.
-  * Passing the `min_score` as x% of `max_score` may not result in top x% results.
-  * The score is calculated for each query by Elasticsearch, and so the `max_score` value will be different for each query.
+>**Note**:
+>  * The `max_score` will be returned as 0 if size is 0 or if a sort is applied.
+>  * Passing the `min_score` as x% of `max_score` may not result in top x% results.
+>  * The score is calculated for each query by Elasticsearch, and so the `max_score` value will be different for each query.
 
 
 ### Supported Query Types

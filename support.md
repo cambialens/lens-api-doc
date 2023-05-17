@@ -16,6 +16,7 @@ permalink: /support.html
 
 API Version | Schema Versions | Date Released | Notes
 ------- | ------| ------| -------
+`2.9.0` | - Scholar: `1.6.5` <br/> - Patent: `1.6.0` | May 17, 2023 | - Added `authors.affiliations.name_original` to the scholar API. <br/> - Added  support for `min_score` in the request body. <br/> - Added `max_score` to the API response.
 `2.8.0` | - Scholar: `1.6.4` <br/> - Patent: `1.6.0` | Feb 20, 2023 | - Added `group_by` to the patent API to support group by patent family queries.  
 `2.5.3` | - Scholar: `1.6.3` <br/> - Patent: `1.4.0` | Sep 12, 2022 | - Added scholarly request fields: `has_affiliation_ror` <br/> - Added query parser to normalise string based queries.
 `2.5.0` | - Scholar: `1.6.2` <br/> - Patent: `1.4.0` | Jun 9, 2022 | - Added scholarly request fields: `ids.doi`, `ids.pmid`, `ids.pmcid`, `ids.magid`, `ids.coreid` and `ids.openalex`  <br/> - Added data schema endpoints.

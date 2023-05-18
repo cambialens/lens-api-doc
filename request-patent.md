@@ -282,7 +282,7 @@ For example, if the `max_score` is 14.9 and there are 236K results in total from
 >  * The `max_score` will be returned as `0` if size is 0 or if a sort is applied.
 >  * Passing the `min_score` as x% of `max_score` may not result in top x% results.
 >  * The score is calculated for each query by Elasticsearch, and so the `max_score` value will be different for each query.
->  * The `max_score` will be returned as `0` if sorting by any fields other than `relevance`, i.e. `{"relevance": "desc"}`.
+>  * The `max_score` will be returned as 0 if sorting by any fields other than `relevance`, i.e. `{"relevance": "desc"}`.
 
 
 ### Supported Query Types

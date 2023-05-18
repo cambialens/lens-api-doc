@@ -228,7 +228,7 @@ Regex allows the use of regular expressions in [Query String based query](#query
 }
 ```
 ### Minimum Score
-The minimum score represents the relevance score based on the query matching score used in Elasticsearch. This can be used to This can be used to limit the response to the most relevant results and can be used in 2-steps:
+The minimum score represents the `relevance` score based on the query matching score used in Elasticsearch. This can be used to This can be used to limit the response to the most relevant results and can be used in 2-steps:
 
    1. Perform an initial API request to get the `max_score`. N.B. the size of the request needs to be greater than 0 to return the `max_score`.
    2. You can then filter by the `min_score` in subsequent requests.
@@ -239,6 +239,7 @@ For example, if the `max_score` is 14.9 and there are 236K results in total from
 >  * The `max_score` will be returned as 0 if size is 0 or if a sort is applied.
 >  * Passing the `min_score` as x% of `max_score` may not result in top x% results.
 >  * The score is calculated for each query by Elasticsearch, and so the `max_score` value will be different for each query.
+>  * The `max_score` will be returned as 0 if sorting by any fields other than `relevance`, i.e. `{"relevance": "desc"}`.
 
 ### Supported Query Types
 Following queries are supported by current version of Lens API:

@@ -271,7 +271,7 @@ Regex allows the use of regular expressions in [Query String based query](#query
 Group by patent family queries supports group by `SIMPLE_FAMILY` and `EXTENDED_FAMILY`, e.g. `"group_by": "SIMPLE_FAMILY"`
 
 ### Minimum Score
-The minimum score represents the relevance score based on the query matching score used in Elasticsearch. This can be used to This can be used to limit the response to the most relevant results and can be used in 2-steps:
+The minimum score represents the `relevance` score based on the query matching score used in Elasticsearch. This can be used to This can be used to limit the response to the most relevant results and can be used in 2-steps:
 
    1. Perform an initial API request to get the `max_score`. N.B. the size of the request needs to be greater than 0 to return the `max_score`.
    2. You can then filter by the `min_score` in subsequent requests.
@@ -279,9 +279,10 @@ The minimum score represents the relevance score based on the query matching sco
 For example, if the `max_score` is 14.9 and there are 236K results in total from the initial request, you can pass the `min_score` as 14 (i.e. less than max_score) in the subsequent request to limit the response to the most relevant results only.
 
 >**Note**:
->  * The `max_score` will be returned as 0 if size is 0 or if a sort is applied.
+>  * The `max_score` will be returned as `0` if size is 0 or if a sort is applied.
 >  * Passing the `min_score` as x% of `max_score` may not result in top x% results.
 >  * The score is calculated for each query by Elasticsearch, and so the `max_score` value will be different for each query.
+>  * The `max_score` will be returned as `0` if sorting by any fields other than `relevance`, i.e. `{"relevance": "desc"}`.
 
 
 ### Supported Query Types

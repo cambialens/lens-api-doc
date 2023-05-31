@@ -268,7 +268,11 @@ Regex allows the use of regular expressions in [Query String based query](#query
 ```
 
 ### Group by Family
-Group by patent family queries supports group by `SIMPLE_FAMILY` and `EXTENDED_FAMILY`, e.g. `"group_by": "SIMPLE_FAMILY"`
+Group by patent family queries supports group by `SIMPLE_FAMILY` and `EXTENDED_FAMILY`, e.g. `"group_by": "SIMPLE_FAMILY"`. This returns the top sorted patent document record for each family (sorted by relevance by default). 
+
+>**Note**:
+>  * Group by family does not work with `scroll` requests.
+
 
 ### Minimum Score
 The minimum score represents the `relevance` score based on the query matching score used in Elasticsearch. This can be used to This can be used to limit the response to the most relevant results and can be used in 2-steps:

@@ -204,7 +204,7 @@ Use parameter `from` to define the offset and `size` to specify number of record
 ```
 Similarly for `GET` requests, the following parameters are applicable: `size=50&from=100`
 > **Note**: 
-> - Offset/size based paginations is suitable for small result sets only and does not work on result sets of more that 1000 records. For larger volume data downloads, use Cursor Based Pagination.
+> - Offset/size based paginations is suitable for small result sets only and does not work on result sets of more that **10,000** records. For larger volume data downloads, use Cursor Based Pagination.
 
 ##### Cursor Based Pagination
 You can specify records per page using `size` (default 20 and max 100-500, refer to your API plan for your max records per request) and context alive time `scroll` (default 1 minute). You will receive a `scroll_id` in response, which should be passed via request body to access next set of results. Since the `scroll_id` tends to change every time after each successful requests, please use the most recent `scroll_id` to access next page. This is not suited for real time user requests.

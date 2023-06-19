@@ -71,6 +71,7 @@ Field | Type | Description
 **author.affiliation.name_original** | String | The author's original affiliation including the institution name and address. e.g. `School of Engineering and Applied Sciences, Harvard University, Cambridge, Massachusetts USA`
 **author.affiliation.grid_id** | String | The institution GRID identifier e.g. `grid.9018.0`. N.B. GRID identifiers will be deprecated in future and replaced with [ROR identifiers](https://ror.org/).
 **author.affiliation.ror_id** | String | The institution ROR identifier e.g. `03yrm5c26`. N.B. this field is case sensitive.
+**author.affiliation.ror_id_lineage** | String | The institution's ROR identifier lineage. This includes all parent ROR identifiers for the institution. e.g. `00pjdza24`, `03yrm5c26`. N.B. this field is case sensitive.
 **author.affiliation.country_code** | String | The institution Country Code e.g. `US`,`DE`,`CH`,`FR`, etc. *N.B* this field will be deprecated in future, we recommend using the `author.affiliation.address.country_code` field instead. 
 **author.affiliation.address.country_code** | String | The alpha-2 country code of the institution e.g. `US`,`DE`,`CH`,`FR`, etc. N.B. this field is case sensitive.
 **author.affiliation.address.city** | String | The institution city e.g. `Tokyo`. N.B. this field is case sensitive.

@@ -21,7 +21,20 @@ toc:
         url: examples-patent.html#us-patents-by-document-number
       - page: Search for Dcument Identifiers
         url: examples-patent.html#search-for-document-identifiers
-        
+  - title: Aggregation Examples
+    subfolderitems:
+      - page: Patent Metrics
+        url: examples-patent.html#metrics-for-ibm-patents
+      - page: Nested Date Histogram
+        url: examples-patent.html#nested-date-histogram-for-ibm-patents-published-after-1980-by-document-type
+      - page: Terms Aggregation - Document Type
+        url: examples-patent.html#terms-aggregation-ibm-patents-by-document-type
+      - page: Terms Aggregation - Top Applicants
+        url: examples-patent.html#terms-aggregation-top-applicants-by-active-granted-patents-published-since-1980      
+      - page: Nested Terms Aggregation - Top Applicants by Legal Status
+        url: examples-patent.html#nested-terms-aggregation-top-applicants-granted-patents-published-since-1980-by-legal-status       
+      - page: Nested Terms Aggregation - Top Applicants by Patent Citations
+        url: examples-patent.html#nested-terms-aggregation-top-applicants-granted-patents-published-since-1980-by-patent-citations    
 ---
 
 ##### Find the 20 most recently published patent records from offset 10 that match the provided string query
@@ -216,3 +229,308 @@ toc:
 ##### Using GET Requests
 
 > `[GET] https://api.lens.org/patent/search?token=[your-access-token]&size=10&query=YOUR_QUERY&include=biblio,lens_id&sort=desc(date_published)`
+
+
+# Aggregation Examples
+
+##### Metrics for IBM patents
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "owner.name.exact": "International Business Machines Corporation"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "range": {
+                        "date_published": {
+                            "gte": "1980-01-01"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "aggs": {
+        "simple_families": {
+            "cardinality": {
+                "field": "family.simple.id"
+            }
+        },
+        "extended_families": {
+            "cardinality": {
+                "field": "family.extended.id"
+            }
+        },
+        "cites_patents": {
+            "filter": {
+                "term": {
+                    "cites_patent": true
+                }
+            }
+        },
+        "cited_by_patents": {
+            "filter": {
+                "term": {
+                    "cited_by_patent": true
+                }
+            }
+        },
+        "citing_patents": {
+            "cardinality": {
+                "field": "cited_by.patent.lens_id"
+            }
+        },
+        "patent_citations": {
+            "avg": {
+                "field": "cited_by.patent_count"
+            }
+        },
+        "cited_patents": {
+            "cardinality": {
+                "field": "reference_cited.patent.lens_id"
+            }
+        },
+        "cites_npl": {
+            "filter": {
+                "term": {
+                    "cites_npl": true
+                }
+            }
+        },
+        "npl_citations": {
+            "sum": {
+                "field": "reference_cited.npl_count"
+            }
+        },
+        "cites_resolved_npl": {
+            "filter": {
+                "term": {
+                    "cites_resolved_npl": true
+                }
+            }
+        },
+        "resolved_npl_citations": {
+            "avg": {
+                "field": "reference_cited.npl_resolved_count"
+            }
+        },
+        "citied_scholarly_works": {
+            "cardinality": {
+                "field": "reference_cited.npl.record_lens_id"
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+##### Nested Date Histogram for IBM patents published after `1980` by document type 
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "owner.name.exact": "International Business Machines Corporation"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "range": {
+                        "date_published": {
+                            "gte": "1980-01-01"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "aggs": {
+        "date_histo": {
+            "date_histogram": {
+                "field": "date_published",
+                "interval": "YEAR",
+                "aggs": {
+                    "pubtype": {
+                        "terms": {
+                            "field": "publication_type",
+                            "size": 20
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+##### Terms Aggregation - IBM patents by document type
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "owner.name.exact": "International Business Machines Corporation"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "range": {
+                        "date_published": {
+                            "gte": "1980-01-01"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "aggs": {
+        "pubtype": {
+            "terms": {
+                "field": "publication_type",
+                "size": 20
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+#####  Terms Aggregation - Top Applicants by Active Granted Patents published since `1980`
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "legal_status.patent_status": "active"
+                    }
+                },
+                {
+                    "match": {
+                        "publication_type": "granted_patent"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "range": {
+                        "date_published": {
+                            "gte": "1980-01-01"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "aggs": {
+        "top_applicants": {
+            "terms": {
+                "field": "applicant.name.exact",
+                "size": 20
+            }
+        }
+    },
+    "size": 0
+}
+```
+##### Nested Terms Aggregation - Top Applicants Granted Patents published since `1980` by Legal Status
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "publication_type": "granted_patent"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "range": {
+                        "date_published": {
+                            "gte": "1980-01-01"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "aggs": {
+        "applicants": {
+            "terms": {
+                "field": "applicant.name.exact",
+                "size": 20,
+                "aggs": {
+                    "legal_status": {
+                        "terms": {
+                            "field": "legal_status.patent_status",
+                            "size": 10
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+##### Nested Terms Aggregation - Top Applicants Granted Patents published since `1980` by Patent Citations
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "publication_type": "granted_patent"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "range": {
+                        "date_published": {
+                            "gte": "1980-01-01"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "aggs": {
+        "applicants": {
+            "terms": {
+                "field": "applicant.name.exact",
+                "size": 20,
+                "order": {
+                    "patent_citations": "asc"
+                },
+                "aggs": {
+                    "patent_citations": {
+                        "sum": {
+                            "field": "cited_by.patent_count"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "size": 0
+}
+```

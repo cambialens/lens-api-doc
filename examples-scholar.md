@@ -33,6 +33,20 @@ toc:
         url: examples-scholar.html#access-your-collection
       - page: Using GET Requests
         url: examples-scholar.html#using-get-requests
+  - title: Aggregation Examples
+    subfolderitems:
+      - page: Scholarly Metrics
+        url: examples-scholar.html#scholarly-metrics-the-journal-of-contemporary-dental-practice
+      - page: Nested Date Histogram
+        url: examples-scholar.html#nested-date-histogram-the-journal-of-contemporary-dental-practice-scholarly-works-by-publication-type
+      - page: Terms Aggregation - Publication Type
+        url: examples-scholar.html#terms-aggregation-the-journal-of-contemporary-dental-practice-scholarly-works-by-publication-type
+      - page: Terms Aggregation - Top Institutions
+        url: examples-scholar.html#terms-aggregation-top-20-institutions-publishing-in-the-journal-of-contemporary-dental-practice
+      - page: Nested Terms Aggregation - Scholarly Citations
+        url: examples-scholar.html#nested-terms-aggregation-top-10-institutions-publishing-in-the-journal-of-contemporary-dental-practice-by-field-of-study-and-scholarly-citations
+      - page: Nested Date Histogram - Open Access Colour Over Time
+        url: examples-scholar.html#nested-date-histogram-the-journal-of-contemporary-dental-practice-open-access-colour-over-time    
 ---
 
 ##### Find 20 records from offset 10 that match provided query
@@ -200,3 +214,258 @@ OR using String Based Query
 > `[GET] https://api.lens.org/collections/123456?token=[your-access-token]&size=10&query=Malaria&include=authors,lens_id&sort=desc(date_published)`
 
 > `[GET] https://api.lens.org/scholarly/search?token=[your-access-token]&size=10&query=Malaria&include=authors,lens_id&sort=desc(date_published)`
+
+
+
+# Aggregation Examples
+
+##### Scholarly Metrics - The Journal of Contemporary Dental Practice
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "source.title.exact": "The Journal of Contemporary Dental Practice"
+                    }
+                },
+                {
+                    "match": {
+                        "source.publisher.exact": "Jaypee Brothers Medical Publishers"
+                    }
+                }
+            ]
+        }
+    },
+    "aggs": {
+        "works_cited_by_patents": {
+            "filter": {
+                "term": {
+                    "is_referenced_by_patent": true
+                }
+            }
+        },
+        "citing_patents": {
+            "cardinality": {
+                "field": "referenced_by_patent.lens_id"
+            }
+        },
+        "patent_citations": {
+            "sum": {
+                "field": "referenced_by_patent_count"
+            }
+        },
+        "works_cited_by_scholarly": {
+            "filter": {
+                "term": {
+                    "is_referenced_by_scholarly": true
+                }
+            }
+        },
+        "citing_scholarly_works": {
+            "cardinality": {
+                "field": "referenced_by"
+            }
+        },        
+        "scholarly_citations": {
+            "sum": {
+                "field": "referenced_by_count"
+            }
+        },
+        "cited_scholarly_works": {
+            "cardinality": {
+                "field": "reference.lens_id"
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+##### Nested Date Histogram - The Journal of Contemporary Dental Practice Scholarly Works by Publication Type
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "source.title.exact": "The Journal of Contemporary Dental Practice"
+                    }
+                },
+                {
+                    "match": {
+                        "source.publisher.exact": "Jaypee Brothers Medical Publishers"
+                    }
+                }
+            ]
+        }
+    },
+    "aggs": {
+        "date_histo": {
+            "date_histogram": {
+                "field": "date_published",
+                "interval": "YEAR",
+                "aggs": {
+                    "pubtype": {
+                        "terms": {
+                            "field": "publication_type",
+                            "size": 20
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+##### Terms Aggregation - The Journal of Contemporary Dental Practice Scholarly Works by Publication Type
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "source.title.exact": "The Journal of Contemporary Dental Practice"
+                    }
+                },
+                {
+                    "match": {
+                        "source.publisher.exact": "Jaypee Brothers Medical Publishers"
+                    }
+                }
+            ]
+        }
+    },
+    "aggs": {
+        "pubtype": {
+            "terms": {
+                "field": "publication_type",
+                "size": 20
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+##### Terms Aggregation - Top 20 Institutions Publishing in The Journal of Contemporary Dental Practice 
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "source.title.exact": "The Journal of Contemporary Dental Practice"
+                    }
+                },
+                {
+                    "match": {
+                        "source.publisher.exact": "Jaypee Brothers Medical Publishers"
+                    }
+                }
+            ]
+        }
+    },
+    "aggs": {
+        "pubtype": {
+            "terms": {
+                "field": "author.affiliation.name.exact",
+                "size": 20,
+                "order": {
+                        "_count": "asc"
+                    }
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+##### Nested Terms Aggregation - Top 10 Institutions Publishing in The Journal of Contemporary Dental Practice, by Field of Study and Scholarly Citations
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "source.title.exact": "The Journal of Contemporary Dental Practice"
+                    }
+                },
+                {
+                    "match": {
+                        "source.publisher.exact": "Jaypee Brothers Medical Publishers"
+                    }
+                }
+            ]
+        }
+    },
+    "aggregations": {
+        "institutions": {
+            "terms": {
+                "field": "author.affiliation.name.exact",
+                "size": 10,
+                "aggregations": {
+                    "fields_of_study": {
+                        "terms": {
+                            "field": "field_of_study",
+                            "size": 5
+                        }
+                    },
+                    "scholarly_citations": {
+                        "sum": {
+                            "field": "referenced_by_count"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+##### Nested Date Histogram - The Journal of Contemporary Dental Practice Open Access Colour Over Time 
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "source.title.exact": "The Journal of Contemporary Dental Practice"
+                    }
+                },
+                {
+                    "match": {
+                        "source.publisher.exact": "Jaypee Brothers Medical Publishers"
+                    }
+                }
+            ]
+        }
+    },
+    "aggs": {
+        "date_histo": {
+            "date_histogram": {
+                "field": "date_published",
+                "interval": "YEAR",
+                "aggs": {
+                    "oa-colour": {
+                        "terms": {
+                            "field": "open_access.colour",
+                            "size": 20
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "size": 0
+}
+```

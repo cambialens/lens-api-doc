@@ -256,7 +256,7 @@ toc:
             ]
         }
     },
-    "aggs": {
+    "aggregations": {
         "simple_families": {
             "cardinality": {
                 "field": "family.simple.id"
@@ -353,12 +353,12 @@ toc:
             ]
         }
     },
-    "aggs": {
+    "aggregations": {
         "date_histo": {
             "date_histogram": {
                 "field": "date_published",
                 "interval": "YEAR",
-                "aggs": {
+                "aggregations": {
                     "pubtype": {
                         "terms": {
                             "field": "publication_type",
@@ -396,7 +396,7 @@ toc:
             ]
         }
     },
-    "aggs": {
+    "aggregations": {
         "pubtype": {
             "terms": {
                 "field": "publication_type",
@@ -436,7 +436,7 @@ toc:
             ]
         }
     },
-    "aggs": {
+    "aggregations": {
         "top_applicants": {
             "terms": {
                 "field": "applicant.name.exact",
@@ -470,12 +470,12 @@ toc:
             ]
         }
     },
-    "aggs": {
+    "aggregations": {
         "applicants": {
             "terms": {
                 "field": "applicant.name.exact",
                 "size": 20,
-                "aggs": {
+                "aggregations": {
                     "legal_status": {
                         "terms": {
                             "field": "legal_status.patent_status",
@@ -513,7 +513,7 @@ toc:
             ]
         }
     },
-    "aggs": {
+    "aggregations": {
         "applicants": {
             "terms": {
                 "field": "applicant.name.exact",
@@ -521,7 +521,7 @@ toc:
                 "order": {
                     "patent_citations": "asc"
                 },
-                "aggs": {
+                "aggregations": {
                     "patent_citations": {
                         "sum": {
                             "field": "cited_by.patent_count"

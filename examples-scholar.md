@@ -238,7 +238,7 @@ OR using String Based Query
             ]
         }
     },
-    "aggs": {
+    "aggregations": {
         "works_cited_by_patents": {
             "filter": {
                 "term": {
@@ -302,12 +302,12 @@ OR using String Based Query
             ]
         }
     },
-    "aggs": {
+    "aggregations": {
         "date_histo": {
             "date_histogram": {
                 "field": "date_published",
                 "interval": "YEAR",
-                "aggs": {
+                "aggregations": {
                     "pubtype": {
                         "terms": {
                             "field": "publication_type",
@@ -341,7 +341,7 @@ OR using String Based Query
             ]
         }
     },
-    "aggs": {
+    "aggregations": {
         "pubtype": {
             "terms": {
                 "field": "publication_type",
@@ -372,7 +372,7 @@ OR using String Based Query
             ]
         }
     },
-    "aggs": {
+    "aggregations": {
         "pubtype": {
             "terms": {
                 "field": "author.affiliation.name.exact",
@@ -450,12 +450,12 @@ OR using String Based Query
             ]
         }
     },
-    "aggs": {
+    "aggregations": {
         "date_histo": {
             "date_histogram": {
                 "field": "date_published",
                 "interval": "YEAR",
-                "aggs": {
+                "aggregations": {
                     "oa-colour": {
                         "terms": {
                             "field": "open_access.colour",

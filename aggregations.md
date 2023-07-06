@@ -1,20 +1,33 @@
+---
+layout: post-sidebar
+title: Aggregation Request
+permalink: /aggregations-beta.html
+show_sidebar: true
+sidebar: toc
+toc:
+  - title: Table of Contents
+    subfolderitems:
+      - page: Overview
+        url: aggregations-beta.html#overview
+      - page: Types of aggregation
+        url: aggregations-beta.html#types-of-aggregation
+      - page: Aggregations supported in The Lens
+        url: aggregations-beta.html#aggregations-supported-in-the-lens
+      - page: Nesting using sub-aggregations
+        url: aggregations-beta.html#nesting-using-sub-aggregations
+        subfolderitems:
+          - page: xxx
+            url: aggregations-beta.html#types-of-aggregation
+---
 
-### Lens Aggregation API
+### Overview
 Aggregation request follows similar structure as [elasticSearch aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html).
 
 Following aggregation endpoints are supported in Lens:
 - `POST` `/patent/aggregate`
 - `POST` `/scholarly/aggregate`
 
-Fields | Description                                      |  Required
-------- |--------------------------------------------------| -------
-**query** | Valid json search query                       | true
-**[aggregations](#aggregation-request)**  | Aggregation request                              | true
-**include** | Only select specific fields from response.       | false
-**exclude** | Exclude the fields from search result.           | false
-**size** | Integer value to specify number of items per page | false
-**from** | Integer value, defines the offset from the first result | false
-**regex** | For Query String based queries containing regular expressions | false
+### Types of Aggregation
 
 #### Single value metrics aggregation
 These aggregations compute the metrics based on value aggregated. e.g. `cardinality`, `avg`, `max`, `min`, `sum`
@@ -31,25 +44,6 @@ Following fields are supported for aggregation requests.
 > Note: Some aggregation supports additional request configuration fields e.g. `interval` for `date_histogram` aggregation
 
 > We strongly recommend applying aggregations with specific `query` and keeping the result size to avoid slow responses or timeouts.
-
-The request should be a valid json as illustrated below:
-
-```json
-{
-  "aggregations": {
-    "{user defined name of aggregation}": {
-      "{aggregation type from below e.g. terms, avg, date_histogram}": {
-        "field": "{supported field for this aggregation from table below}",
-        "aggregations": {
-          "{sub aggregation name}": {
-            //sub aggregation json
-          }
-        }
-      }
-    }
-  }
-}
-```
 
 ### Aggregations supported in The Lens
 
@@ -160,13 +154,14 @@ e.g.
 }
 ```
 Product | supported Fields
+
 ------- |-------------
-**Scholarly** | `date_published_sort`
+**Scholarly** | `date_published`
 **Patent** | `application_reference.date`, `date_published`, `earliest_priority_claim_date`, `legal_status.anticipated_term_date`, `legal_status.grant_date`
 
 #### terms
 
-It is also bucket aggregation where the buckets are dynamically built based on unique value of the field.
+It is a bucket aggregation where the buckets are dynamically built based on unique value of the field.
 
 Additional request config fields:
 - `size`: Number of (default to `10` upto `100`)
@@ -175,9 +170,20 @@ Additional request config fields:
   - `doc_count`: sort by document count
   - sub-aggregation-name - sort by user defined sub aggregation name
 
+Product | supported Fields
+------- |-------------
+**Scholarly** | `affiliation.type`, `author.affiliation.address.city`, `author.affiliation.address.country_code`, `author.affiliation.address.state_code`, `author.affiliation.name.exact`, `author.display_name.exact`, `author.display_name_id`, `author.display_name_orcid`, `author_first.display_name.exact`, `author_first.display_name_id`, `author_last.display_name.exact`, `author_last.display_name_id`, `citation_id_type`, `conference.name.exact`, `field_of_study`, `funding.country.exact`, `funding.funding_name.exact`, `funding.organisation.exact`, `has_abstract`, `has_affiliation`, `has_affiliation_ror`, `has_clinical_trial`, `has_field_of_study`, `has_full_text`, `has_funding`, `has_keyword`, `has_mesh_term`, `has_orcid`, `in_analytics_set`, `is_open_access`, `is_referenced_by_patent`, `is_referenced_by_scholarly`, `mesh_term.mesh_heading`, `open_access.colour`, `open_access.license`, `open_access.source`, `publication_type`, `source.asjc_code`, `source.asjc_subject.exact`, `source.country`, `source.is_diamond`, `source.publisher.exact`, `source.title.exact`, `source.type`
+**Patent** | `agent.country`, `agent.name.exact`, `applicant.name.exact`, `applicant.residence`, `assistant_examiner.name.exact`, `cited_by_patent`, `cites_npl`, `cites_patent`, `cites_resolved_npl`, `class_cpc.symbol`, `class_ipcr.symbol`, `class_national.symbol`, `examiner.name.exact`, `has_abstract`, `has_applicant`, `has_claim`, `has_description`, `has_docdb`, `has_examiner`, `has_full_text`, `has_inpadoc`, `has_inventor`, `has_owner`, `has_sequence`, `has_title`, `inventor.name.exact`, `inventor.residence`, `jurisdiction`, `kind`, `legal_status.granted`, `legal_status.has_disclaimer`, `legal_status.has_entry_into_national_phase`, `legal_status.has_grant_event`, `legal_status.has_spc`, `legal_status.patent_status`, `owner_all.country`, `owner_all.name.exact`, `primary_examiner.name.exact`, `publication_type`, `sequence.organism.name.exact`
+
+e.g.
+
 ```json
 {
-  "query": ...,
+  "query": {
+    "match": {
+      "title": "malaria"
+    }
+  },
   "aggregations": {
     "affiliation types": {
       "terms": {
@@ -192,16 +198,12 @@ Additional request config fields:
 }
 ```
 
-Product | supported Fields
-------- |-------------
-**Scholarly** | `affiliation.type`, `author.affiliation.address.city`, `author.affiliation.address.country_code`, `author.affiliation.address.state_code`, `author.affiliation.name.exact`, `author.display_name.exact`, `author.display_name_id`, `author.display_name_orcid`, `author_first.display_name.exact`, `author_first.display_name_id`, `author_last.display_name.exact`, `author_last.display_name_id`, `citation_id_type`, `conference.name.exact`, `field_of_study`, `funding.country.exact`, `funding.funding_name.exact`, `funding.organisation.exact`, `has_abstract`, `has_affiliation`, `has_affiliation_ror`, `has_clinical_trial`, `has_field_of_study`, `has_full_text`, `has_funding`, `has_keyword`, `has_mesh_term`, `has_orcid`, `in_analytics_set`, `is_open_access`, `is_referenced_by_patent`, `is_referenced_by_scholarly`, `mesh_term.mesh_heading`, `open_access.colour`, `open_access.license`, `open_access.source`, `publication_type`, `source.asjc_code`, `source.asjc_subject.exact`, `source.country`, `source.is_diamond`, `source.publisher.exact`, `source.title.exact`, `source.type`
-**Patent** | `agent.country`, `agent.name.exact`, `applicant.name.exact`, `applicant.residence`, `assistant_examiner.name.exact`, `cited_by_patent`, `cites_npl`, `cites_patent`, `cites_resolved_npl`, `class_cpc.symbol`, `class_ipcr.symbol`, `class_national.symbol`, `examiner.name.exact`, `has_abstract`, `has_applicant`, `has_claim`, `has_description`, `has_docdb`, `has_examiner`, `has_full_text`, `has_inpadoc`, `has_inventor`, `has_owner`, `has_sequence`, `has_title`, `inventor.name.exact`, `inventor.residence`, `jurisdiction`, `kind`, `legal_status.granted`, `legal_status.has_disclaimer`, `legal_status.has_entry_into_national_phase`, `legal_status.has_grant_event`, `legal_status.has_spc`, `legal_status.patent_status`, `owner_all.country`, `owner_all.name.exact`, `primary_examiner.name.exact`, `publication_type`, `sequence.organism.name.exact`
-
 #### filter
+
+It narrows the documents which matches the filter query.
 
 - `filter` : required valid query of type `match`, `term`, `terms`, `range`
 
-It narrows the documents which matches the filter query.
 e.g.
 ```json
   "works_cited_by_patents": {
@@ -218,6 +220,7 @@ e.g.
 It is a multiple bucket aggregation that supports multiple queries.
 
 - `filters` : required valid queries with type `match`, `term`, `terms`, `range`
+
 e.g.
 ```json
   "works_cited_by": {

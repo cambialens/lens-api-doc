@@ -1,6 +1,6 @@
 ---
 layout: post-sidebar
-title: Aggregation Request
+title: Aggregations
 permalink: /aggregations-beta.html
 show_sidebar: true
 sidebar: toc
@@ -15,21 +15,23 @@ toc:
         url: aggregations-beta.html#aggregations-supported-in-the-lens
       - page: Nesting using sub-aggregations
         url: aggregations-beta.html#nesting-using-sub-aggregations
-        subfolderitems:
-          - page: xxx
-            url: aggregations-beta.html#types-of-aggregation
+      - page: Examples - Scholarly Aggregation
+        url: aggregations-beta.html#scholarly-aggregation-examples
+      - page: Examples - Patent Aggregation
+        url: aggregations-beta.html#patent-aggregation-examples
 ---
 
 ### Overview
-Aggregation request follows similar structure as [elasticSearch aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html).
 
-Following aggregation endpoints are supported in Lens:
+Lens Aggregation API enables users to calculate metrics, summarize data that can be useful for analysis. Aggregation request follows similar structure as [elasticSearch aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html).
+
+Following aggregation endpoints are supported in The Lens:
 - `POST` `/patent/aggregate`
 - `POST` `/scholarly/aggregate`
 
 ### Types of Aggregation
 
-#### Single value metrics aggregation
+#### Metrics aggregation
 These aggregations compute the metrics based on value aggregated. e.g. `cardinality`, `avg`, `max`, `min`, `sum`
 
 #### Bucket aggregation
@@ -277,5 +279,562 @@ e.g.
             }
         }
     }
+}
+```
+
+### Scholarly Aggregation Examples
+
+##### Scholarly Metrics - The Journal of Contemporary Dental Practice
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "source.title.exact": "The Journal of Contemporary Dental Practice"
+                    }
+                },
+                {
+                    "match": {
+                        "source.publisher.exact": "Jaypee Brothers Medical Publishers"
+                    }
+                }
+            ]
+        }
+    },
+    "aggregations": {
+        "works_cited_by_patents": {
+            "filter": {
+                "term": {
+                    "is_referenced_by_patent": true
+                }
+            }
+        },
+        "citing_patents": {
+            "cardinality": {
+                "field": "referenced_by_patent.lens_id"
+            }
+        },
+        "patent_citations": {
+            "sum": {
+                "field": "referenced_by_patent_count"
+            }
+        },
+        "works_cited_by_scholarly": {
+            "filter": {
+                "term": {
+                    "is_referenced_by_scholarly": true
+                }
+            }
+        },
+        "citing_scholarly_works": {
+            "cardinality": {
+                "field": "referenced_by"
+            }
+        },        
+        "scholarly_citations": {
+            "sum": {
+                "field": "referenced_by_count"
+            }
+        },
+        "cited_scholarly_works": {
+            "cardinality": {
+                "field": "reference.lens_id"
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+##### Nested Date Histogram - The Journal of Contemporary Dental Practice Scholarly Works by Publication Type
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "source.title.exact": "The Journal of Contemporary Dental Practice"
+                    }
+                },
+                {
+                    "match": {
+                        "source.publisher.exact": "Jaypee Brothers Medical Publishers"
+                    }
+                }
+            ]
+        }
+    },
+    "aggregations": {
+        "date_histo": {
+            "date_histogram": {
+                "field": "date_published",
+                "interval": "YEAR",
+                "aggregations": {
+                    "pubtype": {
+                        "terms": {
+                            "field": "publication_type",
+                            "size": 20
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+##### Terms Aggregation - The Journal of Contemporary Dental Practice Scholarly Works by Publication Type
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "source.title.exact": "The Journal of Contemporary Dental Practice"
+                    }
+                },
+                {
+                    "match": {
+                        "source.publisher.exact": "Jaypee Brothers Medical Publishers"
+                    }
+                }
+            ]
+        }
+    },
+    "aggregations": {
+        "pubtype": {
+            "terms": {
+                "field": "publication_type",
+                "size": 20
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+##### Terms Aggregation - Top 20 Institutions Publishing in The Journal of Contemporary Dental Practice
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "source.title.exact": "The Journal of Contemporary Dental Practice"
+                    }
+                },
+                {
+                    "match": {
+                        "source.publisher.exact": "Jaypee Brothers Medical Publishers"
+                    }
+                }
+            ]
+        }
+    },
+    "aggregations": {
+        "pubtype": {
+            "terms": {
+                "field": "author.affiliation.name.exact",
+                "size": 20,
+                "order": {
+                        "_count": "asc"
+                    }
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+##### Nested Terms Aggregation - Top 10 Institutions Publishing in The Journal of Contemporary Dental Practice, by Field of Study and Scholarly Citations
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "source.title.exact": "The Journal of Contemporary Dental Practice"
+                    }
+                },
+                {
+                    "match": {
+                        "source.publisher.exact": "Jaypee Brothers Medical Publishers"
+                    }
+                }
+            ]
+        }
+    },
+    "aggregations": {
+        "institutions": {
+            "terms": {
+                "field": "author.affiliation.name.exact",
+                "size": 10,
+                "aggregations": {
+                    "fields_of_study": {
+                        "terms": {
+                            "field": "field_of_study",
+                            "size": 5
+                        }
+                    },
+                    "scholarly_citations": {
+                        "sum": {
+                            "field": "referenced_by_count"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+##### Nested Date Histogram - The Journal of Contemporary Dental Practice Open Access Colour Over Time
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "source.title.exact": "The Journal of Contemporary Dental Practice"
+                    }
+                },
+                {
+                    "match": {
+                        "source.publisher.exact": "Jaypee Brothers Medical Publishers"
+                    }
+                }
+            ]
+        }
+    },
+    "aggregations": {
+        "date_histo": {
+            "date_histogram": {
+                "field": "date_published",
+                "interval": "YEAR",
+                "aggregations": {
+                    "oa-colour": {
+                        "terms": {
+                            "field": "open_access.colour",
+                            "size": 20
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+### Patent Aggregation Examples
+
+##### Metrics for IBM patents
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "owner.name.exact": "International Business Machines Corporation"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "range": {
+                        "date_published": {
+                            "gte": "1980-01-01"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "aggregations": {
+        "simple_families": {
+            "cardinality": {
+                "field": "family.simple.id"
+            }
+        },
+        "extended_families": {
+            "cardinality": {
+                "field": "family.extended.id"
+            }
+        },
+        "cites_patents": {
+            "filter": {
+                "term": {
+                    "cites_patent": true
+                }
+            }
+        },
+        "cited_by_patents": {
+            "filter": {
+                "term": {
+                    "cited_by_patent": true
+                }
+            }
+        },
+        "citing_patents": {
+            "cardinality": {
+                "field": "cited_by.patent.lens_id"
+            }
+        },
+        "patent_citations": {
+            "avg": {
+                "field": "cited_by.patent_count"
+            }
+        },
+        "cited_patents": {
+            "cardinality": {
+                "field": "reference_cited.patent.lens_id"
+            }
+        },
+        "cites_npl": {
+            "filter": {
+                "term": {
+                    "cites_npl": true
+                }
+            }
+        },
+        "npl_citations": {
+            "sum": {
+                "field": "reference_cited.npl_count"
+            }
+        },
+        "cites_resolved_npl": {
+            "filter": {
+                "term": {
+                    "cites_resolved_npl": true
+                }
+            }
+        },
+        "resolved_npl_citations": {
+            "avg": {
+                "field": "reference_cited.npl_resolved_count"
+            }
+        },
+        "citied_scholarly_works": {
+            "cardinality": {
+                "field": "reference_cited.npl.record_lens_id"
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+##### Nested Date Histogram for IBM patents published after `1980` by document type
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "owner.name.exact": "International Business Machines Corporation"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "range": {
+                        "date_published": {
+                            "gte": "1980-01-01"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "aggregations": {
+        "date_histo": {
+            "date_histogram": {
+                "field": "date_published",
+                "interval": "YEAR",
+                "aggregations": {
+                    "pubtype": {
+                        "terms": {
+                            "field": "publication_type",
+                            "size": 20
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+##### Terms Aggregation - IBM patents by document type
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "owner.name.exact": "International Business Machines Corporation"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "range": {
+                        "date_published": {
+                            "gte": "1980-01-01"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "aggregations": {
+        "pubtype": {
+            "terms": {
+                "field": "publication_type",
+                "size": 20
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+#####  Terms Aggregation - Top Applicants by Active Granted Patents published since `1980`
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "legal_status.patent_status": "active"
+                    }
+                },
+                {
+                    "match": {
+                        "publication_type": "granted_patent"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "range": {
+                        "date_published": {
+                            "gte": "1980-01-01"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "aggregations": {
+        "top_applicants": {
+            "terms": {
+                "field": "applicant.name.exact",
+                "size": 20
+            }
+        }
+    },
+    "size": 0
+}
+```
+##### Nested Terms Aggregation - Top Applicants Granted Patents published since `1980` by Legal Status
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "publication_type": "granted_patent"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "range": {
+                        "date_published": {
+                            "gte": "1980-01-01"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "aggregations": {
+        "applicants": {
+            "terms": {
+                "field": "applicant.name.exact",
+                "size": 20,
+                "aggregations": {
+                    "legal_status": {
+                        "terms": {
+                            "field": "legal_status.patent_status",
+                            "size": 10
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "size": 0
+}
+```
+
+##### Nested Terms Aggregation - Top Applicants Granted Patents published since `1980` by Patent Citations
+```json
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "publication_type": "granted_patent"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "range": {
+                        "date_published": {
+                            "gte": "1980-01-01"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "aggregations": {
+        "applicants": {
+            "terms": {
+                "field": "applicant.name.exact",
+                "size": 20,
+                "order": {
+                    "patent_citations": "asc"
+                },
+                "aggregations": {
+                    "patent_citations": {
+                        "sum": {
+                            "field": "cited_by.patent_count"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "size": 0
 }
 ```

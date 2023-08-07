@@ -29,6 +29,10 @@ Following aggregation endpoints are supported in The Lens:
 - `POST` `/patent/aggregate`
 - `POST` `/scholarly/aggregate`
 
+Aggregation API usage endpoints: 
+- `GET` `/subscriptions/patent_aggregation_api/usage`
+- `GET` `/subscriptions/scholarly_aggregation_api/usage`
+
 ### Types of Aggregation
 
 #### Metrics aggregation

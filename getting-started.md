@@ -97,6 +97,6 @@ Response |  Description  |
 429 - Too Many Requests | You have exceeded the number of allowed calls
 50x	- Internal Server Error	| An error occurred on API server side.
 
-[manage your access plan and tokens]: <http://lens.org/lens/user/subscriptions>
+[manage your access plan and tokens]: <https://www.lens.org/lens/user/subscriptions/requested>
 [Terms of Use]: <https://about.lens.org/policies/#termsuse>
 [Work Area]: <https://www.lens.org/lens/user/collections>

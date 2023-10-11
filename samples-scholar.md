@@ -279,6 +279,192 @@ public class JavaSample {
     }
 }
 ```
+### Java - Cursor Based Pagination - Aggregate by Journal
+
+Use this script of you have a list of journals and want to aggregate output by journal to calculate the total scholarly citations per journal.
+
+```java
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicLong;
+
+/**
+ * Note: This example is using `jackson-databind` for working with json request/response.
+ * To keep it simple, its using HttpURLConnection to send the http request.
+ *
+ */
+public class ScholarlyScrollSample {
+
+    private final static ObjectMapper objectMapper = new ObjectMapper();
+    private static final String TOKEN = "YOUR_TOKEN";
+
+    public static void main(String[] args) throws IOException {
+        Map<String, CitationOutput> output = new HashMap<>();
+        AtomicLong recordCounter = new AtomicLong();
+
+        LensApiClient client = new LensApiClient(new URL("https://api.lens.org/scholarly/search")) {
+            /**
+             * Writing the response to Map in this example. Could be a database write if required.
+             * If it's a heavy operation, a non-blocking implementation might be required.
+             * @param response response from the api call
+             */
+            @Override
+            public void consumeResponse(JsonNode response) {
+                long numRecords = response.get("results").longValue();
+                ArrayNode records = (ArrayNode) response.get("data");
+                records.forEach(record -> {
+                    String lensId = record.get("lens_id").asText();
+                    String sourceTitle = record.path("source").path("title").asText();
+                    int scholarlyCitationCounts = record.has("scholarly_citations_count") ? record.get("scholarly_citations_count").asInt() : 0;
+                    CitationOutput existing = output.getOrDefault(sourceTitle, new CitationOutput());
+                    output.put(sourceTitle, existing.merge(lensId, scholarlyCitationCounts));
+                });
+                recordCounter.addAndGet(numRecords);
+            }
+        };
+        //Call the API and handle the response. Pass scrollTime e.g. "1m" since we want to scroll.
+        client.scrollAndConsume(createRequest(), "1m");
+
+        System.out.println("Completed processing " + recordCounter.get() + " records.");
+        output.forEach((k, v) ->
+                System.out.println(k + ": (citation count: " + v.getCitationCount() + ", records count: " + v.getRecordsCount() + ")")
+        );
+    }
+
+    private static ObjectNode createRequest() throws JsonProcessingException {
+        String request = "{" +
+                "    \"include\": [" +
+                "        \"lens_id\"," +
+                "        \"scholarly_citations_count\"," +
+                "        \"source.title\""+
+                "    ]," +
+                "    \"size\": 1000," +
+                "    \"query\": {" +
+                "        \"terms\": {" +
+                "            \"source.title.exact\": [" +
+                "                \"The Journal of Medical Sciences\"," +
+                "                \"An International Journal of Otorhinolaryngology Clinics\"" +
+                "            ]" +
+                "        }" +
+                "    }" +
+                "}";
+        return objectMapper.readValue(request, ObjectNode.class);
+    }
+
+    private abstract static class LensApiClient {
+        private final URL url;
+
+        private LensApiClient(URL url) {
+            this.url = url;
+        }
+
+        /**
+         * Perform http call and subsequent recursive calls for scrolling
+         * @param request request body
+         * @param scrollTime scroll context alive time e.g. 1m. Can be null if no scrolling is required
+         * @throws IOException
+         */
+        public void scrollAndConsume(ObjectNode request, String scrollTime) throws IOException {
+            if(scrollTime != null && !scrollTime.isBlank()) {
+                request.put("scroll", scrollTime);
+            }
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            try {
+                conn.setConnectTimeout(30000);
+                conn.setDoOutput(true);
+                conn.setRequestMethod("POST");
+                conn.setRequestProperty("Content-Type", "application/json");
+                conn.setRequestProperty("Authorization", "Bearer " + TOKEN);
+                conn.getOutputStream().write(objectMapper.writeValueAsBytes(request));
+
+                //If rate-limited, wait until the next allowed call
+                if (conn.getResponseCode() == 429) {
+                    int sleepSeconds = Integer.parseInt(conn.getHeaderField("x-rate-limit-retry-after-seconds"));
+                    System.out.println("Rate limited - sleeping for " + sleepSeconds + " seconds ...");
+                    Thread.sleep(sleepSeconds * 1000L);
+                    scrollAndConsume(request, scrollTime);
+                } else if (conn.getResponseCode() == 200) {
+                    JsonNode output = objectMapper.readTree(conn.getInputStream());
+                    consumeResponse(output);
+                    if (output.has("results") && output.get("results").intValue() > 0) {
+                        if(output.has("scroll_id")) {
+                            System.out.println("Fetched " + output.get("results") + " records. Scrolling next batch ...");
+                            String scrollId = output.get("scroll_id").asText();
+                            scrollAndConsume(createScrollRequest(request, scrollId), scrollTime);
+                        }
+                    }
+                } else if(conn.getResponseCode() == 204) {
+                    System.out.println("No more records found.");
+                } else {
+                    System.out.println("Failed with status: (" + conn.getResponseCode() + ")");
+                }
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            } finally {
+                conn.disconnect();
+            }
+        }
+
+        /**
+         * Implement this to handle the response.
+         * Note: if the execution of implemented method is a heavy operation, the scroll context might get expired.
+         * In such case, you should make the implementation non-blocking
+         * @param response response from the api call
+         */
+        public abstract void consumeResponse(JsonNode response);
+
+        /**
+         * Create request for scroll based pagination
+         * @param originalRequest previous request required to copy over pagination to next scroll request
+         * @param scrollId scroll id from the response
+         * @return scroll request
+         */
+        private ObjectNode createScrollRequest(ObjectNode originalRequest, String scrollId) {
+            ObjectNode request = objectMapper.createObjectNode();
+            JsonNode projection = originalRequest.get("include");
+            request.set("include", projection);
+            request.put("scroll_id", scrollId);
+            return request;
+        }
+    }
+
+    //Sample model schema to get citations count and records
+    private static class CitationOutput {
+        private Integer citationCount;
+        private List<String> lensIds;
+
+        public CitationOutput() {
+            this.citationCount = 0;
+            this.lensIds = new ArrayList<>();
+        }
+
+        public CitationOutput merge(String lensId, Integer citationCount) {
+            this.citationCount += citationCount;
+            this.lensIds.add(lensId);
+            return this;
+        }
+
+        public Integer getCitationCount() {
+            return citationCount;
+        }
+
+        public Integer getRecordsCount() {
+            return lensIds.size();
+        }
+    }
+}
+```
 
 ### NodeJs
 ```javascript

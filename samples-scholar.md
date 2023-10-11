@@ -283,6 +283,8 @@ public class JavaSample {
 
 Use this script of you have a list of journals and want to aggregate output by journal to calculate the total scholarly citations per journal.
 
+**Note**: If you have a large list of journals or result set, it would be better to use the [Aggregation API](https://docs.api.lens.org/aggregations-beta.html) as this script is using recursion.  
+
 ```java
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;

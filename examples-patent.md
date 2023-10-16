@@ -21,6 +21,10 @@ toc:
         url: examples-patent.html#us-patents-by-document-number
       - page: Search for Document Identifiers
         url: examples-patent.html#search-for-document-identifiers
+      - page: Using GET Requests
+        url: examples-patent.html#using-get-requests
+      - page: Example Postman Collection
+        url: examples-patent.html#example-postman-collection      
         
 ---
 
@@ -217,3 +221,7 @@ toc:
 
 > `[GET] https://api.lens.org/patent/search?token=[your-access-token]&size=10&query=YOUR_QUERY&include=biblio,lens_id&sort=desc(date_published)`
 
+
+##### Example Postman Collection
+
+You can download a [Postman Collection](https://www.postman.com/collection/) containing a variety of useful API example requests here: <a href="https://docs.api.lens.org/patent-postman-collection.json" download>patent-postman-collection.json</a>

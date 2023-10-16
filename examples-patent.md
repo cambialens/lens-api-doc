@@ -19,7 +19,7 @@ toc:
         url: examples-patent.html#patent-applications-from-2012-to-2020-with-crispr-cas9-in-the-claims
       - page: US Patents by document number
         url: examples-patent.html#us-patents-by-document-number
-      - page: Search for Dcument Identifiers
+      - page: Search for Document Identifiers
         url: examples-patent.html#search-for-document-identifiers
         
 ---
@@ -216,3 +216,4 @@ toc:
 ##### Using GET Requests
 
 > `[GET] https://api.lens.org/patent/search?token=[your-access-token]&size=10&query=YOUR_QUERY&include=biblio,lens_id&sort=desc(date_published)`
+

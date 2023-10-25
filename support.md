@@ -16,6 +16,7 @@ permalink: /support.html
 
 API Version | Schema Versions | Date Released | Notes
 ------- | ------| ------| -------
+`2.11.0` | - Scholar: `1.6.5` <br/> - Patent: `1.6.0` | Oct 25, 2023 | - Released the Aggregation API out of beta. <br/> - Added Aggregation API endpoints to Swagger UI. <br/>
 `2.10.0` | - Scholar: `1.6.5` <br/> - Patent: `1.6.0` | Aug 2, 2023 | - Added and improved API error and validation messages. <br/> - Increased the size of result sets that are supported by offset/size based pagination to 10,000 results. <br/> - Released the beta Aggregation API.
 `2.9.0` | - Scholar: `1.6.5` <br/> - Patent: `1.6.0` | May 17, 2023 | - Added `authors.affiliations.name_original` to the scholar API. <br/> - Added  support for `min_score` in the request body. <br/> - Added `max_score` to the API response.
 `2.8.0` | - Scholar: `1.6.4` <br/> - Patent: `1.6.0` | Feb 20, 2023 | - Added `group_by` to the patent API to support group by patent family queries.  

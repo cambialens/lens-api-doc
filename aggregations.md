@@ -1,6 +1,6 @@
 ---
 layout: post-sidebar
-title: Aggregations (Beta)
+title: Aggregations
 permalink: /aggregations.html
 show_sidebar: true
 sidebar: toc

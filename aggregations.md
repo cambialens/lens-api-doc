@@ -1,24 +1,24 @@
 ---
 layout: post-sidebar
 title: Aggregations (Beta)
-permalink: /aggregations-beta.html
+permalink: /aggregations.html
 show_sidebar: true
 sidebar: toc
 toc:
   - title: Table of Contents
     subfolderitems:
       - page: Overview
-        url: aggregations-beta.html#overview
+        url: aggregations.html#overview
       - page: Types of aggregation
-        url: aggregations-beta.html#types-of-aggregation
+        url: aggregations.html#types-of-aggregation
       - page: Aggregations supported in The Lens
-        url: aggregations-beta.html#aggregations-supported-in-the-lens
+        url: aggregations.html#aggregations-supported-in-the-lens
       - page: Nesting using sub-aggregations
-        url: aggregations-beta.html#nesting-using-sub-aggregations
+        url: aggregations.html#nesting-using-sub-aggregations
       - page: Examples - Scholarly Aggregation
-        url: aggregations-beta.html#scholarly-aggregation-examples
+        url: aggregations.html#scholarly-aggregation-examples
       - page: Examples - Patent Aggregation
-        url: aggregations-beta.html#patent-aggregation-examples
+        url: aggregations.html#patent-aggregation-examples
 ---
 
 ### Overview

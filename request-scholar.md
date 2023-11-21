@@ -185,6 +185,7 @@ You can specify records per page using `size` (default 20 and max 1000) and cont
 > - Parameter `size` will be used for first scroll query and will remain the same for whole scroll context. Hence, using size in each scroll request will not have any effect.
 > - Cursor based pagination is only applicable to `POST` requests.
 > - For optimal performance, we recommend limiting the number of items (e.g. `lens_ids`) in a single terms query to 10,000.
+> - If no further results found, the response will be `204` and scroll context gets invalidated. The subsequent response will be `400`, if same `scroll_id` is used again.
 
 
 ### Sorting

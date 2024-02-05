@@ -85,7 +85,7 @@ class WorkParser:
 			name = affiliation.get('name')
 			ids = affiliation['ids'] if 'ids' in affiliation else []
 			for id in ids:
-				if id['type'] == 'ror':
+				if 'type' in id and id['type'] == 'ror':
 					ror = id['value']
 			grid_id = affiliation.get('grid_id')
 			country_code = affiliation.get('country_code')

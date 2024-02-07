@@ -32,6 +32,7 @@ toc:
 **claims** | List of [Claims](#claims) | The Claims recorded in the patent document. | 
 **description** | [Description](#description) | The description text of the patent document. | 
 **legal_status** | [Legal Status Information](#legal-status-information) | The legal Status Information for the patent document. | 
+**sequence_listing** | [Sequence Listing](#sequence-listing) | Information on the sequences listed on the patent document. | 
 {: .param-def }
 
 ### Bibliographic Data
@@ -136,8 +137,22 @@ Field  |  Type  |  Description |  Example
 **calculation_log** | List of String | The legal status calculation log. | [`Application Filing Date: 2001-11-21`, `Earliest Filing Date: 2001-11-21 priority to EP01984746A`, `Granted date: 2009-07-29`]
 {: .param-def }
 
-**N.B.** Legal status information is derived from INPADOC data and may not be accurate. For more details, please see [Patent Legal Status Calculations](https://support.lens.org/help-resources/patents/patent-legal-status-calculations/)
+**N.B.** Legal status information is derived from INPADOC and USPTO Assignments data and may not be accurate. For more details, please see [Patent Legal Status Calculations](https://support.lens.org/help-resources/patents/patent-legal-status-calculations/)
 
+
+### Sequence Listing
+Field  |  Type  |  Description |  Example
+--------  |  ---------  |  ------- |  -------
+**sequence_types** | Boolean | The type of sequences listed on the patent document. e.g. N - nucleotide (including DNA and RNA sub-types), P - peptides/proteins.  | `N`, `RNA`, `DNA`, `P`
+**length_buckets** | String | Preset sequence length ranges (nucleotide: "0-100", "101-5000", "5001-100k", ">100k"; Peptide: "0-50", "51-300", ">300"). | `NT_1_100`, `NT_101_5000`, `NT_5001_100000`, `NT_100001`, `AA_1_50`, `AA_51_300`, `AA_301` 
+**organisms** | List of [Organisms](#organisms) | List of declared organisms associated with the sequences listed on the patent document. |
+**count** | Integer | The number of sequences listed on the patent document. | `31`
+
+### Organisms
+ Field  |  Type  |  Description |  Example
+ --------  |  ---------  |  ------- |  -------
+**tax_id** | Integer  | The NCBI taxonomic identifier of the declared organism. | `9606`, `12110`
+**name** | String | The name of the declared organism. | `Homo sapiens`, `Foot-and-mouth disease virus`
 
 ### Priority Claims
 
@@ -378,6 +393,7 @@ Field  |  Type  |  Description |  Example
 **kind** | String | The patent document kind code (varies by jurisdiction). | `A1`
 **date** | LocalDate | Date of publication for the patent document, or filing date for the application reference. N.B. date information for [Cited By Patents](#cited-by-patents) is not always available. | `2009-05-22`
 {: .param-def }
+
 
 ---
 

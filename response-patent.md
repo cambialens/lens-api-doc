@@ -290,21 +290,21 @@ Field  |  Type  |  Description |  Example
 
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
-**classifications** | List of [Classification Symbols](#classification-symbols) | List of CPC classification symbols. | `H01R11/01`
+**classifications** | List of [Classification Symbols](#classification-symbols) | List of CPC classification symbols and their attributes. | `H01R11/01`
 {: .param-def }
 
 ### IPCR Classifications
 
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
-**classifications** | List of [Classification Symbols](#classification-symbols) | List of IPCR classification symbols. | `H01R13/115`
+**classifications** | List of [Classification Symbols](#classification-symbols) | List of IPCR classification symbols and their attributes. | `H01R13/115`
 {: .param-def }
 
 ### US Classifications
 
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
-**classifications** | List of [Classification Symbols](#classification-symbols) | List of US classification symbols. | `439/535`
+**classifications** | List of [Classification Symbols](#classification-symbols) | List of US classification symbols and their attributes. | `439/535`
 {: .param-def }
 
 ### Classification Symbols
@@ -312,6 +312,8 @@ Field  |  Type  |  Description |  Example
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **symbol** | String | Classification code symbol. | `H01R11/01`, `H01R13/115`, `439/535`
+**classification_value** | String | Classification value. | `I`, `L`, applies to CPC and IPRC Classifications only. See [Classification Value](#classification-value) enums.
+**classification_symbol_position** | String | Classification symbol position. | `F`, `A`, applies to CPC and IPRC Classifications only. See [Classification Symbol Position](#classification-symbol-position) enums.
 {: .param-def }
 
 ### References Cited
@@ -412,6 +414,13 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
 - `TPO` - Third party observation, date observation letters filed
 - `CH2` - Chapter 2, date international search report completed
 
+##### Classification Value
+- `I` - Invention
+- `L` - Later
+
+##### Classification Symbol Position
+- `F` - First
+- `A` - Additional
 
 <!--
 ##### Source

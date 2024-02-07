@@ -141,6 +141,7 @@ Field  |  Type  |  Description |  Example
 
 
 ### Sequence Listing
+
 Field  |  Type  |  Description |  Example
 --------  |  ---------  |  ------- |  -------
 **sequence_types** | Boolean | The type of sequences listed on the patent document. e.g. N - nucleotide (including DNA and RNA sub-types), P - peptides/proteins.  | `N`, `RNA`, `DNA`, `P`
@@ -149,6 +150,7 @@ Field  |  Type  |  Description |  Example
 **count** | Integer | The number of sequences listed on the patent document. | `31`
 
 ### Organisms
+
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **tax_id** | Integer  | The NCBI taxonomic identifier of the declared organism. | `9606`, `12110`

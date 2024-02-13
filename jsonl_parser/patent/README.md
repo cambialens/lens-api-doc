@@ -42,3 +42,4 @@ Field | Description | Example
 `npl_resolved_external_ids` | Resolved external identifier(s) for cited non-patent literature | `10.1126/science.2416057`
 `npl_citations` | Number of original non-patent literature citations | `37`
 `legal_status` | Calculated legal status of the patent application | `ACTIVE`
+`claims` | Claims text |

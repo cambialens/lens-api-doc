@@ -46,12 +46,13 @@ class PatentParser:
         extended_family_size = self.__get_number(patent_json, 'families', 'extended_family', 'size')
         simple_family_size = self.__get_number(patent_json, 'families', 'simple_family', 'size')
         legal_status = self.__get_string(patent_json, 'legal_status', 'patent_status')
+        claims = self.__get_string(patent_json, 'claims', 'claims', 'claim_text')
 
         return Patent(lens_id, jurisdiction, kind, display_key, publication_date, publication_year, application_number,
                 application_date, priority_numbers, earliest_priority_date, title, abstract_text, applicants, inventors, owners, url,
                 document_type, cites_patent_count, cited_by_patent_count, simple_family_size, extended_family_size,cpc_classification, ipcr_classification,
                 us_classification, npl_citations_count, npl_resolved_citation_count, npl_resolved_lens_ids, npl_resolved_external_ids, npl_citations,
-                legal_status)
+                legal_status, claims)
                 
     def __get_object(self, root, element):
         if root is None:

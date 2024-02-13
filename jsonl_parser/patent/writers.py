@@ -11,7 +11,7 @@ class PatentCsvWriter:
         'Applicants', 'Inventors', 'Owners', 'URL', 'Document Type', 'Cites Patent Count', 'Cited By Patent Count', 
         'Simple Family Size', 'Extended Family Size', 'CPC Classification', 'IPCR Classification',
         'US Classification', 'NPL Citation Count', 'NPL Resolved Citation Count', 'NPL Resolved Lens IDs',
-        'NPL Resolved External IDs', 'NPL Citations', 'Legal Status']
+        'NPL Resolved External IDs', 'NPL Citations', 'Legal Status', 'Claims']
 
 		self.patent_writer = csv.DictWriter(patent_csv_file, fieldnames=patent_headers)
 
@@ -51,6 +51,7 @@ class PatentCsvWriter:
                 		'NPL Resolved Lens IDs' : patent.npl_resolved_lens_ids,
                 		'NPL Resolved External IDs' : patent.npl_resolved_external_ids,
                 		'NPL Citations' : patent.npl_citations,
-                		'Legal Status' : patent.legal_status
+                		'Legal Status' : patent.legal_status,
+						'Claims': patent.claims
 					}
 		self.patent_writer.writerow(patent_dist)

@@ -144,7 +144,7 @@ Field  |  Type  |  Description |  Example
 
 Field  |  Type  |  Description |  Example
 --------  |  ---------  |  ------- |  -------
-**sequence_types** | Boolean | The type of sequences listed on the patent document. e.g. N - nucleotide (including DNA and RNA sub-types), P - peptides/proteins.  | `N`, `RNA`, `DNA`, `P`
+**sequence_types** | List of String | The type of sequences listed on the patent document. e.g. N - nucleotide (including DNA and RNA sub-types), P - peptides/proteins.  | `N`, `RNA`, `DNA`, `P`
 **length_buckets** | String | Preset sequence length ranges (nucleotide: "0-100", "101-5000", "5001-100k", ">100k"; Peptide: "0-50", "51-300", ">300"). | `NT_1_100`, `NT_101_5000`, `NT_5001_100000`, `NT_100001`, `AA_1_50`, `AA_51_300`, `AA_301` 
 **organisms** | List of [Organisms](#organisms) | List of declared organisms associated with the sequences listed on the patent document. |
 **count** | Integer | The number of sequences listed on the patent document. | `31`

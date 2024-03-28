@@ -69,10 +69,11 @@ Priority | **priority_claim.jurisdiction** | String | The jurisdiction of the pr
 Priority | **priority_claim.date** | Date | The publication date of the priority document. e.g. `2009-05-22`
 Priority | **priority_claim.doc_number** | String | The document number of the priority document. e.g. `1117265`
 Priority | **priority_claim.kind** | String | The kind code of the priority document. e.g. `A1`
+Text Fields | **title** | String | Title of the patent. e.g. `Fidget Spinner`
 Text Fields | **abstract** | String | Searches the patent document abstract text. e.g. `A processor implements conditional vector operations in which an input vector containing multiple operands to be used in conditional operations is divided into two or more output…`
 Text Fields | **claim** | String | Searches the Claims recorded in the patent. e.g. `What is claimed is: 1. A method of performing a conditional vector output operation in a processor, the method comprising: receiving electrical signals representative of an input data vector…`
 Text Fields | **description** | String | The description text of the patent document. e.g. `This invention was made in conjuction with U.S. Government support under U.S. Army Grant No. DABT63-96-C-0037.” BACKGROUND OF THE INVENTION 1. Field of the Invention The present invention is directed to…`
-Text Fields | **title** | String | Title of the patent. e.g. `Fidget Spinner`
+Text Fields | **full_text** | String | The full text of the patent document.
 Families | **family.extended.member.document_id.jurisdiction** | String | The jurisdiction of the extended family member. e.g. `CN`
 Families | **family.extended.member.document_id.date** | Date | The publication date of the extended family member. e.g. `2009-05-22`
 Families | **family.extended.member.document_id.doc_number** | String | The document number of the extended family member. e.g. `1117265`
@@ -121,6 +122,8 @@ Citations | **reference_cited.npl.text** | String | The original unresolved non-
 Citations | **reference_cited.npl_count** | Integer | The number of original non-patent literature citations. e.g. `2`
 Citations | **reference_cited.npl_resolved_count** | Integer | The number of resolved scholalry works cited by a patent. e.g. `12`
 Citations | **reference_cited.patent.lens_id** | String | The Lens Id of the cited patent. e.g. `106-213-498-661-220`
+Citations | **reference_cited.patent.category** | String | Cited patent documents are identified by letter(s) indicating the category of the cited document. e.g. `X`
+Citations | **reference_cited.patent.cited_phase** | String | The application phase that a cited patent was added to a patent document. e.g. `SEA`
 Citations | **reference_cited.patent.document_id.jurisdiction** | String | The jurisdiction of the cited patent. e.g. `US`
 Citations | **reference_cited.patent.document_id.date** | Date | The publication date of the cited patent. e.g. `2009-05-22`
 Citations | **reference_cited.patent.document_id.doc_number** | String | The document number of the cited patent. e.g. `4590964`
@@ -142,7 +145,15 @@ Agents & Attorneys | **agent.name** | String | The agent/attorney name. e.g. `Ch
 Agents & Attorneys | **agent.name.exact** | String | The patent agent/attorney name. N.B. Use this field for exact name matches. e.g. `Paul Chapman`
 Agents & Attorneys | **agent_count** | Integer | The number of agents/attorneys listed on the patent. e.g. `1`
 Classifications | **class_cpc.symbol** | String | CPC patent classification codes. e.g. `H01R11/01`
+Classifications | **class_cpc.first_symbol** | String | First CPC classifiction code. e.g. `A61K9/0051`
+Classifications | **class_cpc.later_symbol** | String | Later CPC classifiction codes. e.g. `A61L31/143`
+Classifications | **class_cpc.inv_symbol** | String | CPC classification codes identified as invention information. e.g. `A61K9/0051`
+Classifications | **class_cpc.add_symbol** | String | CPC classification codes identified as additional information. e.g. `A61F9/00781`
 Classifications | **class_ipcr.symbol** | String | IPCR patent classification codes. e.g. `H01R13/115`
+Classifications | **class_ipcr.first_symbol** | String | First IPCR classifiction code. e.g. `G06F17/30`
+Classifications | **class_ipcr.later_symbol** | String | Later IPCR classifiction codes. e.g. `A61P35/00`
+Classifications | **class_ipcr.inv_symbol** | String | IPCR classification codes identified as invention information. e.g. `A61K38/00`
+Classifications | **class_ipcr.add_symbol** | String | IPCR classification codes identified as additional information. e.g. `F21Y115/10`
 Classifications | **class_national.symbol** | String | US patent classification codes. e.g. `439/535`
 Sequences | **sequence.count** | Integer | The number of biological sequences associated with a patent. e.g. `5`
 Sequences | **sequence.data_source** | String | The data source of the disclosed sequence. `DDBJPAT`: DDBJ patent division, `EMBLPAT_EBI`: EMBL-EBI patent division, `USPTO_FULLTEXT_RB`: USPTO full-text, `EP_SEQL`: EPO, `GBPAT_NCBI`: GenBank patent division, `WIPO_SEQL`: WIPO, `GBPAT_EBI`, `CIPO_BSL`: CIPO, `GBPAT_DDBJ`, `USPTO_FULLTEXT_GB`, `USPTO_PSIPS`, `DE_MEGA`, `EP_MEGA`

@@ -134,11 +134,12 @@ Field | Description |  Possible Value
 **has_clinical_trial** | Indicates if the scholarly work has clinical trial | `true`/`false`
 **has_field_of_study** | Flags if the scholarly work has a Field of Study | `true`/`false`
 **has_abstract** | Indicates if the scholarly work has abstract | `true`/`false`
-**has_fulltext** | Indicates if the scholarly work has fulltext | `true`/`false`
+**has_full_text** | Indicates if the scholarly work has fulltext | `true`/`false`
 **has_funding** | Indicates if the scholarly work has funding information | `true`/`false`
 **is_open_access** | Flags if the scholarly work has is Open Access | `true`/`false`
 **in_analytics_set** | Indicates if the scholarly work is part of the analytic dataset. | `true`/`false`
 **source.is_diamond** | Non-APC Journal flag - Indicates if the journal does not have article processing charges (APCs), i.e. Diamond Open Access journals. | `true`/`false`
+**is_retracted** | Indicates if the scholarly work has been retracted. . | `true`/`false`
 
 {: .param-def }
 

@@ -329,8 +329,8 @@ Field  |  Type  |  Description |  Example
  Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **symbol** | String | Classification code symbol. | `H01R11/01`, `H01R13/115`, `439/535`
-**classification_value** | String | Classification value. | `I`, `L`, applies to CPC and IPRC Classifications only. See [Classification Value](#classification-value) enums.
-**classification_symbol_position** | String | Classification symbol position. | `F`, `A`, applies to CPC and IPRC Classifications only. See [Classification Symbol Position](#classification-symbol-position) enums.
+**classification_value** | String | Classification value. Applies to CPC and IPRC Classifications only. See [Classification Value](#classification-value) enums. | `I`, `L`
+**classification_symbol_position** | String | Classification symbol position. Applies to CPC and IPRC Classifications only. See [Classification Symbol Position](#classification-symbol-position) enums. | `F`, `A`
 {: .param-def }
 
 ### References Cited
@@ -351,7 +351,8 @@ Field  |  Type  |  Description |  Example
 **patcit** | [Patents Cited](#patents-cited) | Patents cited in the patent documnet. | 
 **nplcit** | [NPL Cited](#npl-cited) | Non-patent literature cited in the patent document. | 
 **sequence** | Integer | The sequence of the citation in the patent document. | `5`
-**cited_phase** | String | The phase of the patenting process when the citation was added, see [Cited Phase](#cited-phase) | `SEA`
+**category** | Array | Cited patent document are identified by letter(s) indicating the category of the cited document, see [Citation Category](#citation-category) enums. | `X`
+**cited_phase** | String | The phase of the patenting process when the citation was added, see [Cited Phase](#cited-phase) enums. | `SEA`
 {: .param-def }
 
 ### Patents Cited
@@ -432,6 +433,21 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
 - `TPO` - Third party observation, date observation letters filed
 - `CH2` - Chapter 2, date international search report completed
 
+##### Citation Category
+- `X`: Particularly relevant if taken alone.
+- `I`: Particularly relevant if taken alone - prejudicing inventive step.
+- `Y`: Particularly relevant if combined with another document of the same category.
+- `A`: Defining the state of the art and not prejudicing novelty or inventive step.
+- `O`: Non-written disclosure.
+- `P`: Intermediate document.
+- `T`: Theory or principle underlying the invention.
+- `E`: Earlier patent application, but published after the filing date of the application searched (potentially conflicting patent documents).
+- `D`: Document cited in the application.
+- `L`: Document cited for other reasons.
+- `R`: Referring to a patent application or a utility model filed on the same day that relates to the same invention
+<!-- - `AMPERSAND`: Document member of the same patent family -->
+
+
 ##### Classification Value
 - `I` - Invention
 - `L` - Later
@@ -464,7 +480,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
 ```json
 {
     "total": 1,
-    "max_score": 16.704784,
+    "max_score": 16.750214,
     "data": [
         {
             "lens_id": "031-156-664-516-153",
@@ -584,26 +600,38 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                 "classifications_ipcr": {
                     "classifications": [
                         {
-                            "symbol": "C12Q1/68"
+                            "symbol": "C12Q1/68",
+                            "classification_value": "I",
+                            "classification_symbol_position": "F"
                         }
                     ]
                 },
                 "classifications_cpc": {
                     "classifications": [
                         {
-                            "symbol": "A61K35/14"
+                            "symbol": "A61K35/14",
+                            "classification_value": "I",
+                            "classification_symbol_position": "L"
                         },
                         {
-                            "symbol": "C12Q1/6881"
+                            "symbol": "C12Q1/6881",
+                            "classification_value": "I",
+                            "classification_symbol_position": "F"
                         },
                         {
-                            "symbol": "C12Q1/6881"
+                            "symbol": "C12Q1/6881",
+                            "classification_value": "I",
+                            "classification_symbol_position": "F"
                         },
                         {
-                            "symbol": "C12Q2600/156"
+                            "symbol": "C12Q2600/156",
+                            "classification_value": "A",
+                            "classification_symbol_position": "L"
                         },
                         {
-                            "symbol": "C12Q2600/156"
+                            "symbol": "C12Q2600/156",
+                            "classification_value": "A",
+                            "classification_symbol_position": "L"
                         }
                     ]
                 },
@@ -620,6 +648,9 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                                 },
                                 "lens_id": "185-701-234-511-622"
                             },
+                            "category": [
+                                "X"
+                            ],
                             "cited_phase": "SEA"
                         },
                         {
@@ -628,11 +659,14 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                                 "text": "AVENT N D ET AL: \"The bloodgen project of the European Union, 2003-2009\", TRANSFUSION MEDICINE AND HEMOTHERAPY 2009 S. KARGER AG CHE LNKD- DOI:10.1159/000218192, vol. 36, no. 3, June 2009 (2009-06-01), pages 162 - 167, XP002633276, ISSN: 1660-3796",
                                 "lens_id": "004-047-148-411-345",
                                 "external_ids": [
+                                    "10.1159/000218192",
                                     "pmc2980524",
-                                    "21113258",
-                                    "10.1159/000218192"
+                                    "21113258"
                                 ]
                             },
+                            "category": [
+                                "I"
+                            ],
                             "cited_phase": "SEA"
                         },
                         {
@@ -641,11 +675,16 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                                 "text": "WESTHOFF CONNIE M ET AL: \"DIIIa and DIII Type 5 are encoded by the same allele and are associated with altered RHCE*ce alleles: clinical implications\", TRANSFUSION (MALDEN), vol. 50, no. 6, June 2010 (2010-06-01), pages 1303 - 1311, XP002633277, ISSN: 0041-1132",
                                 "lens_id": "125-529-168-227-632",
                                 "external_ids": [
+                                    "10.1111/j.1537-2995.2009.02573.x",
                                     "pmc2908519",
-                                    "20088832",
-                                    "10.1111/j.1537-2995.2009.02573.x"
+                                    "20088832"
                                 ]
                             },
+                            "category": [
+                                "X",
+                                "D",
+                                "I"
+                            ],
                             "cited_phase": "SEA"
                         },
                         {
@@ -654,10 +693,15 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                                 "text": "PHAM BACH-NGA ET AL: \"Heterogeneous molecular background of the weak C, VS+, hr(B)-, Hr(B)- phenotype in black persons\", TRANSFUSION (MALDEN), vol. 49, no. 3, March 2009 (2009-03-01), pages 495 - 504, XP002633278, ISSN: 0041-1132",
                                 "lens_id": "086-240-354-498-516",
                                 "external_ids": [
-                                    "19040491",
-                                    "10.1111/j.1537-2995.2008.02005.x"
+                                    "10.1111/j.1537-2995.2008.02005.x",
+                                    "19040491"
                                 ]
                             },
+                            "category": [
+                                "X",
+                                "D",
+                                "I"
+                            ],
                             "cited_phase": "SEA"
                         },
                         {
@@ -671,6 +715,9 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                                 },
                                 "lens_id": "071-147-450-571-460"
                             },
+                            "category": [
+                                "Y"
+                            ],
                             "cited_phase": "SEA"
                         },
                         {
@@ -684,6 +731,9 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                                 },
                                 "lens_id": "033-566-032-105-609"
                             },
+                            "category": [
+                                "Y"
+                            ],
                             "cited_phase": "SEA"
                         },
                         {
@@ -696,6 +746,9 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                                     "10.1182/blood.v85.3.829.bloodjournal853829"
                                 ]
                             },
+                            "category": [
+                                "Y"
+                            ],
                             "cited_phase": "SEA"
                         },
                         {
@@ -708,6 +761,9 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                                     "9838930"
                                 ]
                             },
+                            "category": [
+                                "Y"
+                            ],
                             "cited_phase": "SEA"
                         },
                         {
@@ -721,6 +777,9 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                                 },
                                 "lens_id": "187-498-666-224-100"
                             },
+                            "category": [
+                                "E"
+                            ],
                             "cited_phase": "SEA"
                         },
                         {
@@ -879,9 +938,9 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                                 "text": "CONNIE M.; WESTHOFF, SUNITHA VEGE; CHRISTINE HALTER-HIPSKY; TRINA WHORLEY; KIM HUE-ROYE; CHRISTINE LOMAS-FRANCIS; MARION E.: \"Dllla and Dill Type 5 are encoded by the same allele and are associated with altered RHCE*ce alleles: clinical implications\", REID. TRANSFUSION, vol. 50, 2010, pages 1303 - 1311",
                                 "lens_id": "125-529-168-227-632",
                                 "external_ids": [
+                                    "10.1111/j.1537-2995.2009.02573.x",
                                     "pmc2908519",
-                                    "20088832",
-                                    "10.1111/j.1537-2995.2009.02573.x"
+                                    "20088832"
                                 ]
                             },
                             "cited_phase": "APP"
@@ -892,8 +951,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                                 "text": "BACH-NGA PHAM; THIERRY PEYRARD; GENEVIEVE JUSZCZAK; ISABELLE DUBEAUX; DOMINIQUE GIEN; ANTOINE BLANCHER; JEAN-PIERRE CARTRON; PHILI: \"Heterogeneous molecular background of the weak C, VS+, hrB-, HrB- phenotype in black persons\", TRANSFUSION, vol. 49, 2009, pages 495 - 504",
                                 "lens_id": "086-240-354-498-516",
                                 "external_ids": [
-                                    "19040491",
-                                    "10.1111/j.1537-2995.2008.02005.x"
+                                    "10.1111/j.1537-2995.2008.02005.x",
+                                    "19040491"
                                 ]
                             },
                             "cited_phase": "APP"
@@ -904,8 +963,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                                 "text": "MARTINE G.H.M.; TAX, C.; ELLEN VAN DER SCHOOT; RENE' VAN DOORN; LOTTE DOUGLAS-BERGER; DICK J.; VAN RHENEN; PETRA A.; MAASKANT-VAN: \"RHC and RHc genotyping in different ethnic groups\", TRANSFUSION, vol. 42, 2002, pages 6234 - 644",
                                 "lens_id": "028-957-496-647-171",
                                 "external_ids": [
-                                    "10.1046/j.1537-2995.2002.00096.x",
-                                    "12084173"
+                                    "12084173",
+                                    "10.1046/j.1537-2995.2002.00096.x"
                                 ]
                             },
                             "cited_phase": "APP"
@@ -934,19 +993,19 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                         },
                         {
                             "document_id": {
-                                "jurisdiction": "WO",
-                                "doc_number": "2012171990",
-                                "kind": "A1"
-                            },
-                            "lens_id": "084-623-881-707-629"
-                        },
-                        {
-                            "document_id": {
                                 "jurisdiction": "US",
                                 "doc_number": "9359643",
                                 "kind": "B2"
                             },
                             "lens_id": "007-584-344-944-889"
+                        },
+                        {
+                            "document_id": {
+                                "jurisdiction": "US",
+                                "doc_number": "9637788",
+                                "kind": "B2"
+                            },
+                            "lens_id": "138-800-291-931-331"
                         },
                         {
                             "document_id": {
@@ -958,11 +1017,11 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                         },
                         {
                             "document_id": {
-                                "jurisdiction": "US",
-                                "doc_number": "9637788",
-                                "kind": "B2"
+                                "jurisdiction": "WO",
+                                "doc_number": "2012171990",
+                                "kind": "A1"
                             },
-                            "lens_id": "138-800-291-931-331"
+                            "lens_id": "084-623-881-707-629"
                         }
                     ],
                     "patent_count": 5
@@ -1070,6 +1129,28 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                     "size": 5
                 }
             },
+            "sequence_listing": {
+                "sequence_types": [
+                    "N",
+                    "DNA"
+                ],
+                "length_buckets": [
+                    "NT_5001_100000",
+                    "NT_101_5000",
+                    "NT_1_100"
+                ],
+                "organisms": [
+                    {
+                        "tax_id": 9606,
+                        "name": "Homo sapiens"
+                    },
+                    {
+                        "tax_id": -1,
+                        "name": "Unknown/Artificial"
+                    }
+                ],
+                "count": 42
+            },
             "legal_status": {
                 "granted": true,
                 "grant_date": "2013-12-25",
@@ -1083,7 +1164,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
             },
             "abstract": [
                 {
-                    "text": "The invention relates to the field of genotyping and blood cell antigen determination. In particular, the invention adresses the problem of discriminating the RHD*DIIIa-CE(4-7)-D or RHD*DIIIa-CE(4-7)-D )-like blood type variants, which express the C +w antigen and lack a D antigen, from RHD*DIIIa , RHD*DIVa-2 and other blood type variants. The invention provides methods for genotyping a subject, comprising: a) determining at least 4 markers in a sample that has been obtained from the subject, wherein the markers comprise: (i) the presence or absence of an RHCE*C allele; (ii) the presence or absence of an RHD/RHCE hybrid exon 3 (RHD/CE Hex03) allele; (iii) the absence of, or a single nucleotide polymorphism (SNP) variant within, of any one of the SNPs at position 602 of RHD exon 4, position 667 of RHD exon 5, or position 819 of RHD exon 6; and (iv) the absence of, or SNP variant within, of the SNP at position 1048 of RHD exon 7. The invention also provides products, in particular, probes, primers and kits for use in such methods.",
+                    "text": "The invention relates to the field of genotyping and blood cell antigen determination. In particular, the invention adresses the problem of discriminating the  RHD*DIIIa-CE(4-7)-D  or  RHD*DIIIa-CE(4-7)-D )-like blood type variants, which express the C +w  antigen and lack a D antigen, from  RHD*DIIIa ,  RHD*DIVa-2  and other blood type variants. The invention provides methods for genotyping a subject, comprising: \na) determining at least 4 markers in a sample that has been obtained from the subject, wherein the markers comprise: \n(i) the presence or absence of an RHCE*C allele; \n(ii) the presence or absence of an RHD/RHCE hybrid exon 3 (RHD/CE Hex03) allele; \n(iii) the absence of, or a single nucleotide polymorphism (SNP) variant within, of any one of the SNPs at position 602 of RHD exon 4, position 667 of RHD exon 5, or position 819 of RHD exon 6; and \n(iv) the absence of, or SNP variant within, of the SNP at position 1048 of RHD exon 7. The invention also provides products, in particular, probes, primers and kits for use in such methods.",
                     "lang": "en"
                 }
             ],
@@ -1127,7 +1208,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                         },
                         {
                             "claim_text": [
-                                "A method according to any one of the preceding claims, wherein determining the presence, absence or SNP variant of a marker comprises contacting nucleic acid containing each marker with one or more probes, e.g. wherein:\n a) as dependent from claim 3, the probes for determining the presence or absence of RHD/CE Hex03 or RHD exon 3 contact an SNP located in both RHD/CE Hex03 and RHD exon 3, wherein...."
+                                "A method according to any one of the preceding claims, wherein determining the presence, absence or SNP variant of a marker comprises contacting nucleic acid containing each marker with one or more probes, e.g. wherein:\n a) as dependent from claim 3, the probes for determining the presence or absence of RHD/CE Hex03 or RHD exon 3 contact an SNP located in both RHD/CE Hex03 and RHD exon 3, wherein one SNP variant is specific for RHD/CE Hex03, and another SNP variant is specific for RHD exon 3, e.g. wherein\n (i) the SNP is at position 410 of the coding sequence, located within both RHD/CE Hex03 and RHD exon 3; and/or \n (ii) the probes comprise:\n (1) 5'-TTTTACAGACGCCTGCTACCATG-3', (SEQ ID NO: 5) \n (2) 5'-CATGGTAGCAGGCGTCTGTAAAA-3', (SEQ ID NO: 6) \n (3) 5'-TTTTACAGACGTCTGCTACCATG-3', (SEQ ID NO: 7) and \n (4) 5'-CATGGTAGCAGACGTCTGTAAAA-3', (SEQ ID NO: 8) \nor a variant of any one of probes 1 to 4 having up to 4 nucleotide alterations; and/or \n b) the probes for determining the absence or SNP variant of the SNP at: position 602 of the  RHD  coding sequence located within exon 4 (rs1053355), position 667 of the  RHD  coding sequence located within exon 5 (rs1053356), or position 819 of the  RHD  coding sequence located within exon 6 comprise:\n (i) RHD exon 4:\n (1) 5'-ATAAAGATCAGACAGCAACGATACC-3' (SEQ ID NO: 23) \n (2) 5'-TAAAGATCAGACAGCAACGATAC-3' (SEQ ID NO: 24) \n (3) 5'-ATAAAGATCAGAGAGCAACGATACC-3' (SEQ ID NO: 25) \n (4) 5'-TAAAGATCAGAGAGCAACGATAC-3' (SEQ ID NO: 26) \nor a variant of any one of probes 1 to 4 having up to 4 nucleotide alterations; \n (ii) RHD exon 5:\n (1) 5'-CTGGCCAAGTTTCAACTCTGC-3' (SEQ ID NO: 27) \n (2) 5'-TGGCCAAGTTTCAACTCTG-3' (SEQ ID NO: 28) \n (3) 5'-CTGGCCAAGTGTCAACTCTGC-3' (SEQ ID NO: 29) \n (4) 5'-TGGCCAAGTGTCAACTCTG-3' (SEQ ID NO: 30) \nor a variant of any one of probes 1 to 4 having up to 4 nucleotide alterations; \n (iii) RHD exon 6:\n (1) 5'-GTGCACAGTGCGGTGTTGGCAGG-3' (SEQ ID NO: 31) \n (2) 5'- TGCACAGTGCGGTGTTGGCAG -3' (SEQ ID NO: 32) \n (3) 5'- GTGCACAGTGCAGTGTTGGCAGG -3' (SEQ ID NO: 33) \n (4) 5'-TGCACAGTGCAGTGTTGGCAG-3' (SEQ ID NO: 34) \nor a variant of any one of probes 1 to 4 having up to 4 nucleotide alterations. \n c) the probes for determining the SNP variant of the SNP at position 1048 of the  RHD  coding sequence located within exon 7 (rs41307826)comprise:\n (1) 5'-TGCTGGTGCTTGATACCGTCGGA-3' (SEQ ID NO: 37) \n (2) 5'-GCTGGTGCTTGATACCGTCGG-3' (SEQ ID NO: 38) \n (3) 5'-TGCTGGTGCTTCATACCGTCGGA-3' (SEQ ID NO: 39) \n (4) 5'-GCTGGTGCTTCATACCGTCGG-3' (SEQ ID NO: 40) \nor a variant of any one of probes 1 to 4 having up to 4 nucleotide alterations."
                             ]
                         },
                         {
@@ -1170,7 +1251,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                 }
             ],
             "description": {
-                "text": "Field of the Invention The invention relates to methods for genotyping and blood cell antigen determination, which in particular may discriminate the  RHD*DIIIa-CE(4-7)-D  or  RHD*DIIIa-CE(4-7)-D )-like blood type variants, which express the C +W  antigen and lack a D antigen, from  RHD*DIIIa ,  RHD*DIVa-2  and other blood type variants. The invention also relates to products...",
+                "text": "Field of the Invention The invention relates to methods for genotyping and blood cell antigen determination, which in particular may discriminate the  RHD*DIIIa-CE(4-7)-D  or  RHD*DIIIa-CE(4-7)-D )-like blood type variants, which express the C +W  antigen and lack a D antigen, from  RHD*DIIIa ,  RHD*DIVa-2  and other blood type variants. The invention also relates to products, in particular...",
                 "lang": "en"
             },
             "publication_type": "PATENT_APPLICATION"

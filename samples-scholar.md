@@ -195,6 +195,7 @@ Use this script of you have a large list of Lens identifiers to send in the requ
 import requests
 import time
 import itertools
+import json
 
 url = 'https://api.lens.org/scholarly/search'
 headers = {'Authorization': 'Bearer YOUR-TOKEN', 'Content-Type': 'application/json'}
@@ -227,7 +228,7 @@ def scroll(scroll_id, request_body):
 include = '''["lens_id", "patent_citations"]'''
 identifiers = [list of Lens identifiers which can be more than 10K]
 # take 5000 at a time from the list and scroll for the 5000
-for ids in itertools.islice(identifiers, 5000):
+for ids in itertools.batched(identifiers, 5000):
   request_body = '''{
     "query": {
         "terms":  {
@@ -238,7 +239,7 @@ for ids in itertools.islice(identifiers, 5000):
   }''' % include
 
   # start recursive scrolling
-  scroll(scroll_id=None, request_body)
+  scroll(scroll_id=None, request_body=request_body)
 ```
 
 ### Java

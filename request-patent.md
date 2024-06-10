@@ -287,7 +287,7 @@ Group by patent family queries supports group by `SIMPLE_FAMILY` and `EXTENDED_F
 
 
 ### Minimum Score
-The minimum score represents the `relevance` score based on the query matching score used in Elasticsearch. This can be used to This can be used to limit the response to the most relevant results and can be used in 2-steps:
+The minimum score represents the `relevance` score based on the query matching score used in Elasticsearch. This can be used to limit the response to the most relevant results and can be used in 2-steps:
 
    1. Perform an initial API request to get the `max_score`. N.B. the size of the request needs to be greater than 0 to return the `max_score`.
    2. You can then filter by the `min_score` in subsequent requests.

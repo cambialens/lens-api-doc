@@ -148,7 +148,7 @@ e.g.
 This aggregation can be applied to date values extracted from documents. It allows the user to specify the interval and the values are rounded down to the closest date range bucket.
 
 Additional request config fields:
-- `interval` : supported for `date_histogram` with possible values: `QUARTER`, `YEAR`(default)
+- `interval` : supported for `date_histogram` with possible values: `QUARTER`, `YEAR`(default) and `MONTH`
 
 Product | Supported Fields
 ------- |-------------

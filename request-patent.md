@@ -139,6 +139,7 @@ Legal Events | **legal_status.has_grant_event** | Boolean | Indicates if the pat
 Legal Events | **legal_status.has_entry_into_national_phase** | Boolean | Indicates if the patent application/simple family has entered the National Phase in INPADOC. e.g. `TRUE`
 Legal Events | **legal_status.patent_status** | String | The calculated legal status of the patent application. e.g. `expired`, `inactive`, `active`, `patented`, `discontinued`, `withdrawn or rejected`, `pending`, `unknown`
 Legal Events | **legal_status.has_spc** | Boolean | Indicates if the patent has a supplementary protection certificate. e.g. `TRUE`
+Legal Events | **legal_status.term_extension_days** | Integer              | Indicates number of days the patent has US Term Extended
 Agents & Attorneys | **agent.address** | String | The agent/attorney address as recorded on the patent. e.g. `20 Red Lion Street, GB-London WC1R 4PJ(GB)`
 Agents & Attorneys | **agent.country** | String | The country of the agent/attorney (ISO 2-digit country code). e.g. `GB`
 Agents & Attorneys | **agent.name** | String | The agent/attorney name. e.g. `Chapman, Paul William et al.`
@@ -375,6 +376,18 @@ It matches each words separately. If you need to search whole phrase use [match 
             "year_published": {
                 "gte": "1980",
                 "lte": "2000"
+            }
+        }
+   }
+}
+```
+> Example: Filter documents which has Patent Term Extension
+```json
+{
+  "query": {
+      	"range": {
+            "legal_status.term_extension_days": {
+                "gt": 0
             }
         }
    }

@@ -31,7 +31,7 @@ toc:
  **volume** | String | Volume | `32`
  **issue** | String | Issue | `4`
  **languages** | Array of String | Languages | `["en"]`
- **references** | List of [Reference](#reference) | References |  |
+ **references** | List of [References](#references) | References |  |
  **scholarly_citations** | List of Lens Ids | Scholarly Citations  | `["091-720-300-990-437"]`
  **chemicals** | List of [Chemical](#chemical) | Chemicals |  |
  **clinical_trials** | List of [Clinical Trial](#clinical-trial) | Clinical Trials |  |
@@ -82,7 +82,7 @@ toc:
 {: .param-def }
 
 
-#### Reference
+#### References
 
  Field | Type |  Description | Example
 ------- |:------| -------|---------

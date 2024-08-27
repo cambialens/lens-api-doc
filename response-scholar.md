@@ -17,39 +17,40 @@ toc:
 
  Field | Type |  Description  | Example
 ------- |:------| :------- |---------
- **patent_citations** | Array of [Patent Citation](#patent-citation) | Referenced by patents |  |
- **patent_citations_count** | Integer | Number of patent citations | `10`
- **lens_id** | String | Unique lens identifier | `100-004-910-081-14X`
- **created** | Date | Record created date | `2016-08-01T00:00:00+00:00`
- **publication_type** | String ([Publication Types](#publication-types)) | Publication Type | `journal article`
- **publication_supplementary_type** | Array of String | Supplementary publication type | `["review"]`
- **authors** | Array of [Author](#author) | Authors| |
- **title** | String | Title of the scholarly work | `Malaria`
- **external_ids** | Array of [Ids](#ids) | The external identifier(s) for a scholarly work (DOI, PubMed ID, PubMed Central ID, Microsoft Academic ID or CORE) | |
- **start_page** | String | Start page | `893`
- **end_page** | String | End page | `916`
- **volume** | String | Volume | `32`
- **issue** | String | Issue | `4`
- **languages** | Array of String | Languages | `["en"]`
- **references** | List of [References](#references) | References |  |
- **scholarly_citations** | List of Lens Ids | Scholarly Citations  | `["091-720-300-990-437"]`
- **chemicals** | List of [Chemical](#chemical) | Chemicals |  |
- **clinical_trials** | List of [Clinical Trial](#clinical-trial) | Clinical Trials |  |
- **fields_of_study** | List of String |Fields Of Study | `["Immunology", "Malaria"]`
- **source_urls** | List of [Source URL](#source-url) | Source Urls |
- **abstract** | String | Scholarly work abstract text |
- **date_published** | Date | Date of publication | `2009-05-22`
- **date_published_parts** | Array of Integer | Consist of year, month and day | `[1974, 1, 6]`
- **year_published** | Integer | Year of publication | `1986`
- **conference** | [Conference](#conference) | The conference instance or edition |
- **author_count** | Integer | Number of Authors | `4`
- **references_count** | Integer | The number of works in the reference list of a scholarly work | `2`
- **scholarly_citations_count** | Integer | The number of scholarly works that cite this scholarly work | `3`
- **open_access** | [Open Access](#open-access) |
- **source** | [Source](#source) | Source publication in which the scholarly work appears |
- **keywords** | Array of String | Keywords |
- **mesh_terms** | Array of [MeSH Term](#mesh-term) | MeSH term |
- **funding** | Array of [Funding](#funding) |  Funding |
+**lens_id** | String | Unique lens identifier | `100-004-910-081-14X`
+**created** | Date | Record created date | `2016-08-01T00:00:00+00:00`
+**publication_type** | String ([Publication Types](#publication-types)) | Publication Type | `journal article`
+**publication_supplementary_type** | Array of String | Supplementary publication type | `["review"]`
+**authors** | Array of [Author](#author) | Authors| |
+**title** | String | Title of the scholarly work | `Malaria`
+**external_ids** | Array of [Ids](#ids) | The external identifier(s) for a scholarly work (DOI, PubMed ID, PubMed Central ID, Microsoft Academic ID or CORE) | |
+**start_page** | String | Start page | `893`
+**end_page** | String | End page | `916`
+**volume** | String | Volume | `32`
+**issue** | String | Issue | `4`
+**languages** | Array of String | Languages | `["en"]`
+**references** | List of [References](#references) | References |  |
+**references_count** | Integer | The number of works in the reference list of a scholarly work | `22`
+**references_resolved_count** | Integer | The number of works in the reference list of a scholarly work that have been resolved to a scholarly work Lens Id | `21` 
+**scholarly_citations** | List of Lens Ids | Scholarly Citations  | `["091-020-924-584-261", "159-770-478-635-994", ...]`
+**scholarly_citations_count** | Integer | The number of scholarly works that cite this scholarly work | `3`
+**patent_citations** | Array of [Patent Citation](#patent-citation) | Referenced by patents |  |
+**patent_citations_count** | Integer | Number of patent citations | `10`
+**chemicals** | List of [Chemical](#chemical) | Chemicals |  |
+**clinical_trials** | List of [Clinical Trial](#clinical-trial) | Clinical Trials |  |
+**fields_of_study** | List of String |Fields Of Study | `["Immunology", "Malaria"]`
+**source_urls** | List of [Source URL](#source-url) | Source Urls |
+**abstract** | String | Scholarly work abstract text |
+**date_published** | Date | Date of publication | `2009-05-22`
+**date_published_parts** | Array of Integer | Consist of year, month and day | `[1974, 1, 6]`
+**year_published** | Integer | Year of publication | `1986`
+**conference** | [Conference](#conference) | The conference instance or edition |
+**author_count** | Integer | Number of Authors | `4`
+**open_access** | [Open Access](#open-access) |
+**source** | [Source](#source) | Source publication in which the scholarly work appears |
+**keywords** | Array of String | Keywords |
+**mesh_terms** | Array of [MeSH Term](#mesh-term) | MeSH term |
+**funding** | Array of [Funding](#funding) |  Funding |
 {: .param-def }
 
 #### Patent Citation
@@ -86,7 +87,8 @@ toc:
 
  Field | Type |  Description | Example
 ------- |:------| -------|---------
-**lens_id** | String | Unique lens identifier | `071-957-228-698-625`
+**lens_id** | String | Unique lens identifier | `041-778-570-427-167`
+**text** | String | The the original text string in the references | `Haddaway, N. R. & Verhoeven, J. T. Ecol. Evol. 5, 4451–4454 (2015).`
 {: .param-def }
 
 #### Open Access
@@ -167,7 +169,7 @@ Field | Type |  Description | Example
 
 Field | Type |  Description | Example
  ------- |:------:| -------|---------
-**type** | String | Source URL Type | `html`
+**type** | String | Source URL Type | `html`, `pdf`, `unknown`
 **url** | String | URL String | `http://cds.cern.ch/record/2291692`
 {: .param-def }
 

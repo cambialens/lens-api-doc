@@ -209,6 +209,7 @@ Field  |  Type  |  Description |  Example
  --------  |  ---------  |  ------- |  -------
 **residence** | String | The country of residence of the inventor (ISO 2-digit country code). | `DE`
 **sequence** | Integer | The sequence of the inventor listed on the patent document. | `3`
+**orcid** | String | The inventor's ORCID identifier. | `0000-0002-7168-5006`
 **extracted_name** | [Name](#name) | The patent inventor's name. | `Engebretson Steven P`
 **extracted_address** | String | The address of the inventor. | `TORONTO, ONTARIA, CA`
 {: .param-def }

@@ -95,6 +95,7 @@ Inventors | **inventor.address** | String | The address of the inventor. e.g. `T
 Inventors | **inventor.name** | String | The patent inventor(s) name. e.g. `Engebretson Steven P`
 Inventors | **inventor.name.exact** | String | The patent inventor(s) name. N.B. Use this field for exact name matches. e.g. `ENGEBRETSON STEVEN P`
 Inventors | **inventor.residence** | String | The country of residence of the inventor (ISO 2-digit country code). e.g. `DE`
+Inventors | **inventor.orcid** | String |  The inventor's ORCID identifier e.g. `0000-0001-5352-4498`
 Inventors | **inventor_count** | Integer | The number of inventors. e.g. `3`
 Owners | **owner_all.address** | String | The owner address as recorded on the patent or legal event. e.g. `TORONTO, ONTARIA, CA`
 Owners | **owner_all.country** | String | The owner's country code (ISO 2-digit country code). e.g. `US`

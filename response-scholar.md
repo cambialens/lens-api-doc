@@ -200,7 +200,7 @@ Field | Type |  Description | Example
 ```json
 {
     "total": 1,
-    "max_score": 18.879501,
+    "max_score": 19.05009,
     "data": [
         {
             "lens_id": "086-713-276-176-892",
@@ -216,16 +216,8 @@ Field | Type |  Description | Example
             "created": "2018-05-12T02:39:28.395000+00:00",
             "external_ids": [
                 {
-                    "type": "pmcid",
-                    "value": "pmc5024789"
-                },
-                {
                     "type": "coreid",
                     "value": "82196673"
-                },
-                {
-                    "type": "magid",
-                    "value": "2113210954"
                 },
                 {
                     "type": "pmid",
@@ -234,6 +226,14 @@ Field | Type |  Description | Example
                 {
                     "type": "doi",
                     "value": "10.1016/j.ejca.2015.05.019"
+                },
+                {
+                    "type": "pmcid",
+                    "value": "pmc5024789"
+                },
+                {
+                    "type": "magid",
+                    "value": "2113210954"
                 }
             ],
             "patent_citations": [
@@ -243,6 +243,18 @@ Field | Type |  Description | Example
             ],
             "patent_citations_count": 1,
             "open_access": {
+                "locations": {
+                    "landing_page_urls": [
+                        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5024789/",
+                        "https://doi.org/10.1016/j.ejca.2015.05.019",
+                        "https://europepmc.org/articles/pmc5024789",
+                        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5024789"
+                    ],
+                    "pdf_urls": [
+                        "http://www.ejcancer.com/article/S0959804915004505/pdf",
+                        "https://europepmc.org/articles/pmc5024789?pdf=render"
+                    ]
+                },
                 "license": "cc-by-nc-nd",
                 "colour": "hybrid"
             },
@@ -269,6 +281,10 @@ Field | Type |  Description | Example
                                 {
                                     "type": "grid",
                                     "value": "grid.214458.e"
+                                },
+                                {
+                                    "type": "isni",
+                                    "value": "0000000419367347"
                                 },
                                 {
                                     "type": "fundref",
@@ -698,10 +714,6 @@ Field | Type |  Description | Example
                                     "value": "100007812"
                                 },
                                 {
-                                    "type": "orgref",
-                                    "value": "31776"
-                                },
-                                {
                                     "type": "grid",
                                     "value": "grid.34477.33"
                                 },
@@ -773,112 +785,144 @@ Field | Type |  Description | Example
             ],
             "references": [
                 {
-                    "lens_id": "003-415-704-045-340"
+                    "lens_id": "003-415-704-045-340",
+                    "text": "Wilke . Ramucirumab plus paclitaxel versus placebo plus paclitaxel in patients with previously treated advanced gastric or gastro-oesophageal junction adenocarcinoma (RAINBOW): a double-blind, randomised phase 3 trial, Lancet Oncol. 2014; 15 1224."
                 },
                 {
-                    "lens_id": "006-027-163-131-418"
+                    "lens_id": "006-027-163-131-418",
+                    "text": "Pandini . Androgens up-regulate the insulin-like growth factor-I receptor in prostate cancer cells, Cancer Res. 2005; 65 1849."
                 },
                 {
-                    "lens_id": "010-839-632-959-305"
+                    "lens_id": "010-839-632-959-305",
+                    "text": "Spratlin . Ramucirumab (IMC-1121B): monoclonal antibody inhibition of vascular endothelial growth factor receptor-2, Curr Oncol Rep. 2011; 13 97."
                 },
                 {
-                    "lens_id": "013-690-046-069-453"
+                    "lens_id": "013-690-046-069-453",
+                    "text": "Strohmeyer . Vascular endothelial growth factor and its correlation with angiogenesis and p53 expression in prostate cancer, Prostate. 2000; 45 216."
                 },
                 {
-                    "lens_id": "015-449-984-502-884"
+                    "lens_id": "015-449-984-502-884",
+                    "text": "Int J Oncol. 2006 Mar;28(3):723-30"
                 },
                 {
-                    "lens_id": "015-767-931-570-158"
+                    "lens_id": "015-767-931-570-158",
+                    "text": "Fuchs . Ramucirumab monotherapy for previously treated advanced gastric or gastro-oesophageal junction adenocarcinoma (REGARD): an international, randomised, multicentre, placebo-controlled, phase 3 trial, Lancet. 2014; 383 31."
                 },
                 {
                     "lens_id": "018-245-327-947-052"
                 },
                 {
-                    "lens_id": "020-963-415-260-304"
+                    "lens_id": "020-963-415-260-304",
+                    "text": "Wu . Combined in vivo effect of A12, a type 1 insulin-like growth factor receptor antibody, and docetaxel against prostate cancer tumors, Clin Cancer Res. 2006; 12 (20 Pt 1) 6153."
                 },
                 {
-                    "lens_id": "026-332-934-265-841"
+                    "lens_id": "026-332-934-265-841",
+                    "text": "Rubin . Prostate carcinoma cells that have resided in bone have an upregulated IGF-I axis, Prostate. 2004; 58 41."
                 },
                 {
-                    "lens_id": "028-101-820-366-93X"
+                    "lens_id": "028-101-820-366-93X",
+                    "text": "Garon . Ramucirumab plus docetaxel versus placebo plus docetaxel for second-line treatment of stage IV non-small-cell lung cancer after disease progression on platinum-based therapy (REVEL): a multicentre, double-blind, randomised phase 3 trial, Lancet. 2014; 384 665."
                 },
                 {
-                    "lens_id": "032-523-762-689-478"
+                    "lens_id": "032-523-762-689-478",
+                    "text": "Cancer Res. 2001 Mar 15;61(6):2533-6"
                 },
                 {
-                    "lens_id": "037-117-740-052-570"
+                    "lens_id": "037-117-740-052-570",
+                    "text": "Doll . Thrombospondin-1, vascular endothelial growth factor and fibroblast growth factor-2 are key functional regulators of angiogenesis in the prostate, Prostate. 2001; 49 293."
                 },
                 {
-                    "lens_id": "038-557-040-762-884"
+                    "lens_id": "038-557-040-762-884",
+                    "text": "Kawada . Insulin-like growth factor I secreted from prostate stromal cells mediates tumor-stromal cell interactions of prostate cancer, Cancer Res. 2006; 66 4419."
                 },
                 {
-                    "lens_id": "040-239-601-782-040"
+                    "lens_id": "040-239-601-782-040",
+                    "text": "Burfeind . Antisense RNA to the type I insulin-like growth factor receptor suppresses tumor growth and prevents invasion by rat prostate cancer cells in vivo, Proc Natl Acad Sci USA. 1996; 93 7263."
                 },
                 {
-                    "lens_id": "042-246-996-698-043"
+                    "lens_id": "042-246-996-698-043",
+                    "text": "Bähr . The IGF-1 receptor and its contributions to metastatic tumor growth-novel approaches to the inhibition of IGF-1R function, Growth Factors. 2005; 23 1."
                 },
                 {
                     "lens_id": "043-024-349-674-734"
                 },
                 {
-                    "lens_id": "043-201-312-439-671"
+                    "lens_id": "043-201-312-439-671",
+                    "text": "Clin Cancer Res. 2002 Aug;8(8):2714-24"
                 },
                 {
-                    "lens_id": "043-546-849-370-25X"
+                    "lens_id": "043-546-849-370-25X",
+                    "text": "Khandwala . The effects of insulin-like growth factors on tumorigenesis and neoplastic growth, Endocr Rev. 2000; 21 215."
                 },
                 {
-                    "lens_id": "046-041-414-632-674"
+                    "lens_id": "046-041-414-632-674",
+                    "text": "Rowinsky . Blockade of insulin-like growth factor type-1 receptor with cixutumumab (IMC-A12): a novel approach to treatment for multiple cancers, Curr Drug Targets. 2011; 12 2016."
                 },
                 {
-                    "lens_id": "046-648-350-541-685"
+                    "lens_id": "046-648-350-541-685",
+                    "text": "Sternberg . Multinational, double-blind, phase III study of prednisone and either satraplatin or placebo in patients with castrate-refractory prostate cancer progressing after prior chemotherapy: the SPARC trial, J Clin Oncol. 2009; 27 5431."
                 },
                 {
-                    "lens_id": "046-852-526-558-260"
+                    "lens_id": "046-852-526-558-260",
+                    "text": "Tannock . Docetaxel plus prednisone or mitoxantrone plus prednisone for advanced prostate cancer, N Engl J Med. 2004; 351 1502."
                 },
                 {
-                    "lens_id": "054-808-246-993-497"
+                    "lens_id": "054-808-246-993-497",
+                    "text": "Scher . Design and end points of phase 2 trials for patients with progressive prostate cancer and castrate levels of testosterone: recommendations of the Prostate Cancer Clinical Trials Working Group (PCWG2), J Clin Oncol. 2008; 26 1148."
                 },
                 {
-                    "lens_id": "059-727-763-246-876"
+                    "lens_id": "059-727-763-246-876",
+                    "text": "Alva . The changing natural history of metastatic prostate cancer, Cancer J. 2013; 19 19."
                 },
                 {
-                    "lens_id": "065-982-455-260-233"
+                    "lens_id": "065-982-455-260-233",
+                    "text": "Tannock . Chemotherapy with mitoxantrone plus prednisone or prednisone alone for symptomatic hormone-resistant prostate cancer: a Canadian randomized trial with palliative end points, J Clin Oncol. 1996; 14 1756."
                 },
                 {
                     "lens_id": "069-612-901-254-771"
                 },
                 {
-                    "lens_id": "070-794-057-102-152"
+                    "lens_id": "070-794-057-102-152",
+                    "text": "Spratlin . Phase I pharmacologic and biologic study of ramucirumab (IMC-1121B), a fully human immunoglobulin G1 monoclonal antibody targeting the vascular endothelial growth factor receptor-2, J Clin Oncol. 2010; 28 780."
                 },
                 {
-                    "lens_id": "083-233-359-584-62X"
+                    "lens_id": "083-233-359-584-62X",
+                    "text": "Hwang . Angiogenesis inhibitors in the treatment of prostate cancer, J Hematol Oncol. 2010; 3 26."
                 },
                 {
-                    "lens_id": "087-375-055-670-659"
+                    "lens_id": "087-375-055-670-659",
+                    "text": "Blum . Development of new insulin-like growth factor-1 receptor kinase inhibitors using catechol mimics, J Biol Chem. 2003; 278 40442."
                 },
                 {
-                    "lens_id": "087-458-139-690-01X"
+                    "lens_id": "087-458-139-690-01X",
+                    "text": "de Bono . Prednisone plus cabazitaxel or mitoxantrone for metastatic castration-resistant prostate cancer progressing after docetaxel treatment: a randomised open-label trial, Lancet. 2010; 376 1147."
                 },
                 {
-                    "lens_id": "090-234-280-758-859"
+                    "lens_id": "090-234-280-758-859",
+                    "text": "Yu . SWOG S0925: a randomized phase II study of androgen deprivation combined with cixutumumab versus androgen deprivation alone in patients with new metastatic hormone-sensitive prostate cancer, J Clin Oncol. 2015; 33 1601."
                 },
                 {
-                    "lens_id": "094-489-992-059-749"
+                    "lens_id": "094-489-992-059-749",
+                    "text": "Petrylak . Docetaxel and estramustine compared with mitoxantrone and prednisone for advanced refractory prostate cancer, N Engl J Med. 2004; 351 1513."
                 },
                 {
-                    "lens_id": "096-654-301-744-608"
+                    "lens_id": "096-654-301-744-608",
+                    "text": "Wu . In vivo effects of the human type I insulin-like growth factor receptor antibody A12 on androgen-dependent and androgen-independent xenograft human prostate tumors, Clin Cancer Res. 2005; 11 3065."
                 },
                 {
-                    "lens_id": "101-625-667-760-940"
+                    "lens_id": "101-625-667-760-940",
+                    "text": "Clin Cancer Res. 2000 May;6(5):1882-90"
                 },
                 {
-                    "lens_id": "113-073-836-369-700"
+                    "lens_id": "113-073-836-369-700",
+                    "text": "Cancer Res. 2003 Dec 15;63(24):8912-21"
                 },
                 {
                     "lens_id": "128-335-721-572-401"
                 },
                 {
-                    "lens_id": "155-152-241-876-905"
+                    "lens_id": "155-152-241-876-905",
+                    "text": "Mauro . Role of the IGF-I receptor in the regulation of cell–cell adhesion: implications in cancer development and progression, J Cell Physiol. 2003; 194 108."
                 }
             ],
             "mesh_terms": [
@@ -987,6 +1031,10 @@ Field | Type |  Description | Example
                 {
                     "mesh_heading": "Young Adult",
                     "mesh_id": "D055815"
+                },
+                {
+                    "mesh_heading": "Ramucirumab",
+                    "mesh_id": "D000096662"
                 }
             ],
             "chemicals": [
@@ -1019,11 +1067,6 @@ Field | Type |  Description | Example
                     "substance_name": "Mitoxantrone",
                     "registry_number": "BZ114NVM5P",
                     "mesh_id": "D008942"
-                },
-                {
-                    "substance_name": "ramucirumab",
-                    "registry_number": "D99YVK4L0X",
-                    "mesh_id": "C543333"
                 },
                 {
                     "substance_name": "Prednisone",
@@ -1078,9 +1121,10 @@ Field | Type |  Description | Example
                     "url": "https://core.ac.uk/download/pdf/82196673.pdf"
                 }
             ],
-            "abstract": "Abstract Background Cixutumumab, a human monoclonal antibody (HuMAb), targets the insulin-like growth factor receptor. Ramucirumab is a recombinant HuMAb that binds to vascular endothelial growth factor receptor-2. A non-comparative randomised phase II study evaluated cixutumumab or ramucirumab plus mitoxantrone and prednisone (MP) in metastatic castration-resistant prostate cancer (mCRPC). Patients and methods Men with progressive mCRPC during or after docetaxel therapy received mitoxantrone 12 mg/m2 on day 1 and prednisone 5 mg twice daily and were randomised 1:1 to receive either cixutumumab or ramucirumab 6 mg/kg intravenously weekly in a 21-day cycle. Primary end-point was composite progression-free survival (cPFS). Secondary end-points included safety, response, radiographic progression-free survival (PFS) and overall survival (OS). Sample size was based on a 50% increase in median cPFS from 2.6 (MP) to 3.9 months (either combination). Results 132 men were treated (66 per arm). Median cPFS was 4.1 months (95% confidence interval (CI), 2.2–5.6) for cixutumumab and 6.7 months (95% CI, 4.5–8.3) for ramucirumab. Median time to radiographic progression was 7.5 months for cixutumumab and 10.2 months for ramucirumab, with a median OS of 10.8 and 13.0 months, respectively. Fatigue was the most frequent adverse event (AE). Incidence of most non-haematologic grade 3–4 AEs was Conclusion Combinations of cixutumumab or ramucirumab plus MP were feasible and associated with moderate toxicities in docetaxel-pretreated men with mCRPC. Of the two regimens, the ramucirumab regimen is worthy of further testing based on the observed cPFS relative to the historical control.",
+            "abstract": "Abstract Background Cixutumumab, a human monoclonal antibody (HuMAb), targets the insulin-like growth factor receptor...",
             "references_count": 36,
-            "scholarly_citations_count": 27,
+            "references_resolved_count": 36,
+            "scholarly_citations_count": 30,
             "start_page": "1714",
             "end_page": "1724",
             "scholarly_citations": [
@@ -1104,12 +1148,15 @@ Field | Type |  Description | Example
                 "046-312-772-821-709",
                 "054-371-103-868-542",
                 "055-935-439-115-752",
+                "059-021-699-657-683",
                 "062-343-220-167-149",
                 "067-043-485-486-441",
                 "085-619-841-835-92X",
                 "086-063-652-233-255",
+                "106-358-426-773-191",
                 "132-091-200-995-616",
                 "145-126-752-104-913",
+                "149-831-451-273-472",
                 "153-500-774-834-922"
             ],
             "author_count": 12,

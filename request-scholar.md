@@ -56,6 +56,9 @@ General | **created** | Date | Record created date e.g. `2018-05-12`, `2016-08-0
 General | **publication_type** | String | Publication Type `conference proceedings`, `book chapter`, `journal article`, `component`, `conference proceedings article`, `dataset`, `libguide`, `reference entry`, `book`. N.B. this field is case sensitive.
 General | **publication_supplementary_type** | String | Supplementary publication type e.g. `review`, `comparative study`, `research support`. N.B. this field is case sensitive.
 General | **external_id_type** | String | External Identifier type (Crossref: `doi`, Microsoft Academic: `magid`, PubMed: `pmid`, PubMed Central: `pmcid`, CORE: `coreid`, OpenAlex: `openalex`)
+General | **retraction_update.date** | Date | The date of the retraction update. Data source: Crossref/Retraction Watch. e.g. `2018-05-12`
+General | **retraction_update.nature** | String | The nature of the retraction update (e.g. Retraction, Expression of Concern, Correction, Reinstatement). Data source: Crossref/Retraction Watch. e.g. `Retraction`
+General | **retraction_update.reason** | String | The reason for the retraction update (e.g. investigation by journal/publisher, notice - limited or no information, concerns/issues about data, unreliable results, investigation by third party, etc.). Data source: Crossref/Retraction Watch. e.g. `Falsification/Fabrication of Image`
 Authors | **author.display_name** | String | Author's full name e.g. `Alexander Kupco`
 Authors | **author.orcid** | String | Author ORCID identifier e.g. `0000-0001-5352-4498`
 Authors | **author.magid** | String | Author MAG identifier 

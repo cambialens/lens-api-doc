@@ -93,10 +93,11 @@ toc:
 
 #### Open Access
 
- Field | Type |  Description | Example
-------- |:------| -------|---------
-**license** |  String | The Open Access license type | `cc-by`
-**colour** |  String | The Open Access colour category | `gold`
+ Field | Type                   | Description                     | Example
+------- |:-----------------------|---------------------------------|---------
+**license** | String                 | The Open Access license type    | `cc-by`
+**colour** | String                 | The Open Access colour category | `gold`
+**locations** | [Open Access Location] | The Open Access Locations       | 
 {: .param-def }
 
 #### Source
@@ -181,6 +182,12 @@ Field | Type |  Description | Example
 **value** | String | The external identifier(s) for the scholarly work, author, institution, etc. | `10.1016/s0031-3955(16)34861-1`, `0000-0003-3902-2234`, `grid.425957.8`, `056x7d368`, etc.
 {: .param-def }
 
+#### Open Access Location
+Field |      Type       | Description       | Example
+------- |:---------------:|-------------------|---------
+**landing_page_urls** | Array of String | Landing page urls | `["https://europepmc.org/articles/pmc5024789"]`
+**pdf_urls** |     Array of String      | PDF urls          | `["http://www.ejcancer.com/article/S0959804915004505/pdf"]`
+{: .param-def }
 
 ### Enums
 

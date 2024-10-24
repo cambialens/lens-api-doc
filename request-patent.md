@@ -292,6 +292,7 @@ When checking the number of items in the results, use the `group_by_count` field
     "total": 1000,
     "group_by_count": 700
 }
+```
 
 >**Note**:
 >  * Group by family does not work with `scroll` requests.

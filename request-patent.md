@@ -110,8 +110,8 @@ Examiners | **examiner.department** | String | The patent examiner department. e
 Examiners | **primary_examiner.name** | String | The primary patent examiner name. e.g. `Jack W Keith`
 Examiners | **primary_examiner.name.exact** | String | The primary patent examiner name. N.B. Use this field for exact name matches.
 Examiners | **primary_examiner.department** | String | The primary patent examiner department. e.g. `3646`
-Examiners | **assistant_examiner.name** | String | The assistant patent examiner name. e.g. `Lily C Garner` 
-Examiners | **assistant_examiner.name** | String | The assistant patent examiner name. N.B. Use this field for exact name matches. 
+Examiners | **assistant_examiner.name** | String | The assistant patent examiner name. e.g. `Lily C Garner`
+Examiners | **assistant_examiner.name** | String | The assistant patent examiner name. N.B. Use this field for exact name matches.
 Citations | **cited_by.patent.document_id.jurisdiction** | String | The jurisdiction of the citing patent. e.g. `EP`
 Citations | **cited_by.patent.document_id.doc_number** | String | The document number of the citing patent. e.g. `EP2020/063503`
 Citations | **cited_by.patent.document_id.kind** | String | The kind code of the citing patent. e.g. `B2`
@@ -191,7 +191,7 @@ Field | Description |  Possible Value
 **has_sequence** | Indicates if the patent record has sequence information. | `true`/`false`
 **has_title** | Indicates if the title is available for the patent document. | `true`/`false`
 **has_docdb** | Indicates if the DOCDB information is available for the patent document. | `true`/`false`
-**has_inpadoc** | Indicates if the patent document has associated legal events in INPADOC. | `true`/`false` 
+**has_inpadoc** | Indicates if the patent document has associated legal events in INPADOC. | `true`/`false`
 {: .param-def }
 
  Example:
@@ -218,7 +218,7 @@ Use parameter `from` to define the offset and `size` to specify number of record
 }
 ```
 Similarly for `GET` requests, the following parameters are applicable: `size=50&from=100`
-> **Note**: 
+> **Note**:
 > - Offset/size based paginations is suitable for small result sets only and does not work on result sets of more that **10,000** records. For larger volume data downloads, use Cursor Based Pagination.
 
 ##### Cursor Based Pagination
@@ -230,7 +230,7 @@ You can specify records per page using `size` (default 20 and max 100-500, refer
   "scroll": "1m"
 }
 ```
-> **Note**: 
+> **Note**:
 > - The lifespan of scroll_id is limited to 1 minute for the current API version. Using expired scroll_id will result bad request HTTP response.
 > - Parameter `size` will be used for first scroll query and will remain the same for whole scroll context. Hence, using size in each scroll request will not have any effect.
 > - Cursor based pagination is only applicable to `POST` requests.
@@ -284,7 +284,14 @@ Regex allows the use of regular expressions in [Query String based query](#query
 ```
 
 ### Group by Family
-Group by patent family queries supports group by `SIMPLE_FAMILY` and `EXTENDED_FAMILY`, e.g. `"group_by": "SIMPLE_FAMILY"`. This returns the top sorted patent document record for each family (sorted by relevance by default). 
+Group by patent family queries supports group by `SIMPLE_FAMILY` and `EXTENDED_FAMILY`, e.g. `"group_by": "SIMPLE_FAMILY"`. This returns the top sorted patent document record for each family (sorted by relevance by default).
+
+When checking the number of items in the results, use the `group_by_count` field in the response object. The `total` field does not show the grouped total. It shows the ungrouped total. The `group_by_count` value shows the grouped total. For example if there are 1000 results in the ungrouped total, and then the `"group_by"` term is applied, if the grouped number is say 700, then the response will look like this:
+```json
+{
+    "total": 1000,
+    "group_by_count": 700
+}
 
 >**Note**:
 >  * Group by family does not work with `scroll` requests.
@@ -335,7 +342,7 @@ Following queries are supported by current version of Lens API:
 	}
 }
 ```
-> **Note**: 
+> **Note**:
 > * Avoid using the [Term](#term-query) and [Terms](#terms-query) queries for text fields. To search text field values, we recommend using the [Match](#match-query) and [Match Phrase](#match-phrase-query) queries instead.
 
 ##### Match query

@@ -66,6 +66,7 @@ else:
 ```python
 import requests
 import time
+import sys
 url = 'https://api.lens.org/patent/search'
 
 # include fields
@@ -100,15 +101,16 @@ def scroll(scroll_id):
     scroll(scroll_id)
   # If the response is not ok here, better to stop here and debug it
   elif response.status_code != requests.codes.ok:
-    print(response.json())
+    if response.status_code != requests.codes.no_content:
+        print(response.json())
+    sys.exit(1)
   # If the response is ok, do something with the response, take the new scroll id and iterate
   else:
-      if response.status_code != requests.codes.no_content:
-        json = response.json()
-        if json.get('results') is not None and json['results'] > 0:
-            scroll_id = json['scroll_id'] # Extract the new scroll id from response
-            print(json['data']) #DO something with your data
-            scroll(scroll_id)
+    json = response.json()
+    if json.get('results') is not None and json['results'] > 0:
+        scroll_id = json['scroll_id'] # Extract the new scroll id from response
+        print(json['data']) #DO something with your data
+        scroll(scroll_id)
 
 # start recursive scrolling
 scroll(scroll_id=None)

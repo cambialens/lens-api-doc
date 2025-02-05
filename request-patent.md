@@ -272,7 +272,17 @@ Since sometime the default stemming might not give you exact result, disabling i
 e.g. `"stemming": false`
 
 ### Language
-Available search language codes: `AR`, `DE`, `EN`, `ES`, `FR`, `JA`, `KO`, `PT`, `RU`, `ZH`
+Available search language codes include:
+* `AR` = Arabic
+* `DE` = Dutch
+* `EN` = English
+* `ES` = Spanish
+* `FR` = French
+* `JA` = Japanese
+* `KO` = Korean
+* `PT` = Portugese
+* `RU` = Russian
+* `ZH` = Chinese
 
 ### Regex
 Regex allows the use of regular expressions in [Query String based query](#query-string-based-query), e.g. `"regex": true`

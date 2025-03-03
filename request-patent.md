@@ -58,6 +58,7 @@ General | **jurisdiction** | String | The jurisidiction of the patent document. 
 General | **kind** | String | The patent document kind code (varies by jurisdiction). e.g. `A1`
 General | **lang** | String | The original language of the patent document. e.g. `EN`
 General | **date_published** | Date | Date of publication for the patent document. e.g. `2009-05-22`
+General | **date_published_sort** | Date | Date of publication used for sorting. Note, this field has been converted to a complete date where only partial date information is available for a scholarly work and may not accurately represent the actual publication date. e.g. `2009-05-01`
 General | **year_published** | Integer | The year of publication for the patent document. e.g. `2009`
 General | **publication_type** | String | Type of patent document. e.g. `ABSTRACT`, `AMBIGUOUS`, `AMENDED_APPLICATION`, `AMENDED_PATENT`, `DESIGN_RIGHT`, `GRANTED_PATENT`, `LIMITED_PATENT`, `PATENT_APPLICATION`, `PATENT_OF_ADDITION`, `PLANT_PATENT`, `SEARCH_REPORT`, `SPC`, `STATUTORY_INVENTION_REGISTRATION`, `UNKNOWN`
 General | **earliest_priority_claim_date** | Date | Earliest priority date. The earliest date of filing of a patent application, anywhere in the world, to protect an invention. The priority date may be earlier than the actual filing date of an application if an application claims priority to an earlier parent application, then its earliest priority date may be the same as the parent.

@@ -51,6 +51,7 @@ toc:
 **keywords** | Array of String | Keywords |
 **mesh_terms** | Array of [MeSH Term](#mesh-term) | MeSH term |
 **funding** | Array of [Funding](#funding) |  Funding |
+**retraction_updates** | Array of [Retraction Updates](#retraction-updates) |  Retraction Updates |
 {: .param-def }
 
 #### Patent Citation
@@ -59,6 +60,7 @@ toc:
 ------- |:------| -------|---------
 **lens_id** | String | Unique lens identifier | `141-171-521-309-804`
 {: .param-def }
+
 #### Author
 
  Field | Type |  Description  | Example
@@ -188,6 +190,18 @@ Field |      Type       | Description       | Example
 **landing_page_urls** | Array of String | Landing page urls | `["https://europepmc.org/articles/pmc5024789"]`
 **pdf_urls** |     Array of String      | PDF urls          | `["http://www.ejcancer.com/article/S0959804915004505/pdf"]`
 {: .param-def }
+
+#### Retraction Updates
+
+ Field | Type |  Description | Example
+------- |:------:| -------|---------
+**updated** | Date | Retraction update date | `2011-06-16`
+**update_nature** | String | The nature of the retraction update.  | `Retraction`, `Expression of Concern`, `Correction`, `Reinstatement`
+**reasons** | Array of String | The reason for the retraction update.  | `investigation by  journal/publisher`, `notice - limited or no information`, `concerns/issues about data`, `unreliable results`, `1investigation by third party`
+**notes** | String | Notes on the retraction update.  | `Date of retraction unknown, estimated from conference date.`
+**urls** | Array of String | URLs for the retraction update.  | `http://retractionwatch.com/2015/06/25/one-publisher-appears-to-have-retracted-thousands-of-meeting-abstracts-yes-thousands/`
+{: .param-def }
+
 
 ### Enums
 

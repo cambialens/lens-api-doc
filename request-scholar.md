@@ -359,8 +359,8 @@ If you need to use any [reserved special characters](https://www.elastic.co/guid
 ```json
 {"query": "doi:10.1109\\/ee.1934.6540358"}
 ```
-You can use json based format for string based query and mixed with complex boolean queries like this:
 
+You can use json based format for string based query and mixed with complex boolean queries like this:
 ```json
 {
     "query": {
@@ -389,6 +389,22 @@ You can use json based format for string based query and mixed with complex bool
     }
 }
 ```
+
+Note: You can specify the field `ui_default` in a query_string query to replicate the same search behaviour as a query string on the lens.org user interface.
+```json
+{
+    "query": {
+        "query_string": {
+            "query": "malaria vaccine",
+            "default_operator": "and",
+            "fields": [
+                "ui_default"
+            ]
+        }
+    }
+}
+```
+
 
 [//]: # (Reference Links)
 [Response]: <{{site.baseurl}}/response.html>

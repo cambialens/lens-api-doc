@@ -41,6 +41,7 @@ Fields | Description |  Required
 **[language](#language)** | For multi-lingual fulltext search | false (`EN` by default)
 **[regex](#regex)** | For Query String based queries containing regular expressions | false (false by default)
 **[group_by](#group-by-family)** | For group by patent family queries. Supports group by `SIMPLE_FAMILY` and `EXTENDED_FAMILY` | false
+**[expand_by](#expand-by-family)** | For expand by patent family queries. Supports expand by `SIMPLE_FAMILY` and `EXTENDED_FAMILY` | false
 **[min_score](#minimum-score)** | For limiting the response to the most relevant results, e.g. `"min_score": 14` | false
 {: .param-def }
 
@@ -296,6 +297,9 @@ Regex allows the use of regular expressions in [Query String based query](#query
 
 ### Group by Family
 Group by patent family queries supports group by `SIMPLE_FAMILY` and `EXTENDED_FAMILY`, e.g. `"group_by": "SIMPLE_FAMILY"`. This returns the top sorted patent document record for each family (sorted by relevance by default). 
+
+### Expand by Family
+Expand by patent family queries supports group by `SIMPLE_FAMILY` and `EXTENDED_FAMILY`, e.g. `"expand_by": "SIMPLE_FAMILY"`. This returns all the patent family members from the patent documents that match your query. 
 
 >**Note**:
 >  * Group by family does not work with `scroll` requests.

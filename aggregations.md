@@ -39,7 +39,7 @@ Aggregation API usage endpoints:
 These aggregations compute the metrics based on value aggregated. e.g. `cardinality`, `avg`, `max`, `min`, `sum`
 
 #### Bucket aggregation
-These aggregations do not compute metrics. They group the values if they fall into specific bucket and returns number of documents for each bucket. e.g. `terms`, `date_histogram`, `field`, `filters`. 
+These aggregations do not compute metrics. They group the values if they fall into specific bucket and returns number of documents for each bucket. e.g. `terms`, `histogram` `date_histogram`, `field`, `filters`. 
 Bucket aggregation supports sub-aggregations which are aggregated for the buckets created by parent aggregation.
 
 ### Aggregation Request
@@ -142,6 +142,35 @@ e.g.
     }
 }
 ```
+
+#### histogram
+
+This aggregation can be applied to select integer fields. It allows the user to specify an interval value for the bucket size.
+
+Additional request config fields:
+- `interval` : supported for `histogram` with integer values.
+
+Product | Supported Fields
+------- |-------------
+**Scholarly** | `patent_citation_count`, `scholarly_citation_count`, `reference_count`.
+**Patent** | `cited_by.patent_count`, `reference_cited.patent_count`, `reference_cited.npl_resolved_count`, `reference_cited.npl_count`.
+
+e.g. 
+```json
+{
+    "query": "EV battery",
+    "aggregations": {
+        "refernces_cited": {
+            "histogram": {
+                "field": "reference_count",
+                "interval": 10
+            }
+        }
+    },
+    "size": 0
+}
+```
+
 
 #### date_histogram
 

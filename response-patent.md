@@ -229,7 +229,6 @@ Field  |  Type  |  Description |  Example
 **sequence** | Integer | The sequence of the applicant listed on the patent document. | `2`
 **extracted_name** | [Name](#name) | The patent applicant's name. | `IBM`
 **extracted_address** | String | The applicant address as recorded on the patent. | `SEATTLE, WASHINGTON, US`
-**residence** | String | The applicant's country of residence (ISO 2-digit country code). | `US`
 {: .param-def }
 
 <!--

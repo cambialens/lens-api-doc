@@ -52,7 +52,7 @@ For searching, the following fields are supported by the API:
  --------  |  ---------  |  ------- |  -------
 General | **lens_id** | String | Unique lens identifier. Every document in the Lens has a unique 15-digit identifier called a Lens ID. e.g. `186-488-232-022-055`
 General | **created** | Date | Earliest create date of the patent meta record
-General | **Ids** | Document Identifiers | Use this field to search for patent records using publication identifiers or Lens Ids. e.g. `"EP_0227762_B1_19900411", "EP 0227762 B1", "EP_0227762_B1", "EP0227762B1", "EP0227762", "145-564-229-856-440", "US 7,654,321 B2", "7,654,321", "US 2021/0191781 A1"`
+General | **ids** | Document Identifiers | Use this field to search for patent records using publication identifiers or Lens Ids. e.g. `"EP_0227762_B1_19900411", "EP 0227762 B1", "EP_0227762_B1", "EP0227762B1", "EP0227762", "145-564-229-856-440", "US 7,654,321 B2", "7,654,321", "US 2021/0191781 A1"`
 General | **doc_number** | String | The document number assigned to a patent application on publication. e.g. `20130227762`
 General | **docdb_id** | Integer | The DOCDB identifier for the patent document. e.g. `499168393`
 General | **jurisdiction** | String | The jurisidiction of the patent document. e.g. `US`

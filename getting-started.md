@@ -79,6 +79,7 @@ To ensure our public API endpoints remain usable by everyone and to maintain the
 
 - `x-rate-limit-remaining-request-per-minute`: Number of remaining requests allowed in a minute
 - `x-rate-limit-retry-after-seconds`: Time in seconds until next request can be performed
+- `x-rate-limit-retry-after-millis`: Time in milliseconds until next request can be performed
 - `x-rate-limit-reset-date`: Rate limit will get reset at this date
 - `x-rate-limit-remaining-request-per-month`: Number of API calls allowed till the reset date above
 - `x-rate-limit-remaining-record-per-month`: Number of remaining records that can be fetched

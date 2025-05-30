@@ -294,6 +294,13 @@ Regex allows the use of regular expressions in [Query String based query](#query
     "regex": true
 }
 ```
+Example: Matching kind codes using regular expression:
+```json
+{
+  "query": "kind:/A[2-4]/",
+  "regex": true
+}
+```
 
 ### Group by Family
 Group by patent family queries supports group by `SIMPLE_FAMILY` and `EXTENDED_FAMILY`, e.g. `"group_by": "SIMPLE_FAMILY"`. This returns the top sorted patent document record for each family (sorted by relevance by default). 
@@ -453,6 +460,11 @@ If you need to use any [reserved special characters](https://www.elastic.co/guid
 ```json
 {"query": "class_cpc.symbol:Y02E10\\/70"}
 ```
+Lucene reserved works like `OR`, `AND` can be escaped if you are searching it in the value. Example:
+```json
+ { "query": "applicant.name:\\OR" }
+```
+
 You can use json based format for string based query and mixed with complex boolean queries like this:
 
 ```json

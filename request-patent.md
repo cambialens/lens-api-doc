@@ -460,7 +460,7 @@ If you need to use any [reserved special characters](https://www.elastic.co/guid
 ```json
 {"query": "class_cpc.symbol:Y02E10\\/70"}
 ```
-Lucene reserved works like `OR`, `AND` can be escaped if you are searching it in the value. Example:
+Lucene reserved words like `OR`, `AND` can be escaped if you are searching it in the value. Example:
 ```json
  { "query": "applicant.name:\\OR" }
 ```

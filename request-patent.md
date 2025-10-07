@@ -38,7 +38,7 @@ Fields | Description |  Required
 **[scroll_id](#pagination)** | Pagination parameter | false (true for next scroll requests)
 **[scroll](#pagination)** | Lifespan of Scroll scroll context in minute (e.g. 1m) | false (true for scroll context)
 **[stemming](#stemming)** | Change the ability to reduce the search word into root form | false (true by default)
-**[language](#language)** | For multi-lingual fulltext search | false (`EN` by default)
+**[language](#language)** | The query language for multi-lingual search | false (`EN` by default)
 **[regex](#regex)** | For Query String based queries containing regular expressions | false (false by default)
 **[group_by](#group-by-family)** | For group by patent family queries. Supports group by `SIMPLE_FAMILY` and `EXTENDED_FAMILY` | false
 **[expand_by](#expand-by-family)** | For expand by patent family queries. Supports expand by `SIMPLE_FAMILY` and `EXTENDED_FAMILY` | false

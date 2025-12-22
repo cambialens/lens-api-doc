@@ -482,7 +482,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
 ```json
 {
     "total": 1,
-    "max_score": 16.750214,
+    "max_score": 16.891047,
     "data": [
         {
             "lens_id": "031-156-664-516-153",
@@ -506,6 +506,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                     "kind": "A",
                     "date": "2010-12-31"
                 },
+                "application_number": "10197481.4",
                 "priority_claims": {
                     "claims": [
                         {
@@ -611,8 +612,13 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                 "classifications_cpc": {
                     "classifications": [
                         {
-                            "symbol": "A61K35/14",
+                            "symbol": "C12Q1/6881",
                             "classification_value": "I",
+                            "classification_symbol_position": "F"
+                        },
+                        {
+                            "symbol": "C12Q2600/156",
+                            "classification_value": "A",
                             "classification_symbol_position": "L"
                         },
                         {
@@ -621,13 +627,8 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                             "classification_symbol_position": "F"
                         },
                         {
-                            "symbol": "C12Q1/6881",
+                            "symbol": "A61K35/14",
                             "classification_value": "I",
-                            "classification_symbol_position": "F"
-                        },
-                        {
-                            "symbol": "C12Q2600/156",
-                            "classification_value": "A",
                             "classification_symbol_position": "L"
                         },
                         {
@@ -661,9 +662,9 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                                 "text": "AVENT N D ET AL: \"The bloodgen project of the European Union, 2003-2009\", TRANSFUSION MEDICINE AND HEMOTHERAPY 2009 S. KARGER AG CHE LNKD- DOI:10.1159/000218192, vol. 36, no. 3, June 2009 (2009-06-01), pages 162 - 167, XP002633276, ISSN: 1660-3796",
                                 "lens_id": "004-047-148-411-345",
                                 "external_ids": [
-                                    "10.1159/000218192",
                                     "pmc2980524",
-                                    "21113258"
+                                    "21113258",
+                                    "10.1159/000218192"
                                 ]
                             },
                             "category": [
@@ -677,9 +678,9 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                                 "text": "WESTHOFF CONNIE M ET AL: \"DIIIa and DIII Type 5 are encoded by the same allele and are associated with altered RHCE*ce alleles: clinical implications\", TRANSFUSION (MALDEN), vol. 50, no. 6, June 2010 (2010-06-01), pages 1303 - 1311, XP002633277, ISSN: 0041-1132",
                                 "lens_id": "125-529-168-227-632",
                                 "external_ids": [
-                                    "10.1111/j.1537-2995.2009.02573.x",
+                                    "20088832",
                                     "pmc2908519",
-                                    "20088832"
+                                    "10.1111/j.1537-2995.2009.02573.x"
                                 ]
                             },
                             "category": [
@@ -940,9 +941,9 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                                 "text": "CONNIE M.; WESTHOFF, SUNITHA VEGE; CHRISTINE HALTER-HIPSKY; TRINA WHORLEY; KIM HUE-ROYE; CHRISTINE LOMAS-FRANCIS; MARION E.: \"Dllla and Dill Type 5 are encoded by the same allele and are associated with altered RHCE*ce alleles: clinical implications\", REID. TRANSFUSION, vol. 50, 2010, pages 1303 - 1311",
                                 "lens_id": "125-529-168-227-632",
                                 "external_ids": [
-                                    "10.1111/j.1537-2995.2009.02573.x",
+                                    "20088832",
                                     "pmc2908519",
-                                    "20088832"
+                                    "10.1111/j.1537-2995.2009.02573.x"
                                 ]
                             },
                             "cited_phase": "APP"
@@ -995,19 +996,19 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                         },
                         {
                             "document_id": {
+                                "jurisdiction": "WO",
+                                "doc_number": "2012171990",
+                                "kind": "A1"
+                            },
+                            "lens_id": "084-623-881-707-629"
+                        },
+                        {
+                            "document_id": {
                                 "jurisdiction": "US",
                                 "doc_number": "9359643",
                                 "kind": "B2"
                             },
                             "lens_id": "007-584-344-944-889"
-                        },
-                        {
-                            "document_id": {
-                                "jurisdiction": "US",
-                                "doc_number": "9637788",
-                                "kind": "B2"
-                            },
-                            "lens_id": "138-800-291-931-331"
                         },
                         {
                             "document_id": {
@@ -1019,11 +1020,11 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                         },
                         {
                             "document_id": {
-                                "jurisdiction": "WO",
-                                "doc_number": "2012171990",
-                                "kind": "A1"
+                                "jurisdiction": "US",
+                                "doc_number": "9637788",
+                                "kind": "B2"
                             },
-                            "lens_id": "084-623-881-707-629"
+                            "lens_id": "138-800-291-931-331"
                         }
                     ],
                     "patent_count": 5
@@ -1031,6 +1032,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
             },
             "families": {
                 "simple_family": {
+                    "family_id": 212482337,
                     "members": [
                         {
                             "document_id": {
@@ -1081,6 +1083,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                     "size": 5
                 },
                 "extended_family": {
+                    "family_id": 212231137,
                     "members": [
                         {
                             "document_id": {
@@ -1137,9 +1140,9 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                     "DNA"
                 ],
                 "length_buckets": [
+                    "NT_1_100",
                     "NT_5001_100000",
-                    "NT_101_5000",
-                    "NT_1_100"
+                    "NT_101_5000"
                 ],
                 "organisms": [
                     {
@@ -1166,7 +1169,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
             },
             "abstract": [
                 {
-                    "text": "The invention relates to the field of genotyping and blood cell antigen determination. In particular, the invention adresses the problem of discriminating the  RHD*DIIIa-CE(4-7)-D  or  RHD*DIIIa-CE(4-7)-D )-like blood type variants, which express the C +w  antigen and lack a D antigen, from  RHD*DIIIa ,  RHD*DIVa-2  and other blood type variants. The invention provides methods for genotyping a subject, comprising: \na) determining at least 4 markers in a sample that has been obtained from the subject, wherein the markers comprise: \n(i) the presence or absence of an RHCE*C allele; \n(ii) the presence or absence of an RHD/RHCE hybrid exon 3 (RHD/CE Hex03) allele; \n(iii) the absence of, or a single nucleotide polymorphism (SNP) variant within, of any one of the SNPs at position 602 of RHD exon 4, position 667 of RHD exon 5, or position 819 of RHD exon 6; and \n(iv) the absence of, or SNP variant within, of the SNP at position 1048 of RHD exon 7. The invention also provides products, in particular, probes, primers and kits for use in such methods.",
+                    "text": "The invention relates to the field of genotyping and blood cell antigen determination. In particular, the invention adresses the problem of discriminating the RHD*DIIIa-CE(4-7)-D or RHD*DIIIa-CE(4-7)-D )-like blood type variants, which express the C +w antigen and lack a D antigen, from RHD*DIIIa , RHD*DIVa-2 and other blood type variants. The invention provides methods for genotyping a subject, comprising: a) determining at least 4 markers in a sample that has been obtained from the subject, wherein the markers comprise: (i) the presence or absence of an RHCE*C allele; (ii) the presence or absence of an RHD/RHCE hybrid exon 3 (RHD/CE Hex03) allele; (iii) the absence of, or a single nucleotide polymorphism (SNP) variant within, of any one of the SNPs at position 602 of RHD exon 4, position 667 of RHD exon 5, or position 819 of RHD exon 6; and (iv) the absence of, or SNP variant within, of the SNP at position 1048 of RHD exon 7. The invention also provides products, in particular, probes, primers and kits for use in such methods.",
                     "lang": "en"
                 }
             ],
@@ -1253,7 +1256,7 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
                 }
             ],
             "description": {
-                "text": "Field of the Invention The invention relates to methods for genotyping and blood cell antigen determination, which in particular may discriminate the  RHD*DIIIa-CE(4-7)-D  or  RHD*DIIIa-CE(4-7)-D )-like blood type variants, which express the C +W  antigen and lack a D antigen, from  RHD*DIIIa ,  RHD*DIVa-2  and other blood type variants. The invention also relates to products, in particular...",
+                "text": "Field of the Invention The invention relates to methods for genotyping and blood cell antigen determination, which in particular may discriminate the  RHD*DIIIa-CE(4-7)-D  or  RHD*DIIIa-CE(4-7)-D )-like blood type variants, which express the C +W  antigen and lack a D antigen, from  RHD*DIIIa ,  RHD*DIVa-2  and other blood type variants...",
                 "lang": "en"
             },
             "publication_type": "PATENT_APPLICATION"

@@ -37,10 +37,11 @@ toc:
 
 ### Bibliographic Data
 
- Field  |  Type  |  Description 
+ Field  |  Type  |  Description
  --------  |  ---------  |  ------- 
 **publication_reference** | [Document Id](#document-id) | The publication reference document Id. | 
 **application_reference** | [Document Id](#document-id) | The application reference document Id. | 
+**application_number** | String | The application number e.g. `10/716,854`
 **priority_claims** | [Priority Claims](#priority-claims) | The priotrity claims documents. | 
 **invention_title** | List of [Title](#title) | Title of the patent / invention. | 
 **parties** | [Parties](#parties) | The parties associated with the patent (applicants, inventors, owners, agents, etc.)  | 

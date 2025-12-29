@@ -138,8 +138,10 @@ Field | Type |  Description | Example
  Field | Type |  Description | Example
 ------- |:------:| -------|---------
 **org** | String | Name of the funding organisation | `NIDCR NIH HHS`
+**org_id** | String | The identifier of the funding organisation | `10.13039/501100003977`
+**funding_name** | String | The funding organisation's project name or number | `1457/23`
 **funding_id** | String | The funding organisation's project identifier | `U01 DE018902`
-**country** | String | The country of the funding body | `United States`
+**country** | String | The country of the funding organisation | `United States`
 {: .param-def }
 
 #### Conference

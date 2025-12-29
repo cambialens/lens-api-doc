@@ -16,6 +16,7 @@ permalink: /support.html
 
 API Version | Schema Versions | Date Released | Notes
 ------- | ------| ------| -------
+`2.19.0` | - Scholar: `1.6.8` <br/> - Patent: `1.6.4` | Dec 27, 2025 | - Added `funding.org_id` and `funding.funding_name` to the scholarly works response fields.
 `2.19.0` | - Scholar: `1.6.7` <br/> - Patent: `1.6.4` | Dec 21, 2025 | - Added `biblio.application_number` to the patent response fields. <br/> - Added `application_number`to the supported patent request fields.
 `2.16.2` | - Scholar: `1.6.7` <br/> - Patent: `1.6.3` | May 22, 2025 | - Added `x-rate-limit-retry-after-millis` to the response headers. <br/> - Added support for `multi_match` queries.
 `2.16.0` | - Scholar: `1.6.7` <br/> - Patent: `1.6.3` | Mar 03, 2025 | - Added `retraction_update` object and fields to the scholar response fields. <br/> - Added `date_published_sort` to the supported scholar request fields. <br/> - Added support for <a href="https://docs.api.lens.org/aggregations.html#histogram">histogram aggregations</a> to the aggregation endpoint with support for a select number of integer fields. <br/> - Added a `ui_default` field for <a href="https://docs.api.lens.org/request-scholar.html#query-string-based-query">Query String Based Queries</a> in the scholar API. <br/> - Added support for Expand by Family to the patent API.

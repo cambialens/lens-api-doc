@@ -67,8 +67,9 @@ Authors | **author.last_name** | String | The author's last name e.g. `Kupco`
 Authors | **author_count** | Integer | Number of Authors
 Authors | **author.affiliation.name** | String | The institution associated with the author affiliations. e.g. `Stony Brook`
 Citations | **reference.lens_id** | String | The Lens ID of scholarly works cited in the reference list e.g. `007-899-176-416-740`
-Citations | **referenced_by_count** | Integer | The number of scholarly works that cite this scholarly work
 Citations | **reference_count** | Integer | The number of works in the reference list of a scholarly work
+Citations | **referenced_by** | String | The Lens ID of scholarly works that cite a given scholarly work e.g. `001-398-439-492-793`
+Citations | **referenced_by_count** | Integer | The number of scholarly works that cite this scholarly work
 Citations | **patent_citation.lens_id** | String | ID of Referenced by patents. N.B this field will be deprecated in future, we recommend using the `referenced_by_patent.lens_id` field instead.
 Citations | **patent_citation_count** | Integer | Number of patent citations. N.B this field will be deprecated in future, we recommend using the `referenced_by_patent_count` field instead.
 External Identifiers | **ids.doi** | String | Crossref DOI Identifier

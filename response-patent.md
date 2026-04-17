@@ -173,6 +173,7 @@ Field  |  Type  |  Description |  Example
 **doc_number** | String | The document number of the priority document. | `1117265`
 **kind** | String | The kind code of the priority document. | `A1`
 **date** | LocalDate | The publication date of the priority document. | `2009-05-22`
+**linkage_type** | String ([Linkage Type](#priority-linkage-type)) | The priority document linkage type. | `DIVISION`
 **sequence** | Integer | The sequence of the Prioroty Claim Document | `3`
 {: .param-def }
 
@@ -457,6 +458,35 @@ Language codes:  `EN`, `FR`, `DE`, `CN` etc.
 ##### Classification Symbol Position
 - `F` - First
 - `A` - Additional
+
+##### Priority Linkage Type
+- `DEFAULT` - Default value
+- `PCT_REGIONAL_FILING` - PCT application claimed as a regional filing
+- `DIVISION` - Prior application claimed for a division
+- `CONTINUATION` - Prior application claimed for continuation
+- `TECHNICAL_PRIORITY` - Technical priority
+- `PCT_PARIS_CONVENTION` - PCT application claimed under the Paris Convention
+- `CONTINUATION_IN_PART` - Prior application claimed for continuation in part
+- `ABANDONED_CONTINUATION` - Claimed for continuation [abandoned]
+- `ABANDONED_CIP` - Claimed for continuation in part [abandoned]
+- `DOMESTIC_PRIORITY_PATENT` - Domestic priority claimed for patent
+- `ABANDONED_DIVISION` - Claimed for a division [abandoned]
+- `ADDITION` - Prior application claimed for an addition
+- `DOMESTIC_PRIORITY_UTILITY` - Domestic priority claimed for utility model
+- `PATENT_FOR_UTILITY_MODEL` - Patent application claimed for utility model
+- `ORIGINAL_REISSUE` - Claimed application is an original reissue serial number
+- `PATENT_TO_UTILITY` - Cited application changed from patent to utility
+- `DOMESTIC_PRIORITY` - Domestic priority
+- `UNKNOWN` - Unknown linkage type
+- `UTILITY_TO_PATENT` - Cited application changed from utility to patent
+- `COGNATE` - Cognate application
+- `EP_REGIONAL_FILING` - EP application claimed as a regional filing
+- `DIVISION_OF_DIVISION` - Prior application claimed for a division of a division
+- `DIVISION_2` - Prior application claimed for 2 division
+- `SUPPLEMENTARY_DISCLOSURE` - Claimed application is a supplementary disclosure
+- `WIDERRECHTLICHE_ENTNAHME` - Widerrechtliche Entnahme claimed Application
+- `RE_EXAMINATION` - Request for re-examination number
+- `SUBSTITUTE` - Prior application claimed for a substitute
 
 <!--
 ##### Source

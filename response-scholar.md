@@ -187,6 +187,7 @@ Field | Type |  Description | Example
 {: .param-def }
 
 #### Open Access Location
+
  Field | Type |  Description | Example
 ------- |:------:| -------|---------
 **landing_page_urls** | Array of String | Landing page urls | `["https://europepmc.org/articles/pmc5024789"]`

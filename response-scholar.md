@@ -187,8 +187,8 @@ Field | Type |  Description | Example
 {: .param-def }
 
 #### Open Access Location
-Field |      Type       | Description       | Example
-------- |:---------------:|-------------------|---------
+ Field | Type |  Description | Example
+------- |:------:| -------|---------
 **landing_page_urls** | Array of String | Landing page urls | `["https://europepmc.org/articles/pmc5024789"]`
 **pdf_urls** | Array of String | PDF urls | `["http://www.ejcancer.com/article/S0959804915004505/pdf"]`
 {: .param-def }
